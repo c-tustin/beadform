@@ -29,19 +29,19 @@ class Element {
  getContext(type){if(this.tagName!=='CANVAS')throw Error('Not a canvas');if(!this.canvas)this.canvas=createCanvas(+this.width||320,+this.height||320);if(this.canvas.width!==+this.width)this.canvas.width=+this.width;if(this.canvas.height!==+this.height)this.canvas.height=+this.height;return this.canvas.getContext(type);}
 }
 function parse(s,parent){const stack=[parent],rx=/<\/?([a-zA-Z][\w-]*)([^>]*?)\/?\s*>/g;let m;while(m=rx.exec(s)){const full=m[0],tag=m[1].toLowerCase();if(full.startsWith('</')){if(stack.length>1)stack.pop();continue;}const attrs={};const ar=/([^\s=\/]+)(?:\s*=\s*(?:"([^"]*)"|'([^']*)'|([^\s>]+)))?/g;let a;while(a=ar.exec(m[2]))attrs[a[1]]=decode(a[2]??a[3]??a[4]??'');const n=new Element(tag,attrs);stack[stack.length-1].append(n);if(!/^(img|input|br|hr|meta|link|path|rect|stop)$/.test(tag)&&!full.endsWith('/>'))stack.push(n);}}
-const root=new Element('document');parse(fs.readFileSync(path.join(__dirname,'shell.html'),'utf8').replace('<!--VOLUME_HTML-->',fs.readFileSync(path.join(__dirname,'volume-shell.html'),'utf8')),root);
+const root=new Element('document');parse(fs.readFileSync(path.join(__dirname,'..','shell.html'),'utf8').replace('<!--VOLUME_HTML-->',fs.readFileSync(path.join(__dirname,'..','volume-shell.html'),'utf8')),root);
 class BrowserImage extends NativeImage {set src(v){if(typeof v==='string'&&v.startsWith('data:image/svg+xml;charset=utf-8,'))super.src=Buffer.from(decodeURIComponent(v.split(',').slice(1).join(',')));else if(typeof v==='string'&&v.startsWith('blob:'))fetch(v).then(r=>r.arrayBuffer()).then(b=>{super.src=Buffer.from(b);});else super.src=v;}get src(){return super.src;}}
 global.Image=BrowserImage;global.window=globalThis;
 global.addEventListener=()=>{};global.print=()=>{};global.requestAnimationFrame=fn=>setTimeout(fn,0);
 global.document={getElementById:id=>ids.get(id)||null,querySelectorAll:q=>root.querySelectorAll(q),addEventListener:()=>{},body:root,activeElement:{tagName:'BODY'},createElement:tag=>{if(tag==='canvas'){const cv=createCanvas(1,1);cv.toBlob=fn=>cv.encode('png').then(b=>fn(new Blob([b],{type:'image/png'})));return cv;}return new Element(tag);}};
 const realTimer=global.setTimeout;global.setTimeout=(fn,t,...a)=>{const id=realTimer(fn,t,...a);if(t>1000)id.unref();return id;};
-require('./engine.js');vm.runInThisContext(fs.readFileSync(path.join(__dirname,'app.js'),'utf8'),{filename:'app.js'});
+require('../engine.js');vm.runInThisContext(fs.readFileSync(path.join(__dirname,'..','app.js'),'utf8'),{filename:'app.js'});
 const wait=ms=>new Promise(r=>realTimer(r,ms));
 async function until(fn){for(let i=0;i<100;i++){if(fn())return;await wait(20);}throw Error('App initialization did not finish: '+ids.get('toast').textContent);}
 
-require('./shape-engine.js');require('./volume-engine.js');require('./thread-diagram.js');require('./stage-guide.js');require('./parts-engine.js');require('./continuous-thread.js');vm.runInThisContext(fs.readFileSync(path.join(__dirname,'volume-app.js'),'utf8'),{filename:'volume-app.js'});
+require('../shape-engine.js');require('../volume-engine.js');require('../thread-diagram.js');require('../stage-guide.js');require('../parts-engine.js');require('../continuous-thread.js');vm.runInThisContext(fs.readFileSync(path.join(__dirname,'..','volume-app.js'),'utf8'),{filename:'volume-app.js'});
 
-vm.runInThisContext(fs.readFileSync(path.join(__dirname,'creator-app.js'),'utf8'),{filename:'creator-app.js'});
-vm.runInThisContext(fs.readFileSync(path.join(__dirname,'connection-app.js'),'utf8'),{filename:'connection-app.js'});
-vm.runInThisContext(fs.readFileSync(path.join(__dirname,'parts-app.js'),'utf8'),{filename:'parts-app.js'});
+vm.runInThisContext(fs.readFileSync(path.join(__dirname,'..','creator-app.js'),'utf8'),{filename:'creator-app.js'});
+vm.runInThisContext(fs.readFileSync(path.join(__dirname,'..','connection-app.js'),'utf8'),{filename:'connection-app.js'});
+vm.runInThisContext(fs.readFileSync(path.join(__dirname,'..','parts-app.js'),'utf8'),{filename:'parts-app.js'});
 module.exports={ids,root,wait,until,createCanvas,sharp};

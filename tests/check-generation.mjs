@@ -1,10 +1,10 @@
 import assert from 'node:assert/strict';
-import {generateScene,createServer} from './server.mjs';
+import {generateScene,createServer} from '../server.mjs';
 import {createRequire} from 'node:module';
 import {writeFile} from 'node:fs/promises';
 import {fileURLToPath} from 'node:url';
-const require=createRequire(import.meta.url),S=require('./shape-engine.js'),V=globalThis.BeadVolume;
-const G=require('./stage-guide.js');
+const require=createRequire(import.meta.url),S=require('../shape-engine.js'),V=globalThis.BeadVolume;
+const G=require('../stage-guide.js');
 function checkStages(g){
  const stages=G.build(g);assert.deepEqual(stages.flatMap(s=>s.steps),g.steps);assert.deepEqual(stages.flatMap(s=>s.ids),g.steps.flatMap(s=>s.ids));
  const cubes=stages.flatMap(s=>s.blocks.map(b=>b.cubeId));assert.equal(new Set(cubes).size,cubes.length,'A complete unit must never be split across stages.');
@@ -41,11 +41,11 @@ await assert.rejects(()=>generateScene({prompt:'test'},{apiKey:'fixture-key',fet
 await assert.rejects(()=>generateScene({prompt:'test'},{apiKey:'fixture-key',fetchImpl:async()=>({ok:true,json:async()=>({output:[{content:[{type:'refusal'}]}]})})}),/could not create/);
 const disconnected={title:'separate',parts:[part('one','ellipsoid',[-20,0,0],[1,1,1],'#789456'),part('two','ellipsoid',[20,0,0],[1,1,1],'#789456')]};
 await assert.rejects(()=>generateScene({prompt:'test'},{apiKey:'fixture-key',fetchImpl:async()=>modelResponse(disconnected)}),/needs adjustment/);
-const server=createServer({apiKey:'fixture-key',fetchImpl:fakeFetch,htmlPath:fileURLToPath(new URL('./beadform.html',import.meta.url))});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
+const server=createServer({apiKey:'fixture-key',fetchImpl:fakeFetch,htmlPath:fileURLToPath(new URL('../beadform.html',import.meta.url))});await new Promise(resolve=>server.listen(0,'127.0.0.1',resolve));
 try{const base=`http://127.0.0.1:${server.address().port}`,status=await fetch(base+'/api/status'),health=await status.json();assert.equal(health.ready,true);assert.equal(health.app,'beadform');assert.equal(health.canConfigure,true);const html=await fetch(base);assert.equal(html.status,200);assert.ok((await html.text()).includes('vGenerateText'));
  const ok=await fetch(base+'/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt:'an original giraffe',detail:2})});assert.equal(ok.status,200);assert.equal((await ok.json()).scene.title,giraffe.title);
  const blocked=await fetch(base+'/api/generate',{method:'POST',headers:{Origin:'https://unrelated.invalid','Content-Type':'application/json'},body:'{}'});assert.equal(blocked.status,403);
  const traversal=await fetch(base+'/server.mjs');assert.equal(traversal.status,404);const bad=await fetch(base+'/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:'{'});assert.equal(bad.status,400);
 }finally{await new Promise(resolve=>server.close(resolve));}
-await writeFile(new URL('./test-subjects.json',import.meta.url),JSON.stringify({giraffe,teapot},null,2));
+await writeFile(new URL('./fixtures/test-subjects.json',import.meta.url),JSON.stringify({giraffe,teapot},null,2));
 console.log(`${count} fishing-line route configurations passed, plus custom animal/object geometry, structured text/image API contracts, upstream error handling, disconnected-part rejection, and local HTTP/security checks. No live model call was made.`);

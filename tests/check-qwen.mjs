@@ -1,7 +1,7 @@
 import assert from 'node:assert/strict';
-import {generateScene,createServer} from './server.mjs';
+import {generateScene,createServer} from '../server.mjs';
 import {createRequire} from 'node:module';
-const require=createRequire(import.meta.url),scene=require('./parts-engine.js').example('frog');
+const require=createRequire(import.meta.url),scene=require('../parts-engine.js').example('frog');
 let captured;
 const fetchImpl=async(url,o)=>{assert.ok(url.startsWith('http://127.0.0.1:11434/'));assert.equal(o.headers.Authorization,undefined);captured=JSON.parse(o.body);return {ok:true,json:async()=>url.endsWith('/show')?{capabilities:['vision','completion']}:{done:true,message:{content:JSON.stringify(scene)}}};};
 await generateScene({prompt:'frog',imageData:'data:image/png;base64,aGVsbG8=',construction:'parts'},{provider:'ollama',fetchImpl});

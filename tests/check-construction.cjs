@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict');require('./shape-engine.js');const P=require('./parts-engine.js'),G=require('./construction-graph.js');
+const assert=require('node:assert/strict');require('../shape-engine.js');const P=require('../parts-engine.js'),G=require('../construction-graph.js');
 const g=P.build(P.example('frog')),graph=g.constructionGraph;
 assert.equal(graph.beadCount,116);assert.equal(graph.parts.length,7);assert.equal(graph.joints.length,6);assert.equal(graph.checks.valid,true);assert.ok(graph.joints.every(j=>j.status==='draft'));assert.ok(graph.parts.some(p=>p.technique==='circular-peyote'&&p.rounds.reduce((n,r)=>n+r.newBeads,0)===100));
 const bad=structuredClone(graph);bad.joints[0].type='invented';assert.equal(G.validate(g,bad).valid,false);

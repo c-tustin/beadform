@@ -34,7 +34,7 @@ function shapeImage(type){const cv=createCanvas(160,160),c=cv.getContext('2d');c
  $('vPrompt').value='a giraffe with a long neck';const original=s.model;await C.generateAI(false);assert.equal(s.model,original);assert.ok($('modalBody').innerHTML.includes('start.command'));assert.ok(!$('vApiKey'));$('modal').close();
  await $('modeFlat').click();assert.equal(Beadform.state.settings.beadDiameter,2);assert.ok(Beadform.state.geometry.nodes.length>0);await $('modeVolume').click();assert.equal(s.model,original);
  await $('helpBtn').click();assert.ok($('modalBody').innerHTML.includes('No third-party'));assert.ok($('modalBody').innerHTML.includes('physical sample'));
- const fixtures=JSON.parse(fs.readFileSync(path.join(__dirname,'test-subjects.json'),'utf8')),realFetch=global.fetch;let sent;
+ const fixtures=JSON.parse(fs.readFileSync(path.join(__dirname,'fixtures','test-subjects.json'),'utf8')),realFetch=global.fetch;let sent;
  global.location={protocol:'http:'};global.fetch=async(url,options)=>{if(url==='/api/status')return {ok:true,json:async()=>({ready:true})};sent=JSON.parse(options.body);return {ok:true,json:async()=>({scene:fixtures.giraffe})};};
  await C.checkService();s.edits=false;$('vPrompt').value='a giraffe with a long neck';await C.generateAI(false);assert.equal(s.settings.design.kind,'scene');assert.equal(s.title,fixtures.giraffe.title);assert.equal(sent.imageData,null);assert.ok(s.validation.valid);assert.notEqual(s.model,original);
  s.edits=false;await C.generateAI(true);assert.ok(sent.imageData.startsWith('data:image/png;base64,'));const interpreted=s.model;

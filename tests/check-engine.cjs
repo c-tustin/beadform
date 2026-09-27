@@ -1,5 +1,5 @@
 const assert = require('node:assert/strict');
-require('./engine.js');
+require('../engine.js');
 const E=globalThis.BeadEngine;
 let cases=0;
 function check(stitch,width,rows) {

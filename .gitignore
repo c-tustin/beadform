@@ -1,0 +1,11 @@
+.env
+.env.*
+!.env.example
+node_modules/
+__pycache__/
+*.py[cod]
+tests/*.png
+tests/*.svg
+training/ready/
+training-environment.txt
+beadform-qwen-lora/
