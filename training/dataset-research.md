@@ -28,7 +28,9 @@ from the project folder:
 python training/prepare_dataset.py queue beadform-approved-builds.jsonl --output training/review-queue.jsonl
 ```
 
-this retains opted-in finished photos for review, preserves consent, and leaves review/physical-test flags false. fill in the family and original prompt, correct the target scene, and attach the original reference image as `image`. approval requires real review and a build; do not just flip flags to get past validation.
+this retains opted-in finished photos for review, preserves consent, and leaves review/scene-validation flags false. fill in the family and original prompt, correct the target scene, and attach the original reference image as `image`. Approval requires real human review and a passing compiler check; do not just flip flags to get past validation. A physical build is separate evidence, not a prerequisite for the scene-generation target.
+
+once each target is reviewed and passes the Beadform compiler, mark `training_consent`, `reviewed`, and `scene_validated` true. `physically_tested` and `outcome` describe separate real-world evidence and are not required for this scene-generation task. Keep unbuilt, failed, and successful outcomes distinct for later analysis; do not label a digitally valid plan a physical success.
 
 once the rows are actually approved:
 
@@ -38,7 +40,7 @@ python training/prepare_dataset.py split training/review-queue.jsonl --holdout t
 python training/train_lora.py --train training/ready/train.jsonl --eval training/ready/eval.jsonl --check
 ```
 
-split refuses missing consent, review or physical testing, invalid scenes, duplicate target scenes, missing images and empty splits. use consistent family names. it writes absolute local image paths; when moving to a cloud notebook, copy the images and update those paths. no tool here uploads data or starts training automatically.
+split refuses missing consent, review or scene validation, invalid scenes, duplicate target scenes, missing images and empty splits. use consistent family names. it writes absolute image paths; run the split after the data and images are on the target machine so those paths resolve there. no tool here uploads data or starts training automatically.
 
 ## model experiment
 

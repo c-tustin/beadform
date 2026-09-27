@@ -10,8 +10,8 @@ def load_rows(path):
     if not rows:
         raise ValueError(f'{path}: no examples')
     for r in rows:
-        if r.get('training_consent') is not True or r.get('reviewed') is not True or r.get('physically_tested') is not True:
-            raise ValueError('every example needs training_consent, reviewed and physically_tested set to true')
+        if any(r.get(k) is not True for k in ('training_consent', 'reviewed', 'scene_validated')):
+            raise ValueError('every example needs training_consent, reviewed and scene_validated set to true')
         if not r.get('group') or not isinstance(r.get('prompt'), str) or not r['prompt'].strip():
             raise ValueError('each example needs an animal/design group and input prompt')
         if not isinstance(r.get('scene'), dict):
@@ -30,7 +30,7 @@ def main():
     ap.add_argument('--train', required=True)
     ap.add_argument('--eval', required=True)
     ap.add_argument('--check', action='store_true')
-    ap.add_argument('--model', default='Qwen/Qwen3-VL-4B-Instruct')
+    ap.add_argument('--model', default='Qwen/Qwen3-VL-2B-Instruct')
     ap.add_argument('--output', default='beadform-qwen-lora')
     ap.add_argument('--epochs', type=float, default=1)
     a = ap.parse_args()
