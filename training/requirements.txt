@@ -1,5 +1,5 @@
-# Install a CUDA-compatible PyTorch build first. Resolve these in a fresh GPU environment.
-# This starter has not been GPU-tested; freeze working versions after your smoke run.
+# Colab provides its own CUDA-compatible PyTorch; do not replace it in the free notebook.
+# This starter has not been GPU-tested; freeze working versions after the smoke run.
 transformers>=4.57.0,<6
 peft>=0.17.0,<1
 accelerate>=1.10.0,<2
