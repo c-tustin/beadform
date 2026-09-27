@@ -1,10 +1,10 @@
 # Start the training dataset with no images
 
-You can start with text prompts and generated Beadform scenes. The repository contains 14 candidates in [`candidates.jsonl`](candidates.jsonl). You approved all except fish; the 13 accepted designs are recorded in [`approved-seed.jsonl`](approved-seed.jsonl). All examples are text-only.
+You can start with text prompts and generated Beadform scenes. The repository contains 21 candidates in [`candidates.jsonl`](candidates.jsonl). The approved seed has 13 examples, with fish excluded; a new batch of seven designs is awaiting your review. All examples are text-only.
 
 ## Review the starter batch
 
-All 14 candidates pass the digital compiler check; the 13 you approved are in the seed and fish is excluded. You do not need to collect images for the text-to-scene path. Thirteen approved examples are still too few for a useful fine-tune. Add more distinct families before training, especially if you want image-conditioned generation.
+All 21 candidates pass the digital compiler check; the 13 you approved are in the seed and fish is excluded. The newest seven need your review before they can be used. You do not need to collect images for the text-to-scene path. Thirteen approved examples are still too few for a useful fine-tune. Add more distinct families before training, especially if you want image-conditioned generation.
 
 | Candidate | Compiler beads | Decision | Current prompt |
 | --- | ---: | --- | --- |
@@ -22,6 +22,13 @@ All 14 candidates pass the digital compiler check; the 13 you approved are in th
 | rocket | 138 | kept | a small red and white bead rocket with two fins and a round blue window |
 | whale | 84 | kept | a friendly blue bead whale with a tail, two flippers, and a small water spout |
 | snail | 66 | kept | a tiny bead snail with a spiral shell, two eyestalks, and a green body |
+| penguin | 72 | review | a little black and white bead penguin with orange feet and a tiny orange beak |
+| octopus | 52 | review | a friendly purple bead octopus with a round head, four short curling arms, and two eyes |
+| pear | 32 | review | a simple green bead pear with a short brown stem and one leaf |
+| robot | 124 | review | a small friendly bead robot with a square head, boxy body, two arms, and blue eyes |
+| sailboat | 31 | review | a simple red and blue bead sailboat with one white sail and a tall mast |
+| train | 132 | review | a tiny green bead train engine with a round boiler, a chimney, and two wheels |
+| cloud | 129 | review | a soft white bead cloud with three blue raindrops underneath |
 
 Use one row per design family. Images are optional. With no images, this dataset teaches text-to-scene generation only; it does not teach the model to interpret pictures.
 
