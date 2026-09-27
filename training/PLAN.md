@@ -8,7 +8,7 @@ All hosted GPU work in this plan uses only the Colab free tier when Google offer
 
 - Pilot only: `Qwen/Qwen3-VL-2B-Instruct` with 4-bit QLoRA. Its model card lists Apache-2.0. The trainer adapts language attention and freezes the vision encoder. This tests structured scene output; it does not guarantee better image interpretation.
 - Keep technique selection and physical-outcome scoring as later tasks. The current scene schema does not encode the full hybrid plan.
-- `candidates.jsonl` contains 14 synthetic text-only drafts. The user reviewed and kept six initial examples; `approved-seed.jsonl` contains those approved rows with the fish example excluded. Seven added drafts await review. All are digitally validated, but none has been physically built.
+- `candidates.jsonl` contains 14 synthetic text-only drafts. The user approved all except fish; `approved-seed.jsonl` contains the 13 accepted rows. All pass digital compiler validation, but none has been physically built.
 
 ## Data gates
 
@@ -22,7 +22,7 @@ Every training and evaluation row must have:
 
 Keep `physically_tested` and `outcome` as separate real-world evidence. A digitally validated scene is not a proven physical pattern. Finished photos may help document an outcome but must not replace the original reference image as the model input. Do not change approval flags just to make the notebook run.
 
-The approved seed now has six examples across six families. That is enough to prepare the workflow and run a base-model preview, but far too small for a useful fine-tune. Add distinct approved examples before training, and reserve at least two full families for evaluation. The notebook copies the approved seed to Drive only if no user-provided review queue exists; it never promotes the remaining fixture candidates.
+The approved seed now has 13 examples across 13 families. That is enough to prepare the workflow and run a base-model preview, but still too small for a useful fine-tune. Add distinct approved examples before training, and reserve at least two full families for evaluation. The notebook copies the approved seed to Drive only if no user-provided review queue exists; it never promotes the excluded fish candidate.
 
 ## Free Colab workflow
 
@@ -40,7 +40,7 @@ The notebook installs Python packages into its temporary Colab runtime but leave
 ## Baseline, training, and review sequence
 
 1. Run the exploratory base preview to make sure the free GPU can load Qwen 2B and produce schema-like text.
-2. Add more consented, reviewed rows to the six-example approved seed; run the Beadform compiler on each corrected target and mark `scene_validated` only after it passes.
+2. Add more consented, reviewed rows to the 13-example approved seed; run the Beadform compiler on each corrected target and mark `scene_validated` only after it passes.
 3. Keep complete design families out of training. Run the notebook's dataset split and `train_lora.py --check` before downloading training weights.
 4. Run the short QLoRA pilot. Save the adapter, optimizer checkpoints, processor, frozen package list, model identifier, dataset version, and logs on Drive. If a runtime ends, reconnect later and resume from the same output folder.
 5. Compare tuned outputs with the unchanged base outputs on the same held-out families. Inspect JSON/schema validity, compiler validity, human edits, and physical outcomes separately.

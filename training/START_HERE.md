@@ -1,10 +1,10 @@
 # Start the training dataset with no images
 
-You can start with text prompts and generated Beadform scenes. The repository contains 14 candidates in [`candidates.jsonl`](candidates.jsonl). The first batch contains frog, fish, bunny, bear, butterfly, turtle, and bird. You chose to keep all except fish; the six kept designs are recorded in [`approved-seed.jsonl`](approved-seed.jsonl). The second batch adds flower, mushroom, cactus, house, rocket, whale, and snail. Those seven are new drafts and still need your review. All examples are text-only.
+You can start with text prompts and generated Beadform scenes. The repository contains 14 candidates in [`candidates.jsonl`](candidates.jsonl). You approved all except fish; the 13 accepted designs are recorded in [`approved-seed.jsonl`](approved-seed.jsonl). All examples are text-only.
 
 ## Review the starter batch
 
-All 14 candidates pass the digital compiler check, but only the first six selected designs are approved in the seed. The seven new drafts need your review before they can be used. You do not need to collect images for the text-to-scene path. Six approved examples are much too few for a useful fine-tune. Add and review more distinct families before training, especially if you want image-conditioned generation.
+All 14 candidates pass the digital compiler check; the 13 you approved are in the seed and fish is excluded. You do not need to collect images for the text-to-scene path. Thirteen approved examples are still too few for a useful fine-tune. Add more distinct families before training, especially if you want image-conditioned generation.
 
 | Candidate | Compiler beads | Decision | Current prompt |
 | --- | ---: | --- | --- |
@@ -15,13 +15,13 @@ All 14 candidates pass the digital compiler check, but only the first six select
 | butterfly | 82 | kept | a small butterfly bead animal with a rounded body and simple features |
 | turtle | 139 | kept | a small turtle bead animal with a rounded body and simple features |
 | bird | 126 | kept | a small bird bead animal with a rounded body and simple features |
-| flower | 109 | review | a simple bead flower with five pink petals, a yellow center, green stem, and two leaves |
-| mushroom | 65 | review | a small red bead mushroom with a cream stem and three pale cap spots |
-| cactus | 137 | review | a small potted bead cactus with two arms and a pink flower |
-| house | 49 | review | a tiny bead cottage with a green roof, door, and two blue windows |
-| rocket | 138 | review | a small red and white bead rocket with two fins and a round blue window |
-| whale | 84 | review | a friendly blue bead whale with a tail, two flippers, and a small water spout |
-| snail | 66 | review | a tiny bead snail with a spiral shell, two eyestalks, and a green body |
+| flower | 109 | kept | a simple bead flower with five pink petals, a yellow center, green stem, and two leaves |
+| mushroom | 65 | kept | a small red bead mushroom with a cream stem and three pale cap spots |
+| cactus | 137 | kept | a small potted bead cactus with two arms and a pink flower |
+| house | 49 | kept | a tiny bead cottage with a green roof, door, and two blue windows |
+| rocket | 138 | kept | a small red and white bead rocket with two fins and a round blue window |
+| whale | 84 | kept | a friendly blue bead whale with a tail, two flippers, and a small water spout |
+| snail | 66 | kept | a tiny bead snail with a spiral shell, two eyestalks, and a green body |
 
 Use one row per design family. Images are optional. With no images, this dataset teaches text-to-scene generation only; it does not teach the model to interpret pictures.
 
@@ -34,7 +34,7 @@ For any row you accept, copy it to your review file and update all of the follow
 
 To check a corrected JSONL file locally, run `node training/validate_review.cjs path/to/review-queue.jsonl` from the project folder. This reports compiler results but does not edit or approve the data. Set `scene_validated: true` only for rows that pass after your final edits.
 
-Do not edit `candidates.jsonl` to approve examples. The dataset tools deliberately reject rows with missing or false approval flags. The six approved examples are a small seed, far too few to expect a useful fine-tuned model. Add distinct, reviewed examples over time and keep whole design families held out for evaluation.
+Do not edit `candidates.jsonl` to approve examples. The dataset tools deliberately reject rows with missing or false approval flags. The 13 approved examples are still a small seed. Add distinct examples over time and keep whole design families held out for evaluation.
 
 ## Next steps
 
