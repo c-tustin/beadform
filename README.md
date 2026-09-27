@@ -50,7 +50,7 @@ The parts compiler favors named heads/bodies, tubes, and thin strands in model-g
 
 For a photograph, choose **interpret as a full 3D subject** to identify meaningful parts. Local image-outline inflation remains available under **Cubic RAW**; it cannot identify anatomical parts without interpretation. Everyday parts use the compact vocabulary; Expanded keeps larger forms. Body-depth stretching is disabled for this mode because these bead components have fixed geometry.
 
-Use the **save + export** menu in the parts studio for its complete print/PDF guide, parts-map SVG, current thread-chart SVG, exact text sequence, bead CSV, or editable project. These exports use the parts inventory, including joins. The package includes original `parts-map.svg`, `parts-ball.svg`, `parts-join.svg`, and `parts-assembly.svg` examples.
+Use the **save + export** menu in the parts studio for its complete print/PDF guide, parts-map SVG, current thread-chart SVG, exact text sequence, bead CSV, or editable project. These exports use the parts inventory, including joins. The package includes original illustrations in [`examples/`](examples/).
 
 No physical sample was made. Digital checks verify closed surfaces, unique inventory, thread continuity, and planned passage counts including joins. Starting, finishing, knots, needle access, tension, and actual seed-bead hole fit require a sample with your own materials.
 
@@ -88,9 +88,21 @@ Those caps are engineering planning heuristics, **not certified hole capacities*
 
 Text/image interpretation returns a stylized approximation within the geometric vocabulary and bead resolution. It cannot guarantee an exact reconstruction of every subject. Thin features may need to be thickened, poses simplified, or separate components explicitly joined. Small supporting cells connect nearby diagonal contacts and are included in the inventory; widely disconnected parts are rejected. Check all inferred proportions in the 3D preview before making the pattern.
 
+
+## Repository layout
+
+- `assets/` — bundled animal reference images.
+- `docs/` — source notes and local model setup.
+- `qwen-and-lora.md` — compatibility pointer to the guide in `docs/`.
+- `examples/` — original pattern and construction SVG illustrations.
+- `training/` — dataset preparation and QLoRA pilot materials.
+- `beadform.html` — generated, self-contained app; rebuild with `python3 build.py`.
+- Root JavaScript and CSS files — source modules consumed by the builder and local server.
+- Root `check-*` and `test-*` files — dependency-free and UI checks; these stay at the project root because the harness loads application files by relative path.
+
 ## Source and verification
 
-`beadform.html` is the complete front end. To rebuild it after editing the source modules, run `python3 build.py` in this folder.
+`beadform.html` is the complete front end. To rebuild it after editing the source modules, run `python3 build.py` in the project root.
 
 Core files:
 
@@ -231,7 +243,7 @@ The floating arena now starts at the top of the page, adding 135 px of space abo
 
 ## local qwen and lora (current)
 
-Run `node launch-qwen.mjs` after installing Ollama and pulling `qwen3-vl:4b` for local text/image generation without an API key. See `qwen-and-lora.md` for setup, model alternatives, reviewed dataset preparation, and the CUDA QLoRA starter in `training/`. Provider tests use mocked responses; no live local model or GPU training was run in the development environment.
+Run `node launch-qwen.mjs` after installing Ollama and pulling `qwen3-vl:4b` for local text/image generation without an API key. See [`docs/qwen-and-lora.md`](docs/qwen-and-lora.md) for setup, model alternatives, reviewed dataset preparation, and the CUDA QLoRA starter in [`training/`](training/). Provider tests use mocked responses; no live local model or GPU training was run in the development environment.
 
 ## interactive studio and construction contracts (current)
 
