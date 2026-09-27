@@ -8,17 +8,17 @@ reviewed september 21, 2026. no third-party patterns or images were downloaded i
 | [smithsonian open access](https://github.com/Smithsonian/OpenAccess) | cc0 metadata repository with natural-history collections; repository points to its newer aws distribution. | candidate discovery source. metadata licensing alone does not establish the rights of every linked image: check each media item. animal photos need original, reviewed target scenes. |
 | [quick, draw!, google creative lab](https://github.com/googlecreativelab/quickdraw-dataset) | labeled hand-drawn sketches across 345 categories | not a bead-pattern dataset. not included under the request to avoid copyrighted source materials; do not treat an open license as public-domain status. |
 | [international beading week, beadworkers guild and credited designers](https://beadworkersguild.com/ibw-3d-designs/) | free-to-read 3d beading patterns | excluded: the page retains designer copyright and restricts use to personal use. free access is not permission to build a training corpus. |
-| original beadform candidates | seven generated animal scenes and computed construction statistics | included as a review queue, not proven successes. generated targets can reproduce existing planner weaknesses. |
+| original beadform candidates | seven generated animal scenes and computed construction statistics | six user-approved text-only seeds are in `approved-seed.jsonl`; fish is excluded. Digitally validated, not physically proven. Generated targets can reproduce existing planner weaknesses. |
 
 ## actual data included
 
-`candidates.jsonl`: frog, fish, bunny, bear, butterfly, turtle and bird. seven examples, seven families, no synthetic count inflation from recolors. fields retain source, scene, compiler statistics and approval flags. these are text-only candidates; they do not yet teach reference-image interpretation. regenerate with `node training/make_candidates.cjs` from the project root.
+`candidates.jsonl`: frog, fish, bunny, bear, butterfly, turtle and bird. Seven original examples, seven families, no synthetic count inflation from recolors. `approved-seed.jsonl` records the six kept examples (frog, bunny, bear, butterfly, turtle and bird); fish is intentionally omitted. These are text-only and do not teach reference-image interpretation. Regenerate the original candidate set with `node training/make_candidates.cjs` from the project root; this does not alter the approved seed.
 
 ## collect the missing supervision
 
 for each original design retain the original prompt/reference image, corrected scene, actual build photos, materials, changes and outcome. a finished photograph is evidence to review, not a substitute for the original input or proof of every thread move. collect failures too, but keep them out of successful-target supervised training; they can later support a separate outcome scorer.
 
-start by physically reviewing the seven families and adding independently designed examples. a seven-example set is a workflow pilot, not enough evidence of general animal-design skill. hold entire families out of training, including their photos, recolors and paraphrases. compare the unchanged base model against the adapter on identical held-out inputs. report schema validity, compiler validity, recognizable shape, joint placement, bead count, thread sections, max passes, and physical build results separately.
+The six kept families are a tiny seed for setup and workflow checks, not enough evidence of general animal-design skill or a useful fine-tune. Add independently designed examples and physically review builds over time. Hold entire families out of training, including their photos, recolors and paraphrases. Compare the unchanged base model against the adapter on identical held-out inputs. Report schema validity, compiler validity, recognizable shape, joint placement, bead count, thread sections, max passes, and physical build results separately.
 
 ## prepare exports
 
