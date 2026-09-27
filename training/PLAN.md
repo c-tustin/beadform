@@ -8,7 +8,7 @@ All hosted GPU work in this plan uses only the Colab free tier when Google offer
 
 - Pilot only: `Qwen/Qwen3-VL-2B-Instruct` with 4-bit QLoRA. Its model card lists Apache-2.0. The trainer adapts language attention and freezes the vision encoder. This tests structured scene output; it does not guarantee better image interpretation.
 - Keep technique selection and physical-outcome scoring as later tasks. The current scene schema does not encode the full hybrid plan.
-- `candidates.jsonl` remains the original seven-row fixture set. The user reviewed and kept six synthetic examples; `approved-seed.jsonl` contains those rows with the fish example excluded. These are text-only and digitally validated, but they have not been physically built.
+- `candidates.jsonl` contains 14 synthetic text-only drafts. The user reviewed and kept six initial examples; `approved-seed.jsonl` contains those approved rows with the fish example excluded. Seven added drafts await review. All are digitally validated, but none has been physically built.
 
 ## Data gates
 

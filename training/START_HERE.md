@@ -1,10 +1,10 @@
 # Start the training dataset with no images
 
-You can start with text prompts and generated Beadform scenes. The repository contains seven original candidates in [`candidates.jsonl`](candidates.jsonl): frog, fish, bunny, bear, butterfly, turtle, and bird. You chose to keep frog, bunny, bear, butterfly, turtle, and bird. Those six are recorded in [`approved-seed.jsonl`](approved-seed.jsonl); fish remains only in the original candidate file and is excluded from the approved seed.
+You can start with text prompts and generated Beadform scenes. The repository contains 14 candidates in [`candidates.jsonl`](candidates.jsonl). The first batch contains frog, fish, bunny, bear, butterfly, turtle, and bird. You chose to keep all except fish; the six kept designs are recorded in [`approved-seed.jsonl`](approved-seed.jsonl). The second batch adds flower, mushroom, cactus, house, rocket, whale, and snail. Those seven are new drafts and still need your review. All examples are text-only.
 
 ## Review the starter batch
 
-The approved seed has six compiler-checked text-to-scene examples. You do not need to collect images for them. It is enough to run the Colab base preview now; six examples are much too few for a useful fine-tune. Add and review more distinct families before training, especially if you want image-conditioned generation.
+All 14 candidates pass the digital compiler check, but only the first six selected designs are approved in the seed. The seven new drafts need your review before they can be used. You do not need to collect images for the text-to-scene path. Six approved examples are much too few for a useful fine-tune. Add and review more distinct families before training, especially if you want image-conditioned generation.
 
 | Candidate | Compiler beads | Decision | Current prompt |
 | --- | ---: | --- | --- |
@@ -15,6 +15,13 @@ The approved seed has six compiler-checked text-to-scene examples. You do not ne
 | butterfly | 82 | kept | a small butterfly bead animal with a rounded body and simple features |
 | turtle | 139 | kept | a small turtle bead animal with a rounded body and simple features |
 | bird | 126 | kept | a small bird bead animal with a rounded body and simple features |
+| flower | 109 | review | a simple bead flower with five pink petals, a yellow center, green stem, and two leaves |
+| mushroom | 65 | review | a small red bead mushroom with a cream stem and three pale cap spots |
+| cactus | 137 | review | a small potted bead cactus with two arms and a pink flower |
+| house | 49 | review | a tiny bead cottage with a green roof, door, and two blue windows |
+| rocket | 138 | review | a small red and white bead rocket with two fins and a round blue window |
+| whale | 84 | review | a friendly blue bead whale with a tail, two flippers, and a small water spout |
+| snail | 66 | review | a tiny bead snail with a spiral shell, two eyestalks, and a green body |
 
 Use one row per design family. Images are optional. With no images, this dataset teaches text-to-scene generation only; it does not teach the model to interpret pictures.
 
