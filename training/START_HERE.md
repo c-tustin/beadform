@@ -1,10 +1,10 @@
 # Start the training dataset with no images
 
-You can start with text prompts and generated Beadform scenes. The repository contains 21 candidates in [`candidates.jsonl`](candidates.jsonl). The approved seed has 13 examples, with fish excluded; a new batch of seven designs is awaiting your review. All examples are text-only.
+You can start with text prompts and generated Beadform scenes. The repository contains 21 candidates in [`candidates.jsonl`](candidates.jsonl). You have approved 20; fish is excluded. All examples are text-only.
 
 ## Review the starter batch
 
-All 21 candidates pass the digital compiler check; the 13 you approved are in the seed and fish is excluded. The newest seven need your review before they can be used. You do not need to collect images for the text-to-scene path. Thirteen approved examples are still too few for a useful fine-tune. Add more distinct families before training, especially if you want image-conditioned generation.
+All 21 candidates pass the digital compiler check; the 20 you approved are in the seed and fish is excluded. You do not need to collect images for the text-to-scene path. Twenty examples are still a small fine-tuning dataset. Add more distinct families before expecting reliable generalization, especially if you want image-conditioned generation.
 
 | Candidate | Compiler beads | Decision | Current prompt |
 | --- | ---: | --- | --- |
@@ -22,13 +22,13 @@ All 21 candidates pass the digital compiler check; the 13 you approved are in th
 | rocket | 138 | kept | a small red and white bead rocket with two fins and a round blue window |
 | whale | 84 | kept | a friendly blue bead whale with a tail, two flippers, and a small water spout |
 | snail | 66 | kept | a tiny bead snail with a spiral shell, two eyestalks, and a green body |
-| penguin | 72 | review | a little black and white bead penguin with orange feet and a tiny orange beak |
-| octopus | 52 | review | a friendly purple bead octopus with a round head, four short curling arms, and two eyes |
-| pear | 32 | review | a simple green bead pear with a short brown stem and one leaf |
-| robot | 124 | review | a small friendly bead robot with a square head, boxy body, two arms, and blue eyes |
-| sailboat | 31 | review | a simple red and blue bead sailboat with one white sail and a tall mast |
-| train | 132 | review | a tiny green bead train engine with a round boiler, a chimney, and two wheels |
-| cloud | 129 | review | a soft white bead cloud with three blue raindrops underneath |
+| penguin | 72 | kept | a little black and white bead penguin with orange feet and a tiny orange beak |
+| octopus | 52 | kept | a friendly purple bead octopus with a round head, four short curling arms, and two eyes |
+| pear | 32 | kept | a simple green bead pear with a short brown stem and one leaf |
+| robot | 124 | kept | a small friendly bead robot with a square head, boxy body, two arms, and blue eyes |
+| sailboat | 31 | kept | a simple red and blue bead sailboat with one white sail and a tall mast |
+| train | 132 | kept | a tiny green bead train engine with a round boiler, a chimney, and two wheels |
+| cloud | 129 | kept | a soft white bead cloud with three blue raindrops underneath |
 
 Use one row per design family. Images are optional. With no images, this dataset teaches text-to-scene generation only; it does not teach the model to interpret pictures.
 
@@ -41,7 +41,7 @@ For any row you accept, copy it to your review file and update all of the follow
 
 To check a corrected JSONL file locally, run `node training/validate_review.cjs path/to/review-queue.jsonl` from the project folder. This reports compiler results but does not edit or approve the data. Set `scene_validated: true` only for rows that pass after your final edits.
 
-Do not edit `candidates.jsonl` to approve examples. The dataset tools deliberately reject rows with missing or false approval flags. The 13 approved examples are still a small seed. Add distinct examples over time and keep whole design families held out for evaluation.
+Do not edit `candidates.jsonl` to approve examples. The dataset tools deliberately reject rows with missing or false approval flags. The 20 approved examples are still a small seed. Add distinct examples over time and keep whole design families held out for evaluation.
 
 ## Next steps
 
