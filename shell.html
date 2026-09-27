@@ -1,0 +1,92 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Turn an image into a buildable flat beadwork pattern. Even-count peyote, four-bead right-angle weave, and square stitch, with editable colors and construction guides.">
+<title>beadform — canela’s bead studio</title>
+<style>/*STYLE*/
+/*VOLUME_STYLE*/</style>
+</head>
+<body class="journey-welcome">
+<header class="site-header">
+  <a class="brand" href="#" aria-label="Beadform studio"><span class="brand-mark"><i></i><i></i><i></i><i></i></span>beadform<span class="brand-dot">.</span></a><span class="brand-caption">canela’s<br>bead studio</span>
+  <div class="nav-label">beads + crafts <span class="version">3D BETA</span></div>
+  <nav aria-label="App actions"><button id="galleryButton" class="button secondary">my projects</button><button id="newProjectButton" class="button primary">＋ new project</button><button class="text-button" id="shapeReferenceButton">shape reference</button><button class="text-button" id="patternSourcesButton">learn + credits</button><button class="text-button" id="helpBtn"><span data-icon="book"></span>Stitch guide</button><button class="button secondary" id="openBtn" title="import a beadform .json project saved on your computer"><span data-icon="folder"></span><span>import project file</span></button><button class="button primary" id="exportBtn"><span data-icon="download"></span>Export pattern</button></nav>
+</header>
+<main>
+<div id="floatingCrafts" class="floating-crafts" aria-label="canela’s beaded characters"></div><button id="pauseCrafts" class="text-button pause-crafts">pause the floating characters</button>
+<section id="projectGallery" class="project-gallery" hidden aria-label="my projects"><div class="gallery-heading"><div><span class="eyebrow">things you’ve made</span><h1 tabindex="-1" id="galleryTitle">my projects</h1><p>saved in this browser. download a copy if you’d like to keep it elsewhere.</p></div><button class="button primary" id="galleryNew">＋ new project</button></div><button id="exportBuildData" class="text-button">export approved build photos + feedback</button><p id="galleryNotice" role="status"></p><div id="galleryGrid" class="gallery-grid"></div></section>
+<div id="projectToolbar" class="project-toolbar" hidden><button class="text-button" id="editIdea">← Edit idea</button><span>preview → parts → pattern</span><label class="field">Project name<input id="galleryProjectName" maxlength="70" aria-label="Project name"></label><button id="finishedPhotoButton" class="button secondary">i made it! + photo</button><button id="saveToGallery" class="button secondary">Save project</button><span id="projectSaveStatus" role="status"></span></div>
+  <section class="intro"><div><div class="eyebrow">a little math. a little craft.</div><h1>beads + things</h1><p>turn your images and little ideas into things you can stitch.</p></div><div class="privacy"><span data-icon="shield"></span><span>Made on your device.<br><b>Your images stay yours.</b></span></div></section>
+  <div class="dimension-bar"><div class="dimension-tabs" role="group" aria-label="Pattern dimension"><button id="modeFlat" aria-pressed="false">flat patterns</button><button id="modeVolume" class="active" aria-pressed="true">3D creatures <small>NEW</small></button></div><span id="dimensionNote" class="dimension-note">shapes + images → 3D beadwork</span></div>
+  <div class="studio" id="flatStudio" hidden>
+    <aside class="left-column" aria-label="Pattern settings">
+      <section class="panel source-panel"><h2><span class="section-number">01</span>Your inspiration</h2>
+        <button class="upload-zone" id="uploadZone" aria-label="Upload or replace image"><img id="sourceThumb" alt="Current source image"><span class="upload-overlay"><span data-icon="upload"></span> Change image</span></button>
+        <div class="source-caption"><span id="sourceName">Demo image · upload yours</span><span>PNG · JPG · WEBP</span></div>
+        <div class="samples-label">Or start with a little inspiration</div><div class="samples" id="samples"></div>
+        <input type="file" id="fileInput" accept="image/png,image/jpeg,image/webp" hidden>
+        <details class="settings-details"><summary>Image placement <span data-icon="chevron"></span></summary><div class="detail-content">
+          <label class="field">Fit image<select id="fit"><option value="contain">Fit whole image</option><option value="cover">Fill & crop</option></select></label>
+          <label class="range-label" for="scale">Image scale <output id="scaleValue">90%</output></label><input id="scale" type="range" min="40" max="160" step="5" value="90">
+          <label class="range-label" for="contrast">Contrast <output id="contrastValue">0</output></label><input id="contrast" type="range" min="-40" max="80" step="5" value="0">
+          <div class="inline-fields"><label class="color-field">Canvas color<input type="color" id="background" value="#cbd7bd"></label><button class="button tiny" id="rotateBtn"><span data-icon="rotate"></span>Rotate</button></div>
+          <p class="help-text">Transparency becomes canvas-color beads. For a cutout motif, upload a PNG with a transparent background.</p>
+        </div></details>
+      </section>
+      <section class="panel stitch-panel"><h2><span class="section-number">02</span>Choose your stitch</h2>
+        <div class="stitch-options" role="group" aria-label="Stitch technique">
+          <button class="stitch-choice active" data-stitch="peyote" aria-pressed="true"><span class="stitch-glyph peyote-glyph"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><b>Peyote</b><small>Even count · a close-knit finish</small></span><span class="radio-dot"></span></button>
+          <button class="stitch-choice" data-stitch="raw" aria-pressed="false"><span class="stitch-glyph raw-glyph"><i></i><i></i><i></i><i></i></span><span><b>Right-angle weave</b><small>4-bead RAW · an open weave</small></span><span class="radio-dot"></span></button>
+          <button class="stitch-choice" data-stitch="square" aria-pressed="false"><span class="stitch-glyph square-glyph"><i></i><i></i><i></i><i></i><i></i><i></i></span><span><b>Square stitch</b><small>A neat, aligned grid</small></span><span class="radio-dot"></span></button>
+        </div>
+        <div class="two-fields"><label class="field"><span id="widthLabel">Starter beads</span><input id="width" type="number" min="12" max="80" step="2" value="40"></label><label class="field"><span id="rowsLabel">Stitch rows</span><input id="rows" type="number" min="6" max="120" value="56"></label></div>
+        <p class="help-text" id="sizeHint">20 beads per stitch row. The foundation makes rows 1 + 2.</p>
+        <details class="settings-details"><summary>Bead measurements <span data-icon="chevron"></span></summary><div class="detail-content"><div class="two-fields"><label class="field">Hole-axis length, mm<input id="beadLength" type="number" min="0.5" max="8" step="0.1" value="1.3"></label><label class="field">Diameter, mm<input id="beadDiameter" type="number" min="0.5" max="8" step="0.1" value="2"></label></div><p class="help-text">Size 11/0 round seed bead defaults; use 0.20–0.25 mm fishing line. Measure your beads and make a swatch; tension and bead finish affect the final size.</p></div></details>
+      </section>
+    </aside>
+    <section class="center-column" aria-label="Pattern workspace">
+      <div class="workspace-header"><div><span class="live-dot"></span><input id="projectTitle" value="Flat pattern demo" maxlength="70" aria-label="Pattern name"><span class="quiet-label">Your pattern</span></div><div class="view-tabs" role="group" aria-label="Preview mode"><button id="beadsView" class="active" aria-pressed="true">Beads</button><button id="symbolsView" aria-pressed="false">Symbols</button><button id="sourceView" aria-pressed="false">Original</button></div></div>
+      <div class="board" id="board"><div class="board-topline"><span class="board-tag" id="techniqueTag">EVEN-COUNT PEYOTE</span><button class="icon-button" id="expandBtn" title="Expand pattern" aria-label="Expand pattern"><span data-icon="expand"></span></button></div><div class="pattern-scroll" id="patternScroll"><div id="patternStage" class="pattern-stage"></div></div><div class="board-bottomline"><span id="boardNote">A full panel. Every little bead belongs.</span><div class="zoom-control"><button id="zoomOut" aria-label="Zoom out">−</button><span id="zoomValue">100%</span><button id="zoomIn" aria-label="Zoom in">+</button><button id="zoomReset" title="Fit pattern" aria-label="Fit pattern"><span data-icon="fit"></span></button></div></div></div>
+      <div class="pattern-stats"><div><small>TOTAL BEADS</small><strong id="totalBeads">1,120</strong></div><div><small>PALETTE</small><strong id="paletteCount">6 <span>colors</span></strong></div><div><small>ESTIMATED SIZE</small><strong id="sizeEstimate">5.2 × 4.6 <span>cm</span></strong></div><div><small>STRUCTURE</small><strong class="green" id="structureStatus"><span data-icon="check"></span>Connected</strong></div></div>
+      <section class="guide-card"><div class="guide-heading"><div><span class="eyebrow">ONE STEP AT A TIME</span><h2>Your stitch companion</h2></div><button class="text-button" id="allGuideBtn">Full guide <span data-icon="arrow"></span></button></div><div class="step-heading"><div><b id="stepTitle">Foundation · rows 1 + 2</b><span id="stepDirection">Left → right</span></div><div class="step-nav"><button class="icon-button" id="prevStep" aria-label="Previous construction step"><span data-icon="left"></span></button><span id="stepCounter">1 / 55</span><button class="icon-button" id="nextStep" aria-label="Next construction step"><span data-icon="right"></span></button></div></div><p id="stepNote"></p><div id="stepColors" class="step-colors"></div><div class="guide-footer"><label class="check-label"><input id="highlight" type="checkbox"> Highlight this step on the chart</label><label class="jump-label">Go to step <input type="number" id="jumpStep" min="1" value="1" aria-label="Go to construction step"></label></div></section>
+      <p class="workspace-footnote"><span data-icon="spark"></span>Small details make a big difference. Use the paint tool to perfect eyes, edges, and tiny accents.</p>
+    </section>
+    <aside class="right-column" aria-label="Palette and pattern checks">
+      <section class="panel palette-panel"><h2><span class="section-number">03</span>Make it your own</h2><label class="range-label" for="maxColors">Maximum colors <output id="maxColorsValue">6</output></label><input id="maxColors" type="range" min="2" max="12" value="6"><label class="check-label simplify"><input type="checkbox" id="simplify"> Soften low-contrast speckles</label><div class="palette-heading"><span>YOUR COLOR KEY</span><span>BEADS</span></div><div id="paletteList" class="palette-list"></div><p class="help-text">Choose a color to paint. Use its swatch to recolor all matching beads. Screen colors are a guide for matching your own supplies.</p>
+        <div class="edit-toolbar" role="group" aria-label="Editing tools"><button id="inspectTool" class="active" aria-pressed="true" title="Inspect a bead"><span data-icon="cursor"></span>Inspect</button><button id="paintTool" aria-pressed="false" title="Paint individual beads"><span data-icon="pencil"></span>Paint</button><button id="undoBtn" aria-label="Undo last edit" title="Undo last edit" disabled><span data-icon="undo"></span></button></div><div id="selectionInfo" class="selection-info">Click a bead to see its position and color.</div><button class="text-button reset-button" id="resetBtn"><span data-icon="refresh"></span>Regenerate from image</button>
+      </section>
+      <section class="check-card"><div class="check-card-title"><span class="check-circle" data-icon="check"></span><h2>Designed to connect</h2></div><p id="validationSummary">Even starter count, complete rows, and one connected panel.</p><div id="qualityNote" class="quality-note"></div><div class="check-divider"></div><p>Background colors are real beads. Keeping them gives the motif a complete, stitchable panel.</p><button class="text-button" id="scopeBtn">What this pattern includes <span data-icon="arrow"></span></button></section>
+      <div class="project-save"><span data-icon="save"></span><div><b>Keep your place.</b><p>Save a project to return to your image, edits, and current step.</p><button class="text-button" id="saveProjectBtn">Save editable project <span data-icon="arrow"></span></button></div></div>
+    </aside>
+  </div>
+  <!--VOLUME_HTML-->
+  <footer class="site-footer"><span>beadform. <span class="muted">for the joy of making.</span></span><span>flat + 3D · made with care</span></footer>
+</main>
+<dialog id="modal"><div class="modal-top"><div><span class="eyebrow" id="modalEyebrow">BEADFORM STUDIO</span><h2 id="modalTitle">Export your pattern</h2></div><button class="icon-button" id="closeModal" aria-label="Close dialog"><span data-icon="close"></span></button></div><div id="modalBody"></div></dialog>
+<div class="toast" id="toast" role="status" aria-live="polite"></div>
+<input id="projectInput" type="file" accept=".json,application/json" hidden>
+<div id="printArea"></div>
+<script>/*ENGINE*/</script>
+<script>/*APP*/</script>
+<script>/*SHAPE_ENGINE*/</script>
+<script>/*VOLUME_ENGINE*/</script>
+<script>/*THREAD_DIAGRAM*/</script>
+<script>/*STAGE_GUIDE*/</script>
+<script>/*PEYOTE_BALL*/
+/*CONSTRUCTION_GRAPH*/
+/*PARTS_ENGINE*/</script>
+<script>/*CONTINUOUS_THREAD*/</script>
+<script>/*VOLUME_APP*/</script>
+<script>/*CREATOR_APP*/</script>
+<script>/*CONNECTION_APP*/</script>
+<script>/*PARTS_APP*/</script>
+<script>/*JOURNEY_APP*/</script>
+<script>/*FINISHED_APP*/</script>
+<script>/*FLOAT_PHYSICS*/</script>
+<script>/*PLAYFUL_APP*/</script>
+<script>/*SHAPE_REFERENCE*/</script>
+<script>/*MAKER_TOOLS*/</script>
+<script>/*PATTERN_SOURCES*/</script>
+</body>
+</html>

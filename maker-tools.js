@@ -1,0 +1,17 @@
+(() => {
+'use strict';
+const $=id=>document.getElementById(id),T=Beadform3D,U=Beadform.ui;
+function progress(g){const key=JSON.stringify([11,g.nodes.map(n=>[n.id,n.material,g.palette[g.colors[n.index]]]),g.stages.map(s=>s.operations.map(o=>[o.id,o.kind,o.phase]))]);let p=T.state.makerProgress;if(!p||p.key!==key)p=T.state.makerProgress={key,done:[],supplies:[]};p.done=[...new Set((Array.isArray(p.done)?p.done:[]).filter(i=>Number.isInteger(i)&&i>=0&&i<g.stages.length))];p.supplies=(Array.isArray(p.supplies)?p.supplies:[]).filter(x=>typeof x==='string');return p;}
+function rows(g){const groups=new Map();for(const n of g.nodes){const color=g.palette[g.colors[n.index]],key=n.material+'|'+color;if(!groups.has(key))groups.set(key,{key,name:n.material,color,count:0});groups.get(key).count++;}return [...groups.values()].map(r=>({...r,pack:Math.ceil(r.count*1.1)}));}
+function save(){window.BeadJourney?.scheduleSave();}
+function mount(){const g=BeadPartsStudio.model;if(!g)return;const p=progress(g);$('makerProgress').textContent=`${p.done.length} / ${g.stages.length} steps finished`;
+ for(const st of g.stages){const host=$('full-stage-'+st.index);if(!host)continue;let button=$('done-stage-'+st.index);if(!button){host.insertAdjacentHTML('beforeend',`<button id="done-stage-${st.index}" class="step-done"></button>`);button=$('done-stage-'+st.index);}const done=p.done.includes(st.index);button.textContent=done?'✓ finished · undo':'mark step finished';button.setAttribute('aria-pressed',String(done));host.classList.toggle('step-complete',done);button.onclick=()=>{p.done=done?p.done.filter(i=>i!==st.index):[...p.done,st.index];save();mount();};}
+ $('makerContinue').textContent=p.done.length===g.stages.length?'back to the finished piece ↑':'continue where i left off ↓';$('makerContinue').onclick=()=>{const next=g.stages.find(st=>!p.done.includes(st.index));$(next?'full-stage-'+next.index:'pCanvas').scrollIntoView?.({behavior:'smooth',block:'start'});};
+ $('makerSupplies').onclick=()=>supplies(g);
+}
+function supplies(g){const p=progress(g),items=rows(g);U.modal('gather your supplies.',`<p class="help-text">bead amounts include 10% spare. check off what you have.</p><div class="packing-list">${items.map((r,i)=>`<label class="packing-row"><input id="pack-${i}" type="checkbox" ${p.supplies.includes(r.key)?'checked':''}><i class="mini-bead" style="background:${r.color}"></i><span>${U.esc(r.name)}<small>${r.count} used · ${r.color}</small></span><b>${r.pack}</b></label>`).join('')}<p>${T.state.settings.threadDiameter} mm fishing line · ${g.threadLengths.map(x=>x.estimatedMeters.toFixed(1)+' m').join(' + ')} estimated</p><p class="help-text">optional filling · scissors · a beading needle if needed</p></div><button id="downloadSupplies" class="button secondary">save supply list ↓</button>`);
+ items.forEach((r,i)=>$('pack-'+i).onchange=()=>{p.supplies=p.supplies.filter(k=>k!==r.key);if($('pack-'+i).checked)p.supplies.push(r.key);save();});
+ $('downloadSupplies').onclick=()=>T.download([g.title,'supplies (10% spare included)',...items.map(r=>`${r.pack} × ${r.name} · ${r.color} (${r.count} used)`),`${T.state.settings.threadDiameter} mm fishing line`,...g.threadLengths.map(x=>`length ${x.number}: ${x.estimatedMeters.toFixed(1)} m estimated`),'optional filling; scissors; needle if needed'].join('\n'),'text/plain','-supplies.txt');
+}
+window.BeadMaker={mount,rows,progress};mount();
+})();

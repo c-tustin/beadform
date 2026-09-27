@@ -1,0 +1,12 @@
+import assert from 'node:assert/strict';
+import {generateScene} from './server.mjs';
+import {createRequire} from 'node:module';
+const require=createRequire(import.meta.url),scene=require('./parts-engine.js').example('frog');let captured;
+const fetchImpl=async(url,o)=>{captured=JSON.parse(o.body);return {ok:true,json:async()=>({output:[{content:[{type:'output_text',text:JSON.stringify(scene)}]}]})};};
+const reference={consented:true,title:'my frog',notes:'shorter feet worked',outcome:'adjusted',imageData:'data:image/jpeg;base64,aGVsbG8=',design:scene};
+await generateScene({prompt:'a frog',construction:'parts',buildReferences:[reference]},{apiKey:'test',fetchImpl});assert.equal(captured.input[0].content.filter(x=>x.type==='input_image').length,1);assert.ok(captured.input[0].content.some(x=>x.text?.includes('shorter feet worked')));assert.equal(captured.store,false);
+await assert.rejects(()=>generateScene({prompt:'frog',buildReferences:[{...reference,consented:false}]},{apiKey:'test',fetchImpl}),/unapproved/);
+await assert.rejects(()=>generateScene({prompt:'frog',buildReferences:[reference,reference,reference]},{apiKey:'test',fetchImpl}),/at most two/);
+await assert.rejects(()=>generateScene({prompt:'frog',buildReferences:[{...reference,imageData:'https://example.com/private.jpg'}]},{apiKey:'test',fetchImpl}),/unapproved/);
+await generateScene({prompt:'frog',construction:'parts'},{apiKey:'test',fetchImpl});assert.equal(captured.input[0].content.filter(x=>x.type==='input_image').length,0);
+console.log('Feedback API checks passed: approved examples reach the model; unapproved, remote and excess references are rejected; normal generation remains unchanged.');

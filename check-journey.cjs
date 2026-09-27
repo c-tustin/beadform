@@ -1,0 +1,12 @@
+const assert=require('node:assert/strict'),fs=require('node:fs'),vm=require('node:vm');
+const storage=new Map();global.localStorage={getItem:k=>storage.get(k)||null,setItem:(k,v)=>storage.set(k,v)};
+const h=require('./test-dom.cjs'),$=id=>h.ids.get(id);
+(async()=>{await h.until(()=>global.BeadPartsStudio?.model&&global.Beadform?.state.geometry);vm.runInThisContext(fs.readFileSync('journey-app.js','utf8'));const J=BeadJourney;
+assert.equal(J.screen,'welcome');assert.equal(Beadform3D.state.source,null);assert.equal(J.items.length,0);
+J.animal('frog');assert.equal(J.screen,'project');assert.equal(J.items.length,1);const id=J.items[0].id;assert.equal(J.items[0].project.title,'garden frog');BeadPartsStudio.select(2);BeadPartsStudio.reveal(2);J.gallery();assert.equal(J.items[0].project.partsGuide.reveal,2);assert.ok($('galleryGrid').innerHTML.includes('garden frog'));
+await J.open(id);assert.equal(J.screen,'project');assert.equal(Beadform3D.state.partsReveal,2);assert.equal(J.items.length,1);
+J.gallery();J.rename(id);$('renameProjectInput').value='My little frog';await $('confirmRenameProject').click();assert.equal(J.items[0].title,'My little frog');
+J.fresh();assert.equal(J.screen,'welcome');assert.equal($('vPrompt').value,'');J.animal('bunny');assert.equal(J.items.length,2);J.gallery();J.remove(id);await $('cancelDeleteProject').click();assert.equal(J.items.length,2);J.remove(id);await $('confirmDeleteProject').click();assert.equal(J.items.length,1);
+await J.open(J.items[0].id);await $('modeFlat').click();assert.equal(J.items[0].project.dimension,'flat');const flatId=J.items[0].id;J.gallery();await J.open(flatId);assert.equal(BeadformMode,'flat');assert.equal(J.items.filter(x=>x.id===flatId).length,1);localStorage.setItem=()=>{throw Error('quota');};assert.equal(J.save(),false);assert.ok($('projectSaveStatus').textContent.includes('Could not save'));assert.equal(J.items.length,2);
+assert.ok(!$('pExample').innerHTML.includes('value="leaf"'));console.log('Welcome/gallery checks passed: animal creation, save, reopen progress, rename, delete/cancel and storage-failure protection.');
+})().catch(e=>{console.error(e);process.exitCode=1;});

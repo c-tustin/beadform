@@ -1,0 +1,27 @@
+(() => {
+ 'use strict';
+ const $=id=>document.getElementById(id),U=window.Beadform.ui;
+ let keyField=null,connected=false;
+ function local(){return window.location?.protocol==='http:'&&['localhost','127.0.0.1','[::1]'].includes(window.location.hostname);}
+ function setStatus(d){connected=d?.ready===true;$('vConnectGeneration').textContent=connected?'generation connected · settings ↗':'connect text + image generation ↗';$('vConnectGeneration').classList.toggle('connected',connected);}
+ async function open(afterConnect){
+   if(!local()){
+     U.modal('connect your generation studio.',`<p class="modal-copy">Text descriptions and full image interpretation run through the included local studio.</p><ol class="v-setup-steps"><li>Extract <b>beadform-project.zip</b>.</li><li>Open <b>start.command</b> on a Mac or <b>start.bat</b> on Windows. The launcher opens Beadform in your browser.</li><li>for free local qwen, follow <b>qwen-and-lora.md</b> and run <code>node launch-qwen.mjs</code>. for openai, choose <b>connect text + image generation</b> and enter your api key.</li></ol><p class="modal-copy">The launcher needs <a href="https://nodejs.org/en/download" target="_blank" rel="noopener noreferrer">Node.js 22 or newer</a>. You can also run <code>node launch.mjs</code> from the extracted folder.</p><p class="modal-copy">Create a key on your <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">OpenAI API keys page</a>. Enter it only in the local connection screen.</p>`);return;
+   }
+   U.modal('connect text + image generation.',`<p class="modal-copy">Checking the local studio…</p>`);
+   let setup;try{const response=await fetch('/api/setup',{signal:AbortSignal.timeout(5000)});if(!response.ok)throw Error();setup=await response.json();if(typeof setup.token!=='string'||!/^[0-9a-f]{64}$/.test(setup.token))throw Error();}catch(e){$('modalBody').innerHTML='<p class="modal-copy">The local studio connection could not be opened. Restart the included launcher and try again.</p>';return;}
+   if(setup.provider==='ollama'){
+     $('modalBody').innerHTML='<p class="modal-copy">local qwen · no api key needed.</p><ol class="v-setup-steps"><li>install and open <a href="https://ollama.com/download" target="_blank" rel="noopener noreferrer">ollama</a>.</li><li>in terminal, run <code>ollama pull qwen3-vl:4b</code>.</li><li>keep ollama open, then refresh this page.</li></ol><p class="help-text">the first generation may take a few minutes. your pictures stay on this computer. see qwen-and-lora.md in the project folder for model choices and training.</p>';return;
+   }
+   $('modalBody').innerHTML=`<div class="v-setup-badge">${setup.configured?'a key is already connected':'one-time setup · on your computer'}</div><ol class="v-setup-steps"><li>Open your <a href="https://platform.openai.com/api-keys" target="_blank" rel="noopener noreferrer">OpenAI API keys page ↗</a> and create a secret key for your project.</li><li>Copy the key into the private field below.</li><li>Choose <b>check key + enable generation</b>. Your studio saves the key privately for future visits.</li></ol><label class="field v-key-field">Secret API key<input id="vApiKey" type="password" autocomplete="off" autocapitalize="none" spellcheck="false" placeholder="Paste your secret key" maxlength="2048"></label><p class="help-text">This sends one small test request to OpenAI. Generation and connection checks use your API account’s billing. The key stays on the server and is excluded from projects and downloads.</p><div id="vKeyStatus" class="v-key-status" role="status" aria-live="polite"></div><button id="vSaveApiKey" class="button primary v-wide">check key + enable generation ↗</button><p class="help-text"><a href="https://platform.openai.com/settings/organization/billing/overview" target="_blank" rel="noopener noreferrer">API billing / credits ↗</a> &nbsp; <a href="https://developers.openai.com/api/docs/quickstart" target="_blank" rel="noopener noreferrer">OpenAI setup guide ↗</a></p>`;
+   keyField=$('vApiKey');const input=keyField,button=$('vSaveApiKey'),message=$('vKeyStatus');
+   button.onclick=async()=>{if(!input.value.trim()){message.textContent='Paste the complete secret key first.';return;}button.disabled=true;message.textContent='Checking your key with OpenAI…';
+     try{const response=await fetch('/api/setup',{method:'POST',headers:{'Content-Type':'application/json','X-Beadform-Setup':setup.token},body:JSON.stringify({apiKey:input.value.trim()}),signal:AbortSignal.timeout(30000)});input.value='';const data=await response.json();if(!response.ok)throw Error(data.error||'The key could not be connected.');setStatus(data);await window.BeadCreator.checkService();message.textContent='Connected. Your key is saved privately on this computer.';$('modal').close();U.toast('Text and image generation are connected.');if(typeof afterConnect==='function')await afterConnect();}
+     catch(e){input.value='';message.textContent=e.name==='TimeoutError'?'The connection check timed out. Please try again.':e.message;}finally{button.disabled=false;}
+   };
+   input.addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();button.click();}});input.focus?.();
+ }
+ $('modal').addEventListener('close',()=>{if(keyField)keyField.value='';keyField=null;});$('vConnectGeneration').onclick=()=>open();
+ window.BeadConnection={open,setStatus};
+ window.BeadCreator.checkService();
+})();

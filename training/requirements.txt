@@ -1,0 +1,8 @@
+# Install a CUDA-compatible PyTorch build first. Resolve these in a fresh GPU environment.
+# This starter has not been GPU-tested; freeze working versions after your smoke run.
+transformers>=4.57.0,<6
+peft>=0.17.0,<1
+accelerate>=1.10.0,<2
+bitsandbytes>=0.47.0,<1
+pillow>=10
+jsonschema>=4.23

@@ -1,0 +1,19 @@
+{
+  "type":"object","additionalProperties":false,
+  "properties":{
+    "title":{"type":"string"},
+    "notes":{"type":"string"},
+    "parts":{"type":"array","items":{
+      "type":"object","additionalProperties":false,
+      "properties":{
+        "name":{"type":"string"},
+        "type":{"type":"string","enum":["ellipsoid","capsule","box"]},
+        "role":{"type":"string","enum":["solid","paint","cut"]},
+        "center":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},
+        "size":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},
+        "end":{"type":"array","items":{"type":"number"},"minItems":3,"maxItems":3},
+        "color":{"type":"string"}
+      },"required":["name","type","role","center","size","end","color"]
+    }}
+  },"required":["title","notes","parts"]
+}
