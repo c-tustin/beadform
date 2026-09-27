@@ -88,17 +88,17 @@ Those caps are engineering planning heuristics, **not certified hole capacities*
 
 Text/image interpretation returns a stylized approximation within the geometric vocabulary and bead resolution. It cannot guarantee an exact reconstruction of every subject. Thin features may need to be thickened, poses simplified, or separate components explicitly joined. Small supporting cells connect nearby diagonal contacts and are included in the inventory; widely disconnected parts are rejected. Check all inferred proportions in the 3D preview before making the pattern.
 
-
 ## Repository layout
 
 - `assets/` — bundled animal reference images.
 - `docs/` — source notes and local model setup.
 - `qwen-and-lora.md` — compatibility pointer to the guide in `docs/`.
 - `examples/` — original pattern and construction SVG illustrations.
+- `schemas/` — shared scene contract used by the server and training tools.
+- [`tests/`](tests/), documented in [`tests/README.md`](tests/README.md) — check scripts, their harnesses, and fixtures.
 - `training/` — dataset preparation and QLoRA pilot materials.
 - `beadform.html` — generated, self-contained app; rebuild with `python3 build.py`.
 - Root JavaScript and CSS files — source modules consumed by the builder and local server.
-- Root `check-*` and `test-*` files — dependency-free and UI checks; these stay at the project root because the harness loads application files by relative path.
 
 ## Source and verification
 
@@ -119,13 +119,13 @@ Core files:
 | `creator-app.js` | Reference editor, descriptions, service status and generation requests |
 | `volume-app.js` | 3D views, replay, painting, projects and exports |
 | `engine.js`, `app.js` | Flat peyote, RAW and square stitch |
-| `server.mjs`, `scene-schema.json` | Server-side Responses API integration and strict scene validation |
+| `server.mjs`, `schemas/scene-schema.json` | Server-side Responses API integration and strict scene validation |
 | `connection-app.js`, `key-setup.mjs` | Local API-key wizard, verification, private persistence and sanitized errors |
 | `launch.mjs`, `start.command`, `start.bat` | Local studio launchers |
 
-Dependency-free engine/server checks: `node check-engine.cjs`, `node check-volume-engine.cjs`, `node check-generation.mjs`, `node check-connection.mjs`, and `node check-parts.cjs`. The generation check uses controlled model-response fixtures and a real local HTTP server; it makes no live model calls. It also writes the original test-subject fixtures used by the UI check.
+Dependency-free engine/server checks: `node tests/check-engine.cjs`, `node tests/check-volume-engine.cjs`, `node tests/check-generation.mjs`, `node tests/check-connection.mjs`, and `node tests/check-parts.cjs`. The generation check uses controlled model-response fixtures and a real local HTTP server; it makes no live model calls. It also writes the original test-subject fixtures used by the UI check.
 
-For the canvas/DOM smoke checks, install development-only dependencies with `npm install --no-save @napi-rs/canvas sharp`, then run `node check-app.cjs` `node check-creator.cjs`, and `node check-parts-ui.cjs`. The DOM harness exercises real image sampling and SVG rasterization, but it does not replace a full browser interaction or print-layout test.
+For the canvas/DOM smoke checks, install development-only dependencies with `npm install --no-save @napi-rs/canvas sharp`, then run `node tests/check-app.cjs`, `node tests/check-creator.cjs`, and `node tests/check-parts-ui.cjs`. The DOM harness exercises real image sampling and SVG rasterization, but it does not replace a full browser interaction or print-layout test.
 
 Verified during development: 84 parts configurations with closed tube/point surfaces, open panels, and peyote shaping, exact bead/thread accounting and join anchors; continuous working-line routes across part boundaries, estimated lengths, parts-map and replay interactions, parts project round-tripping and export completeness; 52 flat geometry cases, 54 legacy 3D configurations, 108 configurations using passage-aware routes and connected-part ordering, complete significant-stage coverage and continuity, custom animal/object scenes, different geometry from identically colored reference silhouettes, mask editing, thread replay, saved-state restoration, malformed input rejection, exports, print completeness, server/API contracts, secure key setup, restart persistence, connection errors, and generation resumed after the local key wizard. SVG pattern and model renders were visually inspected. No browser binary or configured API key was available, so full browser testing and live model output quality remain unverified.
 
@@ -213,7 +213,7 @@ Use “i made it! + photo” on a project or “add photo” on its gallery card
 
 Both reuse permissions default off. Inference permission allows up to two relevant completed/adjusted builds to be sent with future generation requests to the configured AI service (text-based relevance; recent eligible builds when the request has no description). Feedback is context, not a claim of guaranteed improvement. Separate training-export permission includes a build in the downloaded JSONL feedback collection. It is a curated raw dataset, not a provider-specific fine-tuning file or a trained model. Review consent, labels, quality and target schema before training. This app does not launch training jobs or pool data across users. Importing someone’s project file resets reuse permissions; reopening your own gallery preserves them. Removing permissions excludes records from subsequent inference requests/exports; copies already downloaded cannot be recalled.
 
-Run check-finished.cjs (with the canvas runtime) and check-feedback.mjs for photo persistence, consent, deletion and API forwarding checks.
+Run `node tests/check-finished.cjs` (with the canvas runtime) and `node tests/check-feedback.mjs` for photo persistence, consent, deletion and API forwarding checks.
 
 ## Offline character cutouts (current)
 

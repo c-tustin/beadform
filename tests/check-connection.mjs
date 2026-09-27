@@ -2,12 +2,12 @@ import assert from 'node:assert/strict';
 import {mkdtemp,readFile,stat,rm} from 'node:fs/promises';
 import {tmpdir} from 'node:os';
 import {join} from 'node:path';
-import {createServer} from './server.mjs';
-import {readCredentials,verifyKey} from './key-setup.mjs';
+import {createServer} from '../server.mjs';
+import {readCredentials,verifyKey} from '../key-setup.mjs';
 
 // Synthetic keys and mocked upstream responses only. No live API requests.
 const key='sk-beadform-synthetic-test-key-only',dir=await mkdtemp(join(tmpdir(),'beadform-setup-')),file=join(dir,'private','credentials.json');
-const fixtures=JSON.parse(await readFile(new URL('./test-subjects.json',import.meta.url),'utf8'));
+const fixtures=JSON.parse(await readFile(new URL('./fixtures/test-subjects.json',import.meta.url),'utf8'));
 let calls=[],rejectKey=false;
 const fakeFetch=async(url,options)=>{
  const body=JSON.parse(options.body);calls.push({url,body,authorization:options.headers.Authorization});

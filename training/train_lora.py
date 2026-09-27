@@ -17,7 +17,7 @@ def load_rows(path):
         if not isinstance(r.get('scene'), dict):
             raise ValueError('scene must contain the corrected target JSON, not an uncorrected export')
         from jsonschema import validate
-        validate(r['scene'], json.loads((HERE.parent/'scene-schema.json').read_text()))
+        validate(r['scene'], json.loads((HERE.parent/'schemas'/'scene-schema.json').read_text()))
         if r.get('image'):
             image = (path.parent/r['image']).resolve()
             if not image.is_file():

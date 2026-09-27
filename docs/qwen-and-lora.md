@@ -36,7 +36,7 @@ normal launch.mjs retains the existing openai connection. local qwen makes no pa
 
 ## what to teach
 
-train the model to map an input description and optional image to the corrected scene-schema.json structure. the app compiles that into beadwork and performs its construction checks. do not train a model to invent arbitrary thread routes. the current compiler still limits what shapes and stitch constructions can be expressed; fine-tuning cannot remove those limits.
+train the model to map an input description and optional image to the corrected `schemas/scene-schema.json` structure. the app compiles that into beadwork and performs its construction checks. do not train a model to invent arbitrary thread routes. the current compiler still limits what shapes and stitch constructions can be expressed; fine-tuning cannot remove those limits.
 
 use your own original or appropriately licensed designs and explicitly approved data. for each example retain the input, corrected scene, photos of the finished build, any corrections, and actual build outcome. use the original input image for image-to-design training. using only finished beaded photos would teach a narrower reconstruction task. photos do not establish a physically valid thread route by themselves.
 
@@ -49,7 +49,7 @@ create `training/train.jsonl` and `training/eval.jsonl` from the project root, o
 - group: animal or design family, e.g. frog. every variation/photo of the same design stays in one split. reserve whole families for evaluation.
 - prompt: the user's original description.
 - image: optional local path relative to this jsonl file, pointing to the input image.
-- scene: the complete corrected scene object, following scene-schema.json.
+- scene: the complete corrected scene object, following `schemas/scene-schema.json`.
 - training_consent, reviewed, physically_tested: true only when actually established.
 
 training/example-unreviewed.jsonl demonstrates the format with a generated frog target. it is deliberately unapproved and is not evidence of a successful physical build. replace it with reviewed examples; do not merely flip its flags.

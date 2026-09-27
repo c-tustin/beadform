@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict');require('./volume-engine.js');const V=global.BeadVolume;let configurations=0;
+const assert=require('node:assert/strict');require('../volume-engine.js');const V=global.BeadVolume;let configurations=0;
 for(const shape of Object.keys(V.shapes))for(const detail of [2,3,4])for(const depth of [75,100,125]){
  const g=V.build({shape,detail,depth,beadSize:2});assert.equal(g.validation.valid,true,g.validation.errors.join(';'));
  assert.equal(g.faces.filter(f=>f.uses.length===1).length+2*g.faces.filter(f=>f.uses.length===2).length,6*g.cubes.length);

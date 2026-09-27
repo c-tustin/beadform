@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict'),P=require('./float-physics.js');
+const assert=require('node:assert/strict'),P=require('../float-physics.js');
 const bead=(x,y,vx,vy)=>({x,y,vx,vy,w:80,h:80,r:32,drag:false,angle:0,omega:0});
 {const a=bead(100,100,80,0),b=bead(160,100,-80,0);P.collide(a,b);assert.ok(a.vx<0&&b.vx>0,'head-on collision exchanges momentum');assert.ok(b.x-a.x>=64);}
 {const a=bead(100,100,150,40),b=bead(150,125,0,0);P.collide(a,b);assert.ok(Math.abs(a.omega)>0,'glancing impact spins');assert.ok(Math.hypot(b.vx,b.vy)>0);}

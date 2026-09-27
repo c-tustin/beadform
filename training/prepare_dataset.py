@@ -25,7 +25,7 @@ def queue(rows):
 def split(rows,source,heldout):
     if not heldout: raise ValueError('choose at least one held-out family')
     from jsonschema import validate
-    schema=json.loads((Path(__file__).resolve().parent.parent/'scene-schema.json').read_text())
+    schema=json.loads((Path(__file__).resolve().parent.parent/'schemas'/'scene-schema.json').read_text())
     train=[];evaluation=[];seen=set()
     for r in rows:
         if any(r.get(k) is not True for k in ['training_consent','reviewed','physically_tested']):

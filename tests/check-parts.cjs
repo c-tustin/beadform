@@ -1,4 +1,4 @@
-const assert=require('node:assert/strict');require('./shape-engine.js');const P=require('./parts-engine.js'),G=require('./stage-guide.js');
+const assert=require('node:assert/strict');require('../shape-engine.js');const P=require('../parts-engine.js'),G=require('../stage-guide.js');
 let count=0;
 for(const shape of ['frog','fish','bunny','bear','heart','ball','butterfly','turtle','bird','leaf','fan','cone','pear','dome'])for(const detail of [2,3,4])for(const threadDiameter of [.2,.25]){
  const g=P.build(P.example(shape),{detail,threadDiameter});assert.ok(g.validation.valid);assert.equal(g.joins.length,g.components.length-1);assert.ok(g.maxPasses<=g.passLimit);
@@ -13,7 +13,7 @@ for(const shape of ['frog','fish','bunny','bear','heart','ball','butterfly','tur
 }
 assert.equal(P.ball(false).edges.length,40);assert.equal(P.ball(true).edges.length,70);
 const g=P.build(P.example('frog'));assert.equal(g.components.length,7);assert.equal(g.nodes.length,116);assert.equal(g.components.filter(c=>/black eye bead/.test(c.name)).length,2);assert.ok(g.threadSections>=1);assert.ok(g.nodes.length<=200);assert.ok(g.components.some(c=>c.mesh.stitch==='peyote'));for(const st of g.stages){const svg=G.diagram(g,st,g.colors,g.palette,{labels:st.kind==='join'});assert.deepEqual([...svg.matchAll(/data-stage-pass="([^"]+)"/g)].map(m=>m[1]),st.operations.map(o=>o.id));}
-const fixtures=require('./test-subjects.json');for(const d of Object.values(fixtures)){const g=P.build(d);assert.ok(g.validation.valid);assert.ok(g.components.length>1);}
+const fixtures=require('./fixtures/test-subjects.json');for(const d of Object.values(fixtures)){const g=P.build(d);assert.ok(g.validation.valid);assert.ok(g.components.length>1);}
 console.log(`${count} parts configurations passed: peyote shaping and hollow tube surfaces, complete inventory, connected thread routes, reserved join passages, explicit anchor pairs, exact diagram order, and animal/object scene inputs.`);
 
 for(const big of [false,true]){const m=P.ball(big);assert.equal(m.stitch,'peyote');let active=m.rounds[0];for(const group of m.groups.filter(g=>g.stitches)){const picked=group.stitches.flatMap(s=>s.picks);assert.deepEqual(group.stitches.flatMap(s=>s.anchors),[...active.slice(1),active[0]]);assert.equal(group.sequence.at(-1),picked[0]);assert.equal(group.stepUp,picked[0]);assert.ok(group.stitches.every(s=>s.picks.length===1||s.picks.length===2));assert.ok(group.stitches.every(s=>s.anchors.length===1||s.anchors.length===2));if(group.phase==='increase')assert.ok(picked.length>active.length);if(group.phase==='decrease')assert.ok(picked.length<active.length);active=picked;}assert.equal(active.length,5);assert.deepEqual(m.groups.at(-1).sequence,[...active.slice(1),active[0]]);}
