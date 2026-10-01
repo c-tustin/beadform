@@ -10,8 +10,8 @@ def load_rows(path):
     if not rows:
         raise ValueError(f'{path}: no examples')
     for r in rows:
-        if r.get('training_consent') is not True or r.get('reviewed') is not True or r.get('physically_tested') is not True:
-            raise ValueError('every example needs training_consent, reviewed and physically_tested set to true')
+        if any(r.get(k) is not True for k in ('training_consent', 'reviewed', 'scene_validated')):
+            raise ValueError('every example needs training_consent, reviewed and scene_validated set to true')
         if not r.get('group') or not isinstance(r.get('prompt'), str) or not r['prompt'].strip():
             raise ValueError('each example needs an animal/design group and input prompt')
         if not isinstance(r.get('scene'), dict):
@@ -30,10 +30,18 @@ def main():
     ap.add_argument('--train', required=True)
     ap.add_argument('--eval', required=True)
     ap.add_argument('--check', action='store_true')
-    ap.add_argument('--model', default='Qwen/Qwen3-VL-4B-Instruct')
+    ap.add_argument('--model', default='Qwen/Qwen3-VL-2B-Instruct')
     ap.add_argument('--output', default='beadform-qwen-lora')
     ap.add_argument('--epochs', type=float, default=1)
+    ap.add_argument('--save-steps', type=int, default=1,
+                    help='save resumable checkpoints after this many optimizer steps')
+    ap.add_argument('--image-max-side', type=int, default=384,
+                    help='resize reference images to fit smaller free GPUs')
+    ap.add_argument('--resume', action='store_true',
+                    help='resume from the newest checkpoint in --output, if present')
     a = ap.parse_args()
+    if a.save_steps < 1 or a.image_max_side < 128:
+        ap.error('--save-steps must be positive and --image-max-side must be at least 128')
     train, evaluation = load_rows(a.train), load_rows(a.eval)
     if {r['group'] for r in train} & {r['group'] for r in evaluation}:
         raise ValueError('keep entire animal/design groups out of training for evaluation')
@@ -43,6 +51,7 @@ def main():
     import torch
     from PIL import Image
     from transformers import AutoProcessor, Qwen3VLForConditionalGeneration, BitsAndBytesConfig, Trainer, TrainingArguments
+    from transformers.trainer_utils import get_last_checkpoint
     from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training
     if not torch.cuda.is_available():
         raise RuntimeError('this QLoRA recipe needs an NVIDIA CUDA GPU; use a GPU notebook, not a Mac CPU')
@@ -71,7 +80,7 @@ def main():
         content = [{'type': 'text', 'text': r['prompt']}]
         if r.get('image'):
             with Image.open(r['image']) as im:
-                im = im.convert('RGB'); im.thumbnail((512, 512)); im = im.copy()
+                im = im.convert('RGB'); im.thumbnail((a.image_max_side, a.image_max_side)); im = im.copy()
             content.append({'type': 'image', 'image': im})
         prompt = [{'role': 'system', 'content': system}, {'role': 'user', 'content': content}]
         full = prompt + [{'role': 'assistant', 'content': [{'type': 'text', 'text': json.dumps(r['scene'])}]}]
@@ -91,9 +100,13 @@ def main():
             per_device_eval_batch_size=1, gradient_accumulation_steps=8, learning_rate=1e-4,
             num_train_epochs=a.epochs, bf16=dtype==torch.bfloat16, fp16=dtype==torch.float16,
             gradient_checkpointing=True, gradient_checkpointing_kwargs={'use_reentrant': False},
-            remove_unused_columns=False, eval_strategy='epoch', save_strategy='epoch',
+            remove_unused_columns=False, eval_strategy='epoch', save_strategy='steps',
+            save_steps=a.save_steps,
             save_total_limit=2, logging_steps=1, report_to='none', seed=42))
-    trainer.train()
+    checkpoint=get_last_checkpoint(a.output) if a.resume else None
+    if checkpoint:
+        print(f'resuming from {checkpoint}')
+    trainer.train(resume_from_checkpoint=checkpoint)
     trainer.save_model(a.output)
     processor.save_pretrained(a.output)
     print('saved a LoRA adapter; it still requires the exact base model for inference')
