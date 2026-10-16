@@ -225,7 +225,7 @@ def main():
                 image = source.convert('RGB')
                 image.thumbnail((args.image_max_side, args.image_max_side))
                 content.append({'type': 'image', 'image': image.copy()})
-        messages = [{'role': 'system', 'content': system}, {'role': 'user', 'content': content}]
+        messages = [{'role': 'system', 'content': [{'type': 'text', 'text': system}]}, {'role': 'user', 'content': content}]
         inputs = processor.apply_chat_template(messages, tokenize=True, return_dict=True,
             return_tensors='pt', add_generation_prompt=True)
         inputs = {key: value.to(model.device) if hasattr(value, 'to') else value
