@@ -126,11 +126,14 @@ def main():
     ap.add_argument('--adapter')
     ap.add_argument('--offline-predictions', help='rescore saved prediction_raw JSONL without loading a model')
     ap.add_argument('--constrained', action='store_true', help='filter next tokens using the scene schema')
+    ap.add_argument('--bounded', action='store_true', help='constrain notes to 240 characters and scenes to 18 parts; implies --constrained')
     ap.add_argument('--max-new-tokens', type=int, default=4096)
     ap.add_argument('--image-max-side', type=int, default=384)
     ap.add_argument('--resume', action='store_true',
                     help='keep completed rows in --output and continue with the rest')
     args = ap.parse_args()
+    if args.bounded:
+        args.constrained = True
     output, summary_path = Path(args.output), Path(args.summary)
     if summary_path.exists():
         ap.error('summary already exists; choose new output and summary paths')
@@ -140,7 +143,7 @@ def main():
     if args.offline_predictions and args.resume:
         ap.error('offline rescoring writes new artifacts; do not use --resume')
     identity = dict(model=args.model, adapter=args.adapter,
-                    constrained=args.constrained, max_new_tokens=args.max_new_tokens,
+                    constrained=args.constrained, bounded=args.bounded, max_new_tokens=args.max_new_tokens,
                     image_max_side=args.image_max_side,
                     data_sha256=hashlib.sha256(Path(args.data).read_bytes()).hexdigest(),
                     system_sha256=hashlib.sha256((HERE/'system.txt').read_bytes()).hexdigest())
@@ -164,6 +167,12 @@ def main():
             valid_lines.append(json.dumps(item, ensure_ascii=False))
         output.write_text(''.join(line+'\n' for line in valid_lines))
     schema = json.loads((HERE.parent/'scene-schema.json').read_text())
+    decoding_schema = json.loads(json.dumps(schema))
+    if args.bounded:
+        decoding_schema['properties']['title']['maxLength'] = 80
+        decoding_schema['properties']['notes']['maxLength'] = 240
+        decoding_schema['properties']['parts'].update(minItems=1, maxItems=18)
+        decoding_schema['properties']['parts']['items']['properties']['name']['maxLength'] = 80
     if args.offline_predictions:
         saved = [json.loads(line) for line in Path(args.offline_predictions).read_text().splitlines() if line.strip()]
         expected = {str(row['id']): row for row in rows}
@@ -236,7 +245,7 @@ def main():
             from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
             # Fresh parser for each independent generation; tokenizer comes from the processor.
             generation_options['prefix_allowed_tokens_fn'] = build_transformers_prefix_allowed_tokens_fn(
-                processor.tokenizer, JsonSchemaParser(schema))
+                processor.tokenizer, JsonSchemaParser(decoding_schema))
         with torch.inference_mode():
             tokens = model.generate(**inputs, max_new_tokens=args.max_new_tokens,
                                     do_sample=False, **generation_options)
@@ -251,7 +260,7 @@ def main():
             stream.flush()
         print(f"{index}/{len(rows)} {row['group']}: raw {item['schema_valid']}; repaired {item['repaired_schema_valid']}")
         del inputs, tokens
-    summary = {'model': args.model, 'adapter': args.adapter, 'constrained': args.constrained, 'examples': len(results),
+    summary = {'model': args.model, 'adapter': args.adapter, 'constrained': args.constrained, 'bounded': args.bounded, 'examples': len(results),
         'schema_valid': sum(item['schema_valid'] for item in results),
         'schema_pass_rate': sum(item['schema_valid'] for item in results)/len(results),
         'repaired_schema_valid': sum(item['repaired_schema_valid'] for item in results),
