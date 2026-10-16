@@ -231,7 +231,7 @@ The floating arena now starts at the top of the page, adding 135 px of space abo
 
 ## local qwen and lora (current)
 
-Run `node launch-qwen.mjs` after installing Ollama and pulling `qwen3-vl:4b` for local text/image generation without an API key. See `qwen-and-lora.md` for setup, model alternatives, reviewed dataset preparation, and the CUDA QLoRA starter in `training/`. Provider tests use mocked responses; no live local model or GPU training was run in the development environment.
+Run `node launch-qwen.mjs` after installing Ollama and pulling `qwen3-vl:4b` for local text/image generation without an API key. See `qwen-and-lora.md` and `training/PLAN.md` for setup, reviewed data gates, and the free-Colab-only QLoRA pilot. Provider checks use mocked responses; no live local model or GPU training was run in the development environment.
 
 ## interactive studio and construction contracts (current)
 

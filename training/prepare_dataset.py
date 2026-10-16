@@ -15,11 +15,11 @@ def queue(rows):
         if isinstance(scene,dict): scene={**scene,'notes':scene.get('notes','')}
         out.append(dict(id=hashlib.sha256(json.dumps(r,sort_keys=True).encode()).hexdigest()[:16],
             group='',prompt=snap.get('description',''),scene=scene,image=None,
-            training_consent=True,reviewed=False,physically_tested=False,
+            training_consent=True,reviewed=False,scene_validated=False,physically_tested=False,
             outcome=r.get('outcome'),issues=r.get('issues',[]),review_notes=r.get('feedback',''),
             source={'kind':'user-build-feedback','consent':r['consent']},
             finished_photo=r.get('photo'),
-            todo='set the design family; correct the scene after building; record review and physical testing; attach the original input image separately'))
+            todo='set the design family; correct the target and mark it reviewed; run the Beadform compiler and mark scene_validated only if it passes; record physical outcome separately; attach the original input image separately'))
     return out
 
 def split(rows,source,heldout):
@@ -28,8 +28,8 @@ def split(rows,source,heldout):
     schema=json.loads((Path(__file__).resolve().parent.parent/'scene-schema.json').read_text())
     train=[];evaluation=[];seen=set()
     for r in rows:
-        if any(r.get(k) is not True for k in ['training_consent','reviewed','physically_tested']):
-            raise ValueError('unapproved row: review, consent and physical testing must be established')
+        if any(r.get(k) is not True for k in ['training_consent','reviewed','scene_validated']):
+            raise ValueError('unapproved row: training consent, human review and successful scene/compiler validation are required')
         if not str(r.get('group','')).strip() or not str(r.get('prompt','')).strip():
             raise ValueError('each row needs a family and original input prompt')
         validate(r.get('scene'),schema)

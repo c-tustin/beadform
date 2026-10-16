@@ -2,7 +2,7 @@
 
 ## run the app without a paid api
 
-recommended starting model: Qwen/Qwen3-VL-4B-Instruct, an apache-2.0 vision-language model. this is a candidate to evaluate, not a model already trained to make bead patterns. ollama's qwen3-vl:4b is the convenient local distribution. it needs a roughly 3.3 gb download plus additional working memory; download size is not total ram required. if memory is tight, try qwen3-vl:2b. the 8b model is another candidate when resources allow.
+local inference candidate: Qwen3-VL-4B-Instruct through Ollama. training pilot: Qwen/Qwen3-VL-2B-Instruct with QLoRA. The Hugging Face model card lists Apache-2.0. Neither model is already trained to make bead patterns. Local inference and fine-tuning use different model distributions; the included training script requires CUDA. Recheck the model license and package compatibility when pinning a training run.
 
 1. install node.js 22+ and ollama: https://ollama.com/download
 2. open ollama. in terminal run:
@@ -40,7 +40,7 @@ train the model to map an input description and optional image to the corrected 
 
 use your own original or appropriately licensed designs and explicitly approved data. for each example retain the input, corrected scene, photos of the finished build, any corrections, and actual build outcome. use the original input image for image-to-design training. using only finished beaded photos would teach a narrower reconstruction task. photos do not establish a physically valid thread route by themselves.
 
-beadform-approved-builds.jsonl is feedback, not a ready-to-train file. its projectAtUpload may predate physical corrections. review and correct the target first. unfinished/unreviewed projects are not successful targets. the starter deliberately refuses rows without review, physical testing and training permission.
+beadform-approved-builds.jsonl is feedback, not a ready-to-train file. its projectAtUpload may predate corrections. review and correct the target first, then validate it with the current Beadform compiler. The scene generator can learn from a reviewed, digitally validated target even before a physical sample exists; this does not label it physically successful. Keep physical outcome supervision for a later outcome scorer. The starter requires training consent, human review and `scene_validated: true`.
 
 ## prepare a small supervised dataset
 
@@ -50,7 +50,8 @@ create training/train.jsonl and training/eval.jsonl, one json object per line. f
 - prompt: the user's original description.
 - image: optional local path relative to this jsonl file, pointing to the input image.
 - scene: the complete corrected scene object, following scene-schema.json.
-- training_consent, reviewed, physically_tested: true only when actually established.
+- training_consent, reviewed, scene_validated: true only when actually established. `scene_validated` means the corrected scene passes the Beadform compiler checks, not only JSON-schema validation.
+- physically_tested, outcome: optional separate evidence; never infer physical success from a valid scene or a render.
 
 training/example-unreviewed.jsonl demonstrates the format with a generated frog target. it is deliberately unapproved and is not evidence of a successful physical build. replace it with reviewed examples; do not merely flip its flags.
 
@@ -67,13 +68,13 @@ in a fresh gpu environment with a compatible pytorch installation, from the proj
 ```sh
 python -m pip install -r training/requirements.txt
 python training/train_lora.py --train training/train.jsonl --eval training/eval.jsonl --check
-python training/train_lora.py --train training/train.jsonl --eval training/eval.jsonl --output beadform-qwen-lora
+python training/train_lora.py --train training/train.jsonl --eval training/eval.jsonl --model Qwen/Qwen3-VL-2B-Instruct --output beadform-qwen-lora
 python -m pip freeze > training-environment.txt
 ```
 
 first run a tiny smoke experiment. inspect that trainable parameters are only the intended adapters, loss is finite, and held-out generations remain valid json. the adapter and processor are saved in beadform-qwen-lora. save that folder and your working environment before a notebook session expires. the model download happens on the first real training run, not --check.
 
-this starter passed python syntax checks and the unreviewed-data rejection check, but has not been executed on a gpu. full schema validation also needs the jsonschema dependency installed. dependency ranges must be resolved and tested in your training environment. if the chat template changes, the script stops rather than silently masking the wrong tokens.
+this starter has not been executed on a gpu. full schema validation also needs the jsonschema dependency installed. dependency ranges must be resolved and tested in your training environment. if the chat template changes, the script stops rather than silently masking the wrong tokens. See `training/PLAN.md` for the staged baseline, data gates and RunPod option.
 
 ## evaluation and deployment
 
@@ -84,7 +85,8 @@ the saved adapter is not a standalone model and does not automatically change ol
 codex is useful for dataset cleanup, training scripts, evaluation tooling, and connecting your eventual inference server. actual training requires your gpu environment and reviewed data. do not share api keys in chat.
 
 sources:
-- model and license: https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct
+- 2b training model and license: https://huggingface.co/Qwen/Qwen3-VL-2B-Instruct
+- 4b comparison model and license: https://huggingface.co/Qwen/Qwen3-VL-4B-Instruct
 - local model variants: https://ollama.com/library/qwen3-vl
 - local chat api: https://docs.ollama.com/api/chat
 - qwen architecture: https://huggingface.co/docs/transformers/model_doc/qwen3_vl
