@@ -4,12 +4,12 @@ from pathlib import Path
 
 HERE = Path(__file__).resolve().parent
 
-def load_rows(path):
+def load_rows(path, prompts_only=False):
     rows = [json.loads(line) for line in Path(path).read_text().splitlines() if line.strip()]
     if not rows:
         raise ValueError('evaluation file is empty')
     for row in rows:
-        if any(row.get(k) is not True for k in ('training_consent', 'reviewed', 'scene_validated')):
+        if not prompts_only and any(row.get(k) is not True for k in ('training_consent', 'reviewed', 'scene_validated')):
             raise ValueError('every evaluation example needs consent, review and scene validation')
         if not row.get('group') or not isinstance(row.get('prompt'), str) or not row['prompt'].strip():
             raise ValueError('each evaluation example needs a design family and original prompt')
@@ -124,6 +124,7 @@ def main():
     ap.add_argument('--summary', required=True)
     ap.add_argument('--model', default='Qwen/Qwen3-VL-2B-Instruct')
     ap.add_argument('--adapter')
+    ap.add_argument('--prompts-only', action='store_true', help='evaluate original text prompts without target scenes; measures structure only')
     ap.add_argument('--offline-predictions', help='rescore saved prediction_raw JSONL without loading a model')
     ap.add_argument('--constrained', action='store_true', help='filter next tokens using the scene schema')
     ap.add_argument('--bounded', action='store_true', help='constrain notes to 240 characters and scenes to 18 parts; implies --constrained')
@@ -139,11 +140,11 @@ def main():
         ap.error('summary already exists; choose new output and summary paths')
     if args.max_new_tokens < 1 or args.image_max_side < 128:
         ap.error('--max-new-tokens must be positive and --image-max-side must be at least 128')
-    rows = load_rows(args.data)
+    rows = load_rows(args.data, prompts_only=args.prompts_only)
     if args.offline_predictions and args.resume:
         ap.error('offline rescoring writes new artifacts; do not use --resume')
     identity = dict(model=args.model, adapter=args.adapter,
-                    constrained=args.constrained, bounded=args.bounded, max_new_tokens=args.max_new_tokens,
+                    constrained=args.constrained, bounded=args.bounded, prompts_only=args.prompts_only, max_new_tokens=args.max_new_tokens,
                     image_max_side=args.image_max_side,
                     data_sha256=hashlib.sha256(Path(args.data).read_bytes()).hexdigest(),
                     system_sha256=hashlib.sha256((HERE/'system.txt').read_bytes()).hexdigest())
@@ -219,7 +220,7 @@ def main():
     summary_path.parent.mkdir(parents=True, exist_ok=True)
     for index, row in enumerate(rows, 1):
         row_id = str(row.get('id') or hashlib.sha256(
-            (row['group']+'\n'+row['prompt']+'\n'+json.dumps(row['scene'], sort_keys=True)).encode()
+            (row['group']+'\n'+row['prompt']+'\n'+json.dumps(row.get('scene'), sort_keys=True)).encode()
         ).hexdigest()[:16])
         if row_id in completed:
             saved = completed[row_id]
@@ -253,14 +254,14 @@ def main():
                                      skip_special_tokens=True)[0]
         scored = score_output(raw, schema)
         item = {'id': row_id, 'group': row['group'], 'prompt': row['prompt'],
-                **scored, 'target': row['scene']}
+                **scored, 'target': row.get('scene')}
         results.append(item)
         with output.open('a') as stream:
             stream.write(json.dumps(item, ensure_ascii=False)+'\n')
             stream.flush()
         print(f"{index}/{len(rows)} {row['group']}: raw {item['schema_valid']}; repaired {item['repaired_schema_valid']}")
         del inputs, tokens
-    summary = {'model': args.model, 'adapter': args.adapter, 'constrained': args.constrained, 'bounded': args.bounded, 'examples': len(results),
+    summary = {'model': args.model, 'adapter': args.adapter, 'constrained': args.constrained, 'bounded': args.bounded, 'prompts_only': args.prompts_only, 'examples': len(results),
         'schema_valid': sum(item['schema_valid'] for item in results),
         'schema_pass_rate': sum(item['schema_valid'] for item in results)/len(results),
         'repaired_schema_valid': sum(item['repaired_schema_valid'] for item in results),
