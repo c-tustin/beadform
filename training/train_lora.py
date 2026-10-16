@@ -82,7 +82,7 @@ def main():
             with Image.open(r['image']) as im:
                 im = im.convert('RGB'); im.thumbnail((a.image_max_side, a.image_max_side)); im = im.copy()
             content.append({'type': 'image', 'image': im})
-        prompt = [{'role': 'system', 'content': system}, {'role': 'user', 'content': content}]
+        prompt = [{'role': 'system', 'content': [{'type': 'text', 'text': system}]}, {'role': 'user', 'content': content}]
         full = prompt + [{'role': 'assistant', 'content': [{'type': 'text', 'text': json.dumps(r['scene'])}]}]
         batch = processor.apply_chat_template(full, tokenize=True, return_dict=True, return_tensors='pt', add_generation_prompt=False)
         prefix = processor.apply_chat_template(prompt, tokenize=True, return_dict=True, return_tensors='pt', add_generation_prompt=True)['input_ids']
