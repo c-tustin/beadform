@@ -74,7 +74,7 @@ python -m pip freeze > training-environment.txt
 
 first run a tiny smoke experiment. inspect that trainable parameters are only the intended adapters, loss is finite, and held-out generations remain valid json. the adapter and processor are saved in beadform-qwen-lora. save that folder and your working environment before a notebook session expires. the model download happens on the first real training run, not --check.
 
-this starter has not been executed on a gpu. full schema validation also needs the jsonschema dependency installed. dependency ranges must be resolved and tested in your training environment. if the chat template changes, the script stops rather than silently masking the wrong tokens. See `training/PLAN.md` for the staged baseline, data gates and RunPod option.
+Free-Colab pilot training has now run, with saved LoRA adapters in the user's Drive. The earlier pilot-02b evaluation passed schema validation on 2/4 held-out prompts (base: 1/4). This is a small development result, not a broad quality claim. Current bounded base-model decoding passed 12/12 fresh prompts, including a later strict whole-response JSON audit. See [current free workflow](training/README.md) and [experiment report](training/results/2026-10-16-schema-experiments.md). Saved-adapter evaluation under the same bounded configuration is being run separately. Full schema validation needs the jsonschema dependency installed; use the compatible dependency ranges in training/requirements.txt. if the chat template changes, the script stops rather than silently masking the wrong tokens. See `training/PLAN.md` for the staged baseline and data gates. Current work uses free Colab; no paid RunPod deployment is required.
 
 ## evaluation and deployment
 
@@ -97,4 +97,4 @@ sources:
 
 ## new: dataset review tools
 
-see `training/dataset-research.md` for the source-by-source research, seven original review candidates, feedback-to-review conversion, and family-level splitting. `training/prepare_dataset.py` keeps finished photos separate from original input images and refuses to approve builds automatically. start the gpu experiment with `--model Qwen/Qwen3-VL-2B-Instruct` if resources are limited. no training has run yet.
+see `training/dataset-research.md` for the source-by-source research, seven original review candidates, feedback-to-review conversion, and family-level splitting. `training/prepare_dataset.py` keeps finished photos separate from original input images and refuses to approve builds automatically. start the gpu experiment with `--model Qwen/Qwen3-VL-2B-Instruct` if resources are limited. Pilot training has run; use [training/README.md](training/README.md) for current notebooks, recorded results, and score definitions.
