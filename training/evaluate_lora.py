@@ -29,6 +29,33 @@ def parse_json(text):
     return value if isinstance(value, dict) else None
 
 
+def strict_json_object(text):
+    """Require one complete JSON object, finite numbers and unique object keys."""
+    import math
+    def unique_pairs(pairs):
+        obj = {}
+        for key, value in pairs:
+            if key in obj:
+                raise ValueError(f'duplicate JSON key: {key}')
+            obj[key] = value
+        return obj
+    def finite_float(value):
+        number = float(value)
+        if not math.isfinite(number):
+            raise ValueError('non-finite JSON number')
+        return number
+    def invalid_constant(value):
+        raise ValueError(f'invalid JSON constant: {value}')
+    try:
+        value = json.loads(text, object_pairs_hook=unique_pairs,
+                           parse_float=finite_float, parse_constant=invalid_constant)
+        if not isinstance(value, dict):
+            return None, 'generated JSON is not an object'
+        return value, None
+    except (ValueError, TypeError) as error:
+        return None, str(error)
+
+
 def close_json_object(text):
     """Close unmatched delimiters only; never invent scene content."""
     start = text.find('{')
@@ -110,7 +137,10 @@ def score_output(raw, schema):
             return ['no JSON object found in generated text']
         return [error.message for error in validator.iter_errors(value)]
     raw_errors, repaired_errors = errors(original), errors(candidate)
+    strict, strict_error = strict_json_object(raw)
+    strict_errors = [strict_error] if strict_error else errors(strict)
     return dict(prediction=original, prediction_raw=raw,
+                strict_schema_valid=not strict_errors, strict_validation_error='; '.join(strict_errors) or None,
                 schema_valid=not raw_errors, validation_error='; '.join(raw_errors) or None,
                 repaired_prediction=candidate, repairs=changes,
                 repaired_schema_valid=not repaired_errors,
@@ -147,7 +177,9 @@ def main():
                     constrained=args.constrained, bounded=args.bounded, prompts_only=args.prompts_only, max_new_tokens=args.max_new_tokens,
                     image_max_side=args.image_max_side,
                     data_sha256=hashlib.sha256(Path(args.data).read_bytes()).hexdigest(),
-                    system_sha256=hashlib.sha256((HERE/'system.txt').read_bytes()).hexdigest())
+                    system_sha256=hashlib.sha256((HERE/'system.txt').read_bytes()).hexdigest(),
+                    schema_sha256=hashlib.sha256((HERE.parent/'scene-schema.json').read_bytes()).hexdigest(),
+                    scorer_version=2)
     manifest = output.with_suffix(output.suffix + '.metadata.json')
     if not args.offline_predictions:
         if output.exists() and (not manifest.exists() or json.loads(manifest.read_text()) != identity):
@@ -191,7 +223,7 @@ def main():
         output.write_text(''.join(json.dumps(item, allow_nan=False)+'\n' for item in results))
         summary_path.parent.mkdir(parents=True, exist_ok=True)
         report = {}
-        for key in ('schema_valid', 'repaired_schema_valid'):
+        for key in ('schema_valid', 'strict_schema_valid', 'repaired_schema_valid'):
             report[key] = sum(bool(item[key]) for item in results)
             report[key.replace('valid', 'pass_rate')] = report[key] / len(results)
         report.update(examples=len(results), mode='offline rescore; no new model generation',
@@ -262,6 +294,8 @@ def main():
         print(f"{index}/{len(rows)} {row['group']}: raw {item['schema_valid']}; repaired {item['repaired_schema_valid']}")
         del inputs, tokens
     summary = {'model': args.model, 'adapter': args.adapter, 'constrained': args.constrained, 'bounded': args.bounded, 'prompts_only': args.prompts_only, 'examples': len(results),
+        'strict_schema_valid': sum(item['strict_schema_valid'] for item in results),
+        'strict_schema_pass_rate': sum(item['strict_schema_valid'] for item in results)/len(results),
         'schema_valid': sum(item['schema_valid'] for item in results),
         'schema_pass_rate': sum(item['schema_valid'] for item in results)/len(results),
         'repaired_schema_valid': sum(item['repaired_schema_valid'] for item in results),
