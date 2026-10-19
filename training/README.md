@@ -37,3 +37,7 @@ Use a new output folder when changing data, model, adapter, schema, prompt, or d
 - `repaired_schema_pass_rate`: a separately recorded conservative postprocessor passes the schema. This must not be presented as a raw model score.
 
 Keep development prompts separate from training labels. Reserve new families before tuning. Download results or save them to Drive before the free runtime ends.
+
+## Interrupted comparison
+
+The 2026-10-17 adapter comparison was interrupted after eight completed pilot-02b predictions when the runtime ended. Colab subsequently reported GPU usage limits. This is a partial run, not a 12-example adapter result. Use the [resume notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/runpod-training-guide/training/colab_resume_adapter_comparison.ipynb) when an eligible free GPU is available. It restores the saved code revision, checks critical dependency versions, and retains completed rows. It must not run alongside an active original session.
