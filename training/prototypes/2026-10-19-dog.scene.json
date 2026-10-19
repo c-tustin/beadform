@@ -1,0 +1,258 @@
+{
+  "title": "Floppy-eared dog prototype",
+  "notes": "Deterministic geometry draft; no physical sample has been built.",
+  "parts": [
+    {
+      "name": "body",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        0.75,
+        0.65
+      ],
+      "color": "#8b5a32",
+      "end": [
+        0,
+        0,
+        0
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "head",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        0.8,
+        0.35
+      ],
+      "size": [
+        0.65,
+        0.6,
+        0.55
+      ],
+      "color": "#8b5a32",
+      "end": [
+        0,
+        0.8,
+        0.35
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "left floppy ear",
+      "type": "capsule",
+      "center": [
+        -0.45,
+        1.1,
+        0.4
+      ],
+      "size": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "color": "#8b5a32",
+      "end": [
+        -0.55,
+        0.5,
+        0.4
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "right floppy ear",
+      "type": "capsule",
+      "center": [
+        0.45,
+        1.1,
+        0.4
+      ],
+      "size": [
+        0.15,
+        0.15,
+        0.15
+      ],
+      "color": "#8b5a32",
+      "end": [
+        0.55,
+        0.5,
+        0.4
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "left back leg",
+      "type": "capsule",
+      "center": [
+        -0.6,
+        -0.5,
+        -0.38
+      ],
+      "size": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "color": "#8b5a32",
+      "end": [
+        -0.68,
+        -1,
+        -0.48
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "left front leg",
+      "type": "capsule",
+      "center": [
+        -0.6,
+        -0.5,
+        0.38
+      ],
+      "size": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "color": "#8b5a32",
+      "end": [
+        -0.68,
+        -1,
+        0.48
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "right back leg",
+      "type": "capsule",
+      "center": [
+        0.6,
+        -0.5,
+        -0.38
+      ],
+      "size": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "color": "#8b5a32",
+      "end": [
+        0.68,
+        -1,
+        -0.48
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "right front leg",
+      "type": "capsule",
+      "center": [
+        0.6,
+        -0.5,
+        0.38
+      ],
+      "size": [
+        0.12,
+        0.12,
+        0.12
+      ],
+      "color": "#8b5a32",
+      "end": [
+        0.68,
+        -1,
+        0.48
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "tail",
+      "type": "capsule",
+      "center": [
+        0,
+        -0.1,
+        -0.55
+      ],
+      "size": [
+        0.13,
+        0.13,
+        0.13
+      ],
+      "color": "#8b5a32",
+      "end": [
+        0,
+        0.3,
+        -1.2
+      ],
+      "role": "solid"
+    },
+    {
+      "name": "left eye",
+      "type": "ellipsoid",
+      "center": [
+        -0.23,
+        0.91,
+        0.84
+      ],
+      "size": [
+        0.08,
+        0.09,
+        0.07
+      ],
+      "color": "#20231e",
+      "end": [
+        -0.23,
+        0.91,
+        0.84
+      ],
+      "role": "paint"
+    },
+    {
+      "name": "right eye",
+      "type": "ellipsoid",
+      "center": [
+        0.23,
+        0.91,
+        0.84
+      ],
+      "size": [
+        0.08,
+        0.09,
+        0.07
+      ],
+      "color": "#20231e",
+      "end": [
+        0.23,
+        0.91,
+        0.84
+      ],
+      "role": "paint"
+    },
+    {
+      "name": "nose",
+      "type": "ellipsoid",
+      "center": [
+        0,
+        0.7,
+        0.91
+      ],
+      "size": [
+        0.13,
+        0.1,
+        0.07
+      ],
+      "color": "#20231e",
+      "end": [
+        0,
+        0.7,
+        0.91
+      ],
+      "role": "paint"
+    }
+  ]
+}

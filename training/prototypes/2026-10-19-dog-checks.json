@@ -1,0 +1,108 @@
+{
+  "kind": "single deterministic layout prototype; not a model evaluation",
+  "source_scene": "2026-10-19-dog.scene.json",
+  "checks": {
+    "numeric_valid": true,
+    "passes": true,
+    "issues": [],
+    "solid_parts": 9,
+    "scene_span": 2.52,
+    "physicalSampleRequired": true
+  },
+  "graph": {
+    "compiler_valid": true,
+    "beads": 149,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "pass_limit": 6,
+    "cross_component_overlap_pairs": 0,
+    "min_cross_component_clearance_mm": 0.14222567904859584,
+    "overlap_examples": [],
+    "max_join_center_span_mm": 3.71856958271783,
+    "joins": [
+      {
+        "parent": "P1",
+        "child": "P2",
+        "a": "B0009",
+        "b": "B0041",
+        "center_span_mm": 3.294959929955226
+      },
+      {
+        "parent": "P1",
+        "child": "P2",
+        "a": "B0003",
+        "b": "B0045",
+        "center_span_mm": 2.432242418566214
+      },
+      {
+        "parent": "P2",
+        "child": "P3",
+        "a": "B0065",
+        "b": "B0111",
+        "center_span_mm": 3.71856958271783
+      },
+      {
+        "parent": "P2",
+        "child": "P3",
+        "a": "B0075",
+        "b": "B0112",
+        "center_span_mm": 2.6939109815103404
+      },
+      {
+        "parent": "P2",
+        "child": "P4",
+        "a": "B0088",
+        "b": "B0121",
+        "center_span_mm": 3.6520796820365233
+      },
+      {
+        "parent": "P2",
+        "child": "P4",
+        "a": "B0079",
+        "b": "B0125",
+        "center_span_mm": 2.449321732208697
+      },
+      {
+        "parent": "P1",
+        "child": "P5",
+        "a": "B0022",
+        "b": "B0131",
+        "center_span_mm": 2.2962328159833216
+      },
+      {
+        "parent": "P1",
+        "child": "P6",
+        "a": "B0031",
+        "b": "B0134",
+        "center_span_mm": 3.1424342860736147
+      },
+      {
+        "parent": "P1",
+        "child": "P7",
+        "a": "B0033",
+        "b": "B0138",
+        "center_span_mm": 3.142434286073615
+      },
+      {
+        "parent": "P1",
+        "child": "P8",
+        "a": "B0037",
+        "b": "B0142",
+        "center_span_mm": 3.204428038944784
+      },
+      {
+        "parent": "P1",
+        "child": "P9",
+        "a": "B0040",
+        "b": "B0146",
+        "center_span_mm": 3.204428038944783
+      }
+    ],
+    "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+    "physicalSampleRequired": true
+  },
+  "reviewed": false,
+  "physically_tested": false,
+  "training_target_approved": false,
+  "note": "This one prototype checks a rule-based placement direction for future work. It is not a twelve-prompt result and is not physically verified."
+}

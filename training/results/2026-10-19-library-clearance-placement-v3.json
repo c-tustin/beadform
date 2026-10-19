@@ -1,0 +1,2351 @@
+{
+  "summary": {
+    "examples": 32,
+    "original_scene_checks_pass": 32,
+    "original_compiler_pass": 31,
+    "original_cross_component_clearance_pass": 31,
+    "eye_spacing_proposals": 0,
+    "physically_tested": 0,
+    "note": "Feature checks are explicit lower-bound requirements; clearance uses conservative nominal spherical envelopes. Neither establishes recognizable or physically buildable patterns."
+  },
+  "results": [
+    {
+      "id": "frog-original-01",
+      "group": "frog",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 2.62,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 116,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.08573286321246698,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.7921303050127553,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0018",
+              "b": "B0101",
+              "center_span_mm": 3.2
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0017",
+              "b": "B0102",
+              "center_span_mm": 3.1999999999999997
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0087",
+              "b": "B0103",
+              "center_span_mm": 3.7921303050127544
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0074",
+              "b": "B0107",
+              "center_span_mm": 2.754448574505359
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0093",
+              "b": "B0110",
+              "center_span_mm": 3.7921303050127553
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0082",
+              "b": "B0114",
+              "center_span_mm": 2.9493575722782674
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "bunny-original-01",
+      "group": "bunny",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 4.57,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 134,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1780831857652121,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.7295561389654326,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.332047209744526
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.332047209744526
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0104",
+              "b": "B0114",
+              "center_span_mm": 3.381684717817665
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0103",
+              "b": "B0111",
+              "center_span_mm": 3.7295561389654326
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0107",
+              "b": "B0120",
+              "center_span_mm": 2.5057685410901733
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0098",
+              "b": "B0123",
+              "center_span_mm": 3.6279035376184545
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0029",
+              "b": "B0129",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0040",
+              "b": "B0132",
+              "center_span_mm": 3.0754563234389334
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "bear-original-01",
+      "group": "bear",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                2
+              ],
+              "message": "left ear has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                3
+              ],
+              "message": "right ear has an endpoint that this primitive ignores."
+            }
+          ],
+          "solid_parts": 6,
+          "scene_span": 3.5700000000000003,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 196,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.20000000000000018,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.152516448846484,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.332047209744526
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.332047209744526
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0094",
+              "b": "B0111",
+              "center_span_mm": 3.152516448846484
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0104",
+              "b": "B0112",
+              "center_span_mm": 2.7870398469322257
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0107",
+              "b": "B0151",
+              "center_span_mm": 2.974171664466774
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0099",
+              "b": "B0155",
+              "center_span_mm": 2.662554905662439
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0029",
+              "b": "B0191",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0040",
+              "b": "B0194",
+              "center_span_mm": 3.0754563234389334
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "butterfly-original-01",
+      "group": "butterfly",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 4.2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 82,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.20000000000000062,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.4327239696915646,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0037",
+              "b": "B0041",
+              "center_span_mm": 3.3076094682880437
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0029",
+              "b": "B0044",
+              "center_span_mm": 3.2215295161962985
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0040",
+              "b": "B0053",
+              "center_span_mm": 3.3076094682880433
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0035",
+              "b": "B0050",
+              "center_span_mm": 3.221529516196298
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0003",
+              "b": "B0062",
+              "center_span_mm": 3.4327239696915646
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0010",
+              "b": "B0059",
+              "center_span_mm": 2.4755354009808848
+            },
+            {
+              "parent": "P4",
+              "child": "P5",
+              "a": "B0061",
+              "b": "B0068",
+              "center_span_mm": 2.5406128434001314
+            },
+            {
+              "parent": "P4",
+              "child": "P6",
+              "a": "B0066",
+              "b": "B0071",
+              "center_span_mm": 2.2000000000000006
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0001",
+              "b": "B0074",
+              "center_span_mm": 2.9731600539270286
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0015",
+              "b": "B0077",
+              "center_span_mm": 2.81381097451612
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "turtle-original-01",
+      "group": "turtle",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 3.2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 139,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.10103168436523546,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.78544750433735,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0013",
+              "b": "B0030",
+              "center_span_mm": 3.665000500211324
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0023",
+              "b": "B0027",
+              "center_span_mm": 2.1740671663296216
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0017",
+              "b": "B0034",
+              "center_span_mm": 2.7220254277932354
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0008",
+              "b": "B0037",
+              "center_span_mm": 2.529160437673289
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0020",
+              "b": "B0107",
+              "center_span_mm": 3.7854475043373497
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0019",
+              "b": "B0116",
+              "center_span_mm": 2.101031684365236
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0024",
+              "b": "B0122",
+              "center_span_mm": 2.1010316843652355
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0025",
+              "b": "B0131",
+              "center_span_mm": 3.78544750433735
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "bird-original-01",
+      "group": "bird",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 2.9,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 126,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.19811320810444677,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.7331003164066363,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0021",
+              "center_span_mm": 3.188421355489457
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0005",
+              "b": "B0025",
+              "center_span_mm": 3.0832651919487835
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0047",
+              "b": "B0098",
+              "center_span_mm": 3.036323674242244
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0057",
+              "b": "B0091",
+              "center_span_mm": 2.7720168438637915
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0003",
+              "b": "B0099",
+              "center_span_mm": 3.483444830547271
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0013",
+              "b": "B0103",
+              "center_span_mm": 3.7331003164066363
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0010",
+              "b": "B0111",
+              "center_span_mm": 3.2486350065395118
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0015",
+              "b": "B0116",
+              "center_span_mm": 3.343907705172849
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0020",
+              "b": "B0121",
+              "center_span_mm": 3.2948140531195254
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0017",
+              "b": "B0124",
+              "center_span_mm": 3.0527812356559396
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "flower-synthetic-01",
+      "group": "flower",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 9,
+          "scene_span": 3.459655040102995,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 109,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.10329902216849973,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.584577009091814,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0006",
+              "b": "B0013",
+              "center_span_mm": 2.1032990221684997
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0010",
+              "b": "B0027",
+              "center_span_mm": 3.1595237909488065
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0014",
+              "b": "B0026",
+              "center_span_mm": 3.1595237909488065
+            },
+            {
+              "parent": "P3",
+              "child": "P4",
+              "a": "B0023",
+              "b": "B0028",
+              "center_span_mm": 3.132929959214272
+            },
+            {
+              "parent": "P3",
+              "child": "P4",
+              "a": "B0020",
+              "b": "B0029",
+              "center_span_mm": 3.584577009091814
+            },
+            {
+              "parent": "P4",
+              "child": "P5",
+              "a": "B0056",
+              "b": "B0076",
+              "center_span_mm": 2.3898710892562
+            },
+            {
+              "parent": "P4",
+              "child": "P5",
+              "a": "B0065",
+              "b": "B0071",
+              "center_span_mm": 3.4217953224272257
+            },
+            {
+              "parent": "P4",
+              "child": "P6",
+              "a": "B0047",
+              "b": "B0077",
+              "center_span_mm": 2.13355952475943
+            },
+            {
+              "parent": "P4",
+              "child": "P6",
+              "a": "B0038",
+              "b": "B0080",
+              "center_span_mm": 2.3198677666678855
+            },
+            {
+              "parent": "P4",
+              "child": "P7",
+              "a": "B0066",
+              "b": "B0093",
+              "center_span_mm": 2.635732478830151
+            },
+            {
+              "parent": "P4",
+              "child": "P8",
+              "a": "B0042",
+              "b": "B0100",
+              "center_span_mm": 2.7816330629703843
+            },
+            {
+              "parent": "P1",
+              "child": "P9",
+              "a": "B0008",
+              "b": "B0104",
+              "center_span_mm": 2.200000000000001
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "mushroom-synthetic-01",
+      "group": "mushroom",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 2,
+          "scene_span": 2.1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 65,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 1.6859770397647114,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.685977039764712,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0025",
+              "b": "B0026",
+              "center_span_mm": 3.6859770397647114
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0017",
+              "b": "B0027",
+              "center_span_mm": 3.685977039764712
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "cactus-synthetic-01",
+      "group": "cactus",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 3.13,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 137,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1743264877866384,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.7199315632429113,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0042",
+              "center_span_mm": 2.5607613504029594
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0041",
+              "center_span_mm": 2.560761350402959
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0084",
+              "b": "B0086",
+              "center_span_mm": 3.7199315632429113
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0082",
+              "b": "B0090",
+              "center_span_mm": 3.083012803089282
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0058",
+              "b": "B0126",
+              "center_span_mm": 2.1999999999999997
+            },
+            {
+              "parent": "P4",
+              "child": "P5",
+              "a": "B0128",
+              "b": "B0129",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P2",
+              "child": "P6",
+              "a": "B0052",
+              "b": "B0132",
+              "center_span_mm": 3.71637080133341
+            },
+            {
+              "parent": "P6",
+              "child": "P7",
+              "a": "B0134",
+              "b": "B0135",
+              "center_span_mm": 2.2
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "house-synthetic-01",
+      "group": "house",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 2,
+          "scene_span": 3.4,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 49,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.45454114656080336,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.4545411465608034,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0009",
+              "b": "B0010",
+              "center_span_mm": 2.4545411465608034
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "rocket-synthetic-01",
+      "group": "rocket",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 5,
+          "scene_span": 3.85,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 138,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.13175719195282287,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.3885660742880317,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0037",
+              "b": "B0092",
+              "center_span_mm": 2.394002785929839
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0038",
+              "b": "B0094",
+              "center_span_mm": 2.394002785929839
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0041",
+              "b": "B0099",
+              "center_span_mm": 3.3885660742880317
+            },
+            {
+              "parent": "P3",
+              "child": "P4",
+              "a": "B0100",
+              "b": "B0108",
+              "center_span_mm": 2.583138729073279
+            },
+            {
+              "parent": "P4",
+              "child": "P5",
+              "a": "B0106",
+              "b": "B0138",
+              "center_span_mm": 2.131757191952823
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "whale-synthetic-01",
+      "group": "whale",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 3.5300000000000002,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 84,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.09999999999999609,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.7902130568135317,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0029",
+              "b": "B0047",
+              "center_span_mm": 3.2835787658362494
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0020",
+              "b": "B0043",
+              "center_span_mm": 3.526501280403999
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0044",
+              "b": "B0059",
+              "center_span_mm": 2.099999999999996
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0043",
+              "b": "B0060",
+              "center_span_mm": 3.1249999999999964
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0026",
+              "b": "B0061",
+              "center_span_mm": 2.362605282430404
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0027",
+              "b": "B0064",
+              "center_span_mm": 3.356057604402388
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0034",
+              "b": "B0070",
+              "center_span_mm": 3.7902130568135317
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0033",
+              "b": "B0073",
+              "center_span_mm": 3.7796785718949173
+            },
+            {
+              "parent": "P2",
+              "child": "P6",
+              "a": "B0041",
+              "b": "B0079",
+              "center_span_mm": 3.595537122056641
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0003",
+              "b": "B0082",
+              "center_span_mm": 2.659240559222002
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "snail-synthetic-01",
+      "group": "snail",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 4,
+          "scene_span": 1.9799999999999998,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 66,
+          "thread_sections": 1,
+          "max_passes": 5,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1499999999999999,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.656668275512675,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0016",
+              "b": "B0057",
+              "center_span_mm": 3.656668275512675
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0025",
+              "b": "B0047",
+              "center_span_mm": 2.334124072329914
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0015",
+              "b": "B0061",
+              "center_span_mm": 3.1458820075820126
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0024",
+              "b": "B0064",
+              "center_span_mm": 2.2
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "penguin-synthetic-01",
+      "group": "penguin",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 2.34,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 72,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.17728152463075064,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.4082910220417952,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0017",
+              "b": "B0045",
+              "center_span_mm": 3.4082910220417952
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0008",
+              "b": "B0046",
+              "center_span_mm": 2.334507446197048
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0020",
+              "b": "B0049",
+              "center_span_mm": 2.1772815246307506
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0025",
+              "b": "B0061",
+              "center_span_mm": 2.1772815246307506
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0037",
+              "b": "B0067",
+              "center_span_mm": 2.1999999999999997
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0040",
+              "b": "B0070",
+              "center_span_mm": 2.1999999999999997
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "octopus-synthetic-01",
+      "group": "octopus",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 5,
+          "scene_span": 2.2199999999999998,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 52,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.03759002400445688,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.5227199072924944,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0040",
+              "b": "B0041",
+              "center_span_mm": 2.2000000000000006
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0034",
+              "b": "B0044",
+              "center_span_mm": 3.5227199072924944
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0037",
+              "b": "B0047",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0031",
+              "b": "B0050",
+              "center_span_mm": 2.2
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "pear-synthetic-01",
+      "group": "pear",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 3,
+          "scene_span": 2.5200000000000005,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 32,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1306358604011133,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.2,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0001",
+              "b": "B0029",
+              "center_span_mm": 2.1306358604011133
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0021",
+              "b": "B0030",
+              "center_span_mm": 2.2
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "robot-synthetic-01",
+      "group": "robot",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 2.5999999999999996,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 124,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.19999999999999973,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.651063093623483,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.3320472097445264
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.3320472097445264
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0029",
+              "b": "B0111",
+              "center_span_mm": 3.0683609827593656
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0040",
+              "b": "B0115",
+              "center_span_mm": 2.625544010838097
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0030",
+              "b": "B0119",
+              "center_span_mm": 3.1179010564198544
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0033",
+              "b": "B0122",
+              "center_span_mm": 3.651063093623483
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "sailboat-synthetic-01",
+      "group": "sailboat",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 4,
+          "scene_span": 2.23,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No collision-free placement for brown mast fits a close parent anchor. Simplify this attachment.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "train-synthetic-01",
+      "group": "train",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 5,
+          "scene_span": 2.3,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 132,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1037284398668743,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.7759931119806507,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0005",
+              "b": "B0010",
+              "center_span_mm": 2.114064939012631
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0006",
+              "b": "B0012",
+              "center_span_mm": 3.732097758189014
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0029",
+              "b": "B0050",
+              "center_span_mm": 3.7759931119806507
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0039",
+              "b": "B0054",
+              "center_span_mm": 3.502573063736788
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0001",
+              "b": "B0090",
+              "center_span_mm": 2.1037284398668743
+            },
+            {
+              "parent": "P3",
+              "child": "P5",
+              "a": "B0063",
+              "b": "B0130",
+              "center_span_mm": 3.1851790264437816
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "cloud-synthetic-01",
+      "group": "cloud",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 2.06,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 129,
+          "thread_sections": 2,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.19999999999999973,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.715241398450936,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0029",
+              "b": "B0041",
+              "center_span_mm": 3.715241398450936
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0020",
+              "b": "B0042",
+              "center_span_mm": 2.428104558731863
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0006",
+              "b": "B0081",
+              "center_span_mm": 3.577576370942811
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0016",
+              "b": "B0082",
+              "center_span_mm": 3.256521277967952
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0036",
+              "b": "B0121",
+              "center_span_mm": 2.1999999999999997
+            },
+            {
+              "parent": "P2",
+              "child": "P5",
+              "a": "B0065",
+              "b": "B0124",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P3",
+              "child": "P6",
+              "a": "B0100",
+              "b": "B0127",
+              "center_span_mm": 2.2
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "ladybug-original-01",
+      "group": "ladybug",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 10,
+          "scene_span": 2.33,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 119,
+          "thread_sections": 2,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.09710353203747069,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.434746991888707,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0006",
+              "b": "B0026",
+              "center_span_mm": 3.2240707829476305
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0025",
+              "b": "B0029",
+              "center_span_mm": 2.461367433927716
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0078",
+              "b": "B0096",
+              "center_span_mm": 2.1999999999999993
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0088",
+              "b": "B0099",
+              "center_span_mm": 3.434746991888707
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0020",
+              "b": "B0102",
+              "center_span_mm": 2.1999999999999997
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0016",
+              "b": "B0105",
+              "center_span_mm": 2.0971035320374707
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0011",
+              "b": "B0108",
+              "center_span_mm": 2.1999999999999997
+            },
+            {
+              "parent": "P1",
+              "child": "P8",
+              "a": "B0024",
+              "b": "B0111",
+              "center_span_mm": 2.0971035320374707
+            },
+            {
+              "parent": "P1",
+              "child": "P9",
+              "a": "B0021",
+              "b": "B0114",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P1",
+              "child": "P10",
+              "a": "B0018",
+              "b": "B0117",
+              "center_span_mm": 2.097103532037471
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "bee-original-01",
+      "group": "bee",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 2.3600000000000003,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 134,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.19999999999999973,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.671417819743961,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0018",
+              "b": "B0049",
+              "center_span_mm": 3.446438173050826
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0009",
+              "b": "B0043",
+              "center_span_mm": 3.671417819743961
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0012",
+              "b": "B0058",
+              "center_span_mm": 2.956822260552238
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0006",
+              "b": "B0059",
+              "center_span_mm": 3.213892465842373
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0016",
+              "b": "B0060",
+              "center_span_mm": 3.2147135335903716
+            },
+            {
+              "parent": "P4",
+              "child": "P5",
+              "a": "B0111",
+              "b": "B0129",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P4",
+              "child": "P6",
+              "a": "B0121",
+              "b": "B0132",
+              "center_span_mm": 3.428262809340766
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "fox-original-01",
+      "group": "fox",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 6,
+          "scene_span": 3.2800000000000002,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 173,
+          "thread_sections": 2,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.029058925816089598,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.5971428454235115,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.2864305114483114
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.3678418398362906
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0020",
+              "b": "B0111",
+              "center_span_mm": 2.2924657599611207
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0010",
+              "b": "B0113",
+              "center_span_mm": 3.0649818412188754
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0094",
+              "b": "B0151",
+              "center_span_mm": 3.5971428454235115
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0104",
+              "b": "B0152",
+              "center_span_mm": 3.0827470078020283
+            },
+            {
+              "parent": "P2",
+              "child": "P5",
+              "a": "B0107",
+              "b": "B0161",
+              "center_span_mm": 2.574984912276598
+            },
+            {
+              "parent": "P2",
+              "child": "P5",
+              "a": "B0099",
+              "b": "B0165",
+              "center_span_mm": 2.285759268126711
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0021",
+              "b": "B0171",
+              "center_span_mm": 2.049233083850118
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "elephant-original-01",
+      "group": "elephant",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 2.6100000000000003,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 137,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1289549749421317,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.662835368296825,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0006",
+              "b": "B0041",
+              "center_span_mm": 2.9166453244996307
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0025",
+              "b": "B0044",
+              "center_span_mm": 3.033126728867974
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0058",
+              "b": "B0114",
+              "center_span_mm": 3.662835368296825
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0067",
+              "b": "B0113",
+              "center_span_mm": 2.6241279737205576
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0062",
+              "b": "B0123",
+              "center_span_mm": 3.6628353682968235
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0072",
+              "b": "B0122",
+              "center_span_mm": 2.6241279737205563
+            },
+            {
+              "parent": "P2",
+              "child": "P5",
+              "a": "B0070",
+              "b": "B0129",
+              "center_span_mm": 3.532891139556552
+            },
+            {
+              "parent": "P2",
+              "child": "P6",
+              "a": "B0080",
+              "b": "B0132",
+              "center_span_mm": 2.2
+            },
+            {
+              "parent": "P2",
+              "child": "P7",
+              "a": "B0088",
+              "b": "B0135",
+              "center_span_mm": 3.456985838372693
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "giraffe-original-01",
+      "group": "giraffe",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 7,
+          "scene_span": 3.87,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 167,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.0931652746594902,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.6393181686335963,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0042",
+              "center_span_mm": 3.3998686770579063
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0005",
+              "b": "B0041",
+              "center_span_mm": 3.5110662690996794
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0074",
+              "b": "B0076",
+              "center_span_mm": 3.5528268596402834
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0075",
+              "b": "B0079",
+              "center_span_mm": 2.3741426123682685
+            },
+            {
+              "parent": "P3",
+              "child": "P4",
+              "a": "B0137",
+              "b": "B0151",
+              "center_span_mm": 3.6393181686335963
+            },
+            {
+              "parent": "P3",
+              "child": "P4",
+              "a": "B0144",
+              "b": "B0149",
+              "center_span_mm": 3.2268621314378416
+            },
+            {
+              "parent": "P3",
+              "child": "P5",
+              "a": "B0143",
+              "b": "B0154",
+              "center_span_mm": 3.1816466615964325
+            },
+            {
+              "parent": "P3",
+              "child": "P5",
+              "a": "B0136",
+              "b": "B0157",
+              "center_span_mm": 2.9587689713915415
+            },
+            {
+              "parent": "P1",
+              "child": "P6",
+              "a": "B0020",
+              "b": "B0162",
+              "center_span_mm": 2.1999999999999997
+            },
+            {
+              "parent": "P1",
+              "child": "P7",
+              "a": "B0034",
+              "b": "B0165",
+              "center_span_mm": 2.09316527465949
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "strawberry-original-01",
+      "group": "strawberry",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 3,
+          "scene_span": 2.5,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 52,
+          "thread_sections": 1,
+          "max_passes": 5,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1999999999999993,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.454541146560803,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0049",
+              "center_span_mm": 2.454541146560803
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0045",
+              "b": "B0050",
+              "center_span_mm": 2.1999999999999993
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "donut-original-01",
+      "group": "donut",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 1,
+          "scene_span": 2.1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 45,
+          "thread_sections": 1,
+          "max_passes": 5,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": null,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 0,
+          "joins": [],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "ice-cream-original-01",
+      "group": "ice-cream",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 4,
+          "scene_span": 3.42,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 108,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.20000000000000018,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.8959055904220765,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.2420499797398192
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.2420499797398192
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0078",
+              "b": "B0081",
+              "center_span_mm": 2.8959055904220765
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0039",
+              "b": "B0084",
+              "center_span_mm": 2.394002785929843
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0040",
+              "b": "B0085",
+              "center_span_mm": 2.3940027859298425
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "teapot-original-01",
+      "group": "teapot",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 5,
+          "scene_span": 2.9299999999999997,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 66,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.20000000000000018,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.274790511935103,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.2527495871099363
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.2527495871099363
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0050",
+              "b": "B0051",
+              "center_span_mm": 2.596923174369665
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0049",
+              "b": "B0054",
+              "center_span_mm": 2.5969231743696644
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0010",
+              "b": "B0061",
+              "center_span_mm": 3.023595920320187
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0006",
+              "b": "B0064",
+              "center_span_mm": 3.274790511935103
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "guitar-original-01",
+      "group": "guitar",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 3,
+          "scene_span": 2.58,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 110,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.10281422080796077,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.3337830264259196,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0021",
+              "b": "B0046",
+              "center_span_mm": 2.2171265702484533
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0019",
+              "b": "B0048",
+              "center_span_mm": 2.2171265702484533
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0067",
+              "b": "B0071",
+              "center_span_mm": 2.333783026425919
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0069",
+              "b": "B0075",
+              "center_span_mm": 2.3337830264259196
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "spaceship-original-01",
+      "group": "spaceship",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 5,
+          "scene_span": 2.58,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 76,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.19999999999999973,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.652847463458687,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0021",
+              "b": "B0046",
+              "center_span_mm": 2.683248401720624
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0019",
+              "b": "B0047",
+              "center_span_mm": 2.271217649997572
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0017",
+              "b": "B0056",
+              "center_span_mm": 3.652847463458687
+            },
+            {
+              "parent": "P1",
+              "child": "P4",
+              "a": "B0008",
+              "b": "B0059",
+              "center_span_mm": 3.267247604308521
+            },
+            {
+              "parent": "P1",
+              "child": "P5",
+              "a": "B0038",
+              "b": "B0071",
+              "center_span_mm": 3.267247604308521
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "castle-original-01",
+      "group": "castle",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [],
+          "solid_parts": 5,
+          "scene_span": 2.8,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 131,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.10188094692662908,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.5637543960985676,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0011",
+              "b": "B0046",
+              "center_span_mm": 3.5637543960985676
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0002",
+              "b": "B0047",
+              "center_span_mm": 2.548203722934414
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0042",
+              "b": "B0086",
+              "center_span_mm": 3.2287938486861383
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0041",
+              "b": "B0090",
+              "center_span_mm": 3.1838886738171426
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0075",
+              "b": "B0126",
+              "center_span_mm": 2.1999999999999993
+            },
+            {
+              "parent": "P3",
+              "child": "P5",
+              "a": "B0119",
+              "b": "B0129",
+              "center_span_mm": 3.0683609827593665
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    }
+  ]
+}

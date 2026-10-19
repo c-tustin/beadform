@@ -2,7 +2,7 @@
 
 ## Current work: pattern quality
 
-Positioning and clearance improvements are underway. See [measured fixes and the free fine-tuning pilot](PATTERN_QUALITY.md). Schema validity remains separate from requested-feature coverage, readable spacing and physical build success.
+All 32 library scenes now compile without detected cross-component bead overlaps at the measured settings. The latest free LoRA pilot did not improve generated geometry. See [measured fixes and the free fine-tuning pilot](PATTERN_QUALITY.md). Schema validity remains separate from requested-feature coverage, readable spacing and physical build success.
 
 ## Start here
 

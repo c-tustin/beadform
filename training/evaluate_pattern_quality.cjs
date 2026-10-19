@@ -1,5 +1,5 @@
 // Local CPU evaluation. Does not approve examples or claim physical success.
-const fs=require('node:fs'),path=require('node:path');
+const fs=require('node:fs'),path=require('node:path'),crypto=require('node:crypto');
 require('../shape-engine.js');const Parts=require('../parts-engine.js'),Quality=require('../pattern-quality.js');
 const args=process.argv.slice(2),option=name=>{const i=args.indexOf(name);return i<0?null:args[i+1];};
 const input=option('--predictions'),requirements=option('--requirements'),output=option('--output');
@@ -22,4 +22,6 @@ const results=predictions.map(row=>{
 });
 if(seen.size!==byId.size)throw Error('Supply the complete benchmark, not a favorable subset.');
 const summary={examples:results.length,original_scene_checks_pass:results.filter(r=>r.original?.scene.passes).length,original_compiler_pass:results.filter(r=>r.original?.graph.compiler_valid).length,original_cross_component_clearance_pass:results.filter(r=>r.original?.graph.compiler_valid&&r.original.graph.cross_component_overlap_pairs===0).length,eye_spacing_proposals:results.filter(r=>r.proposal).length,physically_tested:0,note:'Feature checks are explicit lower-bound requirements; clearance uses conservative nominal spherical envelopes. Neither establishes recognizable or physically buildable patterns.'};
-fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify({summary,results},null,2)+'\n');console.log(JSON.stringify(summary,null,2));
+const fingerprint=file=>crypto.createHash('sha256').update(fs.readFileSync(file)).digest('hex');
+const provenance={predictions_sha256:fingerprint(input),requirements_sha256:fingerprint(requirements),detail:3,thread_diameter_mm:.25,source_sha256:Object.fromEntries(['shape-engine.js','parts-engine.js','peyote-ball.js','continuous-thread.js','construction-graph.js','pattern-quality.js'].map(file=>[file,fingerprint(path.join(__dirname,'..',file))]))};
+fs.mkdirSync(path.dirname(output),{recursive:true});fs.writeFileSync(output,JSON.stringify({summary,provenance,results},null,2)+'\n');console.log(JSON.stringify(summary,null,2));
