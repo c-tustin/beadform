@@ -153,6 +153,7 @@ def main():
     ap.add_argument('--output', required=True)
     ap.add_argument('--summary', required=True)
     ap.add_argument('--model', default='Qwen/Qwen3-VL-2B-Instruct')
+    ap.add_argument('--system', default=str(HERE/'system.txt'), help='system instruction file; fingerprinted in resume metadata')
     ap.add_argument('--adapter')
     ap.add_argument('--prompts-only', action='store_true', help='evaluate original text prompts without target scenes; measures structure only')
     ap.add_argument('--offline-predictions', help='rescore saved prediction_raw JSONL without loading a model')
@@ -177,7 +178,7 @@ def main():
                     constrained=args.constrained, bounded=args.bounded, prompts_only=args.prompts_only, max_new_tokens=args.max_new_tokens,
                     image_max_side=args.image_max_side,
                     data_sha256=hashlib.sha256(Path(args.data).read_bytes()).hexdigest(),
-                    system_sha256=hashlib.sha256((HERE/'system.txt').read_bytes()).hexdigest(),
+                    system_sha256=hashlib.sha256(Path(args.system).read_bytes()).hexdigest(),
                     schema_sha256=hashlib.sha256((HERE.parent/'scene-schema.json').read_bytes()).hexdigest(),
                     scorer_version=2)
     manifest = output.with_suffix(output.suffix + '.metadata.json')
@@ -246,7 +247,7 @@ def main():
         from peft import PeftModel
         model = PeftModel.from_pretrained(model, args.adapter)
     model.eval()
-    system = (HERE/'system.txt').read_text()
+    system = Path(args.system).read_text()
     results = []
     output.parent.mkdir(parents=True, exist_ok=True)
     summary_path.parent.mkdir(parents=True, exist_ok=True)

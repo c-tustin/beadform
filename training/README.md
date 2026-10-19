@@ -1,5 +1,9 @@
 # Beadform: free Qwen workflow
 
+## Current work: pattern quality
+
+Positioning and clearance improvements are underway. See [measured fixes and the free fine-tuning pilot](PATTERN_QUALITY.md). Schema validity remains separate from requested-feature coverage, readable spacing and physical build success.
+
 ## Start here
 
 - [Run the free schema benchmark in Colab](https://colab.research.google.com/github/c-tustin/beadform/blob/runpod-training-guide/training/colab_schema_benchmark.ipynb): no Google Drive or API key needed.

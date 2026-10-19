@@ -1,0 +1,463 @@
+{
+  "before": {
+    "examples": 32,
+    "compiler_pass": 32,
+    "clearance_pass": 28,
+    "results": [
+      {
+        "id": "frog-original-01",
+        "group": "frog",
+        "compiler_valid": true,
+        "overlap_pairs": 10,
+        "min_clearance_mm": -3
+      },
+      {
+        "id": "bunny-original-01",
+        "group": "bunny",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1780831857652121
+      },
+      {
+        "id": "bear-original-01",
+        "group": "bear",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.20000000000000018
+      },
+      {
+        "id": "butterfly-original-01",
+        "group": "butterfly",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.026516315397547174
+      },
+      {
+        "id": "turtle-original-01",
+        "group": "turtle",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10103168436523546
+      },
+      {
+        "id": "bird-original-01",
+        "group": "bird",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19811320810444677
+      },
+      {
+        "id": "flower-synthetic-01",
+        "group": "flower",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10329902216849973
+      },
+      {
+        "id": "mushroom-synthetic-01",
+        "group": "mushroom",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 1.6859770397647114
+      },
+      {
+        "id": "cactus-synthetic-01",
+        "group": "cactus",
+        "compiler_valid": true,
+        "overlap_pairs": 22,
+        "min_clearance_mm": -1.8024004607176138
+      },
+      {
+        "id": "house-synthetic-01",
+        "group": "house",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.45454114656080336
+      },
+      {
+        "id": "rocket-synthetic-01",
+        "group": "rocket",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.13175719195282287
+      },
+      {
+        "id": "whale-synthetic-01",
+        "group": "whale",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.09999999999999609
+      },
+      {
+        "id": "snail-synthetic-01",
+        "group": "snail",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1499999999999999
+      },
+      {
+        "id": "penguin-synthetic-01",
+        "group": "penguin",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.17728152463075064
+      },
+      {
+        "id": "octopus-synthetic-01",
+        "group": "octopus",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.03759002400445688
+      },
+      {
+        "id": "pear-synthetic-01",
+        "group": "pear",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1306358604011133
+      },
+      {
+        "id": "robot-synthetic-01",
+        "group": "robot",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "sailboat-synthetic-01",
+        "group": "sailboat",
+        "compiler_valid": true,
+        "overlap_pairs": 2,
+        "min_clearance_mm": -0.8865958279944979
+      },
+      {
+        "id": "train-synthetic-01",
+        "group": "train",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1037284398668743
+      },
+      {
+        "id": "cloud-synthetic-01",
+        "group": "cloud",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "ladybug-original-01",
+        "group": "ladybug",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.09710353203747069
+      },
+      {
+        "id": "bee-original-01",
+        "group": "bee",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "fox-original-01",
+        "group": "fox",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.02429450348857287
+      },
+      {
+        "id": "elephant-original-01",
+        "group": "elephant",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1289549749421317
+      },
+      {
+        "id": "giraffe-original-01",
+        "group": "giraffe",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.11961088918142693
+      },
+      {
+        "id": "strawberry-original-01",
+        "group": "strawberry",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1999999999999993
+      },
+      {
+        "id": "donut-original-01",
+        "group": "donut",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": null
+      },
+      {
+        "id": "ice-cream-original-01",
+        "group": "ice-cream",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.20000000000000062
+      },
+      {
+        "id": "teapot-original-01",
+        "group": "teapot",
+        "compiler_valid": true,
+        "overlap_pairs": 2,
+        "min_clearance_mm": -1.9999999999999998
+      },
+      {
+        "id": "guitar-original-01",
+        "group": "guitar",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10281422080796077
+      },
+      {
+        "id": "spaceship-original-01",
+        "group": "spaceship",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "castle-original-01",
+        "group": "castle",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10188094692662908
+      }
+    ]
+  },
+  "after": {
+    "examples": 32,
+    "compiler_pass": 31,
+    "clearance_pass": 29,
+    "results": [
+      {
+        "id": "frog-original-01",
+        "group": "frog",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.11588257083482656
+      },
+      {
+        "id": "bunny-original-01",
+        "group": "bunny",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1780831857652121
+      },
+      {
+        "id": "bear-original-01",
+        "group": "bear",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.20000000000000018
+      },
+      {
+        "id": "butterfly-original-01",
+        "group": "butterfly",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.026516315397547174
+      },
+      {
+        "id": "turtle-original-01",
+        "group": "turtle",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10103168436523546
+      },
+      {
+        "id": "bird-original-01",
+        "group": "bird",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19811320810444677
+      },
+      {
+        "id": "flower-synthetic-01",
+        "group": "flower",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10329902216849973
+      },
+      {
+        "id": "mushroom-synthetic-01",
+        "group": "mushroom",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 1.6859770397647114
+      },
+      {
+        "id": "cactus-synthetic-01",
+        "group": "cactus",
+        "compiler_valid": true,
+        "overlap_pairs": 22,
+        "min_clearance_mm": -1.8024004607176138
+      },
+      {
+        "id": "house-synthetic-01",
+        "group": "house",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.45454114656080336
+      },
+      {
+        "id": "rocket-synthetic-01",
+        "group": "rocket",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.13175719195282287
+      },
+      {
+        "id": "whale-synthetic-01",
+        "group": "whale",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.09999999999999609
+      },
+      {
+        "id": "snail-synthetic-01",
+        "group": "snail",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1499999999999999
+      },
+      {
+        "id": "penguin-synthetic-01",
+        "group": "penguin",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.17728152463075064
+      },
+      {
+        "id": "octopus-synthetic-01",
+        "group": "octopus",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.03759002400445688
+      },
+      {
+        "id": "pear-synthetic-01",
+        "group": "pear",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1306358604011133
+      },
+      {
+        "id": "robot-synthetic-01",
+        "group": "robot",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "sailboat-synthetic-01",
+        "group": "sailboat",
+        "compiler_valid": true,
+        "overlap_pairs": 2,
+        "min_clearance_mm": -0.8865958279944979
+      },
+      {
+        "id": "train-synthetic-01",
+        "group": "train",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1037284398668743
+      },
+      {
+        "id": "cloud-synthetic-01",
+        "group": "cloud",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "ladybug-original-01",
+        "group": "ladybug",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.09710353203747069
+      },
+      {
+        "id": "bee-original-01",
+        "group": "bee",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "fox-original-01",
+        "group": "fox",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.02429450348857287
+      },
+      {
+        "id": "elephant-original-01",
+        "group": "elephant",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1289549749421317
+      },
+      {
+        "id": "giraffe-original-01",
+        "group": "giraffe",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.11961088918142693
+      },
+      {
+        "id": "strawberry-original-01",
+        "group": "strawberry",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.1999999999999993
+      },
+      {
+        "id": "donut-original-01",
+        "group": "donut",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": null
+      },
+      {
+        "id": "ice-cream-original-01",
+        "group": "ice-cream",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.20000000000000062
+      },
+      {
+        "id": "teapot-original-01",
+        "group": "teapot",
+        "compiler_valid": false,
+        "error": "No close attachment for lid knob to round blue pot fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread."
+      },
+      {
+        "id": "guitar-original-01",
+        "group": "guitar",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10281422080796077
+      },
+      {
+        "id": "spaceship-original-01",
+        "group": "spaceship",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.19999999999999973
+      },
+      {
+        "id": "castle-original-01",
+        "group": "castle",
+        "compiler_valid": true,
+        "overlap_pairs": 0,
+        "min_clearance_mm": 0.10188094692662908
+      }
+    ]
+  }
+}

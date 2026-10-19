@@ -31,6 +31,8 @@ def main():
     ap.add_argument('--eval', required=True)
     ap.add_argument('--check', action='store_true')
     ap.add_argument('--model', default='Qwen/Qwen3-VL-2B-Instruct')
+    ap.add_argument('--system', default=str(HERE/'system.txt'), help='system instruction file; use the same file during evaluation')
+    ap.add_argument('--parts-first', action='store_true', help='serialize target geometry before notes without changing target values')
     ap.add_argument('--output', default='beadform-qwen-lora')
     ap.add_argument('--epochs', type=float, default=1)
     ap.add_argument('--save-steps', type=int, default=1,
@@ -71,7 +73,7 @@ def main():
         target_modules=targets, bias='none', task_type='CAUSAL_LM'))
     model.config.use_cache = False
     model.print_trainable_parameters()
-    system = (HERE/'system.txt').read_text()
+    system = Path(a.system).read_text()
 
     def collate(rows):
         # A single full example avoids padding/image alignment errors and never truncates image tokens.
@@ -83,7 +85,10 @@ def main():
                 im = im.convert('RGB'); im.thumbnail((a.image_max_side, a.image_max_side)); im = im.copy()
             content.append({'type': 'image', 'image': im})
         prompt = [{'role': 'system', 'content': [{'type': 'text', 'text': system}]}, {'role': 'user', 'content': content}]
-        full = prompt + [{'role': 'assistant', 'content': [{'type': 'text', 'text': json.dumps(r['scene'])}]}]
+        target = r['scene']
+        if a.parts_first:
+            target = {key: target[key] for key in ('title', 'parts', 'notes')}
+        full = prompt + [{'role': 'assistant', 'content': [{'type': 'text', 'text': json.dumps(target)}]}]
         batch = processor.apply_chat_template(full, tokenize=True, return_dict=True, return_tensors='pt', add_generation_prompt=False)
         prefix = processor.apply_chat_template(prompt, tokenize=True, return_dict=True, return_tensors='pt', add_generation_prompt=True)['input_ids']
         n = prefix.shape[1]
