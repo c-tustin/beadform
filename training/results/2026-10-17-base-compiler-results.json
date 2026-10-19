@@ -1,0 +1,107 @@
+[
+  {
+    "id": "schema-fresh-01",
+    "group": "dog",
+    "compiler_valid": true,
+    "beads": 114,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-02",
+    "group": "cat",
+    "compiler_valid": true,
+    "beads": 113,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-03",
+    "group": "duck",
+    "compiler_valid": true,
+    "beads": 55,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-04",
+    "group": "lobster",
+    "compiler_valid": true,
+    "beads": 45,
+    "thread_sections": 1,
+    "max_passes": 5,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-05",
+    "group": "owl",
+    "compiler_valid": true,
+    "beads": 40,
+    "thread_sections": 1,
+    "max_passes": 3,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-06",
+    "group": "hedgehog",
+    "compiler_valid": true,
+    "beads": 110,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-07",
+    "group": "dragon",
+    "compiler_valid": false,
+    "error": "No close attachment for wings to body fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread."
+  },
+  {
+    "id": "schema-fresh-08",
+    "group": "lamp",
+    "compiler_valid": true,
+    "beads": 52,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-09",
+    "group": "chair",
+    "compiler_valid": true,
+    "beads": 40,
+    "thread_sections": 1,
+    "max_passes": 3,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-10",
+    "group": "watering-can",
+    "compiler_valid": true,
+    "beads": 43,
+    "thread_sections": 1,
+    "max_passes": 5,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-11",
+    "group": "umbrella",
+    "compiler_valid": true,
+    "beads": 88,
+    "thread_sections": 1,
+    "max_passes": 6,
+    "errors": []
+  },
+  {
+    "id": "schema-fresh-12",
+    "group": "pineapple",
+    "compiler_valid": true,
+    "beads": 40,
+    "thread_sections": 1,
+    "max_passes": 3,
+    "errors": []
+  }
+]

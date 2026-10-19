@@ -1,0 +1,34 @@
+[
+  {
+    "model": "Qwen/Qwen3-VL-2B-Instruct",
+    "adapter_label": "pilot-02b",
+    "constrained": true,
+    "bounded": true,
+    "prompts_only": true,
+    "examples": 12,
+    "strict_schema_valid": 12,
+    "strict_schema_pass_rate": 1,
+    "schema_valid": 12,
+    "schema_pass_rate": 1,
+    "repaired_schema_valid": 12,
+    "repaired_schema_pass_rate": 1,
+    "source": "Saved summary.json viewed in the user's Drive comparison folder; no new generation in this audit",
+    "note": "Schema checks do not establish compiler or physical validity."
+  },
+  {
+    "model": "Qwen/Qwen3-VL-2B-Instruct",
+    "adapter_label": "pilot-03-expanded",
+    "constrained": true,
+    "bounded": true,
+    "prompts_only": true,
+    "examples": 12,
+    "strict_schema_valid": 12,
+    "strict_schema_pass_rate": 1,
+    "schema_valid": 12,
+    "schema_pass_rate": 1,
+    "repaired_schema_valid": 12,
+    "repaired_schema_pass_rate": 1,
+    "source": "Saved summary.json viewed in the user's Drive comparison folder; no new generation in this audit",
+    "note": "Schema checks do not establish compiler or physical validity."
+  }
+]
