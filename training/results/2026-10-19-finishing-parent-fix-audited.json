@@ -1,0 +1,5331 @@
+{
+  "summary": {
+    "examples": 32,
+    "candidateEndpoints": 70,
+    "totalEndpoints": 70,
+    "allEndpointsHaveCandidate": 32,
+    "validCandidateInventories": 32,
+    "completeFinishes": 0,
+    "physicallyTested": 0,
+    "note": "Three-bead search heuristic only. Routes and combined passage counts are audited; knots, hole access, tension and holding strength remain unverified."
+  },
+  "provenance": {
+    "dataSha256": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "detail": 3,
+    "threadDiameterMm": 0.25,
+    "sourceSha256": {
+      "parts-engine.js": "d65f9c317aa061ef1fc515fd63a4854d9899ef612e22d3769bd0784cc87971df",
+      "thread-finishing.js": "f8ecfba12228971c6864884e67a07c19c3bdba4aba1af0b177eb60191b309ea8",
+      "continuous-thread.js": "4c3500f91be0e995e8a32f4a6d5bc069bfbf7d97730a1de016dfeae68de40dcf",
+      "construction-graph.js": "ad0b88ade89aa933797389f60cf76a700145f9526f903fb22dff08a64fb754c6"
+    }
+  },
+  "results": [
+    {
+      "id": "frog-original-01",
+      "group": "frog",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0003",
+                "from": "P1:5",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 42,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:163",
+            "bead": "B0082",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:163",
+                "to": "P1:134",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0068",
+                "from": "P1:134",
+                "to": "P1:135",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:135",
+                "to": "P1:106",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0054",
+                "from": "P1:106",
+                "to": "P1:107",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:107",
+                "to": "P1:78",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0040",
+                "from": "P1:78",
+                "to": "P1:79",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 45,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0003",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0040",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0054",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0068",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "bunny-original-01",
+      "group": "bunny",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:79",
+            "bead": "B0040",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:79",
+                "to": "P1:68",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0035",
+                "from": "P1:68",
+                "to": "P1:69",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:69",
+                "to": "P1:30",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0016",
+                "from": "P1:30",
+                "to": "P1:31",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:31",
+                "to": "P1:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0007",
+                "from": "P1:12",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0007",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0016",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0035",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "bear-original-01",
+      "group": "bear",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:25",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:25",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:24",
+                "to": "P1:23",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0012",
+                "from": "P1:23",
+                "to": "P1:22",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:78",
+            "bead": "B0040",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:78",
+                "to": "P1:67",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0034",
+                "from": "P1:67",
+                "to": "P1:66",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:66",
+                "to": "P1:47",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0024",
+                "from": "P1:47",
+                "to": "P1:46",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:46",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0012",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0034",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "butterfly-original-01",
+      "group": "butterfly",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P7:0",
+            "bead": "B0077",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0077",
+                "from": "P7:0",
+                "to": "P7:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0082",
+                "from": "P7:3",
+                "to": "P7:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0081",
+                "from": "P7:6",
+                "to": "P7:5",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 42,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0077",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0081",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0082",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "turtle-original-01",
+      "group": "turtle",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:21",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0011",
+                "from": "P1:21",
+                "to": "P1:20",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 25,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:49",
+            "bead": "B0025",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:49",
+                "to": "P1:10",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0006",
+                "from": "P1:10",
+                "to": "P1:11",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:11",
+                "to": "P1:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0007",
+                "from": "P1:12",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:13",
+                "to": "P1:2",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0002",
+                "from": "P1:2",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0002",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0006",
+            "assemblyPasses": 5,
+            "finishingPasses": 1,
+            "totalPasses": 6
+          },
+          {
+            "id": "B0007",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0011",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "bird-original-01",
+      "group": "bird",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0001",
+                "from": "P1:0",
+                "to": "P1:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:1",
+                "to": "P1:2",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0002",
+                "from": "P1:2",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:3",
+                "to": "P1:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0007",
+                "from": "P1:12",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 34,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P6:3",
+            "bead": "B0124",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0125",
+                "from": "P6:3",
+                "to": "P6:7",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0126",
+                "from": "P6:7",
+                "to": "P6:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0123",
+                "from": "P6:6",
+                "to": "P6:5",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 39,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0001",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0002",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0007",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0123",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0125",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0126",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "flower-synthetic-01",
+      "group": "flower",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0004",
+                "from": "P1:0",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0009",
+                "from": "P1:3",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 18,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:6",
+            "bead": "B0008",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0009",
+                "from": "P1:6",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:3",
+                "to": "P1:0",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0001",
+                "from": "P1:0",
+                "to": "P1:1",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 35,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0001",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 1,
+            "finishingPasses": 2,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0009",
+            "assemblyPasses": 1,
+            "finishingPasses": 2,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "mushroom-synthetic-01",
+      "group": "mushroom",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:47",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0024",
+                "from": "P1:47",
+                "to": "P1:46",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:46",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 40,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P2:3",
+            "bead": "B0027",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P2:3",
+                "to": "P2:4",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0028",
+                "from": "P2:4",
+                "to": "P2:5",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:5",
+                "to": "P2:6",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0029",
+                "from": "P2:6",
+                "to": "P2:7",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:7",
+                "to": "P2:8",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0030",
+                "from": "P2:8",
+                "to": "P2:9",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 51,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0028",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0029",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0030",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "cactus-synthetic-01",
+      "group": "cactus",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:25",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:25",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:24",
+                "to": "P1:23",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0012",
+                "from": "P1:23",
+                "to": "P1:22",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P6:3",
+            "bead": "B0134",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0134",
+                "from": "P6:3",
+                "to": "P6:2",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0133",
+                "from": "P6:2",
+                "to": "P6:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0132",
+                "from": "P6:1",
+                "to": "P6:0",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 48,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0012",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0132",
+            "assemblyPasses": 5,
+            "finishingPasses": 1,
+            "totalPasses": 6
+          },
+          {
+            "id": "B0133",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0134",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "house-synthetic-01",
+      "group": "house",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0001",
+                "from": "P1:0",
+                "to": "P1:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:1",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0006",
+                "from": "P1:4",
+                "to": "P1:5",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 15,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:3",
+            "bead": "B0009",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0004",
+                "from": "P1:3",
+                "to": "P1:0",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0001",
+                "from": "P1:0",
+                "to": "P1:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:1",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 18,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0001",
+            "assemblyPasses": 2,
+            "finishingPasses": 2,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 1,
+            "finishingPasses": 2,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0006",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "rocket-synthetic-01",
+      "group": "rocket",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0003",
+                "from": "P1:5",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 42,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P4:3",
+            "bead": "B0106",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0115",
+                "from": "P4:3",
+                "to": "P4:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0125",
+                "from": "P4:8",
+                "to": "P4:13",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0126",
+                "from": "P4:13",
+                "to": "P4:12",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 22,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0003",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0115",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0125",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0126",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "whale-synthetic-01",
+      "group": "whale",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:21",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0011",
+                "from": "P1:21",
+                "to": "P1:20",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 41,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:4",
+            "bead": "B0003",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:4",
+                "to": "P1:17",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0009",
+                "from": "P1:17",
+                "to": "P1:16",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:16",
+                "to": "P1:15",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:15",
+                "to": "P1:14",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:14",
+                "to": "P1:3",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0002",
+                "from": "P1:3",
+                "to": "P1:2",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 54,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0002",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0009",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0011",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "snail-synthetic-01",
+      "group": "snail",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:25",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:25",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:24",
+                "to": "P1:43",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0022",
+                "from": "P1:43",
+                "to": "P1:42",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 45,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:46",
+            "bead": "B0024",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:46",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:44",
+                "to": "P1:25",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:25",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 41,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 5,
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 2,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0022",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "penguin-synthetic-01",
+      "group": "penguin",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0001",
+                "from": "P1:0",
+                "to": "P1:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:1",
+                "to": "P1:2",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0002",
+                "from": "P1:2",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:3",
+                "to": "P1:14",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:14",
+                "to": "P1:15",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 42,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:79",
+            "bead": "B0040",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:79",
+                "to": "P1:68",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0035",
+                "from": "P1:68",
+                "to": "P1:69",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:69",
+                "to": "P1:30",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0016",
+                "from": "P1:30",
+                "to": "P1:31",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:31",
+                "to": "P1:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0007",
+                "from": "P1:12",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 45,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0001",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0002",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0007",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0016",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0035",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "octopus-synthetic-01",
+      "group": "octopus",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0003",
+                "from": "P1:5",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 42,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:61",
+            "bead": "B0031",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:61",
+                "to": "P1:42",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0022",
+                "from": "P1:42",
+                "to": "P1:43",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:43",
+                "to": "P1:24",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:24",
+                "to": "P1:25",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:25",
+                "to": "P1:44",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:44",
+                "to": "P1:45",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 54,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0003",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0022",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "pear-synthetic-01",
+      "group": "pear",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:19",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0010",
+                "from": "P1:19",
+                "to": "P1:18",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:18",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:17",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0009",
+                "from": "P1:17",
+                "to": "P1:16",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 45,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P2:1",
+            "bead": "B0021",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0022",
+                "from": "P2:1",
+                "to": "P2:2",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0023",
+                "from": "P2:2",
+                "to": "P2:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:3",
+                "to": "P1:8",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:8",
+                "to": "P1:9",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 40,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0009",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0010",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0022",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "robot-synthetic-01",
+      "group": "robot",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:25",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:25",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:24",
+                "to": "P1:23",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0012",
+                "from": "P1:23",
+                "to": "P1:22",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:65",
+            "bead": "B0033",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:65",
+                "to": "P1:46",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0024",
+                "from": "P1:46",
+                "to": "P1:47",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:47",
+                "to": "P1:28",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:28",
+                "to": "P1:29",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:29",
+                "to": "P1:48",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0025",
+                "from": "P1:48",
+                "to": "P1:49",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 45,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0012",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0025",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "sailboat-synthetic-01",
+      "group": "sailboat",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0004",
+                "from": "P1:0",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0009",
+                "from": "P1:3",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 25,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P2:5",
+            "bead": "B0016",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0024",
+                "from": "P2:5",
+                "to": "P2:9",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0032",
+                "from": "P2:9",
+                "to": "P2:14",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0042",
+                "from": "P2:14",
+                "to": "P2:19",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 28,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0004",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0009",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0032",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0042",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "train-synthetic-01",
+      "group": "train",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0004",
+                "from": "P1:0",
+                "to": "P1:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0009",
+                "from": "P1:3",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 8,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P3:27",
+            "bead": "B0063",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P3:27",
+                "to": "P3:28",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0064",
+                "from": "P3:28",
+                "to": "P3:29",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:29",
+                "to": "P3:48",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0074",
+                "from": "P3:48",
+                "to": "P3:49",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:49",
+                "to": "P3:68",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0084",
+                "from": "P3:68",
+                "to": "P3:69",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 50,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0004",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0009",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0064",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0074",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0084",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "cloud-synthetic-01",
+      "group": "cloud",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 37,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P2:49",
+            "bead": "B0065",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P2:49",
+                "to": "P2:68",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0075",
+                "from": "P2:68",
+                "to": "P2:69",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:69",
+                "to": "P2:30",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0056",
+                "from": "P2:30",
+                "to": "P2:31",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:31",
+                "to": "P2:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0047",
+                "from": "P2:12",
+                "to": "P2:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-2-tail",
+            "section": 2,
+            "end": "starting-tail",
+            "port": "P3:38",
+            "bead": "B0100",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P3:38",
+                "to": "P3:19",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0090",
+                "from": "P3:19",
+                "to": "P3:18",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:18",
+                "to": "P3:5",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0083",
+                "from": "P3:5",
+                "to": "P3:4",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:4",
+                "to": "P3:17",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0089",
+                "from": "P3:17",
+                "to": "P3:16",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-2-working",
+            "section": 2,
+            "end": "working-end",
+            "port": "P3:39",
+            "bead": "B0100",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P3:39",
+                "to": "P3:20",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0091",
+                "from": "P3:20",
+                "to": "P3:21",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:21",
+                "to": "P3:6",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0084",
+                "from": "P3:6",
+                "to": "P3:7",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:7",
+                "to": "P3:8",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0085",
+                "from": "P3:8",
+                "to": "P3:9",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0047",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0056",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0075",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0083",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0084",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0085",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0089",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0090",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0091",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "ladybug-original-01",
+      "group": "ladybug",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:30",
+            "bead": "B0016",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:30",
+                "to": "P6:0",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0105",
+                "from": "P6:0",
+                "to": "P6:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0106",
+                "from": "P6:1",
+                "to": "P6:2",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0107",
+                "from": "P6:2",
+                "to": "P6:3",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 9,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 24,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-2-tail",
+            "section": 2,
+            "end": "starting-tail",
+            "port": "P1:20",
+            "bead": "B0011",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:20",
+                "to": "P1:19",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0010",
+                "from": "P1:19",
+                "to": "P1:18",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:18",
+                "to": "P1:37",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0019",
+                "from": "P1:37",
+                "to": "P1:36",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:36",
+                "to": "P1:17",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0009",
+                "from": "P1:17",
+                "to": "P1:16",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 34,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-2-working",
+            "section": 2,
+            "end": "working-end",
+            "port": "P1:35",
+            "bead": "B0018",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0018",
+                "from": "P1:35",
+                "to": "P1:34",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:34",
+                "to": "P1:15",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:15",
+                "to": "P1:14",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:14",
+                "to": "P1:33",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0017",
+                "from": "P1:33",
+                "to": "P1:32",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 38,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0008",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0009",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0010",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 5,
+            "finishingPasses": 1,
+            "totalPasses": 6
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0017",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0018",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0019",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0105",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0106",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0107",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "bee-original-01",
+      "group": "bee",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 22,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P4:125",
+            "bead": "B0111",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P4:125",
+                "to": "P4:106",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0102",
+                "from": "P4:106",
+                "to": "P4:107",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P4:107",
+                "to": "P4:88",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0093",
+                "from": "P4:88",
+                "to": "P4:89",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P4:89",
+                "to": "P4:108",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0103",
+                "from": "P4:108",
+                "to": "P4:109",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 51,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0093",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0102",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0103",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "fox-original-01",
+      "group": "fox",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:25",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0013",
+                "from": "P1:25",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:24",
+                "to": "P1:23",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0012",
+                "from": "P1:23",
+                "to": "P1:22",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 37,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P5:9",
+            "bead": "B0165",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0165",
+                "from": "P5:9",
+                "to": "P5:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P5:8",
+                "to": "P5:17",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0169",
+                "from": "P5:17",
+                "to": "P5:16",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P5:16",
+                "to": "P5:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0164",
+                "from": "P5:7",
+                "to": "P5:6",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-2-tail",
+            "section": 2,
+            "end": "starting-tail",
+            "port": "P1:40",
+            "bead": "B0021",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:40",
+                "to": "P1:59",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0030",
+                "from": "P1:59",
+                "to": "P1:58",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:58",
+                "to": "P1:57",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0029",
+                "from": "P1:57",
+                "to": "P1:56",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:56",
+                "to": "P1:37",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0019",
+                "from": "P1:37",
+                "to": "P1:36",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 57,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-2-working",
+            "section": 2,
+            "end": "working-end",
+            "port": "P1:41",
+            "bead": "B0021",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:41",
+                "to": "P1:60",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0031",
+                "from": "P1:60",
+                "to": "P1:61",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:61",
+                "to": "P1:42",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0022",
+                "from": "P1:42",
+                "to": "P1:43",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:43",
+                "to": "P1:62",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0032",
+                "from": "P1:62",
+                "to": "P1:63",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 54,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0012",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0019",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0022",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0029",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0030",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0031",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0032",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0164",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0165",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0169",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "elephant-original-01",
+      "group": "elephant",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:5",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0003",
+                "from": "P1:5",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 37,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P2:94",
+            "bead": "B0088",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P2:94",
+                "to": "P2:75",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0078",
+                "from": "P2:75",
+                "to": "P2:74",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:74",
+                "to": "P2:55",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0068",
+                "from": "P2:55",
+                "to": "P2:54",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P2:54",
+                "to": "P2:73",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0077",
+                "from": "P2:73",
+                "to": "P2:72",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 54,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0003",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0068",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0077",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0078",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "giraffe-original-01",
+      "group": "giraffe",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 45,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:67",
+            "bead": "B0034",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:67",
+                "to": "P1:48",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0025",
+                "from": "P1:48",
+                "to": "P1:49",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:49",
+                "to": "P1:10",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0006",
+                "from": "P1:10",
+                "to": "P1:11",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:11",
+                "to": "P1:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0007",
+                "from": "P1:12",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0006",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0007",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0025",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "strawberry-original-01",
+      "group": "strawberry",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:8",
+                "to": "P1:7",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:7",
+                "to": "P1:6",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:6",
+                "to": "P1:21",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0011",
+                "from": "P1:21",
+                "to": "P1:20",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 42,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P2:1",
+            "bead": "B0045",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0041",
+                "from": "P2:1",
+                "to": "P2:0",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0044",
+                "from": "P2:0",
+                "to": "P2:3",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0043",
+                "from": "P2:3",
+                "to": "P2:2",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 33,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 5,
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0004",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0011",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0041",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          },
+          {
+            "id": "B0043",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0044",
+            "assemblyPasses": 1,
+            "finishingPasses": 1,
+            "totalPasses": 2
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "donut-original-01",
+      "group": "donut",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:4",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0013",
+                "from": "P1:4",
+                "to": "P1:9",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:9",
+                "to": "P1:14",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0024",
+                "from": "P1:14",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 23,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:9",
+            "bead": "B0014",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0015",
+                "from": "P1:9",
+                "to": "P1:5",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:5",
+                "to": "P1:0",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:0",
+                "to": "P1:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 28,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 5,
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "ice-cream-original-01",
+      "group": "ice-cream",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:9",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0005",
+                "from": "P1:9",
+                "to": "P1:8",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 43,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P4:3",
+            "bead": "B0085",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0094",
+                "from": "P4:3",
+                "to": "P4:8",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0097",
+                "from": "P4:8",
+                "to": "P4:9",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0096",
+                "from": "P4:9",
+                "to": "P4:4",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 23,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0094",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0096",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0097",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "teapot-original-01",
+      "group": "teapot",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:0",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:0",
+                "to": "P1:29",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0015",
+                "from": "P1:29",
+                "to": "P1:28",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:28",
+                "to": "P1:27",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0014",
+                "from": "P1:27",
+                "to": "P1:26",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:26",
+                "to": "P1:45",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:45",
+                "to": "P1:44",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 31,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:11",
+            "bead": "B0006",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P1:11",
+                "to": "P1:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0007",
+                "from": "P1:12",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:13",
+                "to": "P1:32",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0017",
+                "from": "P1:32",
+                "to": "P1:33",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P1:33",
+                "to": "P1:14",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0008",
+                "from": "P1:14",
+                "to": "P1:15",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 35,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0007",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0008",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0014",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0015",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0017",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "guitar-original-01",
+      "group": "guitar",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:4",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0013",
+                "from": "P1:4",
+                "to": "P1:9",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:9",
+                "to": "P1:14",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0024",
+                "from": "P1:14",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 25,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P3:9",
+            "bead": "B0075",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P3:9",
+                "to": "P3:26",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0084",
+                "from": "P3:26",
+                "to": "P3:27",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:27",
+                "to": "P3:28",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0085",
+                "from": "P3:28",
+                "to": "P3:29",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:29",
+                "to": "P3:48",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0095",
+                "from": "P3:48",
+                "to": "P3:49",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 53,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0084",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0085",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0095",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "spaceship-original-01",
+      "group": "spaceship",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:4",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0013",
+                "from": "P1:4",
+                "to": "P1:9",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0023",
+                "from": "P1:9",
+                "to": "P1:14",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0024",
+                "from": "P1:14",
+                "to": "P1:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 26,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P1:20",
+            "bead": "B0038",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0045",
+                "from": "P1:20",
+                "to": "P1:24",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0043",
+                "from": "P1:24",
+                "to": "P1:19",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0033",
+                "from": "P1:19",
+                "to": "P1:14",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 28,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0013",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0023",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0024",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0033",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0043",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0045",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    },
+    {
+      "id": "castle-original-01",
+      "group": "castle",
+      "finishing": {
+        "format": "beadform-finishing-candidates",
+        "version": 1,
+        "status": "draft",
+        "minimumDistinctBeads": 3,
+        "endpoints": [
+          {
+            "id": "length-1-tail",
+            "section": 1,
+            "end": "starting-tail",
+            "port": "P1:4",
+            "bead": "B0001",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": "B0005",
+                "from": "P1:4",
+                "to": "P1:0",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0004",
+                "from": "P1:0",
+                "to": "P1:1",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": "B0003",
+                "from": "P1:1",
+                "to": "P1:2",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 24,
+            "searchLimitReached": false
+          },
+          {
+            "id": "length-1-working",
+            "section": 1,
+            "end": "working-end",
+            "port": "P3:67",
+            "bead": "B0119",
+            "status": "candidate",
+            "moves": [
+              {
+                "id": null,
+                "from": "P3:67",
+                "to": "P3:48",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0110",
+                "from": "P3:48",
+                "to": "P3:49",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:49",
+                "to": "P3:10",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0091",
+                "from": "P3:10",
+                "to": "P3:11",
+                "kind": "pass",
+                "phase": "finish"
+              },
+              {
+                "id": null,
+                "from": "P3:11",
+                "to": "P3:12",
+                "kind": "existing-connection"
+              },
+              {
+                "id": "B0092",
+                "from": "P3:12",
+                "to": "P3:13",
+                "kind": "pass",
+                "phase": "finish"
+              }
+            ],
+            "visitedStates": 44,
+            "searchLimitReached": false
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "assemblyMaxPasses": 6,
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "additionalPasses": [
+          {
+            "id": "B0003",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0004",
+            "assemblyPasses": 3,
+            "finishingPasses": 1,
+            "totalPasses": 4
+          },
+          {
+            "id": "B0005",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0091",
+            "assemblyPasses": 4,
+            "finishingPasses": 1,
+            "totalPasses": 5
+          },
+          {
+            "id": "B0092",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          },
+          {
+            "id": "B0110",
+            "assemblyPasses": 2,
+            "finishingPasses": 1,
+            "totalPasses": 3
+          }
+        ],
+        "completeFinish": false,
+        "knotMethod": null,
+        "physicalSampleRequired": true,
+        "note": "Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.",
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        }
+      }
+    }
+  ]
+}

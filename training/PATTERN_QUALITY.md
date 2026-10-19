@@ -95,3 +95,30 @@ The free semantic-only Qwen probe completed on 15 development requests: **11/15 
 Three orthographic views of the dog exposed a real face-placement error: nearest-center matching could put an eye on an ear. Painted facial features now prefer a named head, or a named body/torso if no head exists. Dedicated eye components remain protected. The dog has all three face landmarks on its head after this fix. The complete library still gives [32/32 compiler and clearance passes](results/2026-10-19-library-face-host-fix.json), with source fingerprints recorded in that report. No physical success is implied.
 
 The [dog three-view preview](prototypes/2026-10-19-dog-preview.png) remains unapproved: proportions, splayed ears, line access and finishing need review. The sailboat's silhouette also remains poor despite its clearance improvement. Neither prototype is promoted to a training target. The new `render_prototype.py` renders saved nominal geometry consistently for further shape reviews.
+
+## Candidate weave-in routes — 2026-10-19
+
+The new `thread-finishing.js` searches from both ends of every working length. Each candidate visits three distinct existing bead holes and uses only connections already recorded by the assembly route. Starting tails and working ends share one passage inventory: a route cannot spend capacity already allocated to another candidate. The search is bounded and greedy, so unresolved routes are reported as unresolved rather than impossible.
+
+The audited 32-example library has **70/70 endpoints with a candidate**, with 32/32 combined inventories within the existing passage limit. Assembly operation counts are independently recounted before the audit. Neither the assembly sequence nor its counts are silently changed. See [audited routes and source fingerprints](results/2026-10-19-finishing-candidates-audited.json). The earlier v1 report preserves the initial search allocation.
+
+The studio now shows these drafts under thread details, and includes them in text/PDF guides. The construction graph carries the candidate records. Bead CSV exports separate assembly passages, candidate finishing passages and the combined total. The frog UI was inspected: both ends have candidates and the combined maximum remains six passages.
+
+**These are not complete finishes.** Three beads is an authored search heuristic, not an experimentally established rule for securing fishing line. No knot is specified; additional knot or securing passes are not included. Physical hole access, needle angle, line damage, tension and holding strength remain unverified. The report explicitly records zero complete or physically tested finishes. Do not use these results as physical-success training labels.
+
+### Settings sweep and corrected parent relationships
+
+The complete library was swept across detail 3/4 and 0.20/0.25 mm line, retaining failed compiles in every denominator. The initial sweep exposed antennae attaching to a wing, narrow structural necks becoming flexible strands at detail 4, and a guitar headstock selecting its body. Antennae now prefer head/body, structural necks use the existing tube construction, and headstocks prefer a neck. Small non-capsule leaf panels retain their small construction at both detail settings, allowing the small sail to attach at detail 4.
+
+| Setting | Compiled before → after | No detected overlaps after | Every thread end has a candidate after |
+|---|---:|---:|---:|
+| Detail 3, 0.20 mm | 31/32 → 32/32 | 32/32 | 32/32 |
+| Detail 3, 0.25 mm | 32/32 → 32/32 | 32/32 | 32/32 |
+| Detail 4, 0.20 mm | 27/32 → 31/32 | 31/32 | 31/32 |
+| Detail 4, 0.25 mm | 28/32 → 31/32 | 31/32 | 31/32 |
+
+These are 128 configurations of the same 32 inspected scenes, not 128 independent subjects. The larger castle still fails its right-tower attachment. That failure remains explicit; clearance or span limits were not relaxed. Attachment errors now suggest the smaller setting when the selected line is already 0.20 mm, rather than recommending the same line again.
+
+Evidence: [initial sweep](results/2026-10-19-settings-sweep-v1.json), [parent correction sweep](results/2026-10-19-settings-sweep-parent-fix.json), and [finishing audit after parent fixes](results/2026-10-19-finishing-parent-fix-audited.json). An actual UI-downloaded frog CSV was inspected: 116 rows, six candidate finishing passes, correct assembly-plus-candidate sums, maximum combined count six ([export check](results/2026-10-19-finishing-export-check.json)).
+
+Still required: repair the larger castle using appropriate structural geometry; improve weak silhouettes; choose and physically sample complete finishes; verify actual hole axes and access; improve model semantic rejection before deployment. The goal remains active.
