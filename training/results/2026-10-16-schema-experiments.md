@@ -31,3 +31,9 @@ These prompts were reserved before this run and contain no target scenes. This b
 A manual inspection shows why structural validity is insufficient: the lobster is only a body; the chair is only a box; the pineapple omits its green crown. Owl eyes occupy identical coordinates, and the dragon's parts are all centered at the origin. Several capsules have identical start/end coordinates, and some requested additive parts use the cut role. Many notes end mid-sentence. These predictions remain unapproved evaluation outputs, not training labels or usable bead patterns.
 
 The standalone `training/colab_schema_benchmark.ipynb` reproduces this schema benchmark without Drive authentication and offers a ZIP download. Saved-adapter comparisons remain pending Drive access. Next work should prioritize corrected geometry, requested-feature coverage, and compiler/render review alongside schema validity.
+
+## Adapter follow-up — verified 2026-10-19
+
+Drive summaries confirm both `pilot-02b` and `pilot-03-expanded` completed the same twelve-prompt benchmark with bounded decoding. Each reports 12/12 strict-schema-valid and no repairs. The apparent eight-prompt interruption was a stale notebook display; saved completion summaries provide the authoritative final state. [Comparison and limitations](2026-10-19-bounded-adapter-comparison.md).
+
+The schema task now has a measured 100% configuration on this twelve-prompt set without requiring an adapter. This is the maximum possible score on the measured set, not a guarantee for all future prompts. The earlier four-example unconstrained comparison used a different dependency environment; do not present 25% to 100% as an isolated causal estimate of fine-tuning.
