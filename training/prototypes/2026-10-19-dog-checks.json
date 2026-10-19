@@ -104,5 +104,22 @@
   "reviewed": false,
   "physically_tested": false,
   "training_target_approved": false,
-  "note": "This one prototype checks a rule-based placement direction for future work. It is not a twelve-prompt result and is not physically verified."
+  "note": "This one prototype checks a rule-based placement direction for future work. It is not a twelve-prompt result and is not physically verified.",
+  "face_landmark_hosts": [
+    {
+      "bead": "B0086",
+      "part": "head",
+      "color": "#20231e"
+    },
+    {
+      "bead": "B0087",
+      "part": "head",
+      "color": "#20231e"
+    },
+    {
+      "bead": "B0095",
+      "part": "head",
+      "color": "#20231e"
+    }
+  ]
 }

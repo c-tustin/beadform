@@ -93,9 +93,9 @@ Start the project with a tail for finishing. String five foundation beads and ci
 
 2. make head
 Keep the working line attached to body. The positioning passes bring you to B0009; continue into B0041 to start head. String five foundation beads and circle through the first. Work between the previous round’s up-beads: add one normally, two at each marked increase; at a decrease add one then pass through the two listed up-beads. Step up through the first new bead at each round end. Draw the final five up-beads together. Optional filling: pause before the first decrease and lightly fill the hollow form with clean soft plastic film or craft filling. Keep the rim and bead holes clear; then decrease and close. The chart shows the whole surface; use the exact sequence for shaping and step-ups. This shaped peyote form is a draft: check the cup shape and tension with your beads before continuing. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0027 (#8b5a32) — reposition through existing beads
-2. PASS B0018 (#8b5a32) — reposition through existing beads
-3. PASS B0009 (#8b5a32) — reposition through existing beads
+1. PASS B0027 (#8b5a32)
+2. PASS B0018 (#8b5a32)
+3. PASS B0009 (#8b5a32)
 4. PICK B0041 (#8b5a32)
 5. PICK B0042 (#8b5a32)
 6. PICK B0043 (#8b5a32)
@@ -183,7 +183,7 @@ Keep the working line attached to body. The positioning passes bring you to B000
 88. PASS B0076 (#8b5a32)
 89. PICK B0086 (#20231e)
 90. PASS B0077 (#8b5a32)
-91. PICK B0087 (#8b5a32)
+91. PICK B0087 (#20231e)
 92. PASS B0078 (#8b5a32)
 93. PICK B0088 (#8b5a32)
 94. PASS B0079 (#8b5a32)
@@ -199,11 +199,11 @@ Keep the working line attached to body. The positioning passes bring you to B000
 104. PASS B0084 (#8b5a32)
 105. PICK B0094 (#8b5a32)
 106. PASS B0085 (#8b5a32)
-107. PICK B0095 (#8b5a32)
+107. PICK B0095 (#20231e)
 108. PASS B0076 (#8b5a32)
 109. PASS B0086 (#20231e)
 110. PICK B0096 (#8b5a32)
-111. PASS B0087 (#8b5a32)
+111. PASS B0087 (#20231e)
 112. PICK B0097 (#8b5a32)
 113. PASS B0088 (#8b5a32)
 114. PICK B0098 (#8b5a32)
@@ -219,7 +219,7 @@ Keep the working line attached to body. The positioning passes bring you to B000
 124. PICK B0103 (#8b5a32)
 125. PASS B0094 (#8b5a32)
 126. PICK B0104 (#8b5a32)
-127. PASS B0095 (#8b5a32)
+127. PASS B0095 (#20231e)
 128. PICK B0105 (#8b5a32)
 129. PASS B0086 (#20231e)
 130. PASS B0096 (#8b5a32)
@@ -247,14 +247,14 @@ Keep the working line attached to body. The positioning passes bring you to B000
 
 3. join head to body
 Return through the listed beads to B0041, then cross into B0009 on body. Reinforce that connection with the working line. Continue through the positioning beads to the second pair and work that attachment too. Do not tie off between these steps. Green anchor outlines belong to body; rose outlines belong to head.
-1. PASS B0106 (#8b5a32) — reposition through existing beads
-2. PASS B0096 (#8b5a32) — reposition through existing beads
-3. PASS B0086 (#20231e) — reposition through existing beads
-4. PASS B0076 (#8b5a32) — reposition through existing beads
-5. PASS B0066 (#8b5a32) — reposition through existing beads
-6. PASS B0056 (#8b5a32) — reposition through existing beads
-7. PASS B0046 (#8b5a32) — reposition through existing beads
-8. PASS B0041 (#8b5a32) — reposition through existing beads
+1. PASS B0106 (#8b5a32)
+2. PASS B0096 (#8b5a32)
+3. PASS B0086 (#20231e)
+4. PASS B0076 (#8b5a32)
+5. PASS B0066 (#8b5a32)
+6. PASS B0056 (#8b5a32)
+7. PASS B0046 (#8b5a32)
+8. PASS B0041 (#8b5a32)
 9. PASS B0041 (#8b5a32)
 10. PASS B0009 (#8b5a32)
 11. PASS B0041 (#8b5a32)
@@ -266,17 +266,17 @@ Return through the listed beads to B0041, then cross into B0009 on body. Reinfor
 
 4. make left floppy ear
 Keep the working line attached to head. The positioning passes bring you to B0065; continue into B0111 to start left floppy ear. String five foundation beads and circle through the first. Work between the previous round’s up-beads: add one normally, two at each marked increase; at a decrease add one then pass through the two listed up-beads. Step up through the first new bead at each round end. Leave the last round open as the dome rim; attach the crown anchor in the next step.  The chart shows the whole surface; use the exact sequence for shaping and step-ups. This shaped peyote form is a draft: check the cup shape and tension with your beads before continuing. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0054 (#8b5a32) — reposition through existing beads
-2. PASS B0055 (#8b5a32) — reposition through existing beads
-3. PASS B0065 (#8b5a32) — reposition through existing beads
+1. PASS B0054 (#8b5a32)
+2. PASS B0055 (#8b5a32)
+3. PASS B0065 (#8b5a32)
 4. PICK B0111 (#8b5a32)
-5. PICK B0112 (#20231e)
+5. PICK B0112 (#8b5a32)
 6. PICK B0113 (#8b5a32)
 7. PICK B0114 (#8b5a32)
 8. PICK B0115 (#8b5a32)
 9. PASS B0111 (#8b5a32)
 10. PICK B0116 (#8b5a32)
-11. PASS B0112 (#20231e)
+11. PASS B0112 (#8b5a32)
 12. PICK B0117 (#8b5a32)
 13. PASS B0113 (#8b5a32)
 14. PICK B0118 (#8b5a32)
@@ -289,27 +289,27 @@ Keep the working line attached to head. The positioning passes bring you to B006
 
 5. join left floppy ear to head
 Return through the listed beads to B0111, then cross into B0065 on head. Reinforce that connection with the working line. Continue through the positioning beads to the second pair and work that attachment too. Do not tie off between these steps. Green anchor outlines belong to head; rose outlines belong to left floppy ear.
-1. PASS B0116 (#8b5a32) — reposition through existing beads
-2. PASS B0111 (#8b5a32) — reposition through existing beads
+1. PASS B0116 (#8b5a32)
+2. PASS B0111 (#8b5a32)
 3. PASS B0111 (#8b5a32)
 4. PASS B0065 (#8b5a32)
 5. PASS B0111 (#8b5a32)
 6. PASS B0065 (#8b5a32)
 7. PASS B0075 (#8b5a32)
-8. PASS B0112 (#20231e)
+8. PASS B0112 (#8b5a32)
 9. PASS B0075 (#8b5a32)
-10. PASS B0112 (#20231e)
+10. PASS B0112 (#8b5a32)
 
 6. make right floppy ear
 Keep the working line attached to head. The positioning passes bring you to B0088; continue into B0121 to start right floppy ear. String five foundation beads and circle through the first. Work between the previous round’s up-beads: add one normally, two at each marked increase; at a decrease add one then pass through the two listed up-beads. Step up through the first new bead at each round end. Leave the last round open as the dome rim; attach the crown anchor in the next step.  The chart shows the whole surface; use the exact sequence for shaping and step-ups. This shaped peyote form is a draft: check the cup shape and tension with your beads before continuing. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0075 (#8b5a32) — reposition through existing beads
-2. PASS B0085 (#8b5a32) — reposition through existing beads
-3. PASS B0095 (#8b5a32) — reposition through existing beads
-4. PASS B0105 (#8b5a32) — reposition through existing beads
-5. PASS B0096 (#8b5a32) — reposition through existing beads
-6. PASS B0087 (#8b5a32) — reposition through existing beads
-7. PASS B0078 (#8b5a32) — reposition through existing beads
-8. PASS B0088 (#8b5a32) — reposition through existing beads
+1. PASS B0075 (#8b5a32)
+2. PASS B0085 (#8b5a32)
+3. PASS B0095 (#20231e)
+4. PASS B0105 (#8b5a32)
+5. PASS B0096 (#8b5a32)
+6. PASS B0087 (#20231e)
+7. PASS B0078 (#8b5a32)
+8. PASS B0088 (#8b5a32)
 9. PICK B0121 (#8b5a32)
 10. PICK B0122 (#8b5a32)
 11. PICK B0123 (#8b5a32)
@@ -318,7 +318,7 @@ Keep the working line attached to head. The positioning passes bring you to B008
 14. PASS B0121 (#8b5a32)
 15. PICK B0126 (#8b5a32)
 16. PASS B0122 (#8b5a32)
-17. PICK B0127 (#20231e)
+17. PICK B0127 (#8b5a32)
 18. PASS B0123 (#8b5a32)
 19. PICK B0128 (#8b5a32)
 20. PASS B0124 (#8b5a32)
@@ -330,8 +330,8 @@ Keep the working line attached to head. The positioning passes bring you to B008
 
 7. join right floppy ear to head
 Return through the listed beads to B0121, then cross into B0088 on head. Reinforce that connection with the working line. Continue through the positioning beads to the second pair and work that attachment too. Do not tie off between these steps. Green anchor outlines belong to head; rose outlines belong to right floppy ear.
-1. PASS B0126 (#8b5a32) — reposition through existing beads
-2. PASS B0121 (#8b5a32) — reposition through existing beads
+1. PASS B0126 (#8b5a32)
+2. PASS B0121 (#8b5a32)
 3. PASS B0121 (#8b5a32)
 4. PASS B0088 (#8b5a32)
 5. PASS B0121 (#8b5a32)
@@ -343,16 +343,16 @@ Return through the listed beads to B0121, then cross into B0088 on head. Reinfor
 
 8. make tail
 Keep the working line attached to body. The positioning passes bring you to B0022; continue into B0131 to start tail. String the 3 beads. Skip the final tip bead, then pass back through the other 2 beads. Keep both tails at the base for attachment. This part stays flexible on fishing line. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0079 (#8b5a32) — reposition through existing beads
-2. PASS B0070 (#8b5a32) — reposition through existing beads
-3. PASS B0061 (#8b5a32) — reposition through existing beads
-4. PASS B0052 (#8b5a32) — reposition through existing beads
-5. PASS B0053 (#8b5a32) — reposition through existing beads
-6. PASS B0045 (#8b5a32) — reposition through existing beads
-7. PASS B0003 (#8b5a32) — reposition through existing beads
-8. PASS B0004 (#8b5a32) — reposition through existing beads
-9. PASS B0012 (#8b5a32) — reposition through existing beads
-10. PASS B0022 (#8b5a32) — reposition through existing beads
+1. PASS B0079 (#8b5a32)
+2. PASS B0070 (#8b5a32)
+3. PASS B0061 (#8b5a32)
+4. PASS B0052 (#8b5a32)
+5. PASS B0053 (#8b5a32)
+6. PASS B0045 (#8b5a32)
+7. PASS B0003 (#8b5a32)
+8. PASS B0004 (#8b5a32)
+9. PASS B0012 (#8b5a32)
+10. PASS B0022 (#8b5a32)
 11. PICK B0131 (#8b5a32)
 12. PICK B0132 (#8b5a32)
 13. PICK B0133 (#8b5a32)
@@ -368,8 +368,8 @@ Return through the listed beads to B0131, then cross into B0022 on body. Reinfor
 
 10. make left back leg
 Keep the working line attached to body. The positioning passes bring you to B0031; continue into B0134 to start left back leg. String the 4 beads. Skip the final tip bead, then pass back through the other 3 beads. Keep both tails at the base for attachment. This part stays flexible on fishing line. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0022 (#8b5a32) — reposition through existing beads
-2. PASS B0031 (#8b5a32) — reposition through existing beads
+1. PASS B0022 (#8b5a32)
+2. PASS B0031 (#8b5a32)
 3. PICK B0134 (#8b5a32)
 4. PICK B0135 (#8b5a32)
 5. PICK B0136 (#8b5a32)
@@ -387,10 +387,10 @@ Return through the listed beads to B0134, then cross into B0031 on body. Reinfor
 
 12. make right back leg
 Keep the working line attached to body. The positioning passes bring you to B0033; continue into B0138 to start right back leg. String the 4 beads. Skip the final tip bead, then pass back through the other 3 beads. Keep both tails at the base for attachment. This part stays flexible on fishing line. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0031 (#8b5a32) — reposition through existing beads
-2. PASS B0032 (#8b5a32) — reposition through existing beads
-3. PASS B0023 (#8b5a32) — reposition through existing beads
-4. PASS B0033 (#8b5a32) — reposition through existing beads
+1. PASS B0031 (#8b5a32)
+2. PASS B0032 (#8b5a32)
+3. PASS B0023 (#8b5a32)
+4. PASS B0033 (#8b5a32)
 5. PICK B0138 (#8b5a32)
 6. PICK B0139 (#8b5a32)
 7. PICK B0140 (#8b5a32)
@@ -408,10 +408,10 @@ Return through the listed beads to B0138, then cross into B0033 on body. Reinfor
 
 14. make left front leg
 Keep the working line attached to body. The positioning passes bring you to B0037; continue into B0142 to start left front leg. String the 4 beads. Skip the final tip bead, then pass back through the other 3 beads. Keep both tails at the base for attachment. This part stays flexible on fishing line. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0034 (#8b5a32) — reposition through existing beads
-2. PASS B0040 (#8b5a32) — reposition through existing beads
-3. PASS B0036 (#8b5a32) — reposition through existing beads
-4. PASS B0037 (#8b5a32) — reposition through existing beads
+1. PASS B0034 (#8b5a32)
+2. PASS B0040 (#8b5a32)
+3. PASS B0036 (#8b5a32)
+4. PASS B0037 (#8b5a32)
 5. PICK B0142 (#8b5a32)
 6. PICK B0143 (#8b5a32)
 7. PICK B0144 (#8b5a32)
@@ -429,9 +429,9 @@ Return through the listed beads to B0142, then cross into B0037 on body. Reinfor
 
 16. make right front leg
 Keep the working line attached to body. The positioning passes bring you to B0040; continue into B0146 to start right front leg. String the 4 beads. Skip the final tip bead, then pass back through the other 3 beads. Keep both tails at the base for attachment. This part stays flexible on fishing line. Do not cut or finish the working line here; continue to the next step.
-1. PASS B0038 (#8b5a32) — reposition through existing beads
-2. PASS B0039 (#8b5a32) — reposition through existing beads
-3. PASS B0040 (#8b5a32) — reposition through existing beads
+1. PASS B0038 (#8b5a32)
+2. PASS B0039 (#8b5a32)
+3. PASS B0040 (#8b5a32)
 4. PICK B0146 (#8b5a32)
 5. PICK B0147 (#8b5a32)
 6. PICK B0148 (#8b5a32)
@@ -446,4 +446,3 @@ Return through the listed beads to B0146, then cross into B0040 on body. Reinfor
 2. PASS B0040 (#8b5a32)
 3. PASS B0146 (#8b5a32)
 4. PASS B0040 (#8b5a32)
-
