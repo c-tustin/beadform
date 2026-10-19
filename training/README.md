@@ -38,6 +38,10 @@ Use a new output folder when changing data, model, adapter, schema, prompt, or d
 
 Keep development prompts separate from training labels. Reserve new families before tuning. Download results or save them to Drive before the free runtime ends.
 
-## Interrupted comparison
+## Completed adapter comparison
 
-The 2026-10-17 adapter comparison was interrupted after eight completed pilot-02b predictions when the runtime ended. Colab subsequently reported GPU usage limits. This is a partial run, not a 12-example adapter result. Use the [resume notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/runpod-training-guide/training/colab_resume_adapter_comparison.ipynb) when an eligible free GPU is available. It restores the saved code revision, checks critical dependency versions, and retains completed rows. It must not run alongside an active original session.
+Both saved adapters completed all twelve prompts before the old runtime expired. Their Drive summaries each report **12/12 strict-schema-valid, zero repairs**, tying the bounded base model. The browser's progress display stopped updating at eight prompts; it did not prove that generation stopped at eight. No restart is needed for this completed comparison.
+
+See [comparison results](results/2026-10-19-bounded-adapter-comparison.md) and [summary data](results/2026-10-19-bounded-adapter-summaries.json). Use the bounded base model as the simplest configuration for the measured schema task; the adapters have no measured schema advantage on these twelve prompts. This does not rank visual quality or physical buildability.
+
+The [pinned resume notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/runpod-training-guide/training/colab_resume_adapter_comparison.ipynb) is retained for recovery reference, and is unnecessary for the completed run.
