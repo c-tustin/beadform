@@ -1,0 +1,177 @@
+"""Free-GPU QLoRA pilot: existing draft selection plus explicit rejection."""
+import argparse
+import hashlib
+import json
+from pathlib import Path
+from catalog_data import load, fingerprints, HERE
+
+MODEL = 'Qwen/Qwen3-VL-2B-Instruct'
+
+
+def strict_family(text, families):
+    def pairs(items):
+        result = {}
+        for key, value in items:
+            if key in result:
+                raise ValueError('Duplicate JSON key.')
+            result[key] = value
+        return result
+    try:
+        obj = json.loads(text, object_pairs_hook=pairs)
+        if isinstance(obj, dict) and set(obj) == {'family'} and isinstance(obj['family'], str) and obj['family'] in families:
+            return obj['family']
+    except (ValueError, TypeError):
+        pass
+    return None
+
+
+def main():
+    ap = argparse.ArgumentParser()
+    ap.add_argument('--output', required=True)
+    ap.add_argument('--check', action='store_true')
+    ap.add_argument('--resume', action='store_true')
+    ap.add_argument('--epochs', type=int, default=2, choices=[1, 2, 3])
+    args = ap.parse_args()
+    train, dev, families, system = load()
+    out = Path(args.output)
+    provenance = {**fingerprints(), 'train_catalog_selector.py':hashlib.sha256(Path(__file__).read_bytes()).hexdigest(),
+                  'requirements.txt':hashlib.sha256((HERE/'requirements.txt').read_bytes()).hexdigest()}
+    metadata = {'model':MODEL, 'epochs':args.epochs, 'seed':42, 'source_sha256':provenance,
+                'system_sha256':hashlib.sha256(system.encode()).hexdigest(),
+                'train_rows':len(train), 'dev_rows':len(dev), 'families':families,
+                'note':'Authored synthetic semantic development experiment. Not geometry generation or physical validation.'}
+    if args.check:
+        print(json.dumps(metadata,indent=2)); return
+    if (out/'comparison.json').exists():
+        raise FileExistsError('Completed run exists. Preserve it and choose a new output directory.')
+    manifest = out/'metadata.json'
+    if manifest.exists() and (not args.resume or json.loads(manifest.read_text()) != metadata):
+        raise ValueError('Existing run requires --resume with exactly matching configuration.')
+    if out.exists() and any(out.iterdir()) and not manifest.exists():
+        raise ValueError('Refusing to mix this run with an unidentified existing directory.')
+    import torch
+    from transformers import AutoConfig, AutoProcessor, Qwen3VLForConditionalGeneration, BitsAndBytesConfig, Trainer, TrainingArguments, set_seed
+    from transformers.trainer_utils import get_last_checkpoint
+    from peft import LoraConfig, get_peft_model, prepare_model_for_kbit_training, PeftModel
+    from lmformatenforcer import JsonSchemaParser
+    from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
+    if not torch.cuda.is_available():
+        raise RuntimeError('No eligible free CUDA GPU. Stop and retry later; do not upgrade.')
+    set_seed(42)
+    out.mkdir(parents=True,exist_ok=True)
+    manifest.write_text(json.dumps(metadata,indent=2)+'\n')
+    # Reuse the resolved upstream revision on resumption rather than moving model weights.
+    revision_file = out/'model-revision.json'
+    if revision_file.exists():
+        revision = json.loads(revision_file.read_text())['revision']
+    else:
+        revision = AutoConfig.from_pretrained(MODEL)._commit_hash
+        if not revision:
+            raise ValueError('Cannot pin the base model revision.')
+        revision_file.write_text(json.dumps({'model':MODEL,'revision':revision})+'\n')
+    dtype = torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
+    processor = AutoProcessor.from_pretrained(MODEL,revision=revision)
+    model = Qwen3VLForConditionalGeneration.from_pretrained(MODEL,revision=revision,device_map={'':0},torch_dtype=dtype,
+        quantization_config=BitsAndBytesConfig(load_in_4bit=True,bnb_4bit_quant_type='nf4',
+            bnb_4bit_use_double_quant=True,bnb_4bit_compute_dtype=dtype))
+    (out/'environment.json').write_text(json.dumps({'gpu':torch.cuda.get_device_name(0),
+        'torch':torch.__version__, 'model_revision':revision},indent=2)+'\n')
+    schema = {'type':'object','properties':{'family':{'type':'string','enum':families}},
+              'required':['family'],'additionalProperties':False}
+
+    def messages(row):
+        return [{'role':'system','content':[{'type':'text','text':system}]},
+                {'role':'user','content':[{'type':'text','text':row['prompt']}]}]
+
+    def evaluate(label):
+        folder = out/label; folder.mkdir(exist_ok=True)
+        predictions = folder/'predictions.jsonl'
+        saved = {}
+        if predictions.exists():
+            for line in predictions.read_text().splitlines():
+                row = json.loads(line)
+                if row['id'] in saved:
+                    raise ValueError('Duplicate saved prediction.')
+                saved[row['id']] = row
+        expected = {r['id']:r for r in dev}
+        if set(saved)-set(expected) or any(any(saved[k].get(f)!=expected[k][f] for f in expected[k]) for k in saved):
+            raise ValueError('Saved predictions differ from current development inputs.')
+        model.eval(); model.config.use_cache = True
+        for i, row in enumerate(dev,1):
+            if row['id'] in saved:
+                continue
+            inputs = processor.apply_chat_template(messages(row),tokenize=True,return_dict=True,
+                return_tensors='pt',add_generation_prompt=True)
+            inputs = {k:v.to(model.device) if hasattr(v,'to') else v for k,v in inputs.items()}
+            parser = build_transformers_prefix_allowed_tokens_fn(processor.tokenizer,JsonSchemaParser(schema))
+            with torch.inference_mode():
+                tokens = model.generate(**inputs,max_new_tokens=64,do_sample=False,prefix_allowed_tokens_fn=parser)
+            raw = processor.batch_decode(tokens[:,inputs['input_ids'].shape[-1]:],skip_special_tokens=True)[0]
+            family = strict_family(raw,families)
+            result = {**row,'prediction_raw':raw,'predicted_family':family,'strict_valid':family is not None,
+                      'correct':family==row['family']}
+            with predictions.open('a') as stream:
+                stream.write(json.dumps(result)+'\n');stream.flush()
+            saved[row['id']] = result
+            print(f'{label} {i}/{len(dev)} {row["id"]}: {family}; correct {result["correct"]}',flush=True)
+            del inputs, tokens
+        rows = [saved[r['id']] for r in dev]
+        counts = lambda group: {'cases':len(group),'correct':sum(r['correct'] for r in group)}
+        summary = {'examples':len(rows),'correct':sum(r['correct'] for r in rows),
+                   'strict_valid':sum(r['strict_valid'] for r in rows),
+                   'supported':counts([r for r in rows if r['family']!='unknown']),
+                   'rejection':counts([r for r in rows if r['family']=='unknown']),
+                   'by_category':{c:counts([r for r in rows if r['category']==c]) for c in sorted({r['category'] for r in rows})},
+                   'note':metadata['note']}
+        (folder/'summary.json').write_text(json.dumps(summary,indent=2)+'\n')
+        return summary
+
+    base = evaluate('base')
+    torch.cuda.empty_cache()
+    adapter = out/'adapter'
+    if (out/'training-complete.json').exists():
+        model = PeftModel.from_pretrained(model,adapter)
+    else:
+        model = prepare_model_for_kbit_training(model,use_gradient_checkpointing=True)
+        targets = [name for name,_ in model.named_modules() if 'language_model' in name
+                   and name.rsplit('.',1)[-1] in ('q_proj','v_proj')]
+        if not targets:
+            raise ValueError('Expected language attention modules were not found.')
+        model = get_peft_model(model,LoraConfig(r=16,lora_alpha=32,lora_dropout=.05,
+            target_modules=targets,bias='none',task_type='CAUSAL_LM'))
+        model.config.use_cache = False
+        model.print_trainable_parameters()
+
+        def collate(rows):
+            if len(rows)!=1:
+                raise ValueError('This free GPU recipe requires batch size one.')
+            row=rows[0]; prompt=messages(row)
+            full=prompt+[{'role':'assistant','content':[{'type':'text','text':json.dumps({'family':row['family']})}]}]
+            batch=processor.apply_chat_template(full,tokenize=True,return_dict=True,return_tensors='pt',add_generation_prompt=False)
+            prefix=processor.apply_chat_template(prompt,tokenize=True,return_dict=True,return_tensors='pt',add_generation_prompt=True)['input_ids']
+            n=prefix.shape[1]
+            if not torch.equal(batch['input_ids'][:,:n],prefix) or batch['input_ids'].shape[1]>2048:
+                raise ValueError('Chat prefix mismatch or overlong example; refusing to truncate.')
+            labels=batch['input_ids'].clone();labels[:,:n]=-100;batch['labels']=labels
+            return batch
+
+        trainer=Trainer(model=model,train_dataset=train,eval_dataset=dev,data_collator=collate,
+            args=TrainingArguments(output_dir=str(adapter),per_device_train_batch_size=1,per_device_eval_batch_size=1,
+                gradient_accumulation_steps=8,learning_rate=1e-4,num_train_epochs=args.epochs,
+                bf16=dtype==torch.bfloat16,fp16=dtype==torch.float16,gradient_checkpointing=True,
+                gradient_checkpointing_kwargs={'use_reentrant':False},remove_unused_columns=False,
+                eval_strategy='epoch',save_strategy='steps',save_steps=4,save_total_limit=2,
+                logging_steps=1,report_to='none',seed=42))
+        checkpoint=get_last_checkpoint(str(adapter)) if args.resume and adapter.exists() else None
+        result=trainer.train(resume_from_checkpoint=checkpoint)
+        trainer.save_model(str(adapter));processor.save_pretrained(str(adapter))
+        (out/'training-complete.json').write_text(json.dumps(result.metrics,indent=2)+'\n')
+    adapted=evaluate('adapter')
+    comparison={'base':base,'adapter':adapted,'deployed':False,
+                'note':'Inspect failures and collect independent examples before considering deployment. No automatic promotion.'}
+    (out/'comparison.json').write_text(json.dumps(comparison,indent=2)+'\n')
+    print(json.dumps(comparison,indent=2),flush=True)
+
+
+if __name__=='__main__':
+    main()
