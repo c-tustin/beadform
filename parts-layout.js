@@ -17,12 +17,12 @@ function compose(g,stage,{width=950,minimumSpacing=32}={}){
   tiles.push({c,source,scale,minX,minY,padding,width:tileWidth,height:tileHeight,header,lines});
  }
  const W=Math.max(width,...tiles.map(t=>t.width)),rows=[];let row=[];for(const tile of tiles){if(row.length&&row.reduce((n,t)=>n+t.width+24,0)+tile.width>W){rows.push(row);row=[];}row.push(tile);}if(row.length)rows.push(row);
- const nodes=[],pos=[],axes=[],labels=[];let y=10;
+ const nodes=[],pos=[],axes=[],labels=[],sections=[];let y=10;
  for(const row of rows){const used=row.reduce((n,t)=>n+t.width,0)+(row.length-1)*24;let x=(W-used)/2;
-  for(const t of row){labels.push({component:t.c.id,x:x+12,y:y+22,lines:t.lines});for(const id of t.c.ids){const n=g.byId.get(id),i=t.source.index.get(id),p=t.source.pos[i];nodes.push(n);pos.push({x:x+t.padding+(p.x-t.minX)*t.scale,y:y+t.header+t.padding+(p.y-t.minY)*t.scale});axes.push(t.source.axes[i]);}x+=t.width+24;}
+  for(const t of row){labels.push({component:t.c.id,x:x+12,y:y+22,lines:t.lines});for(const section of t.source.sections||[])sections.push({text:section.text,x:x+t.padding+(section.x-t.minX)*t.scale,y:y+t.header+t.padding+(section.y-t.minY)*t.scale});for(const id of t.c.ids){const n=g.byId.get(id),i=t.source.index.get(id),p=t.source.pos[i];nodes.push(n);pos.push({x:x+t.padding+(p.x-t.minX)*t.scale,y:y+t.header+t.padding+(p.y-t.minY)*t.scale});axes.push(t.source.axes[i]);}x+=t.width+24;}
   y+=Math.max(...row.map(t=>t.height))+24;
  }
- return {nodes,pos,axes,index:new Map(nodes.map((n,i)=>[n.id,i])),W,H:y,components,labels};
+ return {nodes,pos,axes,index:new Map(nodes.map((n,i)=>[n.id,i])),W,H:y,components,labels,sections};
 }
 function measure(layout,{renderedWidth=950}={}){let minimum=Infinity,crowded=0;for(let a=0;a<layout.nodes.length;a++)for(let b=a+1;b<layout.nodes.length;b++){const d=Math.hypot(layout.pos[a].x-layout.pos[b].x,layout.pos[a].y-layout.pos[b].y),clearance=(d-11*((layout.nodes[a].diameterMm||2)+(layout.nodes[b].diameterMm||2))/2)*renderedWidth/layout.W;minimum=Math.min(minimum,clearance);if(clearance<2)crowded++;}return {beads:layout.nodes.length,crowded_pairs:crowded,minimum_nominal_glyph_clearance_px:Number.isFinite(minimum)?minimum:null,viewbox_width:layout.W,viewbox_height:layout.H};}
 root.BeadPartsLayout={compose,measure};if(typeof module!=='undefined')module.exports=root.BeadPartsLayout;

@@ -1,0 +1,828 @@
+{
+  "note": "AUDIT HARNESS ERROR: volume-engine.js sets globalThis.BeadVolume and has no CommonJS export. No actual app-entry cases were evaluated. Retained for diagnosis; do not interpret the zero summary counts as app failures.",
+  "sourceSha256": {
+    "shape-engine.js": "3eb3240c5f796496e75098e6d18c17f30e373d8c16cf1a050748c9d666d587be",
+    "volume-engine.js": "d746682d33e3d71aa158935425d5be12ec963c68e335b328f8fb50fc8f1e13c1",
+    "stage-guide.js": "3053da8684fbf2a1cf02fa7192f66b13da3669bd7ec9aba3a0dbaab498710f03",
+    "parts-library.js": "306ea184df3801b2f763b6d1aeb74611d6e7c9f72f24000a24b640e83525457c"
+  },
+  "results": [
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": false,
+          "error": "V.build is not a function"
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": false,
+          "error": "V.build is not a function"
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": false,
+          "error": "V.build is not a function"
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": false,
+          "error": "V.build is not a function"
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": false,
+          "error": "V.build is not a function"
+        }
+      ]
+    }
+  ],
+  "actualCasesEvaluated": 0
+}

@@ -1,0 +1,2174 @@
+{
+  "summary": {
+    "dimensionCases": 216,
+    "entryOrders": 1728,
+    "unitCubeBeads": 12,
+    "twoCubeRowBeads": 20,
+    "rowIncrement": 8,
+    "physicallyTested": 0,
+    "note": "Exact edge/face inventories and face-connected cube orders only; not an audit of physical thread tension or joint strength."
+  },
+  "sourceSha256": "e0d45a71fbca813973527eb63ce746d6c8f5f2275deead7bd0531d44f22849dd",
+  "cases": [
+    {
+      "dimensions": [
+        1,
+        1,
+        1
+      ],
+      "beads": 12,
+      "cubes": 1,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        2
+      ],
+      "beads": 20,
+      "cubes": 2,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        3
+      ],
+      "beads": 28,
+      "cubes": 3,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        4
+      ],
+      "beads": 36,
+      "cubes": 4,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        5
+      ],
+      "beads": 44,
+      "cubes": 5,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        1,
+        6
+      ],
+      "beads": 52,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        1
+      ],
+      "beads": 20,
+      "cubes": 2,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        2
+      ],
+      "beads": 33,
+      "cubes": 4,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        3
+      ],
+      "beads": 46,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        4
+      ],
+      "beads": 59,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        5
+      ],
+      "beads": 72,
+      "cubes": 10,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        2,
+        6
+      ],
+      "beads": 85,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        1
+      ],
+      "beads": 28,
+      "cubes": 3,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        2
+      ],
+      "beads": 46,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        3
+      ],
+      "beads": 64,
+      "cubes": 9,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        4
+      ],
+      "beads": 82,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        5
+      ],
+      "beads": 100,
+      "cubes": 15,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        3,
+        6
+      ],
+      "beads": 118,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        1
+      ],
+      "beads": 36,
+      "cubes": 4,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        2
+      ],
+      "beads": 59,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        3
+      ],
+      "beads": 82,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        4
+      ],
+      "beads": 105,
+      "cubes": 16,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        5
+      ],
+      "beads": 128,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        4,
+        6
+      ],
+      "beads": 151,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        1
+      ],
+      "beads": 44,
+      "cubes": 5,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        2
+      ],
+      "beads": 72,
+      "cubes": 10,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        3
+      ],
+      "beads": 100,
+      "cubes": 15,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        4
+      ],
+      "beads": 128,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        5
+      ],
+      "beads": 156,
+      "cubes": 25,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        5,
+        6
+      ],
+      "beads": 184,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        1
+      ],
+      "beads": 52,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        2
+      ],
+      "beads": 85,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        3
+      ],
+      "beads": 118,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        4
+      ],
+      "beads": 151,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        5
+      ],
+      "beads": 184,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        1,
+        6,
+        6
+      ],
+      "beads": 217,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        1
+      ],
+      "beads": 20,
+      "cubes": 2,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        2
+      ],
+      "beads": 33,
+      "cubes": 4,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        3
+      ],
+      "beads": 46,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        4
+      ],
+      "beads": 59,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        5
+      ],
+      "beads": 72,
+      "cubes": 10,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        1,
+        6
+      ],
+      "beads": 85,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        1
+      ],
+      "beads": 33,
+      "cubes": 4,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        2
+      ],
+      "beads": 54,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        3
+      ],
+      "beads": 75,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        4
+      ],
+      "beads": 96,
+      "cubes": 16,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        5
+      ],
+      "beads": 117,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        2,
+        6
+      ],
+      "beads": 138,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        1
+      ],
+      "beads": 46,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        2
+      ],
+      "beads": 75,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        3
+      ],
+      "beads": 104,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        4
+      ],
+      "beads": 133,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        5
+      ],
+      "beads": 162,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        3,
+        6
+      ],
+      "beads": 191,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        1
+      ],
+      "beads": 59,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        2
+      ],
+      "beads": 96,
+      "cubes": 16,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        3
+      ],
+      "beads": 133,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        4
+      ],
+      "beads": 170,
+      "cubes": 32,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        5
+      ],
+      "beads": 207,
+      "cubes": 40,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        4,
+        6
+      ],
+      "beads": 244,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        1
+      ],
+      "beads": 72,
+      "cubes": 10,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        2
+      ],
+      "beads": 117,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        3
+      ],
+      "beads": 162,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        4
+      ],
+      "beads": 207,
+      "cubes": 40,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        5
+      ],
+      "beads": 252,
+      "cubes": 50,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        5,
+        6
+      ],
+      "beads": 297,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        1
+      ],
+      "beads": 85,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        2
+      ],
+      "beads": 138,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        3
+      ],
+      "beads": 191,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        4
+      ],
+      "beads": 244,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        5
+      ],
+      "beads": 297,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        2,
+        6,
+        6
+      ],
+      "beads": 350,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        1
+      ],
+      "beads": 28,
+      "cubes": 3,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        2
+      ],
+      "beads": 46,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        3
+      ],
+      "beads": 64,
+      "cubes": 9,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        4
+      ],
+      "beads": 82,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        5
+      ],
+      "beads": 100,
+      "cubes": 15,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        1,
+        6
+      ],
+      "beads": 118,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        1
+      ],
+      "beads": 46,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        2
+      ],
+      "beads": 75,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        3
+      ],
+      "beads": 104,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        4
+      ],
+      "beads": 133,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        5
+      ],
+      "beads": 162,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        2,
+        6
+      ],
+      "beads": 191,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        1
+      ],
+      "beads": 64,
+      "cubes": 9,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        2
+      ],
+      "beads": 104,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        3
+      ],
+      "beads": 144,
+      "cubes": 27,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        4
+      ],
+      "beads": 184,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        5
+      ],
+      "beads": 224,
+      "cubes": 45,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        3,
+        6
+      ],
+      "beads": 264,
+      "cubes": 54,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        1
+      ],
+      "beads": 82,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        2
+      ],
+      "beads": 133,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        3
+      ],
+      "beads": 184,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        4
+      ],
+      "beads": 235,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        5
+      ],
+      "beads": 286,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        4,
+        6
+      ],
+      "beads": 337,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        1
+      ],
+      "beads": 100,
+      "cubes": 15,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        2
+      ],
+      "beads": 162,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        3
+      ],
+      "beads": 224,
+      "cubes": 45,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        4
+      ],
+      "beads": 286,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        5
+      ],
+      "beads": 348,
+      "cubes": 75,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        5,
+        6
+      ],
+      "beads": 410,
+      "cubes": 90,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        1
+      ],
+      "beads": 118,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        2
+      ],
+      "beads": 191,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        3
+      ],
+      "beads": 264,
+      "cubes": 54,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        4
+      ],
+      "beads": 337,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        5
+      ],
+      "beads": 410,
+      "cubes": 90,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        3,
+        6,
+        6
+      ],
+      "beads": 483,
+      "cubes": 108,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        1,
+        1
+      ],
+      "beads": 36,
+      "cubes": 4,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        1,
+        2
+      ],
+      "beads": 59,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        1,
+        3
+      ],
+      "beads": 82,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        1,
+        4
+      ],
+      "beads": 105,
+      "cubes": 16,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        1,
+        5
+      ],
+      "beads": 128,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        1,
+        6
+      ],
+      "beads": 151,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        2,
+        1
+      ],
+      "beads": 59,
+      "cubes": 8,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        2,
+        2
+      ],
+      "beads": 96,
+      "cubes": 16,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        2,
+        3
+      ],
+      "beads": 133,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        2,
+        4
+      ],
+      "beads": 170,
+      "cubes": 32,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        2,
+        5
+      ],
+      "beads": 207,
+      "cubes": 40,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        2,
+        6
+      ],
+      "beads": 244,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        3,
+        1
+      ],
+      "beads": 82,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        3,
+        2
+      ],
+      "beads": 133,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        3,
+        3
+      ],
+      "beads": 184,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        3,
+        4
+      ],
+      "beads": 235,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        3,
+        5
+      ],
+      "beads": 286,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        3,
+        6
+      ],
+      "beads": 337,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        4,
+        1
+      ],
+      "beads": 105,
+      "cubes": 16,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        4,
+        2
+      ],
+      "beads": 170,
+      "cubes": 32,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        4,
+        3
+      ],
+      "beads": 235,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        4,
+        4
+      ],
+      "beads": 300,
+      "cubes": 64,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        4,
+        5
+      ],
+      "beads": 365,
+      "cubes": 80,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        4,
+        6
+      ],
+      "beads": 430,
+      "cubes": 96,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        5,
+        1
+      ],
+      "beads": 128,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        5,
+        2
+      ],
+      "beads": 207,
+      "cubes": 40,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        5,
+        3
+      ],
+      "beads": 286,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        5,
+        4
+      ],
+      "beads": 365,
+      "cubes": 80,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        5,
+        5
+      ],
+      "beads": 444,
+      "cubes": 100,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        5,
+        6
+      ],
+      "beads": 523,
+      "cubes": 120,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        6,
+        1
+      ],
+      "beads": 151,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        6,
+        2
+      ],
+      "beads": 244,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        6,
+        3
+      ],
+      "beads": 337,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        6,
+        4
+      ],
+      "beads": 430,
+      "cubes": 96,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        6,
+        5
+      ],
+      "beads": 523,
+      "cubes": 120,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        4,
+        6,
+        6
+      ],
+      "beads": 616,
+      "cubes": 144,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        1,
+        1
+      ],
+      "beads": 44,
+      "cubes": 5,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        1,
+        2
+      ],
+      "beads": 72,
+      "cubes": 10,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        1,
+        3
+      ],
+      "beads": 100,
+      "cubes": 15,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        1,
+        4
+      ],
+      "beads": 128,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        1,
+        5
+      ],
+      "beads": 156,
+      "cubes": 25,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        1,
+        6
+      ],
+      "beads": 184,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        2,
+        1
+      ],
+      "beads": 72,
+      "cubes": 10,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        2,
+        2
+      ],
+      "beads": 117,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        2,
+        3
+      ],
+      "beads": 162,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        2,
+        4
+      ],
+      "beads": 207,
+      "cubes": 40,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        2,
+        5
+      ],
+      "beads": 252,
+      "cubes": 50,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        2,
+        6
+      ],
+      "beads": 297,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        3,
+        1
+      ],
+      "beads": 100,
+      "cubes": 15,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        3,
+        2
+      ],
+      "beads": 162,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        3,
+        3
+      ],
+      "beads": 224,
+      "cubes": 45,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        3,
+        4
+      ],
+      "beads": 286,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        3,
+        5
+      ],
+      "beads": 348,
+      "cubes": 75,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        3,
+        6
+      ],
+      "beads": 410,
+      "cubes": 90,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        4,
+        1
+      ],
+      "beads": 128,
+      "cubes": 20,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        4,
+        2
+      ],
+      "beads": 207,
+      "cubes": 40,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        4,
+        3
+      ],
+      "beads": 286,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        4,
+        4
+      ],
+      "beads": 365,
+      "cubes": 80,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        4,
+        5
+      ],
+      "beads": 444,
+      "cubes": 100,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        4,
+        6
+      ],
+      "beads": 523,
+      "cubes": 120,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        5,
+        1
+      ],
+      "beads": 156,
+      "cubes": 25,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        5,
+        2
+      ],
+      "beads": 252,
+      "cubes": 50,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        5,
+        3
+      ],
+      "beads": 348,
+      "cubes": 75,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        5,
+        4
+      ],
+      "beads": 444,
+      "cubes": 100,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        5,
+        5
+      ],
+      "beads": 540,
+      "cubes": 125,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        5,
+        6
+      ],
+      "beads": 636,
+      "cubes": 150,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        6,
+        1
+      ],
+      "beads": 184,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        6,
+        2
+      ],
+      "beads": 297,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        6,
+        3
+      ],
+      "beads": 410,
+      "cubes": 90,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        6,
+        4
+      ],
+      "beads": 523,
+      "cubes": 120,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        6,
+        5
+      ],
+      "beads": 636,
+      "cubes": 150,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        5,
+        6,
+        6
+      ],
+      "beads": 749,
+      "cubes": 180,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        1,
+        1
+      ],
+      "beads": 52,
+      "cubes": 6,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        1,
+        2
+      ],
+      "beads": 85,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        1,
+        3
+      ],
+      "beads": 118,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        1,
+        4
+      ],
+      "beads": 151,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        1,
+        5
+      ],
+      "beads": 184,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        1,
+        6
+      ],
+      "beads": 217,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        2,
+        1
+      ],
+      "beads": 85,
+      "cubes": 12,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        2,
+        2
+      ],
+      "beads": 138,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        2,
+        3
+      ],
+      "beads": 191,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        2,
+        4
+      ],
+      "beads": 244,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        2,
+        5
+      ],
+      "beads": 297,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        2,
+        6
+      ],
+      "beads": 350,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        3,
+        1
+      ],
+      "beads": 118,
+      "cubes": 18,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        3,
+        2
+      ],
+      "beads": 191,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        3,
+        3
+      ],
+      "beads": 264,
+      "cubes": 54,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        3,
+        4
+      ],
+      "beads": 337,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        3,
+        5
+      ],
+      "beads": 410,
+      "cubes": 90,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        3,
+        6
+      ],
+      "beads": 483,
+      "cubes": 108,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        4,
+        1
+      ],
+      "beads": 151,
+      "cubes": 24,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        4,
+        2
+      ],
+      "beads": 244,
+      "cubes": 48,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        4,
+        3
+      ],
+      "beads": 337,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        4,
+        4
+      ],
+      "beads": 430,
+      "cubes": 96,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        4,
+        5
+      ],
+      "beads": 523,
+      "cubes": 120,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        4,
+        6
+      ],
+      "beads": 616,
+      "cubes": 144,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        5,
+        1
+      ],
+      "beads": 184,
+      "cubes": 30,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        5,
+        2
+      ],
+      "beads": 297,
+      "cubes": 60,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        5,
+        3
+      ],
+      "beads": 410,
+      "cubes": 90,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        5,
+        4
+      ],
+      "beads": 523,
+      "cubes": 120,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        5,
+        5
+      ],
+      "beads": 636,
+      "cubes": 150,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        5,
+        6
+      ],
+      "beads": 749,
+      "cubes": 180,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        6,
+        1
+      ],
+      "beads": 217,
+      "cubes": 36,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        6,
+        2
+      ],
+      "beads": 350,
+      "cubes": 72,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        6,
+        3
+      ],
+      "beads": 483,
+      "cubes": 108,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        6,
+        4
+      ],
+      "beads": 616,
+      "cubes": 144,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        6,
+        5
+      ],
+      "beads": 749,
+      "cubes": 180,
+      "entryOrdersAudited": 8
+    },
+    {
+      "dimensions": [
+        6,
+        6,
+        6
+      ],
+      "beads": 882,
+      "cubes": 216,
+      "entryOrdersAudited": 8
+    }
+  ]
+}

@@ -1,0 +1,44 @@
+One CRAW cube practice draft
+DRAFT — PHYSICAL SAMPLE REQUIRED
+12 size 11/0 seed beads, nominal diameter 2 mm. 0.25 mm line.
+One cube; each bead is an edge. Counts and routes are computed. Hole fit and tension have not been sampled.
+Keep a starting tail. Knots and securing passes are not specified by this draft; use a finish you have tested with these supplies.
+
+1. make practice CRAW cube
+Start the project with a tail for finishing. The diagram separates xy layers; the lower grid contains z-direction edge beads between layers. Follow the listed four-bead face loops in cube order. Each bead ID is one physical cube edge; adjoining cubes share edge beads. Complete one cube before adding the next across a shared face. Reuse every listed bead rather than adding a duplicate. This cube-edge CRAW construction is a draft and needs a physical tension and hole-access sample.  This is the final step: secure the working end and starting tail with your tested finish.
+1. START LENGTH 1. PICK B0001 — cube 1: close 4-bead face loop
+2. PICK B0002 — cube 1: close 4-bead face loop
+3. PICK B0003 — cube 1: close 4-bead face loop
+4. PICK B0004 — cube 1: close 4-bead face loop
+5. PASS B0001 — cube 1: close 4-bead face loop
+6. PASS B0002 — cube 1: close 4-bead face loop
+7. PICK B0011 — cube 1: close 4-bead face loop
+8. PICK B0006 — cube 1: close 4-bead face loop
+9. PICK B0009 — cube 1: close 4-bead face loop
+10. PASS B0002 — cube 1: close 4-bead face loop
+11. PASS B0011 — cube 1: close 4-bead face loop
+12. PICK B0007 — cube 1: close 4-bead face loop
+13. PICK B0012 — cube 1: close 4-bead face loop
+14. PASS B0003 — cube 1: close 4-bead face loop
+15. PASS B0011 — cube 1: close 4-bead face loop
+16. PASS B0006 — cube 1: close 4-bead face loop
+17. PICK B0005 — cube 1: close 4-bead face loop
+18. PICK B0008 — cube 1: close 4-bead face loop
+19. PASS B0007 — cube 1: close 4-bead face loop
+20. PASS B0006 — cube 1: close 4-bead face loop
+21. PASS B0009 — cube 1: close 4-bead face loop
+22. PASS B0001 — cube 1: close 4-bead face loop
+23. PICK B0010 — cube 1: close 4-bead face loop
+24. PASS B0005 — cube 1: close 4-bead face loop
+25. PASS B0009 — cube 1: close 4-bead face loop
+26. PASS B0001 — cube 1: close 4-bead face loop
+27. PASS B0004 — cube 1: close 4-bead face loop
+28. PASS B0012 — cube 1: close 4-bead face loop
+29. PASS B0008 — cube 1: close 4-bead face loop
+30. PASS B0010 — cube 1: close 4-bead face loop
+31. PASS B0004 — cube 1: close 4-bead face loop
+
+CANDIDATE WEAVE-IN ROUTES, NOT COMPLETE KNOTTED FINISHES
+starting-tail: B0010 → B0008 → B0007
+working-end: B0012 → B0008 → B0005
+Do not force a needle through a crowded hole. Record actual bead brand/size, line, needle, tension, passages, shape and any corrections. Photograph front, side and the thread exit before marking this draft physically tested.

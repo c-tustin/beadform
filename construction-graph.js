@@ -12,6 +12,17 @@ function validate(g,graph){
  const errors=[],byPart=new Map(graph.parts.map(p=>[p.id,p]));
  if(byPart.size!==g.components.length)errors.push('duplicate or missing part');
  if(graph.parts.reduce((sum,p)=>sum+p.beadCount,0)!==g.nodes.length)errors.push('incorrect inventory');
+ for(const p of graph.parts)if(p.technique==='craw'){
+  const Craw=root.BeadCraw||(typeof require==='function'?require('./craw-block.js'):null),dims=p.dimensions;
+  if(!Craw||!Array.isArray(dims)||dims.length!==3){errors.push('missing CRAW dimensions');continue;}
+  try{if(p.beadCount!==Craw.count(...dims))errors.push('incorrect shared-edge CRAW count');}catch(e){errors.push('invalid CRAW dimensions');continue;}
+  if(!p.cubes||p.cubes.length!==dims.reduce((a,b)=>a*b,1)){errors.push('missing CRAW cells');continue;}
+  const faces=new Set(),coordinates=new Set();for(const [i,cube]of p.cubes.entries()){
+   if(cube.index!==i||cube.coordinate.length!==3||cube.coordinate.some((v,j)=>!Number.isInteger(v)||v<0||v>=dims[j])||coordinates.has(cube.coordinate.join(',')))errors.push('invalid CRAW cell coordinate');coordinates.add(cube.coordinate.join(','));
+   if(cube.faces.length!==6||new Set(cube.faces).size!==6)errors.push('invalid CRAW cube faces');
+   if(i&&!cube.faces.some(id=>faces.has(id)))errors.push('CRAW cube does not attach to an earlier face');cube.faces.forEach(id=>faces.add(id));
+  }
+ }
  const parents=new Map();
  for(const j of graph.joints){const rule=templates[j.type],child=g.components.find(c=>c.id===j.child);
   if(!rule||!child){errors.push('unsupported joint');continue;}
@@ -34,9 +45,9 @@ function validate(g,graph){
 }
 function compile(g){
  const parts=g.components.map(c=>({id:c.id,name:c.name,parent:c.parent||null,
-  technique:c.mesh.eye?'single-bead':c.mesh.stitch==='peyote'?'circular-peyote':c.kind==='strand'?'return-strand':'angle-weave',
-  template:c.mesh.eye?'eye':c.kind,templateStatus:'draft',beadCount:c.ids.length,beads:c.ids.slice(),
-  decision:c.mesh.stitch==='peyote'?'rounded hollow surface':c.kind==='strand'?'simple flexible appendage':'named part geometry',
+  technique:c.mesh.stitch==='craw'?'craw':c.mesh.eye?'single-bead':c.mesh.stitch==='peyote'?'circular-peyote':c.kind==='strand'?'return-strand':'angle-weave',
+  template:c.mesh.eye?'eye':c.kind,placementRule:c.placementRule||null,planeNormalAxis:c.planeNormalAxis,dimensions:c.mesh.dimensions||null,cubes:c.mesh.cells||null,templateStatus:'draft',beadCount:c.ids.length,beads:c.ids.slice(),
+  decision:c.mesh.stitch==='craw'?'cuboid volume at bead scale; shared edge beads and parent-facing cube order':c.mesh.stitch==='peyote'?'rounded hollow surface':c.kind==='strand'?'simple flexible appendage':'named part geometry',
   rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id])}))||null}));
  const joints=g.joins.map(j=>{const c=g.components.find(c=>c.id===j.component),type=kind(c)==='eye'?'eye-anchor':kind(c)==='strand'?'strand-return':j.pairs.length===2?'surface-double':'surface-hinge';j.jointType=type;return {id:'joint-'+j.component,type,parent:j.parent,child:j.component,status:'draft',anchors:j.pairs.map(p=>({parent:p.a,child:p.b,parentPasses:g.counts.get(p.a),childPasses:g.counts.get(p.b)}))};});
  const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,physicalSampleRequired:true};

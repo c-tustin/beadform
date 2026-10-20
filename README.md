@@ -2,6 +2,14 @@
 
 A pink-and-green bead studio that starts with varied parts: peyote balls, pears and domes; angle-weave leaves, fans, pointed caps and tubes; and flexible strands. Text/vision interpretation supplies a subject’s parts and colors; the app builds original bead routes and explicit joins. Detailed cubic RAW and flat peyote, RAW, and square stitch are also available. All embedded example artwork, geometric templates, bead diagrams and instructions are original code-generated assets. No reference pattern pages or third-party product images are bundled.
 
+## Free examples and current pattern work
+
+Open `beadform.html`, choose **try an animal**, then **try another example**. The studio now includes all 32 reviewed synthetic drafts, plus practice parts. Examples and their computed routes work without a model, API key or paid service. Their physical construction has not been sampled.
+
+Box-shaped volumes now use cube-edge CRAW with shared bead counts and face-connected build order. Rounded parts retain circular peyote; thin panels remain surfaces. The castle's towers share the wall baseline, and flat non-capsule panels follow their thinnest axis. Candidate weave-in routes are listed separately from assembly; knots remain unplanned.
+
+For optional free local text/image interpretation, use `node launch-qwen.mjs` after the setup in [qwen-and-lora.md](qwen-and-lora.md). The latest free Colab LoRA produced valid JSON but no usable patterns on the twelve inspected prompts; it has not been deployed. See [measured pattern-quality work](training/PATTERN_QUALITY.md) for results and limitations. Paid API setup below is optional.
+
 ## Start with text and image generation
 
 1. Extract **beadform-project.zip** into its own folder.
@@ -231,7 +239,7 @@ The floating arena now starts at the top of the page, adding 135 px of space abo
 
 ## local qwen and lora (current)
 
-Run `node launch-qwen.mjs` after installing Ollama and pulling `qwen3-vl:4b` for local text/image generation without an API key. See `qwen-and-lora.md` and `training/PLAN.md` for setup, reviewed data gates, and the free-Colab-only QLoRA pilot. Provider checks use mocked responses; no live local model or GPU training was run in the development environment.
+Run `node launch-qwen.mjs` after installing Ollama and pulling `qwen3-vl:4b` for local text/image generation without an API key. See `qwen-and-lora.md` and `training/PLAN.md` for setup, reviewed data gates, and the free-Colab-only QLoRA pilot. Provider checks use mocked responses. Free Colab model experiments have now been run; the latest geometry pilot was unsuccessful and its adapter is not deployed. See `training/PATTERN_QUALITY.md`.
 
 ## interactive studio and construction contracts (current)
 

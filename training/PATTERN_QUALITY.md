@@ -122,3 +122,32 @@ These are 128 configurations of the same 32 inspected scenes, not 128 independen
 Evidence: [initial sweep](results/2026-10-19-settings-sweep-v1.json), [parent correction sweep](results/2026-10-19-settings-sweep-parent-fix.json), and [finishing audit after parent fixes](results/2026-10-19-finishing-parent-fix-audited.json). An actual UI-downloaded frog CSV was inspected: 116 rows, six candidate finishing passes, correct assembly-plus-candidate sums, maximum combined count six ([export check](results/2026-10-19-finishing-export-check.json)).
 
 Still required: repair the larger castle using appropriate structural geometry; improve weak silhouettes; choose and physically sample complete finishes; verify actual hole axes and access; improve model semantic rejection before deployment. The goal remains active.
+
+## Current CRAW geometry, library and app entry
+
+The later CRAW work supersedes the previously unresolved larger-castle result. Non-flat boxes now become shared-edge cube lattices. Thin boxes such as sails remain panels, and rounded parts retain circular peyote. The compiler selects integer block dimensions at bead scale, computes all edge beads, and completes cubes in an order that shares a previously built face. Child blocks start from their parent-facing corner. No LLM supplies these counts.
+
+`craw-block.js` matches `a(b+1)(c+1) + b(a+1)(c+1) + c(a+1)(b+1)`. Its bounded generator was audited across 216 dimension combinations and eight entry corners each: **1,728 orders**, one cube = 12 beads, two in a row = 20, row increment = eight. This is a digital inventory/order result, not physical stitch validation.
+
+Visual inspection found and corrected two placement errors: castle tower bases now align with the wall baseline, and flat non-capsule panels use the thinnest source axis as their normal. The compiler checks those constraints. CRAW charts separate xy layers and the z-direction edge beads into labelled groups rather than projecting coincident bead positions. The [castle](prototypes/2026-10-19-craw-castle.png), [house](prototypes/2026-10-19-craw-house.png) and [robot](prototypes/2026-10-19-craw-robot.png) previews are still unreviewed physical drafts. Recognizability and proportions remain judgments beyond the numeric checks.
+
+### Final measurements from unchanged source
+
+- **128/128** library configurations compile: all 32 scenes at detail 3/4 and 0.20/0.25 mm line.
+- **128/128** have no detected cross-component bead overlaps and candidates for every thread end.
+- **Zero crowded bead-glyph pairs across 2,856 part, joint and repositioning diagrams** at the measured 950-pixel width. This does not establish text readability, absence of thread crossings, or needle access.
+- **128/128** version-5 project round trips retain the matching route. Legacy parts migration resets obsolete progress and retains old settings, colors and progress metadata in `legacyProjectData`.
+- **128/128** offline API response fixtures return inventory from the actual parts planner. The collapsed-capsule control is rejected. These use **zero live model calls** and do not measure Qwen's generation quality.
+- **Zero physical builds or complete knotted finishes** have been verified.
+
+Authoritative reports: [pattern/settings/diagram audit](results/2026-10-19-patterns-frozen-final.json), [project round trips](results/2026-10-19-projects-frozen-final.json), [offline API fixtures](results/2026-10-19-api-frozen-final.json), [CRAW inventory](results/2026-10-19-craw-frozen-final.json). The main evaluators capture source hashes at the start and refuse to write a report if captured files change during execution. Earlier iterations, regressions and the initial app-entry harness error are retained separately. One earlier API report explicitly warns that source changed during its process; use the frozen report for current-state evidence.
+
+### Usable app path and sample files
+
+All 32 existing reviewed synthetic scenes are now bundled as **draft examples**. Fish is excluded from this added catalog, as requested. After choosing a starter, use **try another example** to choose the castle, house, guitar and other subjects. No model, API key or paid service is required for examples. The bundle is generated from the existing approved scene file; no physical-success labels were added.
+
+The parts studio previously required an unrelated voxel model to succeed before showing its parts graph. That blocked the guitar at the default setting and the house at the larger setting. Parts projects now build and save the actual parts graph directly, and the API validates the requested construction mode. No placeholder voxel inventory is substituted. The actual browser guitar opened with **90 beads / three parts**, exported as version 5 with guide version 12, and reopened from the gallery with a matching route. The castle was inspected in the browser at **66 beads** (Everyday) and **144 beads** (Expanded).
+
+The [12-bead CRAW cube guide](prototypes/2026-10-19-craw-cube-guide.txt), [numbered chart](prototypes/2026-10-19-craw-cube.svg), and [editable project](prototypes/2026-10-19-craw-cube.beadform-3d.json) provide a concrete small sample to try. The practice menu also includes this cube. Knots are deliberately not invented; candidate weave-in routes are not secure finishes. Record actual supplies, hole fit, tension, geometry and corrections before adding physical success to any dataset. Future build snapshots include the route key so an outcome can be tied to its actual recipe.
+
+The new compiler results do **not** change the unsuccessful Qwen geometry pilot or semantic rejection results above. No adapter has been promoted or deployed. Remaining work includes physically sampled finishing and joints, stronger visual fidelity, and reliable learned design decisions and rejection of unsupported requests. The full goal remains active.

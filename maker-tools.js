@@ -1,7 +1,7 @@
 (() => {
 'use strict';
 const $=id=>document.getElementById(id),T=Beadform3D,U=Beadform.ui;
-function progress(g){const key=JSON.stringify([11,g.nodes.map(n=>[n.id,n.material,g.palette[g.colors[n.index]]]),g.stages.map(s=>s.operations.map(o=>[o.id,o.kind,o.phase]))]);let p=T.state.makerProgress;if(!p||p.key!==key)p=T.state.makerProgress={key,done:[],supplies:[]};p.done=[...new Set((Array.isArray(p.done)?p.done:[]).filter(i=>Number.isInteger(i)&&i>=0&&i<g.stages.length))];p.supplies=(Array.isArray(p.supplies)?p.supplies:[]).filter(x=>typeof x==='string');return p;}
+function progress(g){const key=window.BeadPartsProject.routeKey(g);let p=T.state.makerProgress;if(!p||p.key!==key)p=T.state.makerProgress={key,done:[],supplies:[]};p.done=[...new Set((Array.isArray(p.done)?p.done:[]).filter(i=>Number.isInteger(i)&&i>=0&&i<g.stages.length))];p.supplies=(Array.isArray(p.supplies)?p.supplies:[]).filter(x=>typeof x==='string');return p;}
 function rows(g){const groups=new Map();for(const n of g.nodes){const color=g.palette[g.colors[n.index]],key=n.material+'|'+color;if(!groups.has(key))groups.set(key,{key,name:n.material,color,count:0});groups.get(key).count++;}return [...groups.values()].map(r=>({...r,pack:Math.ceil(r.count*1.1)}));}
 function save(){window.BeadJourney?.scheduleSave();}
 function mount(){const g=BeadPartsStudio.model;if(!g)return;const p=progress(g);$('makerProgress').textContent=`${p.done.length} / ${g.stages.length} steps finished`;

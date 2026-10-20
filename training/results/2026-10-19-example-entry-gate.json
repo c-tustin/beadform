@@ -1,0 +1,1075 @@
+{
+  "note": "Legacy voxel gate and stage construction only; not full browser coverage or physical validation.",
+  "sourceSha256": {
+    "shape-engine.js": "3eb3240c5f796496e75098e6d18c17f30e373d8c16cf1a050748c9d666d587be",
+    "volume-engine.js": "d746682d33e3d71aa158935425d5be12ec963c68e335b328f8fb50fc8f1e13c1",
+    "stage-guide.js": "3053da8684fbf2a1cf02fa7192f66b13da3669bd7ec9aba3a0dbaab498710f03",
+    "parts-library.js": "306ea184df3801b2f763b6d1aeb74611d6e7c9f72f24000a24b640e83525457c"
+  },
+  "results": [
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 31
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1836,
+          "legacyStages": 36
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 650,
+          "legacyStages": 12
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 971,
+          "legacyStages": 18
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 75,
+          "legacyStages": 2
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 773,
+          "legacyStages": 15
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1013,
+          "legacyStages": 18
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 389,
+          "legacyStages": 7
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1830,
+          "legacyStages": 35
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1368,
+          "legacyStages": 26
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2264,
+          "legacyStages": 45
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 261,
+          "legacyStages": 5
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 669,
+          "legacyStages": 13
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1763,
+          "legacyStages": 34
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1541,
+          "legacyStages": 29
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1307,
+          "legacyStages": 24
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1191,
+          "legacyStages": 22
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1186,
+          "legacyStages": 23
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1416,
+          "legacyStages": 26
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1741,
+          "legacyStages": 32
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1076,
+          "legacyStages": 21
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1189,
+          "legacyStages": 22
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1032,
+          "legacyStages": 19
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 782,
+          "legacyStages": 14
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1333,
+          "legacyStages": 25
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 368,
+          "legacyStages": 7
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1254,
+          "legacyStages": 24
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1508,
+          "legacyStages": 29
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 386,
+          "legacyStages": 7
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 856,
+          "legacyStages": 16
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": false,
+          "error": "Separate pieces need a join. Paint a connection in the outline, or describe how the parts attach."
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 769,
+          "legacyStages": 15
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1564,
+          "legacyStages": 30
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 31
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1836,
+          "legacyStages": 36
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 650,
+          "legacyStages": 12
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 971,
+          "legacyStages": 18
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 75,
+          "legacyStages": 2
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 773,
+          "legacyStages": 15
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1013,
+          "legacyStages": 18
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 389,
+          "legacyStages": 7
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1830,
+          "legacyStages": 35
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1368,
+          "legacyStages": 26
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2264,
+          "legacyStages": 45
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 261,
+          "legacyStages": 5
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 669,
+          "legacyStages": 13
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1763,
+          "legacyStages": 34
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1541,
+          "legacyStages": 29
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1307,
+          "legacyStages": 24
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1191,
+          "legacyStages": 22
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1186,
+          "legacyStages": 23
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1416,
+          "legacyStages": 26
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1741,
+          "legacyStages": 33
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1076,
+          "legacyStages": 21
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1189,
+          "legacyStages": 22
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1032,
+          "legacyStages": 19
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 782,
+          "legacyStages": 14
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1333,
+          "legacyStages": 25
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 368,
+          "legacyStages": 7
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1254,
+          "legacyStages": 24
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1508,
+          "legacyStages": 29
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 386,
+          "legacyStages": 7
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 856,
+          "legacyStages": 16
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": false,
+          "error": "Separate pieces need a join. Paint a connection in the outline, or describe how the parts attach."
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 769,
+          "legacyStages": 15
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1564,
+          "legacyStages": 30
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 31
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5462,
+          "legacyStages": 109
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1791,
+          "legacyStages": 33
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2988,
+          "legacyStages": 57
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 804,
+          "legacyStages": 15
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2296,
+          "legacyStages": 43
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2888,
+          "legacyStages": 55
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1013,
+          "legacyStages": 18
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5583,
+          "legacyStages": 111
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5241,
+          "legacyStages": 103
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": false,
+          "error": "This design needs too many stitch cells. Choose Small or Standard detail."
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 913,
+          "legacyStages": 17
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1962,
+          "legacyStages": 37
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5416,
+          "legacyStages": 108
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 4586,
+          "legacyStages": 91
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3705,
+          "legacyStages": 72
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3762,
+          "legacyStages": 75
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3256,
+          "legacyStages": 64
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3550,
+          "legacyStages": 69
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5425,
+          "legacyStages": 107
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3073,
+          "legacyStages": 59
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3675,
+          "legacyStages": 73
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3066,
+          "legacyStages": 59
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2221,
+          "legacyStages": 42
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3973,
+          "legacyStages": 77
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1101,
+          "legacyStages": 21
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3823,
+          "legacyStages": 76
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 4556,
+          "legacyStages": 90
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1202,
+          "legacyStages": 23
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2475,
+          "legacyStages": 48
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 996,
+          "legacyStages": 19
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2322,
+          "legacyStages": 45
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5583,
+          "legacyStages": 111
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 31
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5462,
+          "legacyStages": 109
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1791,
+          "legacyStages": 33
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2988,
+          "legacyStages": 57
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 804,
+          "legacyStages": 15
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2296,
+          "legacyStages": 43
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2888,
+          "legacyStages": 55
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1013,
+          "legacyStages": 18
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5583,
+          "legacyStages": 111
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5241,
+          "legacyStages": 103
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": false,
+          "error": "This design needs too many stitch cells. Choose Small or Standard detail."
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 913,
+          "legacyStages": 17
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1962,
+          "legacyStages": 37
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5416,
+          "legacyStages": 108
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 4586,
+          "legacyStages": 91
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3705,
+          "legacyStages": 72
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3762,
+          "legacyStages": 75
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3256,
+          "legacyStages": 64
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3550,
+          "legacyStages": 69
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5425,
+          "legacyStages": 107
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3073,
+          "legacyStages": 59
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3675,
+          "legacyStages": 73
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3066,
+          "legacyStages": 59
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2221,
+          "legacyStages": 42
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3973,
+          "legacyStages": 78
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1101,
+          "legacyStages": 21
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 3823,
+          "legacyStages": 76
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 4556,
+          "legacyStages": 90
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 1202,
+          "legacyStages": 23
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2475,
+          "legacyStages": 48
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 996,
+          "legacyStages": 19
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 2322,
+          "legacyStages": 45
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "errors": [],
+          "legacyBeads": 5583,
+          "legacyStages": 111
+        }
+      ]
+    }
+  ]
+}

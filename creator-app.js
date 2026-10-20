@@ -23,7 +23,7 @@
    state.settings={...state.settings,shape:'custom',design,routeVersion:2,orderVersion:2,colorSource:'design',beadSize:2};state.title=title.slice(0,70)||'my beaded project';
    if(!T.generate(true)){state.settings=oldSettings;state.title=oldTitle;state.construction=oldConstruction;T.sync();throw Error(state.lastError);}
    state.partsStage=0;state.partsReveal=Infinity;state.view='thread';state.focusStage=false;state.yaw=-28;state.pitch=18;state.zoom=100;state.sourceCustom=true;state.edits=true;T.renderAll();T.setMode('volume');window.BeadJourney?.created();
-   const bridgeCount=state.model.cubes.filter(c=>c.support).length;
+   const bridgeCount=state.model.cubes?.filter(c=>c.support).length||0;
    status(`${origin}. ${bridgeCount?bridgeCount+' supporting cells connect thin details. ':''}${design.kind==='image'?'The visible outline defines the shape; depth is a rounded estimate.':'Review the proportions and small details before making it.'}`);
  }
  function buildOutline(){try{if(!trace&&!makeTrace())return;const d=JSON.parse(JSON.stringify(S.validateImage(trace)));T.confirmEdits(()=>{try{applyDesign(d,(state.sourceName||'my reference').replace(/\.[^.]+$/,''),'Built from your outline');}catch(e){status(e.message,true);}});}catch(e){status(e.message,true);}}
