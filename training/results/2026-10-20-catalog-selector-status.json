@@ -1,0 +1,20 @@
+{
+  "date": "2026-10-20",
+  "experiment": "catalog-selector-v1",
+  "sourceCommit": "2e6e1ff8d0c83c0cfa4f95fc6d968d45c13c0111",
+  "supportedDraftSubjects": 32,
+  "trainingRequests": 128,
+  "developmentRequests": 48,
+  "trainingRejections": 32,
+  "developmentRejections": 16,
+  "dataCheckPassed": true,
+  "pythonAndNotebookSyntaxParsed": true,
+  "gpuRunStarted": false,
+  "trainingStarted": false,
+  "modelPredictionsProduced": 0,
+  "adapterDeployed": false,
+  "status": "waiting-for-free-colab-gpu",
+  "observedUiMessage": "You cannot currently connect to a GPU due to usage limits in Colab.",
+  "action": "Stopped at the GPU allocation message. No paid compute or quota workarounds used.",
+  "note": "New authored synthetic semantic data, not reviewed physical pattern targets. No model-quality improvement is claimed."
+}
