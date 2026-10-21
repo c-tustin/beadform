@@ -1,0 +1,2850 @@
+{
+  "note": "Paired anchor policy comparison on the same synthetic scenes. Nominal access warnings are not physical success labels.",
+  "sourceSha256": {
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "parts-engine.js": "751fa47adfcec4eb76c7a3856ebba0c891575db079ea8c495d385c2fffbb96e5",
+    "continuous-thread.js": "4dc6469312af1cd9a5d46bb600cb7998322e99523ccb21f7fe65bef5d14928a9",
+    "craw-block.js": "e0d45a71fbca813973527eb63ce746d6c8f5f2275deead7bd0531d44f22849dd",
+    "peyote-ball.js": "6ad3be7612d4fe4eb12f1e6afc67e05d26b6d3c7635391bae4e412479fefcbd9",
+    "thread-finishing.js": "f8ecfba12228971c6864884e67a07c19c3bdba4aba1af0b177eb60191b309ea8",
+    "construction-graph.js": "b941fe9602c70688a8d8975cccf73d06a5c5b2934df749435febf191b1d242a1",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/compare_thread_access.cjs": "314ea2e56fb4143e702f020c9a8310d781069fc6c2a7d603f19bd42311cc69f2"
+  },
+  "summary": {
+    "cases": 128,
+    "compiled": 128,
+    "identicalInventory": 128,
+    "identicalCenters": 128,
+    "before": {
+      "conflicts": 526,
+      "crossPart": 212,
+      "connections": 40858,
+      "threadSections": 137
+    },
+    "after": {
+      "conflicts": 371,
+      "crossPart": 50,
+      "connections": 40889,
+      "threadSections": 139
+    }
+  },
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 341,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 341,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 482,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 482,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 213,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 223,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 339,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 339,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 339,
+        "conflicts": 17,
+        "crossPart": 7,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 341,
+        "conflicts": 9,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 283,
+        "conflicts": 6,
+        "crossPart": 6,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 282,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 142,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 142,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 331,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 331,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 128,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 128,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 360,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 360,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 226,
+        "conflicts": 7,
+        "crossPart": 7,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 231,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 161,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 164,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 191,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 191,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 121,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 121,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 68,
+        "conflicts": 9,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 68,
+        "conflicts": 7,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 355,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 355,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 146,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 146,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 347,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 349,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 335,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 335,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 314,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 314,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 301,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 301,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 430,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 430,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 325,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 323,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 462,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 464,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 120,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 120,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 121,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      },
+      "after": {
+        "connections": 121,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 279,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 279,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 165,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 165,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 265,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 265,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 204,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 204,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 220,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 220,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 345,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 345,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 485,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 485,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 214,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 211,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 343,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 343,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 336,
+        "conflicts": 17,
+        "crossPart": 9,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 342,
+        "conflicts": 11,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 286,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 285,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 142,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 142,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 331,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 331,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 128,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 128,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 359,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 359,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 232,
+        "conflicts": 6,
+        "crossPart": 6,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 236,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 162,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 5
+      },
+      "after": {
+        "connections": 166,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 191,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 191,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 123,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 123,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 68,
+        "conflicts": 9,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 68,
+        "conflicts": 7,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 356,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 357,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 146,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 147,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 340,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 341,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 321,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 320,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 311,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 311,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 301,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 301,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 420,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 420,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 318,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 318,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 463,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 463,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 122,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 122,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 121,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      },
+      "after": {
+        "connections": 121,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 279,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 279,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 169,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 169,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 267,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 267,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 206,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 208,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 223,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 223,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 493,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 493,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 633,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 633,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 291,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 291,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 418,
+        "conflicts": 17,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 418,
+        "conflicts": 15,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 392,
+        "conflicts": 30,
+        "crossPart": 7,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 389,
+        "conflicts": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 419,
+        "conflicts": 6,
+        "crossPart": 6,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 418,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 199,
+        "conflicts": 13,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 200,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 578,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 578,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 301,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 301,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 503,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 503,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 293,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 293,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 222,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 222,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 263,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 263,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 188,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 188,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 108,
+        "conflicts": 19,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 108,
+        "conflicts": 19,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 737,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 737,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 174,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 174,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 647,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 649,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 404,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 404,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 389,
+        "conflicts": 23,
+        "crossPart": 13,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 394,
+        "conflicts": 13,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 373,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 373,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 520,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 525,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 388,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 388,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 529,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 529,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 183,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 183,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 148,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      },
+      "after": {
+        "connections": 148,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 375,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 376,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 297,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 294,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 543,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 543,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 260,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 7
+      },
+      "after": {
+        "connections": 260,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 515,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      },
+      "after": {
+        "connections": 515,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 277,
+        "conflicts": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 499,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 492,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 638,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 640,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 291,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 291,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 409,
+        "conflicts": 32,
+        "crossPart": 4,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 418,
+        "conflicts": 31,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 400,
+        "conflicts": 31,
+        "crossPart": 8,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 389,
+        "conflicts": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 422,
+        "conflicts": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 421,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 199,
+        "conflicts": 24,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 200,
+        "conflicts": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 573,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 573,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 295,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 295,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 502,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 502,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 295,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 295,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 231,
+        "conflicts": 27,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 223,
+        "conflicts": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 263,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 263,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 188,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 188,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 108,
+        "conflicts": 19,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 108,
+        "conflicts": 19,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 739,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 739,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 174,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 174,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 636,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 637,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 388,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 388,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 390,
+        "conflicts": 40,
+        "crossPart": 13,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 390,
+        "conflicts": 29,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 373,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 373,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 490,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 3,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 496,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 3,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 383,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 383,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 533,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 533,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 186,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 186,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 148,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      },
+      "after": {
+        "connections": 148,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 375,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 377,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 297,
+        "conflicts": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 289,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 541,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 541,
+        "conflicts": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 260,
+        "conflicts": 6,
+        "crossPart": 6,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 263,
+        "conflicts": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalCenters": true,
+      "before": {
+        "connections": 519,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      },
+      "after": {
+        "connections": 519,
+        "conflicts": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6
+      }
+    }
+  ]
+}

@@ -1,0 +1,48 @@
+{
+  "date": "2026-10-21",
+  "paired": {
+    "cases": 128,
+    "compiled": 128,
+    "identicalInventory": 128,
+    "identicalCenters": 128,
+    "before": {
+      "conflicts": 526,
+      "crossPart": 212,
+      "connections": 40858,
+      "threadSections": 137
+    },
+    "after": {
+      "conflicts": 371,
+      "crossPart": 50,
+      "connections": 40889,
+      "threadSections": 139
+    }
+  },
+  "charts": 2858,
+  "crowdedGlyphPairs": 0,
+  "settingsCompilePasses": 128,
+  "clearancePasses": 128,
+  "projectRoundTrips": 128,
+  "offlineApiFixtures": 128,
+  "liveModelCalls": 0,
+  "physicalBuildsVerified": 0,
+  "completeFinishesVerified": 0,
+  "actualUiCubeExportsVerified": 3,
+  "cubeBeads": 12,
+  "cubeNominalFlags": 0,
+  "nominalAxisCounts": [
+    4,
+    4,
+    4
+  ],
+  "reportsSha256": {
+    "2026-10-21-patterns-access-final.json": "9528056bbdfc879989771cd608455d104d10e53f61b4f0e602442a02d9ab0f00",
+    "2026-10-21-projects-access-final.json": "cd3adf978557c7f6206d3bccfdba593854baa9ab191d63f241b9f6d9642dbdf7",
+    "2026-10-21-api-access-final.json": "6732b50581ea9fcfdf32dbaff535747a77fb99f6e5d5b99f990e8334caf703a8"
+  },
+  "remaining": [
+    "371 nominal straight-path flags, including 50 between parts",
+    "Physical samples of joints, finishes, needle access, tension and bead-hole fit",
+    "Improved silhouettes and reliable learned decisions"
+  ]
+}

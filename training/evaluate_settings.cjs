@@ -1,7 +1,7 @@
 // Full library settings sweep. A failed compile stays in the denominator.
 const fs=require('node:fs'),crypto=require('node:crypto');require('../shape-engine.js');
 const P=require('../parts-engine.js'),Q=require('../pattern-quality.js'),Layout=require('../parts-layout.js');
-const provenance=require('./evaluation_provenance.cjs').capture(['training/approved-expanded.jsonl','beadform.html','volume-app.js','parts-app.js','creator-app.js','maker-tools.js','finished-app.js','build.py','shell.html','shape-engine.js', 'volume-engine.js', 'parts-engine.js', 'parts-project.js', 'parts-library.js', 'craw-block.js', 'peyote-ball.js', 'continuous-thread.js', 'thread-finishing.js', 'construction-graph.js', 'parts-layout.js', 'stage-guide.js', 'pattern-quality.js', 'training/evaluation_provenance.cjs', 'training/evaluate_settings.cjs']);
+const provenance=require('./evaluation_provenance.cjs').capture(['training/approved-expanded.jsonl','beadform.html','volume-app.js','parts-app.js','creator-app.js','maker-tools.js','finished-app.js','build.py','shell.html','shape-engine.js', 'volume-engine.js', 'bead-geometry.js', 'parts-engine.js', 'parts-project.js', 'parts-library.js', 'craw-block.js', 'peyote-ball.js', 'continuous-thread.js', 'thread-finishing.js', 'construction-graph.js', 'parts-layout.js', 'stage-guide.js', 'pattern-quality.js', 'training/evaluation_provenance.cjs', 'training/evaluate_settings.cjs']);
 const args=process.argv.slice(2),arg=k=>args[args.indexOf(k)+1];
 if(!args.includes('--data')||!args.includes('--output'))throw Error('Use --data scenes.jsonl --output new.json');
 const input=arg('--data'),output=arg('--output');if(fs.existsSync(output))throw Error('Choose a new output to preserve evidence.');

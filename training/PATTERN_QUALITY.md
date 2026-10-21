@@ -171,3 +171,28 @@ The two-epoch QLoRA run completed 32 optimizer steps in 336.7 seconds. On the sa
 [Evidence and limitations](results/2026-10-21-catalog-selector-v1/README.md) include all 96 raw decisions, exact source/data hashes, the pinned model revision, environment, package versions and training metrics. Downloaded predictions were checked against their original inputs and independently recounted; recorded source hashes match the local code. The adapter and resumable checkpoints remain in Drive. Colab reported a notebook autosave conflict, so the completed notebook was copied separately rather than overwriting the remote version; the Drive result files were complete and the subprocess exited successfully.
 
 These are synthetic development results, not an independent test, generated-geometry success or physical-success evidence. The adapter is **not deployed**. Independent requests, rejection regressions and physically sampled patterns remain necessary. The earlier unsuccessful geometry pilot is unchanged.
+
+## Nominal hole directions and clearer attachment approaches — October 21, 2026
+
+The previous overlap checks compare bead centers with conservative spherical envelopes. They do not check the direction of the hole or whether thread approaches cross a neighboring bead. `bead-geometry.js` now derives nominal axes from each bead's placed endpoint geometry, uses 2 mm diameter / 1.3 mm longitudinal length for seed beads and 4 mm for round eyes, and audits straight connections in actual guide order. Only beads already present at that point are obstacles. Oriented oblate envelopes are enlarged by the selected line radius. Needle length and diameter, actual hole diameter, tension, thread curvature and deformation are not simulated.
+
+The attachment selector now ranks candidate parent/child bead pairs using both outward and return approaches, alongside the existing passage budget, reach, continuity and anatomical constraints. It prefers candidates whose approaches do not intersect those nominal envelopes. It does not relax the existing 3.8 mm center-span limit or change physical-success labels.
+
+| Paired measurement, 128 configurations | Previous anchors | Revised anchors |
+| --- | ---: | ---: |
+| Compiled | 128 | 128 |
+| Nominal straight-path flags | 526 | 371 |
+| Flags between parts | 212 | 50 |
+| Flags within parts | 314 | 321 |
+| Inter-bead connections | 40,858 | 40,889 |
+| Working lengths across the whole set | 137 | 139 |
+
+All 128 paired cases have **identical bead IDs, materials, colors and center positions**. The reduction comes from attachment and traversal choices, not deleting beads or changing the subject to pass an easier check. Within-part flags increase by seven; the remaining 371 flags still need review, especially in shaped peyote. These are 32 inspected synthetic scenes at four settings, not 128 independent subjects. A straight-path flag may be resolved by curved thread in real beadwork; zero flags does not prove needle access or buildability.
+
+The studio now displays a **thread approach review**, retained in text and print guides and construction JSON. Bead previews use nominal oblate geometry with placed hole directions; hole symbols remain illustrative. CRAW shape maps draw the actual lattice rather than using the tube fallback. A new preview-SVG export preserves the current view. The bead CSV includes positions, nominal hole length and axis vectors.
+
+Final unchanged-source checks: **128/128** compiles with no detected cross-component bead overlap, **128/128** matching project round trips, **128/128** offline API fixtures, and zero crowded bead-glyph pairs across **2,858** charts. Every thread end still has a candidate weave-in route within the existing combined passage limit. Those candidates remain incomplete finishes. No live model calls or physical builds were added.
+
+Evidence: [paired policies](results/2026-10-21-thread-access-comparison.json), [initial nominal audit](results/2026-10-21-thread-access-baseline.json), [final nominal audit](results/2026-10-21-thread-access-final.json), [settings and diagram audit](results/2026-10-21-patterns-access-final.json), [project round trips](results/2026-10-21-projects-access-final.json), [offline API fixtures](results/2026-10-21-api-access-final.json). Intermediate v1 and pre-export reports are retained as development history; the final reports correspond to the final source.
+
+The actual app opened the 12-bead CRAW sample with zero nominal flags. Browser-downloaded [preview](prototypes/2026-10-21-craw-cube-angled.svg), [bead CSV](prototypes/2026-10-21-craw-cube-parts-beads.csv) and [guide](prototypes/2026-10-21-craw-cube-parts-guide.txt) were inspected: 12 unique beads, four axes in each cube direction, unit axis vectors and a 1.3 mm nominal longitudinal length. [PNG preview](prototypes/2026-10-21-craw-cube-angled.png) is a rasterization of the actual SVG export. No maker-completion or physical-success flag was set. Physical samples, secure finishes, stronger silhouettes and reliable learned decisions remain outstanding; the full goal is not complete.

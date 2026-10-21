@@ -1,0 +1,52 @@
+One CRAW cube practice draft — PARTS-FIRST BEAD GUIDE
+11/0 seed beads; larger eye beads listed separately · 0.25 mm fishing line
+12 beads · 1 parts · 0 joins
+Cuboid parts use cube-edge CRAW with shared edge beads, exact counts and face-connected cube order. Thin panels remain surfaces. Shaped parts simplify the subject. Balls, pears and open domes use circular peyote with explicit increases, decreases and step-ups; leaf and fan panels use adjoining four-bead angle-weave loops, points use triangular loops, and tubes use four-bead walls and five-bead ends. Amigurumi proportions use a generous head and short limbs while retaining defining ears, wings and necks. These are approximate forms; flat panels and open domes need a physical tension check. Working thread: 1 planned length. Estimated total 0.5 m including 30% routing allowance and 40 cm of tails per length; this is not a measured cut length.
+12 × 11/0 round seed bead
+Optional: clean soft plastic film or lightweight craft filling. Add before the first decrease, not after closing.
+Maximum assembly passes: 4. Candidate finishing passes are listed separately; knots and extra securing passes still need hole space.
+color 1 #7caa80: 12 beads; 14 with spare.
+
+1. MAKE PRACTICE CRAW CUBE
+Start the project with a tail for finishing. The diagram separates xy layers; the lower grid contains z-direction edge beads between layers. Follow the listed four-bead face loops in cube order. Each bead ID is one physical cube edge; adjoining cubes share edge beads. Complete one cube before adding the next across a shared face. Reuse every listed bead rather than adding a duplicate. This cube-edge CRAW construction is a draft and needs a physical tension and hole-access sample.  This is the final step: secure the working end and starting tail with your tested finish.
+12 shared edge beads · 1 × 1 × 1 CRAW cubes
+1. START LENGTH 1. Keep this working line attached. PICK bead 1 [color 1] — cube 1: close 4-bead face loop
+2. PICK bead 2 [color 1] — cube 1: close 4-bead face loop
+3. PICK bead 3 [color 1] — cube 1: close 4-bead face loop
+4. PICK bead 4 [color 1] — cube 1: close 4-bead face loop
+5. PASS bead 1 [color 1] — cube 1: close 4-bead face loop
+6. PASS bead 2 [color 1] — cube 1: close 4-bead face loop
+7. PICK bead 11 [color 1] — cube 1: close 4-bead face loop
+8. PICK bead 6 [color 1] — cube 1: close 4-bead face loop
+9. PICK bead 9 [color 1] — cube 1: close 4-bead face loop
+10. PASS bead 2 [color 1] — cube 1: close 4-bead face loop
+11. PASS bead 11 [color 1] — cube 1: close 4-bead face loop
+12. PICK bead 7 [color 1] — cube 1: close 4-bead face loop
+13. PICK bead 12 [color 1] — cube 1: close 4-bead face loop
+14. PASS bead 3 [color 1] — cube 1: close 4-bead face loop
+15. PASS bead 11 [color 1] — cube 1: close 4-bead face loop
+16. PASS bead 6 [color 1] — cube 1: close 4-bead face loop
+17. PICK bead 5 [color 1] — cube 1: close 4-bead face loop
+18. PICK bead 8 [color 1] — cube 1: close 4-bead face loop
+19. PASS bead 7 [color 1] — cube 1: close 4-bead face loop
+20. PASS bead 6 [color 1] — cube 1: close 4-bead face loop
+21. PASS bead 9 [color 1] — cube 1: close 4-bead face loop
+22. PASS bead 1 [color 1] — cube 1: close 4-bead face loop
+23. PICK bead 10 [color 1] — cube 1: close 4-bead face loop
+24. PASS bead 5 [color 1] — cube 1: close 4-bead face loop
+25. PASS bead 9 [color 1] — cube 1: close 4-bead face loop
+26. PASS bead 1 [color 1] — positioning
+27. PASS bead 4 [color 1] — cube 1: close 4-bead face loop
+28. PASS bead 12 [color 1] — cube 1: close 4-bead face loop
+29. PASS bead 8 [color 1] — cube 1: close 4-bead face loop
+30. PASS bead 10 [color 1] — cube 1: close 4-bead face loop
+31. PASS bead 4 [color 1] — cube 1: close 4-bead face loop
+Secure the working end and starting tail with your tested finish.
+THREAD APPROACH REVIEW
+0 straight paths meet another nominal bead envelope; 0 are between parts.
+This uses nominal bead dimensions and line thickness. Thread can bend, so these are review flags, not proof of impossible construction. Needle access, tension and finishes still need a physical sample.
+FINISHING ROUTE DRAFTS
+2/2 ends have candidate weave-in routes. Maximum passages including all candidates: 4/6.
+Length 1, starting-tail at bead 1: bead 10 → bead 8 → bead 7.
+Length 1, working-end at bead 4: bead 12 → bead 8 → bead 5.
+After assembly, these candidate routes follow existing connections through three distinct beads. They are not part of the assembly sequence. Knots and additional securing passes are not specified or included. Sample the finish with the actual beads and line.

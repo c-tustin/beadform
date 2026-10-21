@@ -1,13 +1,23 @@
 (function(root){
 'use strict';
 const distance=(a,b)=>Math.hypot(...a.map((v,i)=>v-b[i]));
-function plan(g){
+function plan(g,{accessAware=true}={}){
+ const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
+ if(accessAware&&!Geometry)throw Error('Nominal bead geometry is missing.');
+ if(Geometry)Geometry.annotate(g);
  const base=new Map(g.components.map(c=>[c.id,g.stages[c.stage]])),oldJoins=new Map(g.joins.map(j=>[j.component,j])),known=new Set(),counts=new Map(g.nodes.map(n=>[n.id,0])),future=new Map(g.nodes.map(n=>[n.id,g.faces.filter(f=>f.ids.includes(n.id)).length])),reserve=new Map(),adj=new Map(),bridges=new Map();
  for(const n of g.nodes){n.addedAt=-1;for(const v of n.ends){if(!adj.has(v))adj.set(v,[]);adj.get(v).push(n.id);}}
  for(const c of g.components)if(c.mesh.stitch==='peyote')for(const group of c.mesh.groups)for(const i of group.sequence){const id=c.ids[i];future.set(id,(future.get(id)||0)+1);}
  let cursor=null,section=0,last=null,steps=[],activeMoves=[],activeIds=[],reasons=[];
  g.steps=[];g.stages=[];g.joins=[];
  const room=(id,extra=new Map())=>g.passLimit-counts.get(id)-(future.get(id)||0)-(reserve.get(id)||0)-(extra.get(id)||0);
+ function accessPenalty(a,side,b,child){
+  if(!accessAware)return 0;
+  const parentNode=g.byId.get(a),childNode=g.byId.get(b),present=new Set([...known,...child.ids]);
+  const outward=Geometry.blockers(g,parentNode,parentNode.ends[1-side],childNode,childNode.ends[0],present,{limit:1}).length;
+  const returning=Geometry.blockers(g,childNode,childNode.ends[1],parentNode,parentNode.ends[side],present,{limit:1}).length;
+  return (outward+returning)*100000000;
+ }
  function route(from,to,extra=new Map()){
   if(from===to)return [];if(from===null)return null;
   // Never chain two exposed connections: pass through a bead before another join.
@@ -23,11 +33,11 @@ function plan(g){
  function travel(path){for(const hop of path){if(hop.id)pass(hop.id,'position');else cursor=hop.to;}}
  function saveStep(label,component,faceId){if(!activeMoves.length)return;const st={index:g.steps.length,label,component,faceId,ids:activeIds,ops:activeMoves.map(o=>({kind:o.kind,id:o.id})),moves:activeMoves};g.steps.push(st);steps.push(st);activeMoves=[];activeIds=[];}
  function finishStage(template,instruction,layout){const operations=steps.flatMap(st=>st.moves.map((o,i)=>({...o,step:st.index,local:i,cube:template.component}))),ids=steps.flatMap(st=>st.ids),st={...template,index:g.stages.length,start:steps[0].index,end:steps.at(-1).index,steps,blocks:[{cubeId:template.component,steps}],ids,nodeIds:[...new Set(operations.map(o=>o.id))],operations,instruction};st.layout=contextLayout(g,st,layout);g.stages.push(st);steps=[];return st;}
- function chooseAttachment(parent,child,adjust=true){let best=null;for(const separate of [false,true]){for(const a of parent.ids){if(child.allowedParentIds&&!child.allowedParentIds.includes(a))continue;if(room(a)<(separate?2:3))continue;for(const side of [0,1]){const extra=new Map([[a,separate?2:3]]),entry=g.byId.get(a).ends[side],path=separate?null:route(cursor,entry,extra),restart=path===null;for(const b of child.ids){const n=g.byId.get(b);if(child.kind==='craw'&&!child.ids.slice(0,12).includes(b))continue;if(!['peyote','craw'].includes(child.mesh.stitch)&&child.kind!=='strand'&&room(b)<3)continue;if(child.kind==='craw'&&room(b)<3)continue;if(n.landmark&&child.mesh.stitch!=='peyote'&&child.kind!=='strand')continue;if((child.mesh.stitch==='peyote'||child.kind==='strand')&&b!==child.ids[0])continue;if(child.kind==='tube'&&!n.vertices.every(v=>v<5)&&!n.vertices.every(v=>v>=child.mesh.v.length-5))continue;if(distance(g.byId.get(a).p,n.p)>3.8)continue;const score=(restart?1000000:0)+(path?.filter(h=>h.id).length||0)*100+distance(g.byId.get(a).p,n.p)*1.5;if(!best||score<best.score)best={a,b,side,entry,path,restart,separate,score};}}}if(best)break;}if(!best&&adjust){
+ function chooseAttachment(parent,child,adjust=true){let best=null;for(const separate of [false,true]){for(const a of parent.ids){if(child.allowedParentIds&&!child.allowedParentIds.includes(a))continue;if(room(a)<(separate?2:3))continue;for(const side of [0,1]){const extra=new Map([[a,separate?2:3]]),entry=g.byId.get(a).ends[side],path=separate?null:route(cursor,entry,extra),restart=path===null;for(const b of child.ids){const n=g.byId.get(b);if(child.kind==='craw'&&!child.ids.slice(0,12).includes(b))continue;if(!['peyote','craw'].includes(child.mesh.stitch)&&child.kind!=='strand'&&room(b)<3)continue;if(child.kind==='craw'&&room(b)<3)continue;if(n.landmark&&child.mesh.stitch!=='peyote'&&child.kind!=='strand')continue;if((child.mesh.stitch==='peyote'||child.kind==='strand')&&b!==child.ids[0])continue;if(child.kind==='tube'&&!n.vertices.every(v=>v<5)&&!n.vertices.every(v=>v>=child.mesh.v.length-5))continue;if(distance(g.byId.get(a).p,n.p)>3.8)continue;const baseScore=(restart?1000000:0)+(path?.filter(h=>h.id).length||0)*100+distance(g.byId.get(a).p,n.p)*1.5;if(best&&baseScore>=best.score)continue;const score=baseScore+accessPenalty(a,side,b,child);if(!best||score<best.score)best={a,b,side,entry,path,restart,separate,score};}}}if(best)break;}if(!best&&adjust){
  // Tuck an unbuilt joint closer to an unused parent bead, preserving its subtree.
  const available=parent.ids.filter(id=>(!child.allowedParentIds||child.allowedParentIds.includes(id))&&room(id)>=2),entryIds=child.mesh.stitch==='peyote'||child.kind==='strand'?[child.ids[0]]:child.kind==='craw'?child.ids.slice(0,12).filter(id=>room(id)>=3):child.ids.filter(id=>{const n=g.byId.get(id);return child.kind!=='tube'||n.vertices.every(v=>v<5)||n.vertices.every(v=>v>=child.mesh.v.length-5);});
  const moves=[];for(const a of available)for(const b of entryIds){const pa=g.byId.get(a).p,pb=g.byId.get(b).p,d=distance(pa,pb),shift=pa.map((v,i)=>v+(pb[i]-v)*2.15/(d||1)-pb[i]);if(Math.hypot(...shift)>4)continue;const collision=[...known].some(id=>child.ids.some(cid=>distance(g.byId.get(id).p,g.byId.get(cid).p.map((v,i)=>v+shift[i]))<((g.byId.get(id).diameterMm||2)+(g.byId.get(cid).diameterMm||2))/2));if(!collision)moves.push({shift,d:Math.hypot(...shift)});}
- moves.sort((a,b)=>a.d-b.d);if(moves.length){const shift=moves[0].shift,subtree=new Set([child.id]);for(const c of g.components)if(subtree.has(c.parent))subtree.add(c.id);for(const c of g.components)if(subtree.has(c.id)){c.world=c.world.map((v,i)=>v+shift[i]);c.vertices=c.vertices.map(p=>p.map((v,i)=>v+shift[i]));for(const id of c.ids){const n=g.byId.get(id);n.p=n.p.map((v,i)=>v+shift[i]);}}return chooseAttachment(parent,child,false);}
+ moves.sort((a,b)=>a.d-b.d);if(moves.length){const shift=moves[0].shift,subtree=new Set([child.id]);for(const c of g.components)if(subtree.has(c.parent))subtree.add(c.id);for(const c of g.components)if(subtree.has(c.id)){c.world=c.world.map((v,i)=>v+shift[i]);c.vertices=c.vertices.map(p=>p.map((v,i)=>v+shift[i]));for(const id of c.ids){const n=g.byId.get(id);n.p=n.p.map((v,i)=>v+shift[i]);}}if(Geometry)Geometry.annotate(g);return chooseAttachment(parent,child,false);}
  }if(!best)throw Error('No close attachment for '+child.name+' to '+parent.name+' fits the available hole space. '+(g.settings.threadDiameter===.2?'Choose the smaller parts setting or simplify this joint.':'Try 0.20 mm line, the smaller parts setting, or a simpler joint.')+' The planner will not span the gap with loose thread.');return best;}
 
  function buildFaces(c,anchor){const pending=g.faces.filter(f=>f.id.startsWith(c.id+'F')).slice();let first=true;
@@ -59,7 +69,7 @@ function plan(g){
    const pairs=[{a:anchor.a,b:anchor.b}],join=oldJoins.get(c.id);
    if(c.kind!=='strand'){
     let best=null;const candidates=[];for(const a of parent.ids)if((!c.allowedParentIds||c.allowedParentIds.includes(a))&&a!==anchor.a&&room(a)>=2)for(const b of c.ids)if(b!==anchor.b&&room(b)>=2&&distance(g.byId.get(a).p,g.byId.get(b).p)<=3.8)candidates.push({a,b,d:distance(g.byId.get(a).p,g.byId.get(b).p)});candidates.sort((a,b)=>a.d-b.d);
-    for(const {a,b,d} of candidates){if(best&&d*1.5>=best.score)break;const extra=new Map([[a,2],[b,2]]),entry=g.byId.get(a).ends[0],path=route(cursor,entry,extra),score=(path===null?1000000:0)+(path?.filter(h=>h.id).length||0)*100+d*1.5;if(!best||score<best.score)best={a,b,path,entry,score};}
+    for(const {a,b,d} of candidates){if(best&&d*1.5>=best.score)break;const extra=new Map([[a,2],[b,2]]),entry=g.byId.get(a).ends[0],path=route(cursor,entry,extra),score=(path===null?1000000:0)+(path?.filter(h=>h.id).length||0)*100+d*1.5+accessPenalty(a,0,b,c);if(!best||score<best.score)best={a,b,path,entry,score};}
     if(best){if(best.path===null)fresh(best.entry,'The second attachment could not be reached without overfilling a bead.');else travel(best.path);const a=g.byId.get(best.a),b=g.byId.get(best.b);pass(a.id);connect(cursor,b.ends[0]);cursor=b.ends[0];pass(b.id);connect(cursor,a.ends[0]);cursor=a.ends[0];pass(a.id);cursor=b.ends[0];pass(b.id);saveStep('work the second attachment',c.id);pairs.push({a:a.id,b:b.id});}
    }
    const nodes=pairs.flatMap(p=>[g.byId.get(p.a),g.byId.get(p.b)]),layout={nodes,index:new Map(nodes.map((n,i)=>[n.id,i])),pos:nodes.map((n,i)=>({x:190+i%2*180,y:120+Math.floor(i/2)*120})),axes:nodes.map(()=>[0,1]),W:560,H:400};

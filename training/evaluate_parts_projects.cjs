@@ -1,7 +1,7 @@
 // Actual parts entry and project round-trip audit, independent of voxelization.
 const fs=require('node:fs'),crypto=require('node:crypto'),path=require('node:path');
 const Projects=require('../parts-project.js'),Library=require('../parts-library.js');
-const provenance=require('./evaluation_provenance.cjs').capture(['training/approved-expanded.jsonl','beadform.html','volume-app.js','parts-app.js','creator-app.js','maker-tools.js','finished-app.js','build.py','shell.html','shape-engine.js', 'volume-engine.js', 'parts-engine.js', 'parts-project.js', 'parts-library.js', 'craw-block.js', 'peyote-ball.js', 'continuous-thread.js', 'thread-finishing.js', 'construction-graph.js', 'parts-layout.js', 'stage-guide.js', 'pattern-quality.js', 'training/evaluation_provenance.cjs', 'training/evaluate_parts_projects.cjs']);
+const provenance=require('./evaluation_provenance.cjs').capture(['training/approved-expanded.jsonl','beadform.html','volume-app.js','parts-app.js','creator-app.js','maker-tools.js','finished-app.js','build.py','shell.html','shape-engine.js', 'volume-engine.js', 'bead-geometry.js', 'parts-engine.js', 'parts-project.js', 'parts-library.js', 'craw-block.js', 'peyote-ball.js', 'continuous-thread.js', 'thread-finishing.js', 'construction-graph.js', 'parts-layout.js', 'stage-guide.js', 'pattern-quality.js', 'training/evaluation_provenance.cjs', 'training/evaluate_parts_projects.cjs']);
 const args=process.argv.slice(2),i=args.indexOf('--output');if(i<0||!args[i+1])throw Error('Use --output new-report.json');const output=args[i+1];if(fs.existsSync(output))throw Error('Preserve previous evidence.');
 const results=[];
 for(const detail of [3,4])for(const threadDiameter of [.2,.25]){
