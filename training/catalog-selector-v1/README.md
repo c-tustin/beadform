@@ -2,6 +2,8 @@
 
 This experiment trains Qwen to select one of the **32 bundled draft subjects** or return `unknown`. Geometry, counts, stitch routes and joints remain computed by the existing planner. It does not enable a model in the app.
 
+**Completed October 21, 2026:** the free T4 run improved from 33/48 to 45/48 on the authored development requests. Rejection improved from 1/16 to 15/16, while supported recognition fell from 32/32 to 30/32. The adapter is not deployed. See [results, raw predictions and known failures](../results/2026-10-21-catalog-selector-v1/README.md).
+
 Data is newly authored synthetic text: **128 training prompts** (96 supported, 32 rejection) and **48 development prompts** (32 supported, 16 rejection). Each TSV row holds a subject ID, three training phrases and one development phrase. Rejection categories are fish, unsupported subjects, compositions and ambiguous requests. Fish is excluded from positive targets. The catalog must match `approved-expanded.jsonl` exactly after its existing approval filters and fish exclusion.
 
 These semantic labels have not been reviewed by the user. No physical-success labels, outcome photos or copyrighted pattern instructions are added. The development phrases were authored alongside the training phrases; scores on them are **not independent generalization evidence**. The earlier 15-case semantic probe used a different subject catalog and must not be compared as if it were this benchmark.

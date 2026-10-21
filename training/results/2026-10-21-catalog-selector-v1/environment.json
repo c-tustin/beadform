@@ -1,0 +1,5 @@
+{
+  "gpu": "Tesla T4",
+  "torch": "2.11.0+cu130",
+  "model_revision": "89644892e4d85e24eaac8bacfd4f463576704203"
+}
