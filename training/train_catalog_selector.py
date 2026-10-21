@@ -47,8 +47,14 @@ def main():
     manifest = out/'metadata.json'
     if manifest.exists() and (not args.resume or json.loads(manifest.read_text()) != metadata):
         raise ValueError('Existing run requires --resume with exactly matching configuration.')
-    if out.exists() and any(out.iterdir()) and not manifest.exists():
-        raise ValueError('Refusing to mix this run with an unidentified existing directory.')
+    if out.exists() and not manifest.exists():
+        # The notebook records its revision, environment and log before invoking us.
+        # Permit those startup files, while refusing unidentified model/data outputs.
+        startup_files = {'repository-revision.txt', 'pip-freeze.txt', 'run.log'}
+        unexpected = [p.name for p in out.iterdir()
+                      if p.name not in startup_files or not p.is_file() or p.is_symlink()]
+        if unexpected:
+            raise ValueError('Unidentified files in the run directory: '+', '.join(sorted(unexpected)))
     import torch
     from transformers import AutoConfig, AutoProcessor, Qwen3VLForConditionalGeneration, BitsAndBytesConfig, Trainer, TrainingArguments, set_seed
     from transformers.trainer_utils import get_last_checkpoint
