@@ -229,3 +229,10 @@ Changed version-5 guides now retain their previous guide key, colors, settings a
 The actual browser frog showed 116 beads, seven parts, one working line and zero nominal flags, versus 12 flags before the geometry correction. Its [saved preview SVG](prototypes/2026-10-21-frog-peyote-preview.svg) and [PNG rasterization](prototypes/2026-10-21-frog-peyote-preview.png) are unreviewed digital drafts. No maker-completion or physical-success label was set.
 
 All final report source fingerprints were checked against the current workspace after interruption and still match. This work adds no training labels or deployed adapter. Physical samples, secure finishes, the remaining 47 between-part path flags, better silhouettes and reliable learned decisions remain outstanding. The full goal remains incomplete.
+
+
+## Hole-aware routing through existing joints (2026-10-21)
+
+The router now remembers the last physical bead hole across a virtual joint and penalizes approaches blocked by already-built nominal bead envelopes. The paired audit of 128 configurations preserves every bead position, color, material and stitch schedule. Nominal straight-path flags drop from 47 to 4; no configuration has more flags. Planned working lengths total 138 rather than 139, and all 276 endpoints have candidate weave-in routes within passage budgets. Complete finishes and physical construction remain unverified.
+
+See [joint routing notes](results/2026-10-21-joint-routing-notes.md) and [paired report](results/2026-10-21-joint-routing-comparison.json). The previous published router is retained as an immutable comparison fixture. Remaining flags affect the coarse whale, cactus, and robot; they remain visible in the access diagnostics.
