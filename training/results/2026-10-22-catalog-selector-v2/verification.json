@@ -1,0 +1,343 @@
+{
+  "captured_date": "2026-10-22",
+  "source_revision": "1cc6120e2128e747c6997f18879753fde9ade5fb",
+  "export_sha256": "7360915beddc4ffedee11c336c744bc43e6ac9f12e528cf70960ab908e5e4e4f",
+  "source_hashes_match": true,
+  "predictions_reparsed": 384,
+  "results": {
+    "base": {
+      "examples": 48,
+      "correct": 33,
+      "strict_valid": 48,
+      "supported": {
+        "cases": 32,
+        "correct": 32
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 1
+      }
+    },
+    "adapter": {
+      "examples": 48,
+      "correct": 47,
+      "strict_valid": 48,
+      "supported": {
+        "cases": 32,
+        "correct": 31
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 16
+      }
+    },
+    "previous": {
+      "examples": 48,
+      "correct": 45,
+      "strict_valid": 48,
+      "supported": {
+        "cases": 32,
+        "correct": 30
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 15
+      }
+    },
+    "base-challenge": {
+      "examples": 80,
+      "correct": 66,
+      "strict_valid": 80,
+      "supported": {
+        "cases": 64,
+        "correct": 62
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 4
+      }
+    },
+    "adapter-challenge": {
+      "examples": 80,
+      "correct": 77,
+      "strict_valid": 80,
+      "supported": {
+        "cases": 64,
+        "correct": 64
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 13
+      }
+    },
+    "previous-challenge": {
+      "examples": 80,
+      "correct": 77,
+      "strict_valid": 80,
+      "supported": {
+        "cases": 64,
+        "correct": 64
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 13
+      }
+    }
+  },
+  "failures": {
+    "base": [
+      {
+        "id": "reject-dev-1",
+        "prompt": "A tropical angelfish bead sculpture.",
+        "family": "unknown",
+        "predicted_family": "butterfly"
+      },
+      {
+        "id": "reject-dev-2",
+        "prompt": "A little clownfish with white stripes.",
+        "family": "unknown",
+        "predicted_family": "frog"
+      },
+      {
+        "id": "reject-dev-4",
+        "prompt": "An aquarium guppy.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "reject-dev-5",
+        "prompt": "A pet kitten with whiskers.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "reject-dev-6",
+        "prompt": "A puppy with floppy ears.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "reject-dev-7",
+        "prompt": "A spiny hedgehog curled into a ball.",
+        "family": "unknown",
+        "predicted_family": "snail"
+      },
+      {
+        "id": "reject-dev-8",
+        "prompt": "A two-wheeled bicycle with handlebars.",
+        "family": "unknown",
+        "predicted_family": "butterfly"
+      },
+      {
+        "id": "reject-dev-9",
+        "prompt": "Combine a bunny and a carrot in one sculpture.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "reject-dev-10",
+        "prompt": "Put a butterfly on top of a mushroom.",
+        "family": "unknown",
+        "predicted_family": "butterfly"
+      },
+      {
+        "id": "reject-dev-11",
+        "prompt": "Two separate designs, a frog and a turtle.",
+        "family": "unknown",
+        "predicted_family": "frog"
+      },
+      {
+        "id": "reject-dev-12",
+        "prompt": "An elephant carrying a castle.",
+        "family": "unknown",
+        "predicted_family": "house"
+      },
+      {
+        "id": "reject-dev-13",
+        "prompt": "I want an unspecified cute creature.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "reject-dev-14",
+        "prompt": "Choose whichever design you like.",
+        "family": "unknown",
+        "predicted_family": "bird"
+      },
+      {
+        "id": "reject-dev-15",
+        "prompt": "Make that thing I am thinking of.",
+        "family": "unknown",
+        "predicted_family": "rocket"
+      },
+      {
+        "id": "reject-dev-16",
+        "prompt": "A round decorative item.",
+        "family": "unknown",
+        "predicted_family": "flower"
+      }
+    ],
+    "adapter": [
+      {
+        "id": "bear-4",
+        "prompt": "A round-eared teddy animal.",
+        "family": "bear",
+        "predicted_family": "unknown"
+      }
+    ],
+    "previous": [
+      {
+        "id": "bear-4",
+        "prompt": "A round-eared teddy animal.",
+        "family": "bear",
+        "predicted_family": "unknown"
+      },
+      {
+        "id": "strawberry-4",
+        "prompt": "A heart-shaped strawberry with tiny seeds.",
+        "family": "strawberry",
+        "predicted_family": "unknown"
+      },
+      {
+        "id": "reject-dev-11",
+        "prompt": "Two separate designs, a frog and a turtle.",
+        "family": "unknown",
+        "predicted_family": "frog"
+      }
+    ],
+    "base-challenge": [
+      {
+        "id": "challenge-strawberry-1",
+        "prompt": "Which existing draft should I use for a strawberry?",
+        "family": "strawberry",
+        "predicted_family": "pear"
+      },
+      {
+        "id": "challenge-strawberry-2",
+        "prompt": "My subject is a strawberry; pick its catalog entry.",
+        "family": "strawberry",
+        "predicted_family": "pear"
+      },
+      {
+        "id": "challenge-reject-fish-1",
+        "prompt": "Please select a pufferfish.",
+        "family": "unknown",
+        "predicted_family": "frog"
+      },
+      {
+        "id": "challenge-reject-fish-3",
+        "prompt": "My subject is a zebrafish.",
+        "family": "unknown",
+        "predicted_family": "frog"
+      },
+      {
+        "id": "challenge-reject-unsupported-1",
+        "prompt": "Please select a zebra.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "challenge-reject-unsupported-2",
+        "prompt": "My subject is a motorcycle.",
+        "family": "unknown",
+        "predicted_family": "rocket"
+      },
+      {
+        "id": "challenge-reject-unsupported-3",
+        "prompt": "A cup rather than a teapot.",
+        "family": "unknown",
+        "predicted_family": "teapot"
+      },
+      {
+        "id": "challenge-reject-unsupported-4",
+        "prompt": "Which draft is for a pineapple fruit?",
+        "family": "unknown",
+        "predicted_family": "pear"
+      },
+      {
+        "id": "challenge-reject-composition-1",
+        "prompt": "I need three bunny ornaments.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "challenge-reject-composition-2",
+        "prompt": "Choose one draft for a whale and another for a pear.",
+        "family": "unknown",
+        "predicted_family": "whale"
+      },
+      {
+        "id": "challenge-reject-composition-3",
+        "prompt": "A separate robot and a separate flower please.",
+        "family": "unknown",
+        "predicted_family": "robot"
+      },
+      {
+        "id": "challenge-reject-ambiguous-1",
+        "prompt": "Pick a random catalog entry.",
+        "family": "unknown",
+        "predicted_family": "bird"
+      },
+      {
+        "id": "challenge-reject-ambiguous-3",
+        "prompt": "Something with a round body and appendages.",
+        "family": "unknown",
+        "predicted_family": "bee"
+      },
+      {
+        "id": "challenge-reject-ambiguous-4",
+        "prompt": "I might want a bear or perhaps a fox; undecided.",
+        "family": "unknown",
+        "predicted_family": "bear"
+      }
+    ],
+    "adapter-challenge": [
+      {
+        "id": "challenge-reject-unsupported-3",
+        "prompt": "A cup rather than a teapot.",
+        "family": "unknown",
+        "predicted_family": "teapot"
+      },
+      {
+        "id": "challenge-reject-composition-1",
+        "prompt": "I need three bunny ornaments.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "challenge-reject-composition-2",
+        "prompt": "Choose one draft for a whale and another for a pear.",
+        "family": "unknown",
+        "predicted_family": "whale"
+      }
+    ],
+    "previous-challenge": [
+      {
+        "id": "challenge-reject-unsupported-3",
+        "prompt": "A cup rather than a teapot.",
+        "family": "unknown",
+        "predicted_family": "teapot"
+      },
+      {
+        "id": "challenge-reject-composition-1",
+        "prompt": "I need three bunny ornaments.",
+        "family": "unknown",
+        "predicted_family": "bunny"
+      },
+      {
+        "id": "challenge-reject-composition-2",
+        "prompt": "Choose one draft for a whale and another for a pear.",
+        "family": "unknown",
+        "predicted_family": "whale"
+      }
+    ]
+  },
+  "physical_validation": false,
+  "deployment": false,
+  "limitations": [
+    "Authored synthetic semantic labels, not independently supplied user requests.",
+    "V1 failures informed v2 training; development is a diagnostic.",
+    "Challenge wording repeats two templates; frozen before v2 training, not used to select epochs.",
+    "Selecting a draft does not verify bead geometry, tension, finishing or physical buildability."
+  ]
+}

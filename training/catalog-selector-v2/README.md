@@ -1,3 +1,5 @@
+> **Completed October 22, 2026.** V2 scored 47/48 on development and 77/80 on the separate synthetic set (the same challenge score as v1). [Results and remaining mistakes](../results/2026-10-22-catalog-selector-v2/README.md). The adapter is not deployed.
+
 # Beadform expanded free Qwen run (v2)
 
 1. Choose **Runtime → Change runtime type → T4 GPU** using the free tier.

@@ -1,0 +1,222 @@
+{
+  "base": {
+    "examples": 48,
+    "correct": 33,
+    "strict_valid": 48,
+    "supported": {
+      "cases": 32,
+      "correct": 32
+    },
+    "rejection": {
+      "cases": 16,
+      "correct": 1
+    },
+    "by_category": {
+      "ambiguous": {
+        "cases": 4,
+        "correct": 0
+      },
+      "composition": {
+        "cases": 4,
+        "correct": 0
+      },
+      "fish": {
+        "cases": 4,
+        "correct": 1
+      },
+      "supported": {
+        "cases": 32,
+        "correct": 32
+      },
+      "unsupported": {
+        "cases": 4,
+        "correct": 0
+      }
+    },
+    "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+  },
+  "adapter": {
+    "examples": 48,
+    "correct": 47,
+    "strict_valid": 48,
+    "supported": {
+      "cases": 32,
+      "correct": 31
+    },
+    "rejection": {
+      "cases": 16,
+      "correct": 16
+    },
+    "by_category": {
+      "ambiguous": {
+        "cases": 4,
+        "correct": 4
+      },
+      "composition": {
+        "cases": 4,
+        "correct": 4
+      },
+      "fish": {
+        "cases": 4,
+        "correct": 4
+      },
+      "supported": {
+        "cases": 32,
+        "correct": 31
+      },
+      "unsupported": {
+        "cases": 4,
+        "correct": 4
+      }
+    },
+    "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+  },
+  "previous": {
+    "examples": 48,
+    "correct": 45,
+    "strict_valid": 48,
+    "supported": {
+      "cases": 32,
+      "correct": 30
+    },
+    "rejection": {
+      "cases": 16,
+      "correct": 15
+    },
+    "by_category": {
+      "ambiguous": {
+        "cases": 4,
+        "correct": 4
+      },
+      "composition": {
+        "cases": 4,
+        "correct": 3
+      },
+      "fish": {
+        "cases": 4,
+        "correct": 4
+      },
+      "supported": {
+        "cases": 32,
+        "correct": 30
+      },
+      "unsupported": {
+        "cases": 4,
+        "correct": 4
+      }
+    },
+    "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+  },
+  "challenge": {
+    "base": {
+      "examples": 80,
+      "correct": 66,
+      "strict_valid": 80,
+      "supported": {
+        "cases": 64,
+        "correct": 62
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 4
+      },
+      "by_category": {
+        "ambiguous": {
+          "cases": 4,
+          "correct": 1
+        },
+        "composition": {
+          "cases": 4,
+          "correct": 1
+        },
+        "fish": {
+          "cases": 4,
+          "correct": 2
+        },
+        "supported": {
+          "cases": 64,
+          "correct": 62
+        },
+        "unsupported": {
+          "cases": 4,
+          "correct": 0
+        }
+      },
+      "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+    },
+    "previous": {
+      "examples": 80,
+      "correct": 77,
+      "strict_valid": 80,
+      "supported": {
+        "cases": 64,
+        "correct": 64
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 13
+      },
+      "by_category": {
+        "ambiguous": {
+          "cases": 4,
+          "correct": 4
+        },
+        "composition": {
+          "cases": 4,
+          "correct": 2
+        },
+        "fish": {
+          "cases": 4,
+          "correct": 4
+        },
+        "supported": {
+          "cases": 64,
+          "correct": 64
+        },
+        "unsupported": {
+          "cases": 4,
+          "correct": 3
+        }
+      },
+      "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+    },
+    "adapter": {
+      "examples": 80,
+      "correct": 77,
+      "strict_valid": 80,
+      "supported": {
+        "cases": 64,
+        "correct": 64
+      },
+      "rejection": {
+        "cases": 16,
+        "correct": 13
+      },
+      "by_category": {
+        "ambiguous": {
+          "cases": 4,
+          "correct": 4
+        },
+        "composition": {
+          "cases": 4,
+          "correct": 2
+        },
+        "fish": {
+          "cases": 4,
+          "correct": 4
+        },
+        "supported": {
+          "cases": 64,
+          "correct": 64
+        },
+        "unsupported": {
+          "cases": 4,
+          "correct": 3
+        }
+      },
+      "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+    }
+  },
+  "deployed": false,
+  "note": "Inspect failures and collect independent examples before considering deployment. No automatic promotion."
+}
