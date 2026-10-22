@@ -5,7 +5,7 @@ const args=process.argv.slice(2),output=args[args.indexOf('--output')+1];if(!arg
 const snapshot=require('./evaluation_provenance.cjs').capture(['parts-app.js','finishing-guide.js','thread-finishing.js','parts-engine.js','continuous-thread.js','bead-geometry.js','stage-guide.js','parts-layout.js','training/approved-expanded.jsonl','training/audit_finishing_guide_exports.cjs']);
 const source=fs.readFileSync('parts-app.js','utf8'),rows=fs.readFileSync('training/approved-expanded.jsonl','utf8').trim().split(/\r?\n/).map(JSON.parse),cases=[];
 const escape=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-for(const [group,detail,threadDiameter]of [['frog',3,.25],['cactus',3,.25],['sailboat',4,.2],['robot',3,.25]]){
+for(const [group,detail,threadDiameter]of [['frog',3,.25],['turtle',3,.25],['cactus',3,.25],['sailboat',4,.2],['robot',3,.25]]){
  const scene=rows.find(r=>r.group===group).scene,g=P.build(scene,{detail,threadDiameter}),elements=new Map(),element=id=>{if(!elements.has(id))elements.set(id,{value:'',checked:false,innerHTML:'',textContent:'',hidden:false,classList:{toggle(){}},setAttribute(){},addEventListener(){},close(){},scrollIntoView(){}});return elements.get(id);};
  const document={getElementById:element,querySelectorAll:()=>[]},state={settings:{shape:'custom',design:scene,detail,threadDiameter},model:g,title:scene.title,construction:'parts',partsStage:0,partsReveal:Infinity};g.sceneKey=JSON.stringify([scene,detail,threadDiameter]);
  let printRequested=false;const window={Beadform3D:{state,download(){}},BeadParts:P,BeadStages:Stages,BeadPartsLayout:Layout,BeadGeometry:Geometry,BeadFinishingGuide:Guide,Beadform:{ui:{esc:escape,modal(){},toast(){}}},print(){printRequested=true;}};

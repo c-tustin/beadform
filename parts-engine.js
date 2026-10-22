@@ -134,11 +134,11 @@ function layout(g,c){if(c.kind==='craw'){const dims=c.mesh.dimensions,pitch=Math
 function boxLayout(nodes,pos,axes){const minX=Math.min(...pos.map(p=>p.x)),minY=Math.min(...pos.map(p=>p.y)),dx=Math.max(...pos.map(p=>p.x))-minX,dy=Math.max(...pos.map(p=>p.y))-minY,W=Math.max(560,dx+130),H=Math.max(350,dy+130);pos.forEach(p=>{p.x+=(W-dx)/2-minX;p.y+=(H-dy)/2-minY;});return {nodes,index:new Map(nodes.map((n,i)=>[n.id,i])),pos,axes,W,H};}
 function joinLayout(g,st){const nodes=st.pairs.flatMap(p=>[g.byId.get(p.a),g.byId.get(p.b)]),pos=nodes.map((n,i)=>({x:(i%2)*180,y:Math.floor(i/2)*120})),axes=nodes.map(()=>[0,1]);return boxLayout(nodes,pos,axes);}
 function validate(g){const errors=[];for(const c of g.components)if(Number.isInteger(c.planeNormalAxis)){const coordinates=c.ids.map(id=>g.byId.get(id).p[c.planeNormalAxis]);if(Math.max(...coordinates)-Math.min(...coordinates)>1e-5)errors.push('A flat part no longer follows its specified thin axis.');}for(const c of g.components)if(c.placementRule==='tower-base-alignment'){const parent=g.components.find(p=>p.id===c.parent),bottom=part=>Math.min(...part.ids.map(id=>g.byId.get(id).p[1]));if(!parent||Math.abs(bottom(c)-bottom(parent))>1e-5)errors.push('A tower no longer shares its parent wall baseline.');}const added=g.stages.flatMap(s=>s.ids);if(added.length!==g.nodes.length||new Set(added).size!==g.nodes.length)errors.push('Each physical bead must be added exactly once.');if(g.maxPasses>g.passLimit)errors.push('Passage limit exceeded.');if(g.joins.length!==g.components.length-1)errors.push('Every part needs a joining plan.');for(const child of g.components)if(child.attachmentRegion?.kind==='requested-arm-height'){const region=attachmentRegion(g,child);for(const join of g.joins.filter(j=>j.component===child.id))for(const pair of join.pairs)if(Math.abs(g.byId.get(pair.a).p[1]-region.targetHeightMm)>region.toleranceMm+1e-7)errors.push('An arm anchor no longer follows its requested attachment height.');}for(const st of g.stages){let prev=null;for(const o of st.operations){const n=g.byId.get(o.id);if(!n||!n.ends.includes(o.from)||!n.ends.includes(o.to)||o.from===o.to)errors.push('Invalid bead-hole traversal.');if(prev&&!o.newThread&&!o.bridge&&prev.to!==o.from)errors.push('Disconnected working thread.');prev=o;}}if(g.continuous){let prev=null;for(const st of g.stages)for(const o of st.operations){if(prev&&!o.newThread){const a=g.byId.get(prev.id),b=g.byId.get(o.id);if(a.component!==b.component){const ca=g.components.find(c=>c.id===a.component),cb=g.components.find(c=>c.id===b.component);if(ca.parent!==cb.id&&cb.parent!==ca.id)errors.push('Thread must return through the parent beadwork before moving to another limb.');}}prev=o;}for(const join of g.joins)for(const pair of join.pairs)if(len(sub(g.byId.get(pair.a).p,g.byId.get(pair.b).p))>3.80001)errors.push('An attachment would leave a long exposed thread span.');}return {valid:!errors.length,errors};}
-function build(design,options={}){
+function buildCandidate(design,options={},jointDistanceWeight=0){
  const initial=buildSeparate(design,options);if(options.continuous===false)return initial;
  const C=root.BeadContinuous||(typeof require==='function'?require('./continuous-thread.js'):null),F=root.BeadFinishing||(typeof require==='function'?require('./thread-finishing.js'):null),G=root.BeadConstruction||(typeof require==='function'?require('./construction-graph.js'):null),Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
  if(!C)throw Error('The continuous-thread planner is missing.');
- const run=(g,finishingReserve)=>{const planned=C.plan(g,{accessAware:options.accessAware!==false,finishingReserve});if(F)planned.finishing=F.propose(planned);return planned;};
+ const run=(g,finishingReserve)=>{const planned=C.plan(g,{accessAware:options.accessAware!==false,finishingReserve,jointDistanceWeight});if(F)planned.finishing=F.propose(planned);return planned;};
  let planned=run(initial,[]);const reservations=new Set(),attempts=[];
  // Repair only observed unresolved starting tails, without altering stitch counts
  // or passage limits. A bounded retry may fail; retain the best actual result.
@@ -152,5 +152,36 @@ function build(design,options={}){
  if(attempts.length)planned.finishingRepair={kind:'bounded starting-tail passage reservation',attempts,completeFinish:false};
  if(Geometry)planned.threadAccess=Geometry.audit(planned);return G?G.compile(planned):planned;
 }
-root.BeadParts={build,example,ball,tube,strand,panel,amigurumiScene,attachmentRegion,validate};if(typeof module!=='undefined')module.exports=root.BeadParts;
+function jointPlanMetrics(g){
+ const pairs=g.joins.flatMap(j=>j.pairs.map(p=>{const a=g.byId.get(p.a),b=g.byId.get(p.b),span=len(sub(a.p,b.p)),excess=Math.max(0,span-((a.diameterMm||2)+(b.diameterMm||2))/2-.2);return {span,excess};}));
+ const armErrors={};for(const c of g.components)if(c.attachmentRegion){const r=attachmentRegion(g,c);armErrors[c.id]=Math.max(0,...g.joins.filter(j=>j.component===c.id).flatMap(j=>j.pairs.map(p=>Math.abs(g.byId.get(p.a).p[1]-r.targetHeightMm))));}
+ return {maximumCenterSpanMm:Math.max(0,...pairs.map(p=>p.span)),meanSquaredExcessMm2:pairs.reduce((n,p)=>n+p.excess*p.excess,0)/Math.max(1,pairs.length),workingLengths:g.threadSections,unresolvedEnds:g.finishing?g.finishing.totalEndpoints-g.finishing.candidateEndpoints:Infinity,assemblyFlags:g.threadAccess?.nominalStraightPathConflicts??Infinity,finishingFlags:g.finishing?.nominalAccess?.nominalStraightPathConflicts??Infinity,proposedMaxPasses:g.finishing?.proposedMaxPasses??g.maxPasses,passLimit:g.passLimit,pairsPerPart:Object.fromEntries(g.joins.map(j=>[j.component,j.pairs.length])),armErrorsMm:armErrors};
+}
+function compareJointPlans(baseline,candidate){
+ const a=jointPlanMetrics(baseline),b=jointPlanMetrics(candidate),reasons=[];
+ const geometry=g=>JSON.stringify(g.nodes.map(n=>[n.id,n.component,n.material,n.diameterMm,g.palette[g.colors[n.index]],n.p.map(v=>Number(v.toFixed(8)))]));
+ if(geometry(baseline)!==geometry(candidate))reasons.push('geometry or colored inventory changed');
+ if(b.assemblyFlags>a.assemblyFlags||b.finishingFlags>a.finishingFlags)reasons.push('more nominal approach flags');
+ if(b.unresolvedEnds>a.unresolvedEnds||b.proposedMaxPasses>b.passLimit)reasons.push('finishing coverage or passage budget worsened');
+ if(Object.entries(a.pairsPerPart).some(([id,n])=>(b.pairsPerPart[id]||0)<n))reasons.push('fewer attachment loops');
+ if(Object.entries(a.armErrorsMm).some(([id,error])=>(b.armErrorsMm[id]??Infinity)>error+1e-7))reasons.push('requested arm height worsened');
+ const accessImproved=b.assemblyFlags<a.assemblyFlags||b.finishingFlags<a.finishingFlags||b.unresolvedEnds<a.unresolvedEnds;
+ if(!accessImproved&&b.maximumCenterSpanMm>a.maximumCenterSpanMm+1e-7)reasons.push('widest joint increased');
+ // Explicit ranking heuristic: balance squared excess separation with the
+ // extra ends introduced by another working length. No physical-success label.
+ const workingLengthPenaltyMm2=.1,baselineScore=a.meanSquaredExcessMm2,candidateScore=b.meanSquaredExcessMm2+workingLengthPenaltyMm2*(b.workingLengths-a.workingLengths);
+ if(!(accessImproved||candidateScore<baselineScore-1e-7))reasons.push('no net joint improvement');
+ return {preferCandidate:reasons.length===0,reasons,workingLengthPenaltyMm2,baselineScore,candidateScore,baseline:a,candidate:b};
+}
+function build(design,options={}){
+ if(options.continuous===false)return buildCandidate(design,options,0);
+ const attempts=[];let baseline,candidate;
+ for(const weight of [0,250])try{const model=buildCandidate(design,options,weight);if(weight===0)baseline=model;else candidate=model;attempts.push({weight,compiled:true});}catch(error){attempts.push({weight,compiled:false,error:error.message});}
+ if(!baseline&&!candidate)throw Error(attempts[0].error);
+ let selected=baseline||candidate,comparison=null;
+ if(baseline&&candidate){comparison=compareJointPlans(baseline,candidate);if(comparison.preferCandidate)selected=candidate;}
+ const selection={kind:'two deterministic joint-distance candidates',selectedWeight:selected===candidate?250:0,attempts,comparison,physicalSampleRequired:true};
+ selected.jointSelection=selection;if(selected.constructionGraph)selected.constructionGraph.jointSelection=selection;return selected;
+}
+root.BeadParts={build,example,ball,tube,strand,panel,amigurumiScene,attachmentRegion,jointPlanMetrics,compareJointPlans,validate};if(typeof module!=='undefined')module.exports=root.BeadParts;
 })(typeof window!=='undefined'?window:globalThis);

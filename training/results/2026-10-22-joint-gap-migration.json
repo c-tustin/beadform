@@ -1,0 +1,45 @@
+{
+  "note": "Actual preceding-router version-5 projects. Programmatic import only; no real browser dialog or physical sample is verified.",
+  "sourceSha256": {
+    "parts-engine.js": "36d930f3613e83dfd0ccc37011b782fd40f4548c0add471d860911c4285d72a5",
+    "parts-project.js": "e274ef362fc39e7ae328135ec64efdec9a2139b1ca67b517fa42f02e9d20f425",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "training/fixtures/continuous-before-gap-preference.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_joint_gap_migration.cjs": "41533f7f1a80f8e53381d1cabb91971b4d795a8339ceef015fd782ddb94c3dd1"
+  },
+  "cases": [
+    {
+      "group": "turtle",
+      "detail": 3,
+      "line": 0.25,
+      "routeChanged": true,
+      "resumes": false,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "line": 0.25,
+      "routeChanged": true,
+      "resumes": false,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "line": 0.2,
+      "routeChanged": false,
+      "resumes": true,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "line": 0.25,
+      "routeChanged": false,
+      "resumes": true,
+      "priorProgressPreserved": true
+    }
+  ]
+}

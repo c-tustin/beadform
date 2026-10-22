@@ -264,3 +264,10 @@ See [finishing guide notes](results/2026-10-21-finishing-guide-notes.md), [diagr
 Arms now choose anchors near their requested source height; the previous rule forced every limb into lower-body anchors. Across 128 configurations, all 40 arm anchors fit the requested band (32 before), while mean height error falls from 1.61 mm to 0.71 mm. Colored bead inventories remain identical, nominal assembly and finishing flags remain zero, and all 276 endpoints retain candidate weave-in routes. Twelve unreviewed robot-height variations pass additional digital checks; none is promoted to training data.
 
 See [pose notes](results/2026-10-22-arm-height-notes.md), [paired report](results/2026-10-22-arm-height-comparison.json), and [robot comparison](prototypes/2026-10-22-robot-arm-height.svg). The region is an explicit heuristic for coarse bead levels. Physical needle access, tension, joint strength and secure finishes remain unverified.
+
+
+## Joint-distance candidate selection (2026-10-22)
+
+The planner now compares the original and closer-joint preferences, then checks actual geometry, pose, loops, access, finishing coverage and passage budgets before selection. A stated score balances squared excess anchor separation with added working lengths; it is not a physical-success score. Across 128 configurations, mean anchor separation falls from 2.78 mm to 2.52 mm, and separations above 3.5 mm fall from 119 to 37. Colored bead positions and loop counts remain unchanged, approach flags and overlaps remain zero, and all 280 endpoints have candidate finishing routes. The batch uses two additional working lengths overall.
+
+See [joint-distance notes](results/2026-10-22-joint-gap-notes.md), [paired report](results/2026-10-22-joint-gap-comparison.json), and [turtle example](prototypes/2026-10-22-turtle-joint-gap.svg). These nominal distances do not establish needle access, holding strength or a secure finish. Physical samples remain unverified.

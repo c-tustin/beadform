@@ -1,0 +1,76 @@
+{
+  "note": "Nominal anchor-pair geometry, not actual beadwork or a thread simulation.",
+  "subject": "turtle",
+  "detail": 3,
+  "threadDiameter": 0.25,
+  "data": [
+    {
+      "label": "Before",
+      "part": "flipper -1 -1",
+      "parentBead": "B0020",
+      "childBead": "B0107",
+      "centerSpanMm": 3.7854475043373497,
+      "workingLengths": 1,
+      "parent": {
+        "center": [
+          -4.2999986366068885,
+          0.0034242048561532457,
+          5.551115123125783e-16
+        ],
+        "axis": [
+          0,
+          0,
+          -1
+        ],
+        "diameterMm": 2
+      },
+      "child": {
+        "center": [
+          -5.1740318199506135,
+          -0.541396907238148,
+          -3.6426431005966298
+        ],
+        "axis": [
+          0.7487847728663075,
+          -0.54417370102899,
+          0.3784129319037121
+        ],
+        "diameterMm": 2
+      }
+    },
+    {
+      "label": "Selected plan",
+      "part": "flipper -1 -1",
+      "parentBead": "B0021",
+      "childBead": "B0107",
+      "centerSpanMm": 2.101031684365236,
+      "workingLengths": 2,
+      "parent": {
+        "center": [
+          -3.478771972804077,
+          0.0034242048561532457,
+          -2.52747578347527
+        ],
+        "axis": [
+          0.5877852522924731,
+          0,
+          -0.8090169943749473
+        ],
+        "diameterMm": 2
+      },
+      "child": {
+        "center": [
+          -5.1740318199506135,
+          -0.541396907238148,
+          -3.6426431005966298
+        ],
+        "axis": [
+          0.7487847728663075,
+          -0.54417370102899,
+          0.3784129319037121
+        ],
+        "diameterMm": 2
+      }
+    }
+  ]
+}

@@ -1,0 +1,512 @@
+{
+  "note": "Three arm heights × two detail settings × two line diameters. Scene variants are unreviewed internal diagnostics, not added to the example library or training data.",
+  "sourceSha256": {
+    "parts-engine.js": "36d930f3613e83dfd0ccc37011b782fd40f4548c0add471d860911c4285d72a5",
+    "construction-graph.js": "094f1d95af7fbf631caef34557f97acd04a454634a4c23f7d63070fa75c1e9b1",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_arm_height_variations.cjs": "101c22537a844d520c0112b4a3bc014685467cd9aeb21bd1743ce611876fcbb6"
+  },
+  "summary": {
+    "cases": 12,
+    "valid": 12,
+    "approvedTrainingTargets": 0,
+    "physicalSamples": 0
+  },
+  "cases": [
+    {
+      "height": -0.6,
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -3.320365034660083,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -3.320365034660083,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": -0.6,
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -3.320365034660083,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.24999999999999997
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -3.320365034660083,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 4,
+      "totalEndpoints": 4
+    },
+    {
+      "height": -0.6,
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -4.741576963754832,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.16666666666666674
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -4.741576963754832,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.16666666666666674
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": -0.6,
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -4.741576963754832,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.16666666666666674
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.2,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.2,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -4.741576963754832,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0,
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -1.5808823529411762,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -1.5808823529411762,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0,
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -1.5808823529411762,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -1.5808823529411762,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.75
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0,
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -2.132352941176471,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -2.132352941176471,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0,
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -2.132352941176471,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.5,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.5,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": -2.132352941176471,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.5
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0.6,
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.15860032877773111,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.75
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.15860032877773111,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            1
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0.6,
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.15860032877773111,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            0.75
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.15860032877773111,
+          "toleranceMm": 1.4495689014324225,
+          "actualFractions": [
+            1
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0.6,
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.4768710814018897,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.8333333333333334
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.4768710814018897,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.8333333333333334
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    },
+    {
+      "height": 0.6,
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "regions": [
+        {
+          "part": "left arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.4768710814018897,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.6666666666666667
+          ],
+          "withinBand": true
+        },
+        {
+          "part": "right arm",
+          "requestedFraction": 0.8,
+          "kind": "requested-arm-height",
+          "sourceFraction": 0.8,
+          "toleranceFraction": 0.25,
+          "minimumToleranceMm": 1.4,
+          "targetHeightMm": 0.4768710814018897,
+          "toleranceMm": 2.174353352148634,
+          "actualFractions": [
+            0.8333333333333334
+          ],
+          "withinBand": true
+        }
+      ],
+      "assemblyFlags": 0,
+      "finishingFlags": 0,
+      "overlaps": 0,
+      "candidateEndpoints": 2,
+      "totalEndpoints": 2
+    }
+  ]
+}

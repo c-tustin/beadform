@@ -1,7 +1,8 @@
 (function(root){
 'use strict';
 const distance=(a,b)=>Math.hypot(...a.map((v,i)=>v-b[i]));
-function plan(g,{accessAware=true,finishingReserve=[]}={}){
+function plan(g,{accessAware=true,finishingReserve=[],jointDistanceWeight=0}={}){
+ if(![0,250].includes(jointDistanceWeight))throw Error('Unsupported joint-distance preference.');
  const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
  if(accessAware&&!Geometry)throw Error('Nominal bead geometry is missing.');
  if(Geometry)Geometry.annotate(g);
@@ -18,6 +19,12 @@ function plan(g,{accessAware=true,finishingReserve=[]}={}){
  let cursor=null,section=0,last=null,steps=[],activeMoves=[],activeIds=[],reasons=[];
  g.steps=[];g.stages=[];g.joins=[];
  const finishReserved=new Set(finishingReserve),room=(id,extra=new Map())=>g.passLimit-counts.get(id)-(future.get(id)||0)-(reserve.get(id)||0)-(extra.get(id)||0)-(finishReserved.has(id)?1:0);
+ function attachmentDistanceCost(a,b){
+  const x=g.byId.get(a),y=g.byId.get(b),d=distance(x.p,y.p),nominalContact=((x.diameterMm||2)+(y.diameterMm||2))/2;
+  // Prefer close bead centers once hole access and passage budgets are valid.
+  // The 0.2 mm allowance and weight are planning heuristics, not joint tests.
+  const excess=Math.max(0,d-nominalContact-.2);return d*1.5+jointDistanceWeight*excess*excess;
+ }
  function accessPenalty(a,side,b,child){
   if(!accessAware)return 0;
   const parentNode=g.byId.get(a),childNode=g.byId.get(b),present=new Set([...known,...child.ids]);
@@ -53,7 +60,7 @@ function plan(g,{accessAware=true,finishingReserve=[]}={}){
  function travel(path){for(const hop of path){if(hop.id)pass(hop.id,'position');else cursor=hop.to;}}
  function saveStep(label,component,faceId){if(!activeMoves.length)return;const st={index:g.steps.length,label,component,faceId,ids:activeIds,ops:activeMoves.map(o=>({kind:o.kind,id:o.id})),moves:activeMoves};g.steps.push(st);steps.push(st);activeMoves=[];activeIds=[];}
  function finishStage(template,instruction,layout){const operations=steps.flatMap(st=>st.moves.map((o,i)=>({...o,step:st.index,local:i,cube:template.component}))),ids=steps.flatMap(st=>st.ids),st={...template,index:g.stages.length,start:steps[0].index,end:steps.at(-1).index,steps,blocks:[{cubeId:template.component,steps}],ids,nodeIds:[...new Set(operations.map(o=>o.id))],operations,instruction};st.layout=contextLayout(g,st,layout);g.stages.push(st);steps=[];return st;}
- function chooseAttachment(parent,child,adjust=true){let best=null;for(const separate of [false,true]){for(const a of parent.ids){if(child.allowedParentIds&&!child.allowedParentIds.includes(a))continue;if(room(a)<(separate?2:3))continue;for(const side of [0,1]){const extra=new Map([[a,separate?2:3]]),entry=g.byId.get(a).ends[side],path=separate?null:route(cursor,entry,extra,a),restart=path===null;for(const b of child.ids){const n=g.byId.get(b);if(child.kind==='craw'&&!child.ids.slice(0,12).includes(b))continue;if(!['peyote','craw'].includes(child.mesh.stitch)&&child.kind!=='strand'&&room(b)<3)continue;if(child.kind==='craw'&&room(b)<3)continue;if(n.landmark&&child.mesh.stitch!=='peyote'&&child.kind!=='strand')continue;if((child.mesh.stitch==='peyote'||child.kind==='strand')&&b!==child.ids[0])continue;if(child.kind==='tube'&&!n.vertices.every(v=>v<5)&&!n.vertices.every(v=>v>=child.mesh.v.length-5))continue;if(distance(g.byId.get(a).p,n.p)>3.8)continue;const baseScore=(restart?1000000:0)+(path?.filter(h=>h.id).length||0)*100+((path?.reduce((sum,h)=>sum+(h.blocked||0),0)||0)+(path?.targetBlocked||0))*100000000+distance(g.byId.get(a).p,n.p)*1.5;if(best&&baseScore>=best.score)continue;const score=baseScore+accessPenalty(a,side,b,child);if(!best||score<best.score)best={a,b,side,entry,path,restart,separate,score};}}}
+ function chooseAttachment(parent,child,adjust=true){let best=null;for(const separate of [false,true]){for(const a of parent.ids){if(child.allowedParentIds&&!child.allowedParentIds.includes(a))continue;if(room(a)<(separate?2:3))continue;for(const side of [0,1]){const extra=new Map([[a,separate?2:3]]),entry=g.byId.get(a).ends[side],path=separate?null:route(cursor,entry,extra,a),restart=path===null;for(const b of child.ids){const n=g.byId.get(b);if(child.kind==='craw'&&!child.ids.slice(0,12).includes(b))continue;if(!['peyote','craw'].includes(child.mesh.stitch)&&child.kind!=='strand'&&room(b)<3)continue;if(child.kind==='craw'&&room(b)<3)continue;if(n.landmark&&child.mesh.stitch!=='peyote'&&child.kind!=='strand')continue;if((child.mesh.stitch==='peyote'||child.kind==='strand')&&b!==child.ids[0])continue;if(child.kind==='tube'&&!n.vertices.every(v=>v<5)&&!n.vertices.every(v=>v>=child.mesh.v.length-5))continue;if(distance(g.byId.get(a).p,n.p)>3.8)continue;const baseScore=(restart?1000000:0)+(path?.filter(h=>h.id).length||0)*100+((path?.reduce((sum,h)=>sum+(h.blocked||0),0)||0)+(path?.targetBlocked||0))*100000000+attachmentDistanceCost(a,b);if(best&&baseScore>=best.score)continue;const score=baseScore+accessPenalty(a,side,b,child);if(!best||score<best.score)best={a,b,side,entry,path,restart,separate,score};}}}
  // Compare a separately started attachment if every continuous choice has a
  // nominal obstruction. It can use an anchor with two remaining passages.
  if(best&&best.score<100000000)break;}if(!best&&adjust){
@@ -92,7 +99,7 @@ function plan(g,{accessAware=true,finishingReserve=[]}={}){
    const pairs=[{a:anchor.a,b:anchor.b}],join=oldJoins.get(c.id);
    if(c.kind!=='strand'){
     let best=null;const candidates=[];for(const a of parent.ids)if((!c.allowedParentIds||c.allowedParentIds.includes(a))&&a!==anchor.a&&room(a)>=2)for(const b of c.ids)if(b!==anchor.b&&room(b)>=2&&distance(g.byId.get(a).p,g.byId.get(b).p)<=3.8)candidates.push({a,b,d:distance(g.byId.get(a).p,g.byId.get(b).p)});candidates.sort((a,b)=>a.d-b.d);
-    for(const {a,b,d} of candidates){if(best&&d*1.5>=best.score)break;const extra=new Map([[a,2],[b,2]]),entry=g.byId.get(a).ends[0],path=route(cursor,entry,extra,a),score=(path===null?1000000:0)+(path?.filter(h=>h.id).length||0)*100+((path?.reduce((sum,h)=>sum+(h.blocked||0),0)||0)+(path?.targetBlocked||0))*100000000+d*1.5+accessPenalty(a,0,b,c);if(!best||score<best.score)best={a,b,path,entry,score};}
+    for(const {a,b,d} of candidates){if(best&&d*1.5>=best.score)break;const extra=new Map([[a,2],[b,2]]),entry=g.byId.get(a).ends[0],path=route(cursor,entry,extra,a),score=(path===null?1000000:0)+(path?.filter(h=>h.id).length||0)*100+((path?.reduce((sum,h)=>sum+(h.blocked||0),0)||0)+(path?.targetBlocked||0))*100000000+attachmentDistanceCost(a,b)+accessPenalty(a,0,b,c);if(!best||score<best.score)best={a,b,path,entry,score};}
     if(best){if(best.path===null)fresh(best.entry,'The second attachment could not be reached without overfilling a bead.');else travel(best.path);const a=g.byId.get(best.a),b=g.byId.get(best.b);pass(a.id);connect(cursor,b.ends[0]);cursor=b.ends[0];pass(b.id);connect(cursor,a.ends[0]);cursor=a.ends[0];pass(a.id);cursor=b.ends[0];pass(b.id);saveStep('work the second attachment',c.id);pairs.push({a:a.id,b:b.id});}
    }
    const nodes=pairs.flatMap(p=>[g.byId.get(p.a),g.byId.get(p.b)]),layout={nodes,index:new Map(nodes.map((n,i)=>[n.id,i])),pos:nodes.map((n,i)=>({x:190+i%2*180,y:120+Math.floor(i/2)*120})),axes:nodes.map(()=>[0,1]),W:560,H:400};
