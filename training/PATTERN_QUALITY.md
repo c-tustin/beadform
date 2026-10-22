@@ -250,3 +250,10 @@ See [entry routing notes](results/2026-10-21-entry-routing-notes.md) and [paired
 Finishing search now checks each straight approach against every bead in the completed project. An independent traversal check rejects obstructed candidates even if supplied metadata claims zero conflicts. The paired 128-configuration audit replaces three obstructed approaches while retaining all 280 candidate endpoints, all combined passage budgets, identical bead positions and stitch schedules, and 140 working lengths. Assembly approach flags remain zero. These three-bead routes still lack tested knots and physical validation.
 
 The checked-in `beadform.html` was rebuilt to include this change and the preceding source-only routing fixes. See [finishing access notes](results/2026-10-21-finishing-access-notes.md), [paired report](results/2026-10-21-finishing-access-comparison.json), and [rejection controls](results/2026-10-21-finishing-access-controls.json).
+
+
+## Finishing instructions and diagrams (2026-10-21)
+
+Each candidate endpoint now has a spread-out route map and numbered passages showing the bead ID, part, inventory color, and pictured entrance/exit sides. Screen, print, and text share one guide module. Across 128 configurations, 280 diagrams and 840 displayed passages match the computed moves, with no detected bead-symbol overlaps or bead-number labels contacting other symbols. Rendering leaves the construction graph and positions unchanged. These remain candidate weave-ins, with knots, needle access, tension and holding strength physically unverified.
+
+See [finishing guide notes](results/2026-10-21-finishing-guide-notes.md), [diagram audit](results/2026-10-21-finishing-guide-audit.json), and [cactus example](prototypes/2026-10-21-cactus-finishing-route.svg). The rebuilt app includes the new guide module.

@@ -1,0 +1,53 @@
+{
+  "note": "Actual parts-app rendering and export functions with a controlled DOM facade. No real browser clicks, print pagination, file downloads or physical construction are verified.",
+  "sourceSha256": {
+    "parts-app.js": "c8d444484edb3ae44454ee646faaef1ac5a8a368739d1774534b6689dd0b5aaa",
+    "finishing-guide.js": "94dee4eecc745f3cc1cb05d5541c56e8d16a1421e467cb6166a975db03d4eeb7",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "parts-engine.js": "b8dda7ab040b20b66ab18cc2d034357e198f4f12c63ccf8b5c4732ac1c46cad9",
+    "continuous-thread.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "stage-guide.js": "3053da8684fbf2a1cf02fa7192f66b13da3669bd7ec9aba3a0dbaab498710f03",
+    "parts-layout.js": "605e583251145b2381401d30095124f7c757f6d4880499b0d596df480db89f0b",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_finishing_guide_exports.cjs": "eb392449bff390f11e53f1e1cafe8b6360a8a07f8b06c6e13461c8f9c6262f8d"
+  },
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 2,
+      "printDiagrams": 2,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 4,
+      "printDiagrams": 4,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "screenDiagrams": 2,
+      "printDiagrams": 2,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 4,
+      "printDiagrams": 4,
+      "textMatches": true,
+      "printRequested": true
+    }
+  ]
+}

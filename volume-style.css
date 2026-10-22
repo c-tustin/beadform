@@ -151,3 +151,5 @@ dialog{border:1px solid var(--studio-line);border-radius:24px;box-shadow:0 25px 
 .parts-diagram-scroll>svg{display:block;min-width:950px;width:100%;height:auto;max-height:none}
 .thread-transfer .parts-diagram-scroll>svg{max-height:none}
 @media print{.parts-diagram-scroll{overflow:visible}.parts-diagram-scroll>svg{min-width:0;width:100%}}
+
+.finishing-route-card{margin:18px 0;padding:10px;border:1px solid #e1d4da;border-radius:12px;background:#fffdf9;break-inside:avoid}.finishing-route-card svg{display:block;width:100%;height:auto;max-width:800px;margin:auto}.finishing-route-card figcaption{font-size:12px;color:#786775;margin:8px 4px;line-height:1.45}
