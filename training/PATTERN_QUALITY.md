@@ -257,3 +257,10 @@ The checked-in `beadform.html` was rebuilt to include this change and the preced
 Each candidate endpoint now has a spread-out route map and numbered passages showing the bead ID, part, inventory color, and pictured entrance/exit sides. Screen, print, and text share one guide module. Across 128 configurations, 280 diagrams and 840 displayed passages match the computed moves, with no detected bead-symbol overlaps or bead-number labels contacting other symbols. Rendering leaves the construction graph and positions unchanged. These remain candidate weave-ins, with knots, needle access, tension and holding strength physically unverified.
 
 See [finishing guide notes](results/2026-10-21-finishing-guide-notes.md), [diagram audit](results/2026-10-21-finishing-guide-audit.json), and [cactus example](prototypes/2026-10-21-cactus-finishing-route.svg). The rebuilt app includes the new guide module.
+
+
+## Arm attachment pose (2026-10-22)
+
+Arms now choose anchors near their requested source height; the previous rule forced every limb into lower-body anchors. Across 128 configurations, all 40 arm anchors fit the requested band (32 before), while mean height error falls from 1.61 mm to 0.71 mm. Colored bead inventories remain identical, nominal assembly and finishing flags remain zero, and all 276 endpoints retain candidate weave-in routes. Twelve unreviewed robot-height variations pass additional digital checks; none is promoted to training data.
+
+See [pose notes](results/2026-10-22-arm-height-notes.md), [paired report](results/2026-10-22-arm-height-comparison.json), and [robot comparison](prototypes/2026-10-22-robot-arm-height.svg). The region is an explicit heuristic for coarse bead levels. Physical needle access, tension, joint strength and secure finishes remain unverified.

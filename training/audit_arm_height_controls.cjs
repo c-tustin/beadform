@@ -1,0 +1,21 @@
+// Constraint controls and actual preceding-project migration; no physical labels.
+const fs=require('node:fs');require('../shape-engine.js');for(const name of ['peyote-ball','craw-block','parts-library','continuous-thread','thread-finishing','bead-geometry','construction-graph'])require('../'+name+'.js');
+const prior=require('./fixtures/parts-before-arm-height.js'),P=require('../parts-engine.js'),G=require('../construction-graph.js'),Projects=require('../parts-project.js');
+const args=process.argv.slice(2),output=args[args.indexOf('--output')+1];if(!args.includes('--output')||fs.existsSync(output))throw Error('Choose a new report.');
+const snapshot=require('./evaluation_provenance.cjs').capture(['parts-engine.js','construction-graph.js','parts-project.js','continuous-thread.js','training/fixtures/parts-before-arm-height.js','training/approved-expanded.jsonl','training/audit_arm_height_controls.cjs']);
+const rows=fs.readFileSync('training/approved-expanded.jsonl','utf8').trim().split(/\r?\n/).map(JSON.parse),robot=rows.find(r=>r.group==='robot').scene;
+globalThis.BeadParts=P;const g=P.build(robot,{detail:3,threadDiameter:.25}),arm=g.components.find(c=>c.name==='left arm'),controls=[];
+for(const kind of ['missing-region','nonfinite-height','altered-target','low-anchor']){const graph=JSON.parse(JSON.stringify(g.constructionGraph)),part=graph.parts.find(p=>p.id===arm.id);
+ if(kind==='missing-region')delete part.attachmentRegion;
+ if(kind==='nonfinite-height')part.attachmentRegion.targetHeightMm=NaN;
+ if(kind==='altered-target')part.attachmentRegion.targetHeightMm+=5;
+ if(kind==='low-anchor'){const parent=g.components.find(p=>p.id===arm.parent),lowest=parent.ids.slice().sort((a,b)=>g.byId.get(a).p[1]-g.byId.get(b).p[1])[0];graph.joints.find(j=>j.child===arm.id).anchors[0].parent=lowest;}
+ const result=G.validate(g,graph),expected=kind==='low-anchor'?'arm anchor is outside its requested height band':'invalid arm attachment region';if(result.valid||!result.errors.includes(expected))throw Error('Arm constraint control was accepted: '+kind);controls.push({kind,rejected:true,errors:result.errors});
+}
+const before=P.attachmentRegion(g,arm).targetHeightMm;for(const n of g.nodes)n.p[1]+=6;for(const c of g.components){c.world[1]+=6;for(const v of c.vertices)v[1]+=6;}
+const translated=P.attachmentRegion(g,arm).targetHeightMm,translationRemainsValid=Math.abs(translated-before-6)<1e-7&&G.compile(g).constructionGraph.checks.valid;if(!translationRemainsValid)throw Error('Attachment height became stale after translation.');
+const migrations=[];
+for(const group of ['frog','cactus','octopus','robot','bear']){const scene=rows.find(r=>r.group===group).scene,settings={shape:'custom',design:scene,detail:3,threadDiameter:.25,depth:100,beadSize:2,routeVersion:2,orderVersion:2,colorSource:'design',projection:'front',maxColors:6,keepEyes:true};globalThis.BeadParts=prior;const model=Projects.build(settings),key=Projects.routeKey(model),project={format:'beadform-project',version:5,dimension:'volume',construction:'parts',settings,palette:model.palette,colors:model.colors,partsGuide:{version:Projects.guideVersion,routeKey:key,stage:3},makerProgress:{finished:[1,2]},manualEdits:true};globalThis.BeadParts=P;const loaded=Projects.open(JSON.parse(JSON.stringify(project))),changed=Projects.routeKey(loaded.model)!==key;
+ const preserved=changed?!loaded.resume&&loaded.legacyProjectData.partsGuide.routeKey===key&&loaded.legacyProjectData.partsGuide.stage===3&&JSON.stringify(loaded.legacyProjectData.makerProgress)===JSON.stringify(project.makerProgress)&&loaded.legacyProjectData.manualEdits===true:loaded.resume;
+ if(!preserved||changed!==!['octopus','bear'].includes(group))throw Error('Unexpected migration behavior for '+group);migrations.push({group,routeChanged:changed,resumes:loaded.resume,priorProgressPreserved:preserved});}
+snapshot.assertUnchanged();fs.writeFileSync(output,JSON.stringify({note:'Reject altered arm-region claims and anchors, verify translated reference geometry, and load actual prior version-5 projects. No real browser import or physical construction is verified.',sourceSha256:snapshot.hashes,controls,translationRemainsValid,migrations},null,2)+'\n');console.log(JSON.stringify({rejectedControls:controls.length,translationRemainsValid,migrations}));

@@ -12,6 +12,11 @@ function validate(g,graph){
  const errors=[],byPart=new Map(graph.parts.map(p=>[p.id,p]));
  if(byPart.size!==g.components.length)errors.push('duplicate or missing part');
  if(graph.parts.reduce((sum,p)=>sum+p.beadCount,0)!==g.nodes.length)errors.push('incorrect inventory');
+ for(const p of graph.parts){const c=g.components.find(c=>c.id===p.id),expected=c?.attachmentRegion?root.BeadParts?.attachmentRegion?.(g,c):null,r=p.attachmentRegion;
+  if(!expected&&!r)continue;
+  if(!expected||!r||r.kind!=='requested-arm-height'||['sourceFraction','toleranceFraction','minimumToleranceMm','targetHeightMm','toleranceMm'].some(k=>!Number.isFinite(r[k])||Math.abs(r[k]-expected[k])>1e-7)||r.sourceFraction<0||r.sourceFraction>1||r.toleranceMm<=0)errors.push('invalid arm attachment region');
+ }
+
  for(const p of graph.parts)if(p.technique==='circular-peyote'){
   const rounds=p.rounds||[],ids=rounds.flatMap(r=>r.beads);
   if(rounds.reduce((n,r)=>n+r.newBeads,0)!==p.beadCount||new Set(ids).size!==p.beadCount||ids.some(id=>!p.beads.includes(id)))errors.push('incorrect circular-peyote round inventory');
@@ -45,6 +50,7 @@ function validate(g,graph){
    if(!a||!b||a.component!==j.parent||b.component!==j.child){errors.push('wrong anchor ownership');continue;}
    if(used.has(a.id)||used.has(b.id))errors.push('repeated attachment anchor');used.add(a.id);used.add(b.id);
    if(child.allowedParentIds&&!child.allowedParentIds.includes(a.id))errors.push('anatomically invalid anchor');
+   const region=byPart.get(j.child)?.attachmentRegion;if(region?.kind==='requested-arm-height'&&Math.abs(a.p[1]-region.targetHeightMm)>region.toleranceMm+1e-7)errors.push('arm anchor is outside its requested height band');
    if(Math.hypot(...a.p.map((x,i)=>x-b.p[i]))>rule.maxSpanMm+1e-5)errors.push('unsupported thread span');
    for(const n of [a,b])if(g.counts.get(n.id)>g.passLimit)errors.push('anchor passage budget exceeded');
    const stage=g.joins.find(s=>s.component===j.child);
@@ -58,7 +64,7 @@ function validate(g,graph){
 function compile(g){
  const parts=g.components.map(c=>({id:c.id,name:c.name,parent:c.parent||null,
   technique:c.mesh.stitch==='craw'?'craw':c.mesh.eye?'single-bead':c.mesh.stitch==='peyote'?'circular-peyote':c.kind==='strand'?'return-strand':'angle-weave',
-  template:c.mesh.eye?'eye':c.kind,placementRule:c.placementRule||null,planeNormalAxis:c.planeNormalAxis,dimensions:c.mesh.dimensions||null,cubes:c.mesh.cells||null,templateStatus:'draft',beadCount:c.ids.length,beads:c.ids.slice(),
+  template:c.mesh.eye?'eye':c.kind,placementRule:c.placementRule||null,attachmentRegion:root.BeadParts?.attachmentRegion?.(g,c)||c.attachmentRegion||null,planeNormalAxis:c.planeNormalAxis,dimensions:c.mesh.dimensions||null,cubes:c.mesh.cells||null,templateStatus:'draft',beadCount:c.ids.length,beads:c.ids.slice(),
   decision:c.mesh.stitch==='craw'?'cuboid volume at bead scale; shared edge beads and parent-facing cube order':c.mesh.stitch==='peyote'?'rounded hollow surface':c.kind==='strand'?'simple flexible appendage':'named part geometry',
   nominalGeometry:c.mesh.geometry||null,rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id]),radiusMm:c.mesh.geometry?.roundRadiiMm[i]??null,heightMm:c.mesh.geometry?.roundHeightsMm[i]??null,anglesRad:c.mesh.angles[i]}))||null}));
  const joints=g.joins.map(j=>{const c=g.components.find(c=>c.id===j.component),type=kind(c)==='eye'?'eye-anchor':kind(c)==='strand'?'strand-return':j.pairs.length===2?'surface-double':'surface-hinge';j.jointType=type;return {id:'joint-'+j.component,type,parent:j.parent,child:j.component,status:'draft',anchors:j.pairs.map(p=>({parent:p.a,child:p.b,parentPasses:g.counts.get(p.a),childPasses:g.counts.get(p.b)}))};});
