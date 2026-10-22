@@ -271,3 +271,10 @@ See [pose notes](results/2026-10-22-arm-height-notes.md), [paired report](result
 The planner now compares the original and closer-joint preferences, then checks actual geometry, pose, loops, access, finishing coverage and passage budgets before selection. A stated score balances squared excess anchor separation with added working lengths; it is not a physical-success score. Across 128 configurations, mean anchor separation falls from 2.78 mm to 2.52 mm, and separations above 3.5 mm fall from 119 to 37. Colored bead positions and loop counts remain unchanged, approach flags and overlaps remain zero, and all 280 endpoints have candidate finishing routes. The batch uses two additional working lengths overall.
 
 See [joint-distance notes](results/2026-10-22-joint-gap-notes.md), [paired report](results/2026-10-22-joint-gap-comparison.json), and [turtle example](prototypes/2026-10-22-turtle-joint-gap.svg). These nominal distances do not establish needle access, holding strength or a secure finish. Physical samples remain unverified.
+
+
+## Runtime cross-part clearance validation (2026-10-22)
+
+Parts and construction validation now recompute nominal cross-part clearance from actual bead positions and diameters, rather than relying on placement routines or cached flags. Three deliberately altered models that passed the preceding validators are now rejected. All 128 existing configurations and 12 unreviewed position diagnostics remain clear; existing bead placement and guide keys remain unchanged. The guard uses conservative spherical envelopes and does not replace within-part template checks or physical testing.
+
+See [clearance notes](results/2026-10-22-clearance-notes.md), [normal/diagnostic audit](results/2026-10-22-clearance-audit.json), [validator controls](results/2026-10-22-clearance-controls.json), and [paired route identity](results/2026-10-22-clearance-identity.json). No physical-success or secure-finish claim is made.

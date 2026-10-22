@@ -31,6 +31,13 @@ function blockers(g,a,exit,b,entrance,known,{limit=Infinity}={}){
  for(const id of known){if(id===a.id||id===b.id)continue;const n=g.byId.get(id);if(intersects(from,to,n,lineRadius)){out.push(id);if(out.length>=limit)break;}}
  return out;
 }
+function clearance(g,{toleranceMm=.05,exampleLimit=24}={}){
+ if(!Number.isFinite(toleranceMm)||toleranceMm<0||!Number.isInteger(exampleLimit)||exampleLimit<0||exampleLimit>100)throw Error('Invalid nominal clearance options.');
+ const invalid=[],nodes=[];for(const n of g.nodes){const diameter=n.diameterMm??2;if(!Array.isArray(n.p)||n.p.length!==3||n.p.some(v=>!Number.isFinite(v))||!Number.isFinite(diameter)||diameter<=0||typeof n.component!=='string'||!n.component){invalid.push(n.id);continue;}nodes.push({n,radius:diameter/2});}
+ let checked=0,overlaps=0,minimum=Infinity;const examples=[];
+ for(let i=0;i<nodes.length;i++)for(let j=i+1;j<nodes.length;j++){const a=nodes[i],b=nodes[j];if(a.n.component===b.n.component)continue;checked++;const gap=norm(sub(a.n.p,b.n.p))-a.radius-b.radius;minimum=Math.min(minimum,gap);if(gap< -toleranceMm-1e-8){overlaps++;if(examples.length<exampleLimit)examples.push({a:a.n.id,b:b.n.id,parts:[a.n.component,b.n.component],clearanceMm:gap});}}
+ return {model:'conservative spherical envelopes from nominal bead diameters; cross-part pairs only',valid:invalid.length===0&&overlaps===0,toleranceMm,numericalEpsilonMm:1e-8,pairsChecked:checked,nominalOverlapPairs:overlaps,minimumClearanceMm:Number.isFinite(minimum)?minimum:null,invalidBeads:invalid,examples,physicalSampleRequired:true,note:'This conservative planning guard is not an exact oriented-bead intersection or a physical fit test. Within-part geometry has separate template checks.'};
+}
 function audit(g){
  annotate(g);const known=new Set(),examples=[],byStage=[],unique=new Set();let previous=null,connections=0,conflicts=0,jointConflicts=0;
  for(const st of g.stages){let count=0,checked=0;
@@ -53,5 +60,5 @@ function audit(g){
   needleAccessVerified:false,physicalSampleRequired:true,
   note:'Warnings are not proof of impossible construction. Thread curvature, needle length, hole diameter, tension and deformed beadwork are not modeled. Unchecked finishes and reinforcement are not included.'};
 }
-root.BeadGeometry={annotate,port,intersects,blockers,audit};if(typeof module!=='undefined')module.exports=root.BeadGeometry;
+root.BeadGeometry={annotate,port,intersects,blockers,audit,clearance};if(typeof module!=='undefined')module.exports=root.BeadGeometry;
 })(typeof window!=='undefined'?window:globalThis);

@@ -9,7 +9,9 @@ const templates=Object.freeze({
 });
 function kind(c){return c.mesh.eye?'eye':c.kind==='strand'?'strand':'surface';}
 function validate(g,graph){
+ const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);if(!Geometry)throw Error('Nominal bead geometry is missing.');const nominalClearance=Geometry.clearance(g);
  const errors=[],byPart=new Map(graph.parts.map(p=>[p.id,p]));
+ if(!nominalClearance.valid)errors.push('invalid nominal cross-part bead clearance');
  if(byPart.size!==g.components.length)errors.push('duplicate or missing part');
  if(graph.parts.reduce((sum,p)=>sum+p.beadCount,0)!==g.nodes.length)errors.push('incorrect inventory');
  for(const p of graph.parts){const c=g.components.find(c=>c.id===p.id),expected=c?.attachmentRegion?root.BeadParts?.attachmentRegion?.(g,c):null,r=p.attachmentRegion;
@@ -59,7 +61,7 @@ function validate(g,graph){
  }
  const roots=graph.parts.filter(p=>!parents.has(p.id));if(roots.length!==1||graph.joints.length!==graph.parts.length-1)errors.push('parts must form one connected tree');
  for(const p of graph.parts){const seen=new Set();let id=p.id;while(parents.has(id)){if(seen.has(id)){errors.push('cyclic assembly');break;}seen.add(id);id=parents.get(id);}}
- return {valid:errors.length===0,errors:[...new Set(errors)],physicalSampleRequired:true};
+ return {valid:errors.length===0,errors:[...new Set(errors)],nominalClearance,physicalSampleRequired:true};
 }
 function compile(g){
  const parts=g.components.map(c=>({id:c.id,name:c.name,parent:c.parent||null,
@@ -68,8 +70,8 @@ function compile(g){
   decision:c.mesh.stitch==='craw'?'cuboid volume at bead scale; shared edge beads and parent-facing cube order':c.mesh.stitch==='peyote'?'rounded hollow surface':c.kind==='strand'?'simple flexible appendage':'named part geometry',
   nominalGeometry:c.mesh.geometry||null,rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id]),radiusMm:c.mesh.geometry?.roundRadiiMm[i]??null,heightMm:c.mesh.geometry?.roundHeightsMm[i]??null,anglesRad:c.mesh.angles[i]}))||null}));
  const joints=g.joins.map(j=>{const c=g.components.find(c=>c.id===j.component),type=kind(c)==='eye'?'eye-anchor':kind(c)==='strand'?'strand-return':j.pairs.length===2?'surface-double':'surface-hinge';j.jointType=type;return {id:'joint-'+j.component,type,parent:j.parent,child:j.component,status:'draft',anchors:j.pairs.map(p=>({parent:p.a,child:p.b,parentPasses:g.counts.get(p.a),childPasses:g.counts.get(p.b)}))};});
- const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,finishingRepair:g.finishingRepair||null,threadAccess:g.threadAccess||null,physicalSampleRequired:true};
- graph.checks=validate(g,graph);if(!graph.checks.valid)throw Error(graph.checks.errors.join('; '));g.constructionGraph=graph;return g;
+ const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,finishingRepair:g.finishingRepair||null,nominalClearance:null,threadAccess:g.threadAccess||null,physicalSampleRequired:true};
+ graph.checks=validate(g,graph);graph.nominalClearance=graph.checks.nominalClearance;if(!graph.checks.valid)throw Error(graph.checks.errors.join('; '));g.constructionGraph=graph;return g;
 }
 root.BeadConstruction={templates,compile,validate};if(typeof module!=='undefined')module.exports=root.BeadConstruction;
 })(typeof window!=='undefined'?window:globalThis);

@@ -1,0 +1,1304 @@
+{
+  "note": "Computed pass directions, diagram coverage, bead glyph spacing, labels against other bead glyphs, and no model mutation. Does not prove every label or line is visually clear, or prove physical construction.",
+  "sourceSha256": {
+    "finishing-guide.js": "94dee4eecc745f3cc1cb05d5541c56e8d16a1421e467cb6166a975db03d4eeb7",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "parts-engine.js": "b5b6016454a8e33e054933ce7f47f337eb06793f55ade3dfe0e1b4caeafcdbf0",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "bead-geometry.js": "6e49d690c54ba776f305316a957b332482b85f68cf18b5d710c7fb0117486862",
+    "parts-app.js": "c8d444484edb3ae44454ee646faaef1ac5a8a368739d1774534b6689dd0b5aaa",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_finishing_guides.cjs": "4a4615a96b0a3077366bbdbbef5a9879124529c2ba31018f630c227170bc13a9"
+  },
+  "summary": {
+    "cases": 128,
+    "valid": 128,
+    "diagrams": 280,
+    "displayedPasses": 840,
+    "glyphOverlaps": 0,
+    "labelGlyphConflicts": 0,
+    "physicalSamples": 0
+  },
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 6,
+      "passes": 18,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 4,
+      "passes": 12,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "valid": true,
+      "diagrams": 2,
+      "passes": 6,
+      "minimumGlyphClearancePx": 177,
+      "labelGlyphConflicts": 0
+    }
+  ]
+}
