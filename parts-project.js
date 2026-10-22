@@ -6,6 +6,7 @@ function parts(){return root.BeadParts||(typeof require==='function'?require('./
 function source(settings){if(settings.shape==='custom'){if(settings.design?.kind==='image')throw Error('A parts project needs an interpreted subject, not an inflated image outline.');return settings.design;}return parts().example(settings.shape);}
 function build(settings){volume().settings(settings);const scene=source(settings),g=parts().build(scene,settings);g.sceneKey=JSON.stringify([scene,settings.detail,settings.threadDiameter]);return g;}
 function routeKey(g){return JSON.stringify([guideVersion,g.nodes.map(n=>[n.id,n.p.map(v=>Number(v.toFixed(6))),n.material,g.palette[g.colors[n.index]]]),g.stages.map(st=>st.operations.map(o=>[o.id,o.kind,o.from,o.to,o.phase,o.section]))]);}
+function archive(project,reason){return {reason,formatVersion:project.version,settings:project.settings,palette:project.palette,colors:project.colors,manualEdits:project.manualEdits,partsGuide:project.partsGuide,makerProgress:project.makerProgress,guide:project.guide,step:project.step,layer:project.layer,previous:project.legacyProjectData||project.legacyVoxelEdits||null};}
 function open(project){
  if(project.format!=='beadform-project'||project.dimension!=='volume'||project.construction!=='parts'||![2,3,4,5].includes(project.version))throw Error('Unsupported parts project.');
  const input=project.settings,normalized=volume().settings(input),settings={...input,...normalized};
@@ -17,7 +18,7 @@ function open(project){
   g.palette=project.palette.slice();g.colors=project.colors.slice();g.nodes.forEach(n=>{n.color=g.palette[g.colors[n.index]];});
  }
  const resume=project.version===5&&project.partsGuide?.version===guideVersion&&project.partsGuide.routeKey===routeKey(g);
- return {model:g,settings,resume,legacyProjectData:project.version<5?{formatVersion:project.version,settings:project.settings,palette:project.palette,colors:project.colors,manualEdits:project.manualEdits,partsGuide:project.partsGuide,makerProgress:project.makerProgress,guide:project.guide,step:project.step,layer:project.layer}:project.legacyProjectData||project.legacyVoxelEdits||null};
+ return {model:g,settings,resume,legacyProjectData:project.version<5?archive(project,'migrated legacy parts project'):!resume?archive(project,'geometry or thread route changed; old progress is reference only'):project.legacyProjectData||project.legacyVoxelEdits||null};
 }
 root.BeadPartsProject={build,open,routeKey,guideVersion};if(typeof module!=='undefined')module.exports=root.BeadPartsProject;
 })(typeof window!=='undefined'?window:globalThis);

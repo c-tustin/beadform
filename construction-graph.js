@@ -12,6 +12,18 @@ function validate(g,graph){
  const errors=[],byPart=new Map(graph.parts.map(p=>[p.id,p]));
  if(byPart.size!==g.components.length)errors.push('duplicate or missing part');
  if(graph.parts.reduce((sum,p)=>sum+p.beadCount,0)!==g.nodes.length)errors.push('incorrect inventory');
+ for(const p of graph.parts)if(p.technique==='circular-peyote'){
+  const rounds=p.rounds||[],ids=rounds.flatMap(r=>r.beads);
+  if(rounds.reduce((n,r)=>n+r.newBeads,0)!==p.beadCount||new Set(ids).size!==p.beadCount||ids.some(id=>!p.beads.includes(id)))errors.push('incorrect circular-peyote round inventory');
+  if(p.nominalGeometry){
+   const geometry=p.nominalGeometry;
+   if(geometry.version!==2||geometry.minimumCenterPlaneClearanceMm<geometry.centerPlaneClearanceMm-1e-8)errors.push('invalid nominal peyote spacing');
+   for(const r of rounds){const angles=r.anglesRad;
+    if(!Number.isFinite(r.radiusMm)||r.radiusMm<=0||!Number.isFinite(r.heightMm)||!Array.isArray(angles)||angles.length!==r.newBeads||angles.some(v=>!Number.isFinite(v))){errors.push('invalid peyote ring geometry');continue;}
+    if(angles.some((a,i)=>Math.abs(((i===angles.length-1?angles[0]+Math.PI*2:angles[i+1])-a)-Math.PI*2/angles.length)>1e-7))errors.push('peyote ring angles are not uniformly spaced');
+   }
+  }
+ }
  for(const p of graph.parts)if(p.technique==='craw'){
   const Craw=root.BeadCraw||(typeof require==='function'?require('./craw-block.js'):null),dims=p.dimensions;
   if(!Craw||!Array.isArray(dims)||dims.length!==3){errors.push('missing CRAW dimensions');continue;}
@@ -48,9 +60,9 @@ function compile(g){
   technique:c.mesh.stitch==='craw'?'craw':c.mesh.eye?'single-bead':c.mesh.stitch==='peyote'?'circular-peyote':c.kind==='strand'?'return-strand':'angle-weave',
   template:c.mesh.eye?'eye':c.kind,placementRule:c.placementRule||null,planeNormalAxis:c.planeNormalAxis,dimensions:c.mesh.dimensions||null,cubes:c.mesh.cells||null,templateStatus:'draft',beadCount:c.ids.length,beads:c.ids.slice(),
   decision:c.mesh.stitch==='craw'?'cuboid volume at bead scale; shared edge beads and parent-facing cube order':c.mesh.stitch==='peyote'?'rounded hollow surface':c.kind==='strand'?'simple flexible appendage':'named part geometry',
-  rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id])}))||null}));
+  nominalGeometry:c.mesh.geometry||null,rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id]),radiusMm:c.mesh.geometry?.roundRadiiMm[i]??null,heightMm:c.mesh.geometry?.roundHeightsMm[i]??null,anglesRad:c.mesh.angles[i]}))||null}));
  const joints=g.joins.map(j=>{const c=g.components.find(c=>c.id===j.component),type=kind(c)==='eye'?'eye-anchor':kind(c)==='strand'?'strand-return':j.pairs.length===2?'surface-double':'surface-hinge';j.jointType=type;return {id:'joint-'+j.component,type,parent:j.parent,child:j.component,status:'draft',anchors:j.pairs.map(p=>({parent:p.a,child:p.b,parentPasses:g.counts.get(p.a),childPasses:g.counts.get(p.b)}))};});
- const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,threadAccess:g.threadAccess||null,physicalSampleRequired:true};
+ const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,finishingRepair:g.finishingRepair||null,threadAccess:g.threadAccess||null,physicalSampleRequired:true};
  graph.checks=validate(g,graph);if(!graph.checks.valid)throw Error(graph.checks.errors.join('; '));g.constructionGraph=graph;return g;
 }
 root.BeadConstruction={templates,compile,validate};if(typeof module!=='undefined')module.exports=root.BeadConstruction;

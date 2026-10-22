@@ -979,12 +979,43 @@ dialog{border:1px solid var(--studio-line);border-radius:24px;box-shadow:0 25px 
 'use strict';
 // Original circular-peyote draft. Each round records the actual up-bead anchors.
 // The geometric surface is an illustration; tension and shaping require sampling.
+function uniformAngles(prev,count){
+ const n=prev.length,step=2*Math.PI/count;let lower=-Infinity,upper=Infinity,j=0;
+ const allow=(pick,start)=>{const end=start+1===n?prev[0]+2*Math.PI:prev[start+1];lower=Math.max(lower,prev[start]-step*pick);upper=Math.min(upper,end-step*pick);};
+ if(count>=n){for(let i=0;i<n;i++){const picks=Math.floor((i+1)*count/n)-Math.floor(i*count/n);for(let k=0;k<picks;k++)allow(j++,i);}}
+ else{for(let i=0;i<count;i++){allow(i,j);j+=Math.floor((i+1)*n/count)-Math.floor(i*n/count);}}
+ if(upper-lower<1e-8)throw Error('No uniformly spaced ring fits the scheduled peyote anchor gaps.');
+ const offset=(lower+upper)/2;return Array.from({length:count},(_,i)=>offset+i*step);
+}
+function fitGeometry(mesh){
+ const halfLength=.65,radius=1,clearance=.05,sub=(a,b)=>a.map((v,i)=>v-b[i]),dot=(a,b)=>a.reduce((s,v,i)=>s+v*b[i],0),nodes=mesh.edges.map(([a,b],i)=>({p:mesh.v[a].map((v,k)=>(v+mesh.v[b][k])/2),axis:[-Math.sin(mesh.angles.flat()[i]),0,Math.cos(mesh.angles.flat()[i])]}));
+ const planeGap=(a,b)=>{const delta=sub(b.p,a.p),d=Math.hypot(...delta);if(d<1e-10)return -Infinity;const u=delta.map(v=>v/d),support=n=>Math.sqrt(radius*radius-(radius*radius-halfLength*halfLength)*dot(u,n.axis)**2);return d-support(a)-support(b);},separated=(a,b)=>planeGap(a,b)>=clearance-1e-8;
+ const originalCenter=(Math.max(...nodes.map(n=>n.p[1]))+Math.min(...nodes.map(n=>n.p[1])))/2,heights=[],radii=[],adjustments=[];
+ for(let r=0;r<mesh.rounds.length;r++){
+  const row=mesh.rounds[r],phi=mesh.angles[r],original=nodes[row[0]].p.slice(),gap=Math.min(...phi.map((a,i)=>(i===phi.length-1?phi[0]+2*Math.PI:phi[i+1])-a)),minimum=Math.sqrt(radius*radius+(halfLength/Math.tan(gap/2))**2)+clearance/(2*Math.sin(gap/2));
+  radii[r]=Math.max(Math.hypot(original[0],original[2]),minimum);
+  const previousHeight=r?mesh.v[mesh.edges[mesh.rounds[r-1][0]][0]][1]:null;
+  heights[r]=r?heights[r-1]-(previousHeight-original[1]):original[1];
+  const place=()=>row.forEach((id,j)=>{nodes[id].p=[radii[r]*Math.cos(phi[j]),heights[r],radii[r]*Math.sin(phi[j])];});
+  const earlier=mesh.rounds.slice(0,r).flat();place();let moves=0;
+  while(r&&row.some(id=>earlier.some(other=>!separated(nodes[id],nodes[other])))){
+   heights[r]-=.02;place();if(++moves>200)throw Error('Nominal peyote spacing could not be fitted.');
+  }
+  adjustments.push({round:r+1,radiusDeltaMm:radii[r]-Math.hypot(original[0],original[2]),verticalCorrectionMm:moves*.02});
+ }
+ const center=(Math.max(...heights)+Math.min(...heights))/2-originalCenter;
+ for(let i=0;i<nodes.length;i++){const n=nodes[i];n.p[1]-=center;const [a,b]=mesh.edges[i];mesh.v[a]=n.p.map((v,k)=>v-n.axis[k]*halfLength);mesh.v[b]=n.p.map((v,k)=>v+n.axis[k]*halfLength);}
+ let minimumGap=Infinity;for(let i=0;i<nodes.length;i++)for(let j=0;j<i;j++)minimumGap=Math.min(minimumGap,planeGap(nodes[i],nodes[j]));
+ if(minimumGap<clearance-1e-8)throw Error('Nominal peyote bead envelopes are not separated.');
+ mesh.geometry={version:2,nominalDiameterMm:radius*2,nominalHoleLengthMm:halfLength*2,centerPlaneClearanceMm:clearance,minimumCenterPlaneClearanceMm:minimumGap,uniformRoundAngles:true,originPolicy:'preserve original bound center',roundRadiiMm:radii,roundHeightsMm:heights.map(y=>y-center),adjustments,physicallyTested:false};
+ return mesh;
+}
 function ball(big=false,profile="ball",economy=false){
  const sizes=profile==='body'?[5,10,10,15,15,15,15,10,5]:economy&&profile==='dome'?[5,5]:economy&&profile==='pear'?[5,5,5,5]:profile==='dome'?(big?[5,10,10,15,15]:[5,10,10]):profile==='pear'?[5,10,10,5,5,5]:big?[5,10,10,10,10,10,10,5]:[5,10,10,10,5];
  const v=[],edges=[],rounds=[],groups=[],angles=[];let next=0;
  for(let r=0;r<sizes.length;r++){
   const count=sizes[r],theta=(economy?.6:.3)+(profile==='dome'?(economy?.97:1.27):Math.PI-(economy?1.2:.6))*r/(sizes.length-1),radius=(profile==='body'?6.2:economy?(profile==='dome'?2.4:2.7):big?5.8:4.3),ring=[];
-  let phi=[];if(!r)phi=Array.from({length:count},(_,i)=>i*2*Math.PI/count);else{const prev=angles[r-1],n=prev.length;if(count>=n){for(let i=0;i<n;i++){const num=Math.floor((i+1)*count/n)-Math.floor(i*count/n),end=i===n-1?prev[0]+2*Math.PI:prev[i+1];for(let k=0;k<num;k++)phi.push(prev[i]+(end-prev[i])*(k+1)/(num+1));}}else{let j=0;for(let i=0;i<count;i++){const num=Math.floor((i+1)*n/count)-Math.floor(i*n/count),end=j+num===n?prev[0]+2*Math.PI:prev[j+num];phi.push((prev[j]+end)/2);j+=num;}}}angles.push(phi);
+  const phi=r?uniformAngles(angles[r-1],count):Array.from({length:count},(_,i)=>i*2*Math.PI/count);angles.push(phi);
   for(let i=0;i<count;i++){const a=phi[i],center=[radius*Math.sin(theta)*Math.cos(a)*(profile==='pear'?1-.45*r/(sizes.length-1):1),radius*Math.cos(theta)*(profile==='pear'?1.2:1),radius*Math.sin(theta)*Math.sin(a)*(profile==='pear'?1-.45*r/(sizes.length-1):1)],axis=[-Math.sin(a),0,Math.cos(a)],id=next++;ring.push(id);v.push(center.map((x,k)=>x-axis[k]*.65),center.map((x,k)=>x+axis[k]*.65));edges.push([id*2,id*2+1]);}
   rounds.push(ring);
  }
@@ -1002,7 +1033,7 @@ function ball(big=false,profile="ball",economy=false){
  }
  if(profile!=='dome'){const at=groups.findIndex(g=>g.phase==='decrease');if(at>0)groups[at].pauseBefore='Optional filling: before this decrease, tuck a small amount of clean, dry, soft plastic film or light craft filling through the opening. Keep the rim and bead holes clear; do not pack tightly. Continue the listed decreases and closure.';}
  const top=rounds.at(-1);if(profile!=='dome')groups.push({label:'Close: pass through the last five up-beads and draw snug',phase:'closure',sequence:[...top.slice(1),top[0]]});
- return {v,edges,f:[],kind:profile==='body'?'ball':profile,open:profile==='dome',stitch:'peyote',radius:profile==='body'?6.2:economy?(profile==='dome'?2.4:3.24):big?5.8:profile==='pear'?5.16:4.3,rounds,angles,groups,count:next};
+ return fitGeometry({v,edges,f:[],kind:profile==='body'?'ball':profile,open:profile==='dome',stitch:'peyote',radius:profile==='body'?6.2:economy?(profile==='dome'?2.4:3.24):big?5.8:profile==='pear'?5.16:4.3,rounds,angles,groups,count:next});
 }
 root.BeadPeyote={ball};if(typeof module!=='undefined')module.exports=root.BeadPeyote;
 })(typeof window!=='undefined'?window:globalThis);
@@ -1049,6 +1080,18 @@ function validate(g,graph){
  const errors=[],byPart=new Map(graph.parts.map(p=>[p.id,p]));
  if(byPart.size!==g.components.length)errors.push('duplicate or missing part');
  if(graph.parts.reduce((sum,p)=>sum+p.beadCount,0)!==g.nodes.length)errors.push('incorrect inventory');
+ for(const p of graph.parts)if(p.technique==='circular-peyote'){
+  const rounds=p.rounds||[],ids=rounds.flatMap(r=>r.beads);
+  if(rounds.reduce((n,r)=>n+r.newBeads,0)!==p.beadCount||new Set(ids).size!==p.beadCount||ids.some(id=>!p.beads.includes(id)))errors.push('incorrect circular-peyote round inventory');
+  if(p.nominalGeometry){
+   const geometry=p.nominalGeometry;
+   if(geometry.version!==2||geometry.minimumCenterPlaneClearanceMm<geometry.centerPlaneClearanceMm-1e-8)errors.push('invalid nominal peyote spacing');
+   for(const r of rounds){const angles=r.anglesRad;
+    if(!Number.isFinite(r.radiusMm)||r.radiusMm<=0||!Number.isFinite(r.heightMm)||!Array.isArray(angles)||angles.length!==r.newBeads||angles.some(v=>!Number.isFinite(v))){errors.push('invalid peyote ring geometry');continue;}
+    if(angles.some((a,i)=>Math.abs(((i===angles.length-1?angles[0]+Math.PI*2:angles[i+1])-a)-Math.PI*2/angles.length)>1e-7))errors.push('peyote ring angles are not uniformly spaced');
+   }
+  }
+ }
  for(const p of graph.parts)if(p.technique==='craw'){
   const Craw=root.BeadCraw||(typeof require==='function'?require('./craw-block.js'):null),dims=p.dimensions;
   if(!Craw||!Array.isArray(dims)||dims.length!==3){errors.push('missing CRAW dimensions');continue;}
@@ -1085,9 +1128,9 @@ function compile(g){
   technique:c.mesh.stitch==='craw'?'craw':c.mesh.eye?'single-bead':c.mesh.stitch==='peyote'?'circular-peyote':c.kind==='strand'?'return-strand':'angle-weave',
   template:c.mesh.eye?'eye':c.kind,placementRule:c.placementRule||null,planeNormalAxis:c.planeNormalAxis,dimensions:c.mesh.dimensions||null,cubes:c.mesh.cells||null,templateStatus:'draft',beadCount:c.ids.length,beads:c.ids.slice(),
   decision:c.mesh.stitch==='craw'?'cuboid volume at bead scale; shared edge beads and parent-facing cube order':c.mesh.stitch==='peyote'?'rounded hollow surface':c.kind==='strand'?'simple flexible appendage':'named part geometry',
-  rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id])}))||null}));
+  nominalGeometry:c.mesh.geometry||null,rounds:c.mesh.rounds?.map((ids,i)=>({round:i+1,newBeads:ids.length,beads:ids.map(id=>c.ids[id]),radiusMm:c.mesh.geometry?.roundRadiiMm[i]??null,heightMm:c.mesh.geometry?.roundHeightsMm[i]??null,anglesRad:c.mesh.angles[i]}))||null}));
  const joints=g.joins.map(j=>{const c=g.components.find(c=>c.id===j.component),type=kind(c)==='eye'?'eye-anchor':kind(c)==='strand'?'strand-return':j.pairs.length===2?'surface-double':'surface-hinge';j.jointType=type;return {id:'joint-'+j.component,type,parent:j.parent,child:j.component,status:'draft',anchors:j.pairs.map(p=>({parent:p.a,child:p.b,parentPasses:g.counts.get(p.a),childPasses:g.counts.get(p.b)}))};});
- const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,threadAccess:g.threadAccess||null,physicalSampleRequired:true};
+ const graph={format:'beadform-construction-graph',version:1,parts,joints,materials:g.materials,beadCount:g.nodes.length,threadSections:g.threadSections,finishing:g.finishing||null,finishingRepair:g.finishingRepair||null,threadAccess:g.threadAccess||null,physicalSampleRequired:true};
  graph.checks=validate(g,graph);if(!graph.checks.valid)throw Error(graph.checks.errors.join('; '));g.constructionGraph=graph;return g;
 }
 root.BeadConstruction={templates,compile,validate};if(typeof module!=='undefined')module.exports=root.BeadConstruction;
@@ -1216,7 +1259,24 @@ function layout(g,c){if(c.kind==='craw'){const dims=c.mesh.dimensions,pitch=Math
 function boxLayout(nodes,pos,axes){const minX=Math.min(...pos.map(p=>p.x)),minY=Math.min(...pos.map(p=>p.y)),dx=Math.max(...pos.map(p=>p.x))-minX,dy=Math.max(...pos.map(p=>p.y))-minY,W=Math.max(560,dx+130),H=Math.max(350,dy+130);pos.forEach(p=>{p.x+=(W-dx)/2-minX;p.y+=(H-dy)/2-minY;});return {nodes,index:new Map(nodes.map((n,i)=>[n.id,i])),pos,axes,W,H};}
 function joinLayout(g,st){const nodes=st.pairs.flatMap(p=>[g.byId.get(p.a),g.byId.get(p.b)]),pos=nodes.map((n,i)=>({x:(i%2)*180,y:Math.floor(i/2)*120})),axes=nodes.map(()=>[0,1]);return boxLayout(nodes,pos,axes);}
 function validate(g){const errors=[];for(const c of g.components)if(Number.isInteger(c.planeNormalAxis)){const coordinates=c.ids.map(id=>g.byId.get(id).p[c.planeNormalAxis]);if(Math.max(...coordinates)-Math.min(...coordinates)>1e-5)errors.push('A flat part no longer follows its specified thin axis.');}for(const c of g.components)if(c.placementRule==='tower-base-alignment'){const parent=g.components.find(p=>p.id===c.parent),bottom=part=>Math.min(...part.ids.map(id=>g.byId.get(id).p[1]));if(!parent||Math.abs(bottom(c)-bottom(parent))>1e-5)errors.push('A tower no longer shares its parent wall baseline.');}const added=g.stages.flatMap(s=>s.ids);if(added.length!==g.nodes.length||new Set(added).size!==g.nodes.length)errors.push('Each physical bead must be added exactly once.');if(g.maxPasses>g.passLimit)errors.push('Passage limit exceeded.');if(g.joins.length!==g.components.length-1)errors.push('Every part needs a joining plan.');for(const st of g.stages){let prev=null;for(const o of st.operations){const n=g.byId.get(o.id);if(!n||!n.ends.includes(o.from)||!n.ends.includes(o.to)||o.from===o.to)errors.push('Invalid bead-hole traversal.');if(prev&&!o.newThread&&!o.bridge&&prev.to!==o.from)errors.push('Disconnected working thread.');prev=o;}}if(g.continuous){let prev=null;for(const st of g.stages)for(const o of st.operations){if(prev&&!o.newThread){const a=g.byId.get(prev.id),b=g.byId.get(o.id);if(a.component!==b.component){const ca=g.components.find(c=>c.id===a.component),cb=g.components.find(c=>c.id===b.component);if(ca.parent!==cb.id&&cb.parent!==ca.id)errors.push('Thread must return through the parent beadwork before moving to another limb.');}}prev=o;}for(const join of g.joins)for(const pair of join.pairs)if(len(sub(g.byId.get(pair.a).p,g.byId.get(pair.b).p))>3.80001)errors.push('An attachment would leave a long exposed thread span.');}return {valid:!errors.length,errors};}
-function build(design,options={}){const g=buildSeparate(design,options);if(options.continuous===false)return g;const C=root.BeadContinuous||(typeof require==='function'?require('./continuous-thread.js'):null);if(!C)throw Error('The continuous-thread planner is missing.');const planned=C.plan(g,{accessAware:options.accessAware!==false}),F=root.BeadFinishing||(typeof require==='function'?require('./thread-finishing.js'):null),G=root.BeadConstruction||(typeof require==='function'?require('./construction-graph.js'):null);if(F)planned.finishing=F.propose(planned);const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);if(Geometry)planned.threadAccess=Geometry.audit(planned);return G?G.compile(planned):planned;}
+function build(design,options={}){
+ const initial=buildSeparate(design,options);if(options.continuous===false)return initial;
+ const C=root.BeadContinuous||(typeof require==='function'?require('./continuous-thread.js'):null),F=root.BeadFinishing||(typeof require==='function'?require('./thread-finishing.js'):null),G=root.BeadConstruction||(typeof require==='function'?require('./construction-graph.js'):null),Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
+ if(!C)throw Error('The continuous-thread planner is missing.');
+ const run=(g,finishingReserve)=>{const planned=C.plan(g,{accessAware:options.accessAware!==false,finishingReserve});if(F)planned.finishing=F.propose(planned);return planned;};
+ let planned=run(initial,[]);const reservations=new Set(),attempts=[];
+ // Repair only observed unresolved starting tails, without altering stitch counts
+ // or passage limits. A bounded retry may fail; retain the best actual result.
+ if(F&&options.repairFinishing!==false)for(let retry=0;retry<3&&planned.finishing.candidateEndpoints<planned.finishing.totalEndpoints;retry++){
+  const unresolved=planned.finishing.endpoints.filter(e=>e.status==='unresolved'&&e.end==='starting-tail'&&!reservations.has(e.bead));if(!unresolved.length)break;
+  unresolved.forEach(e=>reservations.add(e.bead));
+  try{const candidate=run(buildSeparate(design,options),[...reservations]);attempts.push({reserveBeads:[...reservations],candidateEndpoints:candidate.finishing.candidateEndpoints,totalEndpoints:candidate.finishing.totalEndpoints});
+   if(candidate.finishing.candidateEndpoints===candidate.finishing.totalEndpoints||candidate.finishing.candidateEndpoints>planned.finishing.candidateEndpoints)planned=candidate;
+  }catch(e){attempts.push({reserveBeads:[...reservations],error:e.message});break;}
+ }
+ if(attempts.length)planned.finishingRepair={kind:'bounded starting-tail passage reservation',attempts,completeFinish:false};
+ if(Geometry)planned.threadAccess=Geometry.audit(planned);return G?G.compile(planned):planned;
+}
 root.BeadParts={build,example,ball,tube,strand,panel,amigurumiScene,validate};if(typeof module!=='undefined')module.exports=root.BeadParts;
 })(typeof window!=='undefined'?window:globalThis);
 </script>
@@ -1281,7 +1341,7 @@ root.BeadGeometry={annotate,port,intersects,blockers,audit};if(typeof module!=='
 <script>(function(root){
 'use strict';
 const distance=(a,b)=>Math.hypot(...a.map((v,i)=>v-b[i]));
-function plan(g,{accessAware=true}={}){
+function plan(g,{accessAware=true,finishingReserve=[]}={}){
  const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
  if(accessAware&&!Geometry)throw Error('Nominal bead geometry is missing.');
  if(Geometry)Geometry.annotate(g);
@@ -1290,7 +1350,7 @@ function plan(g,{accessAware=true}={}){
  for(const c of g.components)if(c.mesh.stitch==='peyote')for(const group of c.mesh.groups)for(const i of group.sequence){const id=c.ids[i];future.set(id,(future.get(id)||0)+1);}
  let cursor=null,section=0,last=null,steps=[],activeMoves=[],activeIds=[],reasons=[];
  g.steps=[];g.stages=[];g.joins=[];
- const room=(id,extra=new Map())=>g.passLimit-counts.get(id)-(future.get(id)||0)-(reserve.get(id)||0)-(extra.get(id)||0);
+ const finishReserved=new Set(finishingReserve),room=(id,extra=new Map())=>g.passLimit-counts.get(id)-(future.get(id)||0)-(reserve.get(id)||0)-(extra.get(id)||0)-(finishReserved.has(id)?1:0);
  function accessPenalty(a,side,b,child){
   if(!accessAware)return 0;
   const parentNode=g.byId.get(a),childNode=g.byId.get(b),present=new Set([...known,...child.ids]);
@@ -1309,7 +1369,7 @@ function plan(g,{accessAware=true}={}){
  }
  function connect(a,b){if(!bridges.has(a))bridges.set(a,new Set());if(!bridges.has(b))bridges.set(b,new Set());bridges.get(a).add(b);bridges.get(b).add(a);}
  function fresh(v,reason){cursor=v;section++;last=null;if(reason)reasons.push({section,reason});}
- function pass(id,phase='weave',from=cursor){const n=g.byId.get(id);if(!n.ends.includes(from))throw Error('The continuous route missed a bead entrance.');const to=n.ends[0]===from?n.ends[1]:n.ends[0],kind=known.has(id)?'pass':'pick';if(counts.get(id)>=g.passLimit)throw Error('The continuous route exceeded its planned passage limit.');const o={id,kind,from,to,phase,section,newThread:last===null,bridge:last!==null&&last.to!==from};if(o.newThread&&section>1)o.restartReason=reasons.at(-1)?.reason;activeMoves.push(o);if(kind==='pick'){activeIds.push(id);n.addedAt=g.steps.length;}known.add(id);counts.set(id,counts.get(id)+1);cursor=to;last=o;return o;}
+ function pass(id,phase='weave',from=cursor){const n=g.byId.get(id);if(!n.ends.includes(from))throw Error('The continuous route missed a bead entrance.');const to=n.ends[0]===from?n.ends[1]:n.ends[0],kind=known.has(id)?'pass':'pick';if(counts.get(id)>=g.passLimit-(finishReserved.has(id)?1:0))throw Error('The continuous route exceeded its available passage budget.');const o={id,kind,from,to,phase,section,newThread:last===null,bridge:last!==null&&last.to!==from};if(o.newThread&&section>1)o.restartReason=reasons.at(-1)?.reason;activeMoves.push(o);if(kind==='pick'){activeIds.push(id);n.addedAt=g.steps.length;}known.add(id);counts.set(id,counts.get(id)+1);cursor=to;last=o;return o;}
  function travel(path){for(const hop of path){if(hop.id)pass(hop.id,'position');else cursor=hop.to;}}
  function saveStep(label,component,faceId){if(!activeMoves.length)return;const st={index:g.steps.length,label,component,faceId,ids:activeIds,ops:activeMoves.map(o=>({kind:o.kind,id:o.id})),moves:activeMoves};g.steps.push(st);steps.push(st);activeMoves=[];activeIds=[];}
  function finishStage(template,instruction,layout){const operations=steps.flatMap(st=>st.moves.map((o,i)=>({...o,step:st.index,local:i,cube:template.component}))),ids=steps.flatMap(st=>st.ids),st={...template,index:g.stages.length,start:steps[0].index,end:steps.at(-1).index,steps,blocks:[{cubeId:template.component,steps}],ids,nodeIds:[...new Set(operations.map(o=>o.id))],operations,instruction};st.layout=contextLayout(g,st,layout);g.stages.push(st);steps=[];return st;}
@@ -1458,6 +1518,7 @@ function parts(){return root.BeadParts||(typeof require==='function'?require('./
 function source(settings){if(settings.shape==='custom'){if(settings.design?.kind==='image')throw Error('A parts project needs an interpreted subject, not an inflated image outline.');return settings.design;}return parts().example(settings.shape);}
 function build(settings){volume().settings(settings);const scene=source(settings),g=parts().build(scene,settings);g.sceneKey=JSON.stringify([scene,settings.detail,settings.threadDiameter]);return g;}
 function routeKey(g){return JSON.stringify([guideVersion,g.nodes.map(n=>[n.id,n.p.map(v=>Number(v.toFixed(6))),n.material,g.palette[g.colors[n.index]]]),g.stages.map(st=>st.operations.map(o=>[o.id,o.kind,o.from,o.to,o.phase,o.section]))]);}
+function archive(project,reason){return {reason,formatVersion:project.version,settings:project.settings,palette:project.palette,colors:project.colors,manualEdits:project.manualEdits,partsGuide:project.partsGuide,makerProgress:project.makerProgress,guide:project.guide,step:project.step,layer:project.layer,previous:project.legacyProjectData||project.legacyVoxelEdits||null};}
 function open(project){
  if(project.format!=='beadform-project'||project.dimension!=='volume'||project.construction!=='parts'||![2,3,4,5].includes(project.version))throw Error('Unsupported parts project.');
  const input=project.settings,normalized=volume().settings(input),settings={...input,...normalized};
@@ -1469,7 +1530,7 @@ function open(project){
   g.palette=project.palette.slice();g.colors=project.colors.slice();g.nodes.forEach(n=>{n.color=g.palette[g.colors[n.index]];});
  }
  const resume=project.version===5&&project.partsGuide?.version===guideVersion&&project.partsGuide.routeKey===routeKey(g);
- return {model:g,settings,resume,legacyProjectData:project.version<5?{formatVersion:project.version,settings:project.settings,palette:project.palette,colors:project.colors,manualEdits:project.manualEdits,partsGuide:project.partsGuide,makerProgress:project.makerProgress,guide:project.guide,step:project.step,layer:project.layer}:project.legacyProjectData||project.legacyVoxelEdits||null};
+ return {model:g,settings,resume,legacyProjectData:project.version<5?archive(project,'migrated legacy parts project'):!resume?archive(project,'geometry or thread route changed; old progress is reference only'):project.legacyProjectData||project.legacyVoxelEdits||null};
 }
 root.BeadPartsProject={build,open,routeKey,guideVersion};if(typeof module!=='undefined')module.exports=root.BeadPartsProject;
 })(typeof window!=='undefined'?window:globalThis);

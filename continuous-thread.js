@@ -1,7 +1,7 @@
 (function(root){
 'use strict';
 const distance=(a,b)=>Math.hypot(...a.map((v,i)=>v-b[i]));
-function plan(g,{accessAware=true}={}){
+function plan(g,{accessAware=true,finishingReserve=[]}={}){
  const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
  if(accessAware&&!Geometry)throw Error('Nominal bead geometry is missing.');
  if(Geometry)Geometry.annotate(g);
@@ -10,7 +10,7 @@ function plan(g,{accessAware=true}={}){
  for(const c of g.components)if(c.mesh.stitch==='peyote')for(const group of c.mesh.groups)for(const i of group.sequence){const id=c.ids[i];future.set(id,(future.get(id)||0)+1);}
  let cursor=null,section=0,last=null,steps=[],activeMoves=[],activeIds=[],reasons=[];
  g.steps=[];g.stages=[];g.joins=[];
- const room=(id,extra=new Map())=>g.passLimit-counts.get(id)-(future.get(id)||0)-(reserve.get(id)||0)-(extra.get(id)||0);
+ const finishReserved=new Set(finishingReserve),room=(id,extra=new Map())=>g.passLimit-counts.get(id)-(future.get(id)||0)-(reserve.get(id)||0)-(extra.get(id)||0)-(finishReserved.has(id)?1:0);
  function accessPenalty(a,side,b,child){
   if(!accessAware)return 0;
   const parentNode=g.byId.get(a),childNode=g.byId.get(b),present=new Set([...known,...child.ids]);
@@ -29,7 +29,7 @@ function plan(g,{accessAware=true}={}){
  }
  function connect(a,b){if(!bridges.has(a))bridges.set(a,new Set());if(!bridges.has(b))bridges.set(b,new Set());bridges.get(a).add(b);bridges.get(b).add(a);}
  function fresh(v,reason){cursor=v;section++;last=null;if(reason)reasons.push({section,reason});}
- function pass(id,phase='weave',from=cursor){const n=g.byId.get(id);if(!n.ends.includes(from))throw Error('The continuous route missed a bead entrance.');const to=n.ends[0]===from?n.ends[1]:n.ends[0],kind=known.has(id)?'pass':'pick';if(counts.get(id)>=g.passLimit)throw Error('The continuous route exceeded its planned passage limit.');const o={id,kind,from,to,phase,section,newThread:last===null,bridge:last!==null&&last.to!==from};if(o.newThread&&section>1)o.restartReason=reasons.at(-1)?.reason;activeMoves.push(o);if(kind==='pick'){activeIds.push(id);n.addedAt=g.steps.length;}known.add(id);counts.set(id,counts.get(id)+1);cursor=to;last=o;return o;}
+ function pass(id,phase='weave',from=cursor){const n=g.byId.get(id);if(!n.ends.includes(from))throw Error('The continuous route missed a bead entrance.');const to=n.ends[0]===from?n.ends[1]:n.ends[0],kind=known.has(id)?'pass':'pick';if(counts.get(id)>=g.passLimit-(finishReserved.has(id)?1:0))throw Error('The continuous route exceeded its available passage budget.');const o={id,kind,from,to,phase,section,newThread:last===null,bridge:last!==null&&last.to!==from};if(o.newThread&&section>1)o.restartReason=reasons.at(-1)?.reason;activeMoves.push(o);if(kind==='pick'){activeIds.push(id);n.addedAt=g.steps.length;}known.add(id);counts.set(id,counts.get(id)+1);cursor=to;last=o;return o;}
  function travel(path){for(const hop of path){if(hop.id)pass(hop.id,'position');else cursor=hop.to;}}
  function saveStep(label,component,faceId){if(!activeMoves.length)return;const st={index:g.steps.length,label,component,faceId,ids:activeIds,ops:activeMoves.map(o=>({kind:o.kind,id:o.id})),moves:activeMoves};g.steps.push(st);steps.push(st);activeMoves=[];activeIds=[];}
  function finishStage(template,instruction,layout){const operations=steps.flatMap(st=>st.moves.map((o,i)=>({...o,step:st.index,local:i,cube:template.component}))),ids=steps.flatMap(st=>st.ids),st={...template,index:g.stages.length,start:steps[0].index,end:steps.at(-1).index,steps,blocks:[{cubeId:template.component,steps}],ids,nodeIds:[...new Set(operations.map(o=>o.id))],operations,instruction};st.layout=contextLayout(g,st,layout);g.stages.push(st);steps=[];return st;}
