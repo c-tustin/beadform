@@ -236,3 +236,10 @@ All final report source fingerprints were checked against the current workspace 
 The router now remembers the last physical bead hole across a virtual joint and penalizes approaches blocked by already-built nominal bead envelopes. The paired audit of 128 configurations preserves every bead position, color, material and stitch schedule. Nominal straight-path flags drop from 47 to 4; no configuration has more flags. Planned working lengths total 138 rather than 139, and all 276 endpoints have candidate weave-in routes within passage budgets. Complete finishes and physical construction remain unverified.
 
 See [joint routing notes](results/2026-10-21-joint-routing-notes.md) and [paired report](results/2026-10-21-joint-routing-comparison.json). The previous published router is retained as an immutable comparison fixture. Remaining flags affect the coarse whale, cactus, and robot; they remain visible in the access diagnostics.
+
+
+## Target entrances and separate starts (2026-10-21)
+
+Positioning now ranks the final approach into its next bead, and attachment selection considers a separate working length when continuous choices have nominal obstructions. In the paired 128-configuration audit, straight-path flags fall from 4 to 0 with identical bead inventory, positions, materials, colors and stitch schedules. Working lengths total 140 rather than 138: the coarse cactus and robot with 0.25 mm line each add one length. All 280 resulting endpoints have candidate weave-in routes; complete secure finishes remain unverified. Zero nominal flags do not establish physical beadability.
+
+See [entry routing notes](results/2026-10-21-entry-routing-notes.md) and [paired report](results/2026-10-21-entry-routing-comparison.json). Physical builds and outcome photos are still required before training a physical-success scorer.
