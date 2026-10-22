@@ -243,3 +243,10 @@ See [joint routing notes](results/2026-10-21-joint-routing-notes.md) and [paired
 Positioning now ranks the final approach into its next bead, and attachment selection considers a separate working length when continuous choices have nominal obstructions. In the paired 128-configuration audit, straight-path flags fall from 4 to 0 with identical bead inventory, positions, materials, colors and stitch schedules. Working lengths total 140 rather than 138: the coarse cactus and robot with 0.25 mm line each add one length. All 280 resulting endpoints have candidate weave-in routes; complete secure finishes remain unverified. Zero nominal flags do not establish physical beadability.
 
 See [entry routing notes](results/2026-10-21-entry-routing-notes.md) and [paired report](results/2026-10-21-entry-routing-comparison.json). Physical builds and outcome photos are still required before training a physical-success scorer.
+
+
+## Finishing approaches against completed beadwork (2026-10-21)
+
+Finishing search now checks each straight approach against every bead in the completed project. An independent traversal check rejects obstructed candidates even if supplied metadata claims zero conflicts. The paired 128-configuration audit replaces three obstructed approaches while retaining all 280 candidate endpoints, all combined passage budgets, identical bead positions and stitch schedules, and 140 working lengths. Assembly approach flags remain zero. These three-bead routes still lack tested knots and physical validation.
+
+The checked-in `beadform.html` was rebuilt to include this change and the preceding source-only routing fixes. See [finishing access notes](results/2026-10-21-finishing-access-notes.md), [paired report](results/2026-10-21-finishing-access-comparison.json), and [rejection controls](results/2026-10-21-finishing-access-controls.json).

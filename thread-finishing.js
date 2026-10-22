@@ -5,6 +5,10 @@
 function propose(g,{minimumBeads=3,maxStates=4000}={}){
  if(!Number.isInteger(minimumBeads)||minimumBeads<1||minimumBeads>8)throw Error('Finishing search requires 1–8 distinct beads.');
  if(!Number.isInteger(maxStates)||maxStates<1||maxStates>100000)throw Error('Finishing search requires a bounded state budget.');
+ const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
+ if(!Geometry)throw Error('Nominal bead geometry is missing for finishing.');
+ Geometry.annotate(g);const present=new Set(g.nodes.map(n=>n.id)),approaches=new Map();
+ const blocked=(a,exit,b,entry)=>{if(a===b)return false;const key=JSON.stringify([a,exit,b,entry]);if(!approaches.has(key))approaches.set(key,Geometry.blockers(g,g.byId.get(a),exit,g.byId.get(b),entry,present,{limit:1}).length>0);return approaches.get(key);};
  const operations=g.stages.flatMap(st=>st.operations),sections=new Map(),adj=new Map(),bridges=new Map();
  for(const n of g.nodes)for(const port of n.ends){if(!adj.has(port))adj.set(port,[]);adj.get(port).push(n.id);}
  const connect=(a,b)=>{if(a===b)return;if(!bridges.has(a))bridges.set(a,new Set());if(!bridges.has(b))bridges.set(b,new Set());bridges.get(a).add(b);bridges.get(b).add(a);};
@@ -19,19 +23,20 @@ function propose(g,{minimumBeads=3,maxStates=4000}={}){
   {id:'length-'+section+'-working',section,end:'working-end',port:ops.at(-1).to,bead:ops.at(-1).id}
  ]),counts=new Map(g.counts),results=[];
  function search(end){
-  const originPart=g.byId.get(end.bead).component,queue=[{port:end.port,used:new Set(),moves:[],bridge:false,cost:0}],candidates=[];let visited=0;
+  const originPart=g.byId.get(end.bead).component,queue=[{port:end.port,used:new Set(),moves:[],bridge:false,cost:0,previousBead:end.bead,exit:end.port}],candidates=[];let visited=0;
   while(queue.length&&visited<maxStates){
    queue.sort((a,b)=>a.cost-b.cost);const state=queue.shift();visited++;
    if(state.used.size===minimumBeads){candidates.push(state);if(candidates.length>=12)break;continue;}
    for(const id of adj.get(state.port)||[]){
     if(state.used.has(id)||(counts.get(id)||0)>=g.passLimit)continue;
     const n=g.byId.get(id),to=n.ends[0]===state.port?n.ends[1]:n.ends[0];
-    queue.push({port:to,used:new Set([...state.used,id]),moves:[...state.moves,{id,from:state.port,to,kind:'pass',phase:'finish'}],bridge:false,
+    if(blocked(state.previousBead,state.exit,id,state.port))continue;
+    queue.push({port:to,used:new Set([...state.used,id]),moves:[...state.moves,{id,from:state.port,to,kind:'pass',phase:'finish'}],bridge:false,previousBead:id,exit:to,
      cost:state.cost+1+(counts.get(id)||0)/g.passLimit+(n.component===originPart?0:4)});
    }
    if(!state.bridge)for(const to of bridges.get(state.port)||[]){
     // A bridge must be followed by a bead passage, never another bridge.
-    queue.push({port:to,used:state.used,moves:[...state.moves,{id:null,from:state.port,to,kind:'existing-connection'}],bridge:true,cost:state.cost+.1});
+    queue.push({port:to,used:state.used,moves:[...state.moves,{id:null,from:state.port,to,kind:'existing-connection'}],bridge:true,previousBead:state.previousBead,exit:state.exit,cost:state.cost+.1});
    }
   }
   return {route:candidates.sort((a,b)=>a.cost-b.cost)[0],candidateCount:candidates.length,visited,limitReached:visited>=maxStates};
@@ -47,12 +52,25 @@ function propose(g,{minimumBeads=3,maxStates=4000}={}){
   results.push({...choice.end,status:choice.route?'candidate':'unresolved',moves:choice.route?.moves||[],visitedStates:choice.visited,searchLimitReached:choice.limitReached});
  }
  const added=g.nodes.filter(n=>counts.get(n.id)!==g.counts.get(n.id)).map(n=>({id:n.id,assemblyPasses:g.counts.get(n.id),finishingPasses:counts.get(n.id)-g.counts.get(n.id),totalPasses:counts.get(n.id)}));
- const result={format:'beadform-finishing-candidates',version:1,status:'draft',minimumDistinctBeads:minimumBeads,
+ const result={format:'beadform-finishing-candidates',version:2,status:'draft',minimumDistinctBeads:minimumBeads,
   endpoints:results,candidateEndpoints:results.filter(r=>r.status==='candidate').length,totalEndpoints:ends.length,
   assemblyMaxPasses:g.maxPasses,proposedMaxPasses:Math.max(...counts.values()),passLimit:g.passLimit,additionalPasses:added,
   completeFinish:false,knotMethod:null,physicalSampleRequired:true,
-  note:'Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Knot choice, tension, hole access and holding strength remain unverified.'};
+  note:'Routes use only existing bead holes and observed assembly connections. Counts include all proposed routes together. Search is bounded and greedy. Straight approaches are screened against completed nominal bead envelopes. Knot choice, tension, actual needle access and holding strength remain unverified.'};
+ result.nominalAccess=auditAccess(g,result);
  result.checks=validate(g,result);if(!result.checks.valid)throw Error(result.checks.errors.join('; '));return result;
+}
+function auditAccess(g,proposal){
+ const Geometry=root.BeadGeometry||(typeof require==='function'?require('./bead-geometry.js'):null);
+ if(!Geometry)throw Error('Nominal bead geometry is missing for finishing.');
+ Geometry.annotate(g);const present=new Set(g.nodes.map(n=>n.id)),examples=[];let connections=0,conflicts=0;
+ for(const end of proposal.endpoints){if(end.status!=='candidate')continue;let previous=g.byId.get(end.bead),exit=end.port;
+  for(const move of end.moves){if(move.id===null)continue;const bead=g.byId.get(move.id);if(!bead||!previous||!previous.ends.includes(exit)||!bead.ends.includes(move.from)){previous=bead;exit=move.to;continue;}
+   if(previous.id!==bead.id){connections++;const blockers=Geometry.blockers(g,previous,exit,bead,move.from,present);if(blockers.length){conflicts++;if(examples.length<24)examples.push({endpoint:end.id,from:previous.id,exit,to:bead.id,entrance:move.from,blockingBeads:blockers});}}
+   previous=bead;exit=move.to;
+  }
+ }
+ return {model:'oriented nominal oblate beads; straight inter-bead paths enlarged by line radius',allBuiltBeads:true,connections,nominalStraightPathConflicts:conflicts,examples,needleAccessVerified:false,physicalSampleRequired:true};
 }
 function validate(g,proposal){
  const ops=g.stages.flatMap(st=>st.operations),sections=new Map(),connections=new Set(),errors=[],counts=new Map(g.counts);
@@ -78,7 +96,8 @@ function validate(g,proposal){
  for(const n of g.nodes){const record=added.get(n.id),extra=counts.get(n.id)-g.counts.get(n.id);if(extra>0&&(!record||record.assemblyPasses!==g.counts.get(n.id)||record.finishingPasses!==extra||record.totalPasses!==counts.get(n.id)))errors.push('incorrect finishing inventory');}
  if(proposal.proposedMaxPasses!==Math.max(...counts.values()))errors.push('incorrect finishing maximum');
  if(proposal.totalEndpoints!==expected.size||proposal.candidateEndpoints!==proposal.endpoints.filter(e=>e.status==='candidate').length)errors.push('incorrect finishing endpoint total');
+ const access=auditAccess(g,proposal);if(access.nominalStraightPathConflicts)errors.push('finishing route intersects a nominal bead envelope');
  return {valid:!errors.length,errors:[...new Set(errors)],physicalSampleRequired:true};
 }
-root.BeadFinishing={propose,validate};if(typeof module!=='undefined')module.exports=root.BeadFinishing;
+root.BeadFinishing={propose,validate,auditAccess};if(typeof module!=='undefined')module.exports=root.BeadFinishing;
 })(typeof window!=='undefined'?window:globalThis);
