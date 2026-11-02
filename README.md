@@ -6,7 +6,7 @@ Turn an idea into a draft 3D beadwork pattern, with a preview, bead list and ste
 
 ## Try it for free
 
-1. [Download the latest development version](https://github.com/c-tustin/beadform/archive/refs/heads/runpod-training-guide.zip) and unzip it.
+1. [Download Beadform](https://github.com/c-tustin/beadform/archive/refs/heads/main.zip) and unzip it.
 2. Open **beadform.html** in a desktop browser.
 3. Choose **try an animal** to open a starter.
 4. Use **try another example** to explore the 32 draft designs, including a castle, flower, robot and guitar.
@@ -37,7 +37,7 @@ Text/image generation now consults an [editable stitch-selection guide](docs/sti
 
 ## Optional AI setup
 
-To try local text and image interpretation, follow the [Qwen setup guide](https://github.com/c-tustin/beadform/blob/runpod-training-guide/qwen-and-lora.md), then run:
+To try local text and image interpretation, follow the [Qwen setup guide](https://github.com/c-tustin/beadform/blob/main/qwen-and-lora.md), then run:
 
 ```sh
 node launch-qwen.mjs
@@ -53,14 +53,14 @@ We are training Qwen to choose from the supported drafts and reject unsupported 
 - The latest free T4 run completed: **47/48 development requests correct** and **77/80** on the separate synthetic set. The first adapter also scored 77/80 on that set. It still makes mistakes and is not deployed.
 - The earlier geometry-training experiment produced no usable patterns. Its adapter is not deployed.
 
-[Open the free Colab notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/runpod-training-guide/training/colab_catalog_selector_v2.ipynb) · [Read the training guide](https://github.com/c-tustin/beadform/blob/runpod-training-guide/training/catalog-selector-v2/README.md)
+[Open the free Colab notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_catalog_selector_v2.ipynb) · [Read the training guide](https://github.com/c-tustin/beadform/blob/main/training/catalog-selector-v2/README.md)
 
-[See the latest results and failures](https://github.com/c-tustin/beadform/blob/runpod-training-guide/training/results/2026-10-22-catalog-selector-v2/README.md). These measure draft selection, not physical buildability.
+[See the latest results and failures](https://github.com/c-tustin/beadform/blob/main/training/results/2026-10-22-catalog-selector-v2/README.md). These measure draft selection, not physical buildability.
 
 ## More detail
 
-- [Latest development files](https://github.com/c-tustin/beadform/tree/runpod-training-guide) — current pattern and training work.
-- [Pattern quality and results](https://github.com/c-tustin/beadform/blob/runpod-training-guide/training/PATTERN_QUALITY.md) — what was checked and what still needs work.
+- [Project files](https://github.com/c-tustin/beadform/tree/main) — current pattern and training work on main.
+- [Pattern quality and results](https://github.com/c-tustin/beadform/blob/main/training/PATTERN_QUALITY.md) — what was checked and what still needs work.
 - [Development history](docs/development-history.md) — the previous detailed README, kept for reference. Some instructions are outdated.
 
-For contributors: edit the source modules and run `python3 build.py` to rebuild `beadform.html`.
+For contributors: edit the source modules and run `python3 build.py` to rebuild matching `beadform.html` and `index.html` entry points.

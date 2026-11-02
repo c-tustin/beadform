@@ -16,5 +16,6 @@ s=s.replace('<!--VOLUME_HTML-->',p.joinpath('volume-shell.html').read_text())
 names=['frog','caterpillar','blue-lizard','jellyfish','starfish','crocodile']
 assets=[{'name':name,'src':'data:image/webp;base64,'+base64.b64encode(p.joinpath('assets',name+'.webp').read_bytes()).decode()} for name in names]
 s=s.replace("['frog','caterpillar','blue-lizard','jellyfish','starfish','crocodile'].map(name=>({name,src:'assets/'+name+'.webp'}))",json.dumps(assets))
-p.joinpath('beadform.html').write_text(s)
-print('Built beadform.html:',len(s.encode()),'bytes')
+for filename in ('beadform.html','index.html'):
+    p.joinpath(filename).write_text(s)
+print('Built beadform.html and index.html:',len(s.encode()),'bytes each')
