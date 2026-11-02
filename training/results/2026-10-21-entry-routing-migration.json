@@ -1,0 +1,32 @@
+{
+  "note": "Focused migration from the actual preceding published router on the three affected configurations; physical construction is not verified.",
+  "cases": [
+    {
+      "group": "whale",
+      "line": 0.2,
+      "oldProgressArchived": true,
+      "newRouteResumed": false,
+      "flags": 0
+    },
+    {
+      "group": "cactus",
+      "line": 0.25,
+      "oldProgressArchived": true,
+      "newRouteResumed": false,
+      "flags": 0
+    },
+    {
+      "group": "robot",
+      "line": 0.25,
+      "oldProgressArchived": true,
+      "newRouteResumed": false,
+      "flags": 0
+    }
+  ],
+  "baselineCommit": "baa2617b7aaade4ad86a02f141058f7685a4fe0e",
+  "sourceSha256": {
+    "continuous-thread.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "parts-project.js": "e274ef362fc39e7ae328135ec64efdec9a2139b1ca67b517fa42f02e9d20f425",
+    "training/fixtures/continuous-before-entry-routing.js": "61e3993f30190aa6c187a04c14175e28e379189a1ef6e671476cf412eb64cd46"
+  }
+}

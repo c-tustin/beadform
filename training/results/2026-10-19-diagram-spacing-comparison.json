@@ -1,0 +1,5410 @@
+{
+  "summary": {
+    "diagrams": 284,
+    "before_crowded_diagrams": 124,
+    "after_crowded_diagrams": 0,
+    "before_crowded_pairs": 2915,
+    "after_crowded_pairs": 0,
+    "before_min_clearance_px": -4.685119449765937,
+    "after_min_clearance_px": 9.999999999999897,
+    "note": "Nominal bead-glyph separation at 950px rendered width. This is not a complete text, route-crossing or usability assessment."
+  },
+  "results": [
+    {
+      "group": "frog",
+      "stage": 1,
+      "label": "make left black eye bead",
+      "before": {
+        "beads": 101,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 101,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.000000000000007,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 2,
+      "label": "join left black eye bead to head and body",
+      "before": {
+        "beads": 101,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 101,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.000000000000007,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 3,
+      "label": "make right black eye bead",
+      "before": {
+        "beads": 101,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 101,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.000000000000007,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 4,
+      "label": "join right black eye bead to head and body",
+      "before": {
+        "beads": 101,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 101,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.000000000000007,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 5,
+      "label": "make left back leg",
+      "before": {
+        "beads": 104,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 104,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 6,
+      "label": "join left back leg to head and body",
+      "before": {
+        "beads": 104,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 104,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 7,
+      "label": "make left front arm",
+      "before": {
+        "beads": 103,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 103,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 8,
+      "label": "join left front arm to head and body",
+      "before": {
+        "beads": 103,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 103,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 9,
+      "label": "make right back leg",
+      "before": {
+        "beads": 104,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 104,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 10,
+      "label": "join right back leg to head and body",
+      "before": {
+        "beads": 104,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 104,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 11,
+      "label": "make right front arm",
+      "before": {
+        "beads": 103,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 103,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "frog",
+      "stage": 12,
+      "label": "join right front arm to head and body",
+      "before": {
+        "beads": 103,
+        "crowded_pairs": 60,
+        "minimum_nominal_glyph_clearance_px": -4.685119449765937,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 103,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 785.4987124921048
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 1,
+      "label": "make head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 2,
+      "label": "join head to body",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 3,
+      "label": "make left ear",
+      "before": {
+        "beads": 79,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 79,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 4,
+      "label": "join left ear to head",
+      "before": {
+        "beads": 79,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 79,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 5,
+      "label": "make right ear",
+      "before": {
+        "beads": 88,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 88,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1024.6506232180159
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 6,
+      "label": "join right ear to head",
+      "before": {
+        "beads": 79,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 79,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 7,
+      "label": "make left foot",
+      "before": {
+        "beads": 113,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 113,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 8,
+      "label": "join left foot to body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 9,
+      "label": "make right foot",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bunny",
+      "stage": 10,
+      "label": "join right foot to body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 1,
+      "label": "make head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 2,
+      "label": "join head to body",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 3,
+      "label": "make left ear",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 35,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 4,
+      "label": "join left ear to head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 35,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 5,
+      "label": "make right ear",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 35,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 6,
+      "label": "join right ear to head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 35,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 7,
+      "label": "make left foot",
+      "before": {
+        "beads": 153,
+        "crowded_pairs": 35,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 153,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 1675.3604757895162
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 8,
+      "label": "join left foot to body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 9,
+      "label": "make right foot",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bear",
+      "stage": 10,
+      "label": "join right foot to body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 1,
+      "label": "make left lower wing",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 2,
+      "label": "join left lower wing to body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 3,
+      "label": "make right lower wing",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 4,
+      "label": "join right lower wing to body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 5,
+      "label": "make left upper wing",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 6,
+      "label": "join left upper wing to body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 7,
+      "label": "make antenna -1",
+      "before": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 8,
+      "label": "join antenna -1 to left upper wing",
+      "before": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 9,
+      "label": "make antenna 1",
+      "before": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 10,
+      "label": "join antenna 1 to left upper wing",
+      "before": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 11,
+      "label": "make right upper wing",
+      "before": {
+        "beads": 58,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 58,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "butterfly",
+      "stage": 12,
+      "label": "join right upper wing to body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 1,
+      "label": "make pointed tail",
+      "before": {
+        "beads": 33,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 33,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 2,
+      "label": "join pointed tail to shell dome",
+      "before": {
+        "beads": 33,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 33,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 3,
+      "label": "make head",
+      "before": {
+        "beads": 95,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1062.646829425641
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 4,
+      "label": "join head to shell dome",
+      "before": {
+        "beads": 95,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1062.646829425641
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 5,
+      "label": "make flipper -1 -1",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 6,
+      "label": "join flipper -1 -1 to shell dome",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 7,
+      "label": "make flipper -1 1",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 8,
+      "label": "join flipper -1 1 to shell dome",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 9,
+      "label": "make flipper 1 -1",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 10,
+      "label": "join flipper 1 -1 to shell dome",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 11,
+      "label": "make flipper 1 1",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "turtle",
+      "stage": 12,
+      "label": "join flipper 1 1 to shell dome",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 1,
+      "label": "make head",
+      "before": {
+        "beads": 90,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 90,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1035.5293711580225
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 2,
+      "label": "join head to pear body",
+      "before": {
+        "beads": 90,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 90,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1035.5293711580225
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 3,
+      "label": "make beak",
+      "before": {
+        "beads": 78,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 78,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 4,
+      "label": "join beak to head",
+      "before": {
+        "beads": 78,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 78,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 5,
+      "label": "make left wing",
+      "before": {
+        "beads": 99,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 99,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1035.5293711580225
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 6,
+      "label": "join left wing to pear body",
+      "before": {
+        "beads": 29,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 29,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 7,
+      "label": "make right wing",
+      "before": {
+        "beads": 29,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 29,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 8,
+      "label": "join right wing to pear body",
+      "before": {
+        "beads": 29,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 29,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 9,
+      "label": "make fan tail",
+      "before": {
+        "beads": 30,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 30,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.673264845213666,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "bird",
+      "stage": 10,
+      "label": "join fan tail to pear body",
+      "before": {
+        "beads": 30,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 30,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.673264845213666,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 1,
+      "label": "make right leaf",
+      "before": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 29.487810461708186,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 19.819999999999972,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 2,
+      "label": "join right leaf to left leaf",
+      "before": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 29.487810461708186,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 19.819999999999972,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 3,
+      "label": "make petal 5",
+      "before": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 29.487810461708186,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 19.819999999999972,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 4,
+      "label": "join petal 5 to right leaf",
+      "before": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 29.487810461708186,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 18,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 19.819999999999972,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 5,
+      "label": "make flower center",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 6,
+      "label": "join flower center to petal 5",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 7,
+      "label": "make petal 2",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 8,
+      "label": "join petal 2 to flower center",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 9,
+      "label": "make petal 1",
+      "before": {
+        "beads": 58,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 58,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 10,
+      "label": "join petal 1 to flower center",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 11,
+      "label": "make petal 3",
+      "before": {
+        "beads": 58,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 58,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 12,
+      "label": "join petal 3 to flower center",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 13,
+      "label": "make petal 4",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 14,
+      "label": "join petal 4 to flower center",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 15,
+      "label": "make green stem",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986751436,
+        "viewbox_width": 1040,
+        "viewbox_height": 1410
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 832.7256727594192
+      }
+    },
+    {
+      "group": "flower",
+      "stage": 16,
+      "label": "join green stem to left leaf",
+      "before": {
+        "beads": 15,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 15,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "mushroom",
+      "stage": 1,
+      "label": "make cream stem",
+      "before": {
+        "beads": 65,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 65,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "mushroom",
+      "stage": 2,
+      "label": "join cream stem to red cap",
+      "before": {
+        "beads": 65,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 65,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999979,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 1,
+      "label": "make main cactus",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999957,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 2,
+      "label": "join main cactus to terracotta pot",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999957,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 3,
+      "label": "make pink flower",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 4,
+      "label": "join pink flower to main cactus",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 5,
+      "label": "make right arm",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.590219043648907,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 6,
+      "label": "join right arm to main cactus",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.590219043648907,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 7,
+      "label": "make right arm tip",
+      "before": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 174
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 8,
+      "label": "join right arm tip to right arm",
+      "before": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 174
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 9,
+      "label": "make left arm",
+      "before": {
+        "beads": 51,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.590219043648907,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 51,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 10,
+      "label": "join left arm to main cactus",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.590219043648907,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 11,
+      "label": "make left arm tip",
+      "before": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 174
+      }
+    },
+    {
+      "group": "cactus",
+      "stage": 12,
+      "label": "join left arm tip to left arm",
+      "before": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 6,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 174
+      }
+    },
+    {
+      "group": "house",
+      "stage": 1,
+      "label": "make cream house body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "house",
+      "stage": 2,
+      "label": "join cream house body to green roof",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 1,
+      "label": "make white rocket body",
+      "before": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 2.2454738448418583,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 565.5479640399637
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 2,
+      "label": "join white rocket body to red nose cone",
+      "before": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 2.2454738448418583,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 565.5479640399637
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 3,
+      "label": "make left red fin",
+      "before": {
+        "beads": 64,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 2.2454738448418357,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 64,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 565.5479640399637
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 4,
+      "label": "join left red fin to white rocket body",
+      "before": {
+        "beads": 64,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 2.2454738448418357,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 64,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 565.5479640399637
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 5,
+      "label": "make yellow flame",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 16.56819231178071,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999897,
+        "viewbox_width": 950,
+        "viewbox_height": 350.88543819998335
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 6,
+      "label": "join yellow flame to left red fin",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 16.56819231178071,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999897,
+        "viewbox_width": 950,
+        "viewbox_height": 350.88543819998335
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 7,
+      "label": "make right red fin",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 16.56819231178071,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.99999999999995,
+        "viewbox_width": 950,
+        "viewbox_height": 350.88543819998335
+      }
+    },
+    {
+      "group": "rocket",
+      "stage": 8,
+      "label": "join right red fin to yellow flame",
+      "before": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 16.56819231178071,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 34,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 350.88543819998335
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 1,
+      "label": "make lower tail fluke",
+      "before": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 2,
+      "label": "join lower tail fluke to blue whale body",
+      "before": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 3,
+      "label": "make upper tail fluke",
+      "before": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 34.47664835164834,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 19.819999999999936,
+        "viewbox_width": 950,
+        "viewbox_height": 302.37
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 4,
+      "label": "join upper tail fluke to lower tail fluke",
+      "before": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 34.47664835164834,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 19.819999999999936,
+        "viewbox_width": 950,
+        "viewbox_height": 302.37
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 5,
+      "label": "make left flipper",
+      "before": {
+        "beads": 59,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 59,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 832.7256727594192
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 6,
+      "label": "join left flipper to blue whale body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 7,
+      "label": "make right flipper",
+      "before": {
+        "beads": 58,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 58,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 8,
+      "label": "join right flipper to blue whale body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 9,
+      "label": "make tail stem",
+      "before": {
+        "beads": 62,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 62,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 832.7256727594192
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 10,
+      "label": "join tail stem to lower tail fluke",
+      "before": {
+        "beads": 13,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 13,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 302.37
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 11,
+      "label": "make water spout",
+      "before": {
+        "beads": 53,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 53,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "whale",
+      "stage": 12,
+      "label": "join water spout to blue whale body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "snail",
+      "stage": 1,
+      "label": "make green body",
+      "before": {
+        "beads": 60,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 60,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "snail",
+      "stage": 2,
+      "label": "join green body to rose shell",
+      "before": {
+        "beads": 60,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 60,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "snail",
+      "stage": 3,
+      "label": "make left eyestalk",
+      "before": {
+        "beads": 63,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 63,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "snail",
+      "stage": 4,
+      "label": "join left eyestalk to rose shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "snail",
+      "stage": 5,
+      "label": "make right eyestalk",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "snail",
+      "stage": 6,
+      "label": "join right eyestalk to rose shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 1,
+      "label": "make orange beak",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 2,
+      "label": "join orange beak to rounded black body",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 3,
+      "label": "make left flipper",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 4,
+      "label": "join left flipper to rounded black body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 5,
+      "label": "make right flipper",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 6,
+      "label": "join right flipper to rounded black body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 7,
+      "label": "make left orange foot",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 8,
+      "label": "join left orange foot to rounded black body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 9,
+      "label": "make right orange foot",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "penguin",
+      "stage": 10,
+      "label": "join right orange foot to rounded black body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 1,
+      "label": "make short arm 2",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 2,
+      "label": "join short arm 2 to round purple head",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 3,
+      "label": "make short arm 1",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 4,
+      "label": "join short arm 1 to round purple head",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 5,
+      "label": "make short arm 3",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 6,
+      "label": "join short arm 3 to round purple head",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 7,
+      "label": "make short arm 4",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "octopus",
+      "stage": 8,
+      "label": "join short arm 4 to round purple head",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "pear",
+      "stage": 1,
+      "label": "make single leaf",
+      "before": {
+        "beads": 24,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 24,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "pear",
+      "stage": 2,
+      "label": "join single leaf to pear body",
+      "before": {
+        "beads": 24,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 21.778367311241585,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 24,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 352.4592455891193
+      }
+    },
+    {
+      "group": "pear",
+      "stage": 3,
+      "label": "make short brown stem",
+      "before": {
+        "beads": 7,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 7,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 197.82
+      }
+    },
+    {
+      "group": "pear",
+      "stage": 4,
+      "label": "join short brown stem to single leaf",
+      "before": {
+        "beads": 7,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 7,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 197.82
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 1,
+      "label": "make square robot head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 2,
+      "label": "join square robot head to green robot body",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 3,
+      "label": "make left leg",
+      "before": {
+        "beads": 114,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 114,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 4,
+      "label": "join left leg to green robot body",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 5,
+      "label": "make right leg",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 6,
+      "label": "join right leg to green robot body",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 7,
+      "label": "make left arm",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 8,
+      "label": "join left arm to green robot body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 9,
+      "label": "make right arm",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "robot",
+      "stage": 10,
+      "label": "join right arm to green robot body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "sailboat",
+      "stage": 1,
+      "label": "make brown mast",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.112770174512791,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "sailboat",
+      "stage": 2,
+      "label": "join brown mast to blue boat hull",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.112770174512791,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "sailboat",
+      "stage": 3,
+      "label": "make small red sail",
+      "before": {
+        "beads": 39,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.112770174512825,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 39,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "sailboat",
+      "stage": 4,
+      "label": "join small red sail to brown mast",
+      "before": {
+        "beads": 39,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.112770174512825,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 39,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "sailboat",
+      "stage": 5,
+      "label": "make large white sail",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.112770174512825,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "sailboat",
+      "stage": 6,
+      "label": "join large white sail to brown mast",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10.112770174512825,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 422.4396134799767
+      }
+    },
+    {
+      "group": "train",
+      "stage": 1,
+      "label": "make round green boiler",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "train",
+      "stage": 2,
+      "label": "join round green boiler to green engine base",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "train",
+      "stage": 3,
+      "label": "make front light",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 10,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "train",
+      "stage": 4,
+      "label": "join front light to round green boiler",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 10,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "train",
+      "stage": 5,
+      "label": "make yellow cabin",
+      "before": {
+        "beads": 129,
+        "crowded_pairs": 15,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986751436,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 129,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 992.290350220613
+      }
+    },
+    {
+      "group": "train",
+      "stage": 6,
+      "label": "join yellow cabin to green engine base",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "train",
+      "stage": 7,
+      "label": "make short chimney",
+      "before": {
+        "beads": 92,
+        "crowded_pairs": 10,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 92,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 992.290350220613
+      }
+    },
+    {
+      "group": "train",
+      "stage": 8,
+      "label": "join short chimney to front light",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 1,
+      "label": "make left cloud puff",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 2,
+      "label": "join left cloud puff to cloud center",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 3,
+      "label": "make right cloud puff",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 4,
+      "label": "join right cloud puff to cloud center",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 5,
+      "label": "make middle blue raindrop",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 6,
+      "label": "join middle blue raindrop to cloud center",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 7,
+      "label": "make left blue raindrop",
+      "before": {
+        "beads": 83,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 83,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 667.1451751103066
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 8,
+      "label": "join left blue raindrop to left cloud puff",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 9,
+      "label": "make right blue raindrop",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "cloud",
+      "stage": 10,
+      "label": "join right blue raindrop to right cloud puff",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 1,
+      "label": "make black head",
+      "before": {
+        "beads": 95,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1062.646829425641
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 2,
+      "label": "join black head to red oval shell",
+      "before": {
+        "beads": 95,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 95,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1062.646829425641
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 3,
+      "label": "make left antenna",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 4,
+      "label": "join left antenna to black head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 5,
+      "label": "make right antenna",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 6,
+      "label": "join right antenna to black head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 7,
+      "label": "make left walking limb 2",
+      "before": {
+        "beads": 98,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 98,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1062.646829425641
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 8,
+      "label": "join left walking limb 2 to red oval shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 9,
+      "label": "make right walking limb 2",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 10,
+      "label": "join right walking limb 2 to red oval shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 11,
+      "label": "make left walking limb 3",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 12,
+      "label": "join left walking limb 3 to red oval shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 13,
+      "label": "make right walking limb 3",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 14,
+      "label": "join right walking limb 3 to red oval shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 15,
+      "label": "make left walking limb 1",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 16,
+      "label": "join left walking limb 1 to red oval shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 17,
+      "label": "make right walking limb 1",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "ladybug",
+      "stage": 18,
+      "label": "join right walking limb 1 to red oval shell",
+      "before": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 6.967351100436671,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 28,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 379.57670385673794
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 1,
+      "label": "make left wing",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 2,
+      "label": "join left wing to yellow bee body",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 3,
+      "label": "make right wing",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999972,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 4,
+      "label": "join right wing to yellow bee body",
+      "before": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 44,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 5,
+      "label": "make black bee head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 6,
+      "label": "join black bee head to yellow bee body",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 7,
+      "label": "make left antenna",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 8,
+      "label": "join left antenna to black bee head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 9,
+      "label": "make right antenna",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "bee",
+      "stage": 10,
+      "label": "join right antenna to black bee head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 1,
+      "label": "make orange fox head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 2,
+      "label": "join orange fox head to orange fox body",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 3,
+      "label": "make white tail tip",
+      "before": {
+        "beads": 150,
+        "crowded_pairs": 35,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 150,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1675.3604757895162
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 4,
+      "label": "join white tail tip to orange fox body",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 5,
+      "label": "make left pointed ear",
+      "before": {
+        "beads": 120,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 120,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 6,
+      "label": "join left pointed ear to orange fox head",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 7,
+      "label": "make right pointed ear",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 8,
+      "label": "join right pointed ear to orange fox head",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 9,
+      "label": "make curled orange tail",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "fox",
+      "stage": 10,
+      "label": "join curled orange tail to orange fox body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 1,
+      "label": "make gray elephant head",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 2,
+      "label": "join gray elephant head to gray elephant body",
+      "before": {
+        "beads": 110,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 110,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 3,
+      "label": "make left large ear",
+      "before": {
+        "beads": 74,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 74,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 4,
+      "label": "join left large ear to gray elephant head",
+      "before": {
+        "beads": 74,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 74,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 5,
+      "label": "make right large ear",
+      "before": {
+        "beads": 74,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 74,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 6,
+      "label": "join right large ear to gray elephant head",
+      "before": {
+        "beads": 74,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 74,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 7,
+      "label": "make curved trunk",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 8,
+      "label": "join curved trunk to gray elephant head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 9,
+      "label": "make left white tusk",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 10,
+      "label": "join left white tusk to gray elephant head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 11,
+      "label": "make right white tusk",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "elephant",
+      "stage": 12,
+      "label": "join right white tusk to gray elephant head",
+      "before": {
+        "beads": 73,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 73,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 1,
+      "label": "make long yellow neck",
+      "before": {
+        "beads": 75,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 75,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 2,
+      "label": "join long yellow neck to yellow giraffe body",
+      "before": {
+        "beads": 75,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 75,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 3,
+      "label": "make yellow giraffe head",
+      "before": {
+        "beads": 105,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 105,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1105.5097390488797
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 4,
+      "label": "join yellow giraffe head to long yellow neck",
+      "before": {
+        "beads": 105,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.24305471425981,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 105,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1105.5097390488797
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 5,
+      "label": "make right horn",
+      "before": {
+        "beads": 78,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 78,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 6,
+      "label": "join right horn to yellow giraffe head",
+      "before": {
+        "beads": 78,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 78,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 7,
+      "label": "make left horn",
+      "before": {
+        "beads": 86,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 86,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 1019.0701255689031
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 8,
+      "label": "join left horn to yellow giraffe head",
+      "before": {
+        "beads": 78,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 78,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 693.0701255689031
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 9,
+      "label": "make left walking limb",
+      "before": {
+        "beads": 148,
+        "crowded_pairs": 30,
+        "minimum_nominal_glyph_clearance_px": -4.243054714259827,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 148,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 1184.2153006792096
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 10,
+      "label": "join left walking limb to yellow giraffe body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 11,
+      "label": "make right walking limb",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "giraffe",
+      "stage": 12,
+      "label": "join right walking limb to yellow giraffe body",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "strawberry",
+      "stage": 1,
+      "label": "make green leafy cap",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "strawberry",
+      "stage": 2,
+      "label": "join green leafy cap to red strawberry body",
+      "before": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 49,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "strawberry",
+      "stage": 3,
+      "label": "make short green stem",
+      "before": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "strawberry",
+      "stage": 4,
+      "label": "join short green stem to green leafy cap",
+      "before": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 17.486263736263705,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 12,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 341.58049764911266
+      }
+    },
+    {
+      "group": "donut",
+      "stage": 0,
+      "label": "make golden donut ring",
+      "before": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 18.67539841411203,
+        "viewbox_width": 520,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "ice-cream",
+      "stage": 1,
+      "label": "make red cherry",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "ice-cream",
+      "stage": 2,
+      "label": "join red cherry to pink ice cream scoop",
+      "before": {
+        "beads": 80,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 80,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "ice-cream",
+      "stage": 3,
+      "label": "make cherry stem",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "ice-cream",
+      "stage": 4,
+      "label": "join cherry stem to red cherry",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "ice-cream",
+      "stage": 5,
+      "label": "make tan waffle cone",
+      "before": {
+        "beads": 105,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 105,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 842.0306133102899
+      }
+    },
+    {
+      "group": "ice-cream",
+      "stage": 6,
+      "label": "join tan waffle cone to pink ice cream scoop",
+      "before": {
+        "beads": 65,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 65,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999897,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 1,
+      "label": "make blue lid",
+      "before": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 2,
+      "label": "join blue lid to round blue pot",
+      "before": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 50,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 3,
+      "label": "make lid knob",
+      "before": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 15.43374289345434,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 259.11396867937196
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 4,
+      "label": "join lid knob to blue lid",
+      "before": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 15.43374289345434,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 20,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 14.67326484521363,
+        "viewbox_width": 950,
+        "viewbox_height": 259.11396867937196
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 5,
+      "label": "make round handle",
+      "before": {
+        "beads": 53,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 53,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999972,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 6,
+      "label": "join round handle to round blue pot",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 7,
+      "label": "make curved spout",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "teapot",
+      "stage": 8,
+      "label": "join curved spout to round blue pot",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 5.247596605502821,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "guitar",
+      "stage": 0,
+      "label": "make lower guitar body",
+      "before": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 18.67539841411203,
+        "viewbox_width": 520,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "guitar",
+      "stage": 1,
+      "label": "make brown neck",
+      "before": {
+        "beads": 70,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 70,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "guitar",
+      "stage": 2,
+      "label": "join brown neck to lower guitar body",
+      "before": {
+        "beads": 70,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 70,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "guitar",
+      "stage": 3,
+      "label": "make small headstock",
+      "before": {
+        "beads": 65,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 65,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "guitar",
+      "stage": 4,
+      "label": "join small headstock to brown neck",
+      "before": {
+        "beads": 65,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 65,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 0,
+      "label": "make silver saucer body",
+      "before": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 18.67539841411203,
+        "viewbox_width": 520,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 1,
+      "label": "make blue cockpit dome",
+      "before": {
+        "beads": 55,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 55,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999954,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 2,
+      "label": "join blue cockpit dome to silver saucer body",
+      "before": {
+        "beads": 55,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 55,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999954,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 3,
+      "label": "make yellow engine flame",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 4,
+      "label": "join yellow engine flame to silver saucer body",
+      "before": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 48,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 5,
+      "label": "make left fin",
+      "before": {
+        "beads": 54,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 54,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999993,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 6,
+      "label": "join left fin to silver saucer body",
+      "before": {
+        "beads": 54,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 54,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999993,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 7,
+      "label": "make right fin",
+      "before": {
+        "beads": 63,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 63,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999993,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "spaceship",
+      "stage": 8,
+      "label": "join right fin to silver saucer body",
+      "before": {
+        "beads": 54,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.337699207056016,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 54,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999993,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 0,
+      "label": "make sand castle wall",
+      "before": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 18.67539841411203,
+        "viewbox_width": 520,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 45,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 10,
+        "viewbox_width": 950,
+        "viewbox_height": 493.9937887599702
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 1,
+      "label": "make left square tower",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 2,
+      "label": "join left square tower to sand castle wall",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 3,
+      "label": "make right square tower",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 4,
+      "label": "join right square tower to sand castle wall",
+      "before": {
+        "beads": 85,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 85,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 5,
+      "label": "make left red flag",
+      "before": {
+        "beads": 88,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 88,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999996,
+        "viewbox_width": 950,
+        "viewbox_height": 665.1451751103066
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 6,
+      "label": "join left red flag to left square tower",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 7,
+      "label": "make right red flag",
+      "before": {
+        "beads": 128,
+        "crowded_pairs": 10,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752087,
+        "viewbox_width": 1040,
+        "viewbox_height": 940
+      },
+      "after": {
+        "beads": 128,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 992.290350220613
+      }
+    },
+    {
+      "group": "castle",
+      "stage": 8,
+      "label": "join right red flag to right square tower",
+      "before": {
+        "beads": 43,
+        "crowded_pairs": 5,
+        "minimum_nominal_glyph_clearance_px": 1.6166867986752311,
+        "viewbox_width": 1040,
+        "viewbox_height": 470
+      },
+      "after": {
+        "beads": 43,
+        "crowded_pairs": 0,
+        "minimum_nominal_glyph_clearance_px": 9.999999999999975,
+        "viewbox_width": 950,
+        "viewbox_height": 501.1451751103065
+      }
+    }
+  ]
+}

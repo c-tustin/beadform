@@ -1,0 +1,13 @@
+{
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "adapter": null,
+  "constrained": true,
+  "bounded": true,
+  "prompts_only": true,
+  "examples": 12,
+  "schema_valid": 12,
+  "schema_pass_rate": 1,
+  "repaired_schema_valid": 12,
+  "repaired_schema_pass_rate": 1,
+  "note": "Schema validity is not compiler, subject-fidelity, or physical validation. No repairs needed."
+}

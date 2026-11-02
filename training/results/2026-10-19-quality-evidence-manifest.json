@@ -1,0 +1,28 @@
+{
+  "purpose": "Fingerprint the final local compiler/layout and saved evidence; not a physical validation",
+  "sha256": {
+    "parts-engine.js": "b79b2e51d5ba586cb903ead18f0d5696eda3c5f942f1612e08ebcfcbb28eb8d5",
+    "parts-layout.js": "10eb22c0c05cc55e0468b0e10d9fea2b80e903ccade43032573459fcde841cc5",
+    "parts-app.js": "5fb3b212a8b5093220b7cccc4100c5a65651b82fc7efc6f15124bc2e1381ffe3",
+    "stage-guide.js": "1486a2236a204cb6d29824f8ab5703b55cf7e3765cd67ca9d7350652d1401a39",
+    "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/results/2026-10-19-library-quality-placement-final.json": "db6a3d3d5540b46ba9270356bc116cfca5aed1338cfe82199469d294619f35e6",
+    "training/results/2026-10-19-diagram-spacing-comparison.json": "058feebef11cb3e7ffaa1d1ab450650734a5f83a8b7c46fab9f90645e006f3a1",
+    "training/results/2026-10-19-quality-pilot-predictions.jsonl": "2c8dfef979c3636e658ceef9034bd2993f6be1cad5e3746014e39478ac460b52"
+  },
+  "free_colab_pilot": {
+    "source_commit": "0d09d8a22f292ece1fff38d06459122d9bb15cd9",
+    "model": "Qwen/Qwen3-VL-2B-Instruct",
+    "gpu": "Tesla T4",
+    "train_examples": 27,
+    "evaluation_examples": 3,
+    "epochs": 3,
+    "optimizer_steps": 12,
+    "training_runtime_seconds": 502.6787,
+    "reported_training_loss": 0.626673,
+    "reported_final_eval_loss": 0.478252,
+    "deployed": false,
+    "notes": "Runtime and losses transcribed from completed Colab output; full raw predictions exported. Loss is not pattern quality."
+  }
+}

@@ -1,0 +1,1360 @@
+{
+  "note": "Parts entry, version-5 round trips and legacy-parts migration. Physical buildability and browser rendering are separate checks.",
+  "sourceSha256": {
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "beadform.html": "6da6cc98b43e4e41adefde372ab00c33aafe18746a96486eb3597eb023716d36",
+    "volume-app.js": "acb9c8fa02d4bbb4e36f70b3bda84054d02cdcf98f3992b28a8f718d57c8d1b5",
+    "parts-app.js": "c8d444484edb3ae44454ee646faaef1ac5a8a368739d1774534b6689dd0b5aaa",
+    "creator-app.js": "483ee3f040ff6684bdfaa102141be7554b4936aa4915b6a83b6950b1d88b9b62",
+    "maker-tools.js": "ecc98c6d13ed4c051e88421a437963f10b97bfde065ad0ef9d0326f39639f623",
+    "finished-app.js": "ab9f36d28418a471d9f5266263067ea9be8efef033e34075c311eb6aa344546e",
+    "build.py": "89e6bf722ecca987ddc1d9650c8dc94ec5e3d7e1d020f457863eb2b348fb0441",
+    "shell.html": "d575cf04dd244c618c287572762f3baed1c2ad340d70baebd9f5bf9de563b99c",
+    "shape-engine.js": "3eb3240c5f796496e75098e6d18c17f30e373d8c16cf1a050748c9d666d587be",
+    "volume-engine.js": "d746682d33e3d71aa158935425d5be12ec963c68e335b328f8fb50fc8f1e13c1",
+    "bead-geometry.js": "6e49d690c54ba776f305316a957b332482b85f68cf18b5d710c7fb0117486862",
+    "parts-engine.js": "b5b6016454a8e33e054933ce7f47f337eb06793f55ade3dfe0e1b4caeafcdbf0",
+    "parts-project.js": "e274ef362fc39e7ae328135ec64efdec9a2139b1ca67b517fa42f02e9d20f425",
+    "parts-library.js": "306ea184df3801b2f763b6d1aeb74611d6e7c9f72f24000a24b640e83525457c",
+    "craw-block.js": "e0d45a71fbca813973527eb63ce746d6c8f5f2275deead7bd0531d44f22849dd",
+    "peyote-ball.js": "86f8bcac7bee2ca9b59ba31dcd025f971a39b7ebc0df279ce2ee0f8d777748c3",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "construction-graph.js": "439a6d2225afb98ba324e800c7348ea0caeace1396c530ed0c6e46df225c9d5b",
+    "parts-layout.js": "605e583251145b2381401d30095124f7c757f6d4880499b0d596df480db89f0b",
+    "stage-guide.js": "3053da8684fbf2a1cf02fa7192f66b13da3669bd7ec9aba3a0dbaab498710f03",
+    "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba",
+    "training/evaluation_provenance.cjs": "0856965ad6094f88c1284d3b05874841d5c73858d7b3140c54154a8f9eadd95e",
+    "training/evaluate_parts_projects.cjs": "1ad0d8d9d5973df8af1c9723ff11b1dbea3cc842372e14d59939df78c510b5db"
+  },
+  "results": [
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 32
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "beads": 116,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "beads": 134,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "beads": 196,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "beads": 82,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "beads": 139,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "beads": 126,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "beads": 109,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "beads": 65,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "beads": 117,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": true,
+          "beads": 42,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "beads": 138,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "beads": 84,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "beads": 66,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "beads": 72,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "beads": 52,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "beads": 27,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "beads": 101,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "beads": 57,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "beads": 125,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "beads": 129,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "beads": 119,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "beads": 124,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "beads": 173,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "beads": 127,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "beads": 167,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "beads": 52,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "beads": 45,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "beads": 108,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "beads": 66,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": true,
+          "beads": 90,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "beads": 76,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "beads": 66,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 32
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "beads": 116,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "beads": 134,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "beads": 196,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "beads": 82,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "beads": 139,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "beads": 126,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "beads": 109,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "beads": 65,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "beads": 117,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": true,
+          "beads": 42,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "beads": 138,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "beads": 84,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "beads": 66,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "beads": 72,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "beads": 52,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "beads": 27,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "beads": 101,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "beads": 57,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "beads": 125,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "beads": 129,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "beads": 119,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "beads": 124,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "beads": 173,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "beads": 127,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "beads": 167,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "beads": 52,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "beads": 45,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "beads": 108,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "beads": 66,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": true,
+          "beads": 90,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "beads": 76,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "beads": 66,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 32
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "beads": 116,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "beads": 188,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "beads": 250,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "beads": 114,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "beads": 169,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "beads": 146,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "beads": 158,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "beads": 95,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "beads": 182,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": true,
+          "beads": 84,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "beads": 198,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "beads": 114,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "beads": 96,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "beads": 102,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "beads": 82,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "beads": 47,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "beads": 193,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "beads": 67,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "beads": 196,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "beads": 159,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "beads": 149,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "beads": 154,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "beads": 199,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "beads": 157,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "beads": 197,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "beads": 82,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "beads": 55,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "beads": 148,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "beads": 126,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": true,
+          "beads": 165,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "beads": 101,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "beads": 144,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "valid": 32
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "valid": true,
+          "beads": 116,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "valid": true,
+          "beads": 188,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "valid": true,
+          "beads": 250,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "valid": true,
+          "beads": 114,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "valid": true,
+          "beads": 169,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "valid": true,
+          "beads": 146,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "valid": true,
+          "beads": 158,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "valid": true,
+          "beads": 95,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "valid": true,
+          "beads": 182,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "valid": true,
+          "beads": 84,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "valid": true,
+          "beads": 198,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "valid": true,
+          "beads": 114,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "valid": true,
+          "beads": 96,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "valid": true,
+          "beads": 102,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "valid": true,
+          "beads": 82,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "valid": true,
+          "beads": 47,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "valid": true,
+          "beads": 193,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "valid": true,
+          "beads": 67,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "valid": true,
+          "beads": 196,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "valid": true,
+          "beads": 159,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "valid": true,
+          "beads": 149,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "valid": true,
+          "beads": 154,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "valid": true,
+          "beads": 199,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "valid": true,
+          "beads": 157,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "valid": true,
+          "beads": 197,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "valid": true,
+          "beads": 82,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "valid": true,
+          "beads": 55,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "valid": true,
+          "beads": 148,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "valid": true,
+          "beads": 126,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "valid": true,
+          "beads": 165,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "valid": true,
+          "beads": 101,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "valid": true,
+          "beads": 144,
+          "matchingRouteResumes": true,
+          "legacyMigrationResetsProgress": true,
+          "legacyVoxelEditsPreserved": true,
+          "revisedVersion5PreservesOldGuide": true
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,5439 @@
+{
+  "note": "Compare requested arm attachment height with actual parent anchor heights, plus nominal geometry and combined passage budgets. Position changes are deliberate. No physical builds are verified.",
+  "sourceSha256": {
+    "parts-engine.js": "3f4c3ed743e4489fff5ea96bcd4e9730e48b0674df21cbe5c64288d88dd0998c",
+    "training/fixtures/parts-before-arm-height.js": "b8dda7ab040b20b66ab18cc2d034357e198f4f12c63ccf8b5c4732ac1c46cad9",
+    "construction-graph.js": "094f1d95af7fbf631caef34557f97acd04a454634a4c23f7d63070fa75c1e9b1",
+    "continuous-thread.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/compare_arm_height.cjs": "613859ce8ec4d77013290e61ed2f4444222fd066e34f39fa1ddb22ad95f40021"
+  },
+  "summary": {
+    "cases": 128,
+    "compiled": 128,
+    "identicalInventory": 128,
+    "identicalStitchSchedules": 128,
+    "before": {
+      "assemblyConflicts": 0,
+      "finishingConflicts": 0,
+      "overlaps": 0,
+      "threadSections": 140,
+      "candidateEndpoints": 280,
+      "totalEndpoints": 280,
+      "withinCombinedPassLimit": 128,
+      "armAnchors": 40,
+      "armAnchorsWithinRequestedBand": 32,
+      "meanArmAnchorHeightErrorMm": 1.6051254789478073
+    },
+    "after": {
+      "assemblyConflicts": 0,
+      "finishingConflicts": 0,
+      "overlaps": 0,
+      "threadSections": 138,
+      "candidateEndpoints": 276,
+      "totalEndpoints": 276,
+      "withinCombinedPassLimit": 128,
+      "armAnchors": 40,
+      "armAnchorsWithinRequestedBand": 40,
+      "meanArmAnchorHeightErrorMm": 0.7086023959741629
+    },
+    "physicalSamples": 0
+  },
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200474
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200514
+            ],
+            "anchors": [
+              {
+                "id": "B0083",
+                "heightMm": -3.6696877079405854,
+                "errorMm": 2.2457470121216843,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291707
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291957
+            ],
+            "anchors": [
+              {
+                "id": "B0068",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 4.397150628755247,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              6.14664386329922,
+              5.04523647227595,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": 3.4068377755733925,
+                "errorMm": 0.9903128531818544,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 5.022611378133262,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              -5.231171623127507,
+              5.441612478994683,
+              -2.6076139152112967
+            ],
+            "anchors": [
+              {
+                "id": "B0041",
+                "heightMm": 3.4068377755733925,
+                "errorMm": 1.6157736025598695,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 4.397150628755247,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              6.14664386329922,
+              5.04523647227595,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0048",
+                "heightMm": 5.80443731485578,
+                "errorMm": 1.4072866861005329,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 5.022611378133262,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              -5.231171623127507,
+              5.441612478994683,
+              -2.6076139152112967
+            ],
+            "anchors": [
+              {
+                "id": "B0051",
+                "heightMm": 5.80443731485578,
+                "errorMm": 0.7818259367225178,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              1.5430954690528187,
+              -4.153411150490667,
+              2.047849785101448
+            ],
+            "anchors": [
+              {
+                "id": "B0040",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              5.8347330531417185,
+              -2.207275772106882,
+              1.069443677867144
+            ],
+            "anchors": [
+              {
+                "id": "B0034",
+                "heightMm": 0.4800098071892638,
+                "errorMm": 0.7930010034906387,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -3.6632628307332658,
+              -3.7631812004849685,
+              -0.8136832969413221
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -1.1199389788994139,
+              -3.9852734748317875,
+              -3.099623039089365
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              1.5430954690528187,
+              -4.153411150490667,
+              2.047849785101448
+            ],
+            "anchors": [
+              {
+                "id": "B0040",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              5.8347330531417185,
+              -2.207275772106882,
+              1.069443677867144
+            ],
+            "anchors": [
+              {
+                "id": "B0034",
+                "heightMm": 0.4800098071892638,
+                "errorMm": 0.7930010034906387,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -3.6632628307332658,
+              -3.7631812004849685,
+              -0.8136832969413221
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -1.1199389788994139,
+              -3.9852734748317875,
+              -3.099623039089365
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              -5.736292495837206,
+              -5.3970230911815085,
+              -1.649296188933521
+            ],
+            "anchors": [
+              {
+                "id": "B0010",
+                "heightMm": -4.480020155806021,
+                "errorMm": 3.6005421100095654,
+                "withinRequestedBand": false
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              5.736292495837206,
+              -5.3970230911815085,
+              -1.649296188933521
+            ],
+            "anchors": [
+              {
+                "id": "B0021",
+                "heightMm": -4.480020155806021,
+                "errorMm": 3.6005421100095654,
+                "withinRequestedBand": false
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              -5.934701424336201,
+              -2.2359958693891446,
+              -1.663263589866315
+            ],
+            "anchors": [
+              {
+                "id": "B0012",
+                "heightMm": -1.5808823529411762,
+                "errorMm": 0.7014043071447205,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              5.934701424336201,
+              -2.2359958693891446,
+              -1.663263589866315
+            ],
+            "anchors": [
+              {
+                "id": "B0023",
+                "heightMm": -1.5808823529411762,
+                "errorMm": 0.7014043071447205,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200474
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200514
+            ],
+            "anchors": [
+              {
+                "id": "B0083",
+                "heightMm": -3.6696877079405854,
+                "errorMm": 2.2457470121216843,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291707
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291957
+            ],
+            "anchors": [
+              {
+                "id": "B0068",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 4.397150628755247,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              6.14664386329922,
+              5.04523647227595,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": 3.4068377755733925,
+                "errorMm": 0.9903128531818544,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 5.022611378133262,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              -5.231171623127507,
+              5.441612478994683,
+              -2.6076139152112967
+            ],
+            "anchors": [
+              {
+                "id": "B0041",
+                "heightMm": 3.4068377755733925,
+                "errorMm": 1.6157736025598695,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 4.397150628755247,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              6.14664386329922,
+              5.04523647227595,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0048",
+                "heightMm": 5.80443731485578,
+                "errorMm": 1.4072866861005329,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 5.022611378133262,
+            "toleranceMm": 2.3975995392823863,
+            "world": [
+              -5.231171623127507,
+              5.441612478994683,
+              -2.6076139152112967
+            ],
+            "anchors": [
+              {
+                "id": "B0051",
+                "heightMm": 5.80443731485578,
+                "errorMm": 0.7818259367225178,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              1.5430954690528187,
+              -4.153411150490667,
+              2.047849785101448
+            ],
+            "anchors": [
+              {
+                "id": "B0040",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              5.8347330531417185,
+              -2.207275772106882,
+              1.069443677867144
+            ],
+            "anchors": [
+              {
+                "id": "B0034",
+                "heightMm": 0.4800098071892638,
+                "errorMm": 0.7930010034906387,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -3.6632628307332658,
+              -3.7631812004849685,
+              -0.8136832969413221
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -1.1199389788994139,
+              -3.9852734748317875,
+              -3.099623039089365
+            ],
+            "anchors": [
+              {
+                "id": "B0031",
+                "heightMm": 0.4800098071892638,
+                "errorMm": 0.7930010034906387,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              1.5430954690528187,
+              -4.153411150490667,
+              2.047849785101448
+            ],
+            "anchors": [
+              {
+                "id": "B0040",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              5.8347330531417185,
+              -2.207275772106882,
+              1.069443677867144
+            ],
+            "anchors": [
+              {
+                "id": "B0034",
+                "heightMm": 0.4800098071892638,
+                "errorMm": 0.7930010034906387,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -3.6632628307332658,
+              -3.7631812004849685,
+              -0.8136832969413221
+            ],
+            "anchors": [
+              {
+                "id": "B0038",
+                "heightMm": -1.0758956211888226,
+                "errorMm": 0.7629044248874477,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.31299119630137495,
+            "toleranceMm": 2.0539734516200525,
+            "world": [
+              -1.1199389788994139,
+              -3.9852734748317875,
+              -3.099623039089365
+            ],
+            "anchors": [
+              {
+                "id": "B0031",
+                "heightMm": 0.4800098071892638,
+                "errorMm": 0.7930010034906387,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              -5.736292495837206,
+              -5.3970230911815085,
+              -1.649296188933521
+            ],
+            "anchors": [
+              {
+                "id": "B0004",
+                "heightMm": -3.030451254373599,
+                "errorMm": 2.150973208577143,
+                "withinRequestedBand": false
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              5.736292495837206,
+              -5.3970230911815085,
+              -1.649296188933521
+            ],
+            "anchors": [
+              {
+                "id": "B0021",
+                "heightMm": -4.480020155806021,
+                "errorMm": 3.6005421100095654,
+                "withinRequestedBand": false
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              -5.934701424336201,
+              -2.2359958693891446,
+              -1.663263589866315
+            ],
+            "anchors": [
+              {
+                "id": "B0012",
+                "heightMm": -1.5808823529411762,
+                "errorMm": 0.7014043071447205,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -0.8794780457964557,
+            "toleranceMm": 1.4495689014324225,
+            "world": [
+              5.934701424336201,
+              -2.2359958693891446,
+              -1.663263589866315
+            ],
+            "anchors": [
+              {
+                "id": "B0029",
+                "heightMm": -0.13131345150875373,
+                "errorMm": 0.748164594287702,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200474
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200514
+            ],
+            "anchors": [
+              {
+                "id": "B0083",
+                "heightMm": -3.6696877079405854,
+                "errorMm": 2.2457470121216843,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291707
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291957
+            ],
+            "anchors": [
+              {
+                "id": "B0068",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 5.689049744627073,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              5.984284141429337,
+              5.484735415570656,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0100",
+                "heightMm": 4.750858620560052,
+                "errorMm": 0.9381911240670204,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 6.470875681349592,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              -5.464680115569889,
+              6.649297050939479,
+              7.429203280404139e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0097",
+                "heightMm": 4.750858620560052,
+                "errorMm": 1.72001706078954,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 5.689049744627073,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              5.984284141429337,
+              5.484735415570656,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0103",
+                "heightMm": 5.949658390201246,
+                "errorMm": 0.2606086455741732,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 6.470875681349592,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              -5.464680115569889,
+              6.649297050939479,
+              7.429203280404139e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0097",
+                "heightMm": 4.750858620560052,
+                "errorMm": 1.72001706078954,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              2.8883481012653944,
+              -3.3905981171570927,
+              4.3844474734008845
+            ],
+            "anchors": [
+              {
+                "id": "B0064",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              5.847732527679567,
+              -3.397179963006121,
+              -1.454774997784688e-15
+            ],
+            "anchors": [
+              {
+                "id": "B0063",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -5.847732527679568,
+              -3.3971799630061215,
+              7.27387498892344e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0067",
+                "heightMm": -1.4512080471849247,
+                "errorMm": 1.0290338754295805,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -2.888348101265395,
+              -3.3905981171570927,
+              -4.384447473400885
+            ],
+            "anchors": [
+              {
+                "id": "B0067",
+                "heightMm": -1.4512080471849247,
+                "errorMm": 1.0290338754295805,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              2.8883481012653944,
+              -3.3905981171570927,
+              4.3844474734008845
+            ],
+            "anchors": [
+              {
+                "id": "B0064",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              5.847732527679567,
+              -3.397179963006121,
+              -1.454774997784688e-15
+            ],
+            "anchors": [
+              {
+                "id": "B0063",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -5.847732527679568,
+              -3.3971799630061215,
+              7.27387498892344e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0067",
+                "heightMm": -1.4512080471849247,
+                "errorMm": 1.0290338754295805,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -2.888348101265395,
+              -3.3905981171570927,
+              -4.384447473400885
+            ],
+            "anchors": [
+              {
+                "id": "B0067",
+                "heightMm": -1.4512080471849247,
+                "errorMm": 1.0290338754295805,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              -7.408264602304475,
+              -5.622265413850327,
+              -1.8571269709580727
+            ],
+            "anchors": [
+              {
+                "id": "B0010",
+                "heightMm": -6.481059645473739,
+                "errorMm": 5.400813165014348,
+                "withinRequestedBand": false
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              7.408264602304475,
+              -5.622265413850327,
+              -1.8571269709580727
+            ],
+            "anchors": [
+              {
+                "id": "B0077",
+                "heightMm": -5.0314907440413155,
+                "errorMm": 3.951244263581925,
+                "withinRequestedBand": false
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              -7.427812611195338,
+              -1.2848259235497541,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0026",
+                "heightMm": -2.1323529411764706,
+                "errorMm": 1.0521064607170802,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              7.427812611195338,
+              -1.2848259235497541,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0092",
+                "heightMm": -0.6827840397440481,
+                "errorMm": 0.3974624407153422,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 7,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 8,
+        "passLimit": 8,
+        "arms": []
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200474
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.575244733290713,
+              -4.378393425649108,
+              1.1571305244200514
+            ],
+            "anchors": [
+              {
+                "id": "B0083",
+                "heightMm": -3.6696877079405854,
+                "errorMm": 2.2457470121216843,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              -8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291707
+            ],
+            "anchors": [
+              {
+                "id": "B0060",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right front arm",
+            "sourceFraction": 0.38,
+            "targetHeightMm": -1.4239406958189011,
+            "toleranceMm": 2.9665431162893787,
+            "world": [
+              8.595688725583928,
+              -2.7360287513825265,
+              -0.15197918235291957
+            ],
+            "anchors": [
+              {
+                "id": "B0068",
+                "heightMm": -1.9267660235704915,
+                "errorMm": 0.5028253277515904,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 5.689049744627073,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              5.984284141429337,
+              5.484735415570656,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0100",
+                "heightMm": 4.750858620560052,
+                "errorMm": 0.9381911240670204,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 6.470875681349592,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              -5.464680115569889,
+              6.649297050939479,
+              7.429203280404139e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0097",
+                "heightMm": 4.750858620560052,
+                "errorMm": 1.72001706078954,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "right arm",
+            "sourceFraction": 0.47826086956521735,
+            "targetHeightMm": 5.689049744627073,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              5.984284141429337,
+              5.484735415570656,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0103",
+                "heightMm": 5.949658390201246,
+                "errorMm": 0.2606086455741732,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "left arm",
+            "sourceFraction": 0.5434782608695653,
+            "targetHeightMm": 6.470875681349592,
+            "toleranceMm": 2.9969994241029836,
+            "world": [
+              -5.464680115569889,
+              6.649297050939479,
+              7.429203280404139e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0097",
+                "heightMm": 4.750858620560052,
+                "errorMm": 1.72001706078954,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              2.8883481012653944,
+              -3.3905981171570927,
+              4.3844474734008845
+            ],
+            "anchors": [
+              {
+                "id": "B0064",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              5.847732527679567,
+              -3.397179963006121,
+              -1.454774997784688e-15
+            ],
+            "anchors": [
+              {
+                "id": "B0063",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -5.847732527679568,
+              -3.3971799630061215,
+              7.27387498892344e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0067",
+                "heightMm": -1.4512080471849247,
+                "errorMm": 1.0290338754295805,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -2.888348101265395,
+              -3.3905981171570927,
+              -4.384447473400885
+            ],
+            "anchors": [
+              {
+                "id": "B0059",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "short arm 2",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              2.8883481012653944,
+              -3.3905981171570927,
+              4.3844474734008845
+            ],
+            "anchors": [
+              {
+                "id": "B0064",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 1",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              5.847732527679567,
+              -3.397179963006121,
+              -1.454774997784688e-15
+            ],
+            "anchors": [
+              {
+                "id": "B0063",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 3",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -5.847732527679568,
+              -3.3971799630061215,
+              7.27387498892344e-16
+            ],
+            "anchors": [
+              {
+                "id": "B0067",
+                "heightMm": -1.4512080471849247,
+                "errorMm": 1.0290338754295805,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "short arm 4",
+            "sourceFraction": 0.0928571428571428,
+            "targetHeightMm": -0.4221741717553442,
+            "toleranceMm": 2.7704758184642566,
+            "world": [
+              -2.888348101265395,
+              -3.3905981171570927,
+              -4.384447473400885
+            ],
+            "anchors": [
+              {
+                "id": "B0059",
+                "heightMm": -0.4812202635141283,
+                "errorMm": 0.05904609175878406,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              -7.408264602304475,
+              -5.622265413850327,
+              1.8571269709580727
+            ],
+            "anchors": [
+              {
+                "id": "B0018",
+                "heightMm": -6.481059645473739,
+                "errorMm": 5.400813165014348,
+                "withinRequestedBand": false
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              7.114121183426809,
+              -7.489636947712018,
+              -2.899137802864845
+            ],
+            "anchors": [
+              {
+                "id": "B0082",
+                "heightMm": -6.481059645473739,
+                "errorMm": 5.400813165014348,
+                "withinRequestedBand": false
+              }
+            ]
+          }
+        ]
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": [
+          {
+            "part": "left arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              -7.427812611195338,
+              -1.2848259235497541,
+              0
+            ],
+            "anchors": [
+              {
+                "id": "B0026",
+                "heightMm": -2.1323529411764706,
+                "errorMm": 1.0521064607170802,
+                "withinRequestedBand": true
+              }
+            ]
+          },
+          {
+            "part": "right arm",
+            "sourceFraction": 0.6209677419354839,
+            "targetHeightMm": -1.0802464804593903,
+            "toleranceMm": 2.174353352148634,
+            "world": [
+              7.375633025698243,
+              -2.8049728539085574,
+              1.6045904542726408
+            ],
+            "anchors": [
+              {
+                "id": "B0094",
+                "heightMm": -2.1323529411764706,
+                "errorMm": 1.0521064607170802,
+                "withinRequestedBand": true
+              }
+            ]
+          }
+        ]
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 3,
+        "candidateEndpoints": 6,
+        "totalEndpoints": 6,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 3,
+        "candidateEndpoints": 6,
+        "totalEndpoints": 6,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 5,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 2,
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventory": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      },
+      "after": {
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "overlaps": 0,
+        "threadSections": 1,
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "maxPasses": 6,
+        "passLimit": 6,
+        "arms": []
+      }
+    }
+  ]
+}

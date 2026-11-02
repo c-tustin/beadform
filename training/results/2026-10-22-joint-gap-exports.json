@@ -1,0 +1,62 @@
+{
+  "note": "Actual parts-app rendering and export functions with a controlled DOM facade. No real browser clicks, print pagination, file downloads or physical construction are verified.",
+  "sourceSha256": {
+    "parts-app.js": "c8d444484edb3ae44454ee646faaef1ac5a8a368739d1774534b6689dd0b5aaa",
+    "finishing-guide.js": "94dee4eecc745f3cc1cb05d5541c56e8d16a1421e467cb6166a975db03d4eeb7",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "parts-engine.js": "36d930f3613e83dfd0ccc37011b782fd40f4548c0add471d860911c4285d72a5",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "stage-guide.js": "3053da8684fbf2a1cf02fa7192f66b13da3669bd7ec9aba3a0dbaab498710f03",
+    "parts-layout.js": "605e583251145b2381401d30095124f7c757f6d4880499b0d596df480db89f0b",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_finishing_guide_exports.cjs": "d64cfd89ad60b2a3af562d2756de135fee62f9566bb2740cc2ca8a5b58215ff6"
+  },
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 2,
+      "printDiagrams": 2,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 4,
+      "printDiagrams": 4,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 2,
+      "printDiagrams": 2,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "screenDiagrams": 2,
+      "printDiagrams": 2,
+      "textMatches": true,
+      "printRequested": true
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "screenDiagrams": 2,
+      "printDiagrams": 2,
+      "textMatches": true,
+      "printRequested": true
+    }
+  ]
+}

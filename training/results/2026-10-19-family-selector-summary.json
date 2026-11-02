@@ -1,0 +1,14 @@
+{
+  "source_commit": "c6d803fc28f743aaeb011fd5da46d7c4ce00b387",
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "gpu": "free Colab Tesla T4",
+  "examples": 15,
+  "correct": 11,
+  "strict_valid": 15,
+  "unknown_controls": 3,
+  "unknown_controls_correct": 0,
+  "predictions_sha256": "1f2392cbad93760098aeb8e65e7e5ee52b34063d4bc25e955779c297fabd4189",
+  "benchmark_sha256": "7ed6536df4acfb7d59396bbcb24f8ddeea0cadf8847eb76f483f30008cf60eb9",
+  "usable_for_automatic_planning": false,
+  "note": "No geometry is generated. Development-only semantic probe; all unknown controls failed. No fine-tuning was run for this semantic probe."
+}

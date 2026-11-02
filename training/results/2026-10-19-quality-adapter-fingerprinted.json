@@ -1,0 +1,1980 @@
+{
+  "summary": {
+    "examples": 12,
+    "original_scene_checks_pass": 1,
+    "original_compiler_pass": 0,
+    "original_cross_component_clearance_pass": 0,
+    "eye_spacing_proposals": 1,
+    "physically_tested": 0,
+    "note": "Feature checks are explicit lower-bound requirements; clearance uses conservative nominal spherical envelopes. Neither establishes recognizable or physically buildable patterns."
+  },
+  "provenance": {
+    "predictions_sha256": "e93d7bf87007e895b5f5129a5f463f6c662bcc2a768e08fe4906dd5e766cc195",
+    "requirements_sha256": "a881b34df8bc0e55393dbeea4fd40195b606f8deac12c4869177d4c91ff48200",
+    "detail": 3,
+    "thread_diameter_mm": 0.25,
+    "source_sha256": {
+      "shape-engine.js": "3eb3240c5f796496e75098e6d18c17f30e373d8c16cf1a050748c9d666d587be",
+      "parts-engine.js": "b79b2e51d5ba586cb903ead18f0d5696eda3c5f942f1612e08ebcfcbb28eb8d5",
+      "peyote-ball.js": "6ad3be7612d4fe4eb12f1e6afc67e05d26b6d3c7635391bae4e412479fefcbd9",
+      "continuous-thread.js": "1e253f088623861c56b49e40f874c5c188bc0aa5d3a38f0a5992039493ac00dd",
+      "construction-graph.js": "11502fe8b69adc8135b85adf506abb3754874fae745e1c9433c1b6262b5f4e98",
+      "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba"
+    }
+  },
+  "results": [
+    {
+      "id": "schema-fresh-01",
+      "group": "dog",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                1
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "left eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "right eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                6
+              ],
+              "message": "left leg has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                7
+              ],
+              "message": "right leg has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                8
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                9
+              ],
+              "message": "feet has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                10
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                11
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                13
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                14
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                15
+              ],
+              "message": "left eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                16
+              ],
+              "message": "right eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                6,
+                7
+              ],
+              "message": "Left and right leg occupy the same region."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "ears",
+              "message": "ears are named separately but occupy coincident positions."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs",
+              "expected": 4,
+              "found": 2,
+              "message": "Expected 4 separately represented legs; found 2."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "legs",
+              "message": "legs are named separately but occupy coincident positions."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "eyes",
+              "message": "eyes are named separately but occupy coincident positions."
+            }
+          ],
+          "solid_parts": 18,
+          "scene_span": 0.30000000000000004,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No collision-free placement for left leg fits a close parent anchor. Simplify this attachment.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-02",
+      "group": "cat",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                1
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "muzzle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                6
+              ],
+              "message": "left leg has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                7
+              ],
+              "message": "right leg has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                8
+              ],
+              "message": "left foot has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                9
+              ],
+              "message": "right foot has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                10
+              ],
+              "message": "left horn has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                11
+              ],
+              "message": "right horn has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                12
+              ],
+              "message": "left tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                13
+              ],
+              "message": "right tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                14
+              ],
+              "message": "left eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                15
+              ],
+              "message": "right eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                16
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                17
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                6,
+                7
+              ],
+              "message": "Left and right leg occupy the same region."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                8,
+                9
+              ],
+              "message": "Left and right foot occupy the same region."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                10,
+                11
+              ],
+              "message": "Left and right horn occupy the same region."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                12,
+                13
+              ],
+              "message": "Left and right tail occupy the same region."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                14,
+                15
+              ],
+              "message": "Left and right eye occupy the same region."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "body",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented body; found 0."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "ears",
+              "message": "ears are named separately but occupy coincident positions."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "eyes",
+              "message": "eyes are named separately but occupy coincident positions."
+            }
+          ],
+          "solid_parts": 16,
+          "scene_span": 0.8999999999999999,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No collision-free placement for left leg fits a close parent anchor. Simplify this attachment.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-03",
+      "group": "duck",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                1
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "wings",
+              "message": "wings are named separately but occupy coincident positions."
+            }
+          ],
+          "solid_parts": 17,
+          "scene_span": 1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No collision-free placement for legs fits a close parent anchor. Simplify this attachment.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-04",
+      "group": "lobster",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                1
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "claws",
+              "message": "claws are named separately but occupy coincident positions."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs (minimum)",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented legs (minimum); found 1."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "antennae",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented antennae; found 0."
+            }
+          ],
+          "solid_parts": 16,
+          "scene_span": 1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for wings to body fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-05",
+      "group": "owl",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "left wing has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                6
+              ],
+              "message": "right wing has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                7
+              ],
+              "message": "beak has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                8
+              ],
+              "message": "left foot has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                9
+              ],
+              "message": "right foot has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                10
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                12
+              ],
+              "message": "left eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                13
+              ],
+              "message": "right eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                14
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                15
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                16
+              ],
+              "message": "left wing has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                17
+              ],
+              "message": "right wing has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                8,
+                9
+              ],
+              "message": "Left and right foot occupy the same region."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "eyes",
+              "message": "eyes are named separately but occupy coincident positions."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "wings",
+              "message": "wings are named separately but occupy coincident positions."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "feet",
+              "message": "feet are named separately but occupy coincident positions."
+            }
+          ],
+          "solid_parts": 16,
+          "scene_span": 0.2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for right ear to body fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": {
+        "scene": {
+          "title": "Small Purple Owl",
+          "parts": [
+            {
+              "name": "head",
+              "type": "ellipsoid",
+              "role": "solid",
+              "center": [
+                0,
+                0,
+                0
+              ],
+              "size": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "end": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left eye",
+              "type": "ellipsoid",
+              "role": "paint",
+              "center": [
+                -0.034999999999999996,
+                0.05,
+                0.07921489758877431
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                -0.034999999999999996,
+                0.05,
+                0.07921489758877431
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right eye",
+              "type": "ellipsoid",
+              "role": "paint",
+              "center": [
+                0.034999999999999996,
+                0.05,
+                0.07921489758877431
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.034999999999999996,
+                0.05,
+                0.07921489758877431
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left ear",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right ear",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left wing",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right wing",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "beak",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left foot",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right foot",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "tail",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "body",
+              "type": "box",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left eye",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right eye",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left ear",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right ear",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "left wing",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            },
+            {
+              "name": "right wing",
+              "type": "capsule",
+              "role": "solid",
+              "center": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "size": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "end": [
+                0.05,
+                0.05,
+                0.05
+              ],
+              "color": "#8B00FF"
+            }
+          ],
+          "notes": "The owl is small and purple with two large eyes, a yellow beak, and two feet. The body is a box-shaped solid, with wings, ears, and feet as separate capsules. The head is an ellipsoid with a paint color. The eyes are painted on the head. No"
+        },
+        "changes": [
+          {
+            "part": "left eye",
+            "before": [
+              0.05,
+              0.05,
+              0.05
+            ],
+            "after": [
+              -0.034999999999999996,
+              0.05,
+              0.07921489758877431
+            ],
+            "reason": "Separate coincident painted eyes on the host ellipsoid surface."
+          },
+          {
+            "part": "right eye",
+            "before": [
+              0.05,
+              0.05,
+              0.05
+            ],
+            "after": [
+              0.034999999999999996,
+              0.05,
+              0.07921489758877431
+            ],
+            "reason": "Separate coincident painted eyes on the host ellipsoid surface."
+          }
+        ],
+        "requiresReview": true,
+        "physicallyTested": false,
+        "quality": {
+          "scene": {
+            "numeric_valid": true,
+            "passes": false,
+            "issues": [
+              {
+                "code": "ignored_endpoint",
+                "severity": "warning",
+                "parts": [
+                  0
+                ],
+                "message": "head has an endpoint that this primitive ignores."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  3
+                ],
+                "message": "left ear has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  4
+                ],
+                "message": "right ear has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  5
+                ],
+                "message": "left wing has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  6
+                ],
+                "message": "right wing has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  7
+                ],
+                "message": "beak has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  8
+                ],
+                "message": "left foot has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  9
+                ],
+                "message": "right foot has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  10
+                ],
+                "message": "tail has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  12
+                ],
+                "message": "left eye has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  13
+                ],
+                "message": "right eye has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  14
+                ],
+                "message": "left ear has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  15
+                ],
+                "message": "right ear has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  16
+                ],
+                "message": "left wing has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  17
+                ],
+                "message": "right wing has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "coincident_pair",
+                "severity": "error",
+                "parts": [
+                  8,
+                  9
+                ],
+                "message": "Left and right foot occupy the same region."
+              },
+              {
+                "code": "collapsed_feature_group",
+                "severity": "error",
+                "feature": "eyes",
+                "message": "eyes are named separately but occupy coincident positions."
+              },
+              {
+                "code": "collapsed_feature_group",
+                "severity": "error",
+                "feature": "wings",
+                "message": "wings are named separately but occupy coincident positions."
+              },
+              {
+                "code": "collapsed_feature_group",
+                "severity": "error",
+                "feature": "feet",
+                "message": "feet are named separately but occupy coincident positions."
+              }
+            ],
+            "solid_parts": 16,
+            "scene_span": 0.2,
+            "physicalSampleRequired": true
+          },
+          "graph": {
+            "compiler_valid": false,
+            "error": "No close attachment for right ear to body fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+            "physicalSampleRequired": true
+          }
+        }
+      }
+    },
+    {
+      "id": "schema-fresh-06",
+      "group": "hedgehog",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                1
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "nose has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "ears has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "legs has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                7
+              ],
+              "message": "spines has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                8
+              ],
+              "message": "feet has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                9
+              ],
+              "message": "claws has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                10
+              ],
+              "message": "horns has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                11
+              ],
+              "message": "handles has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                12
+              ],
+              "message": "leaves has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                13
+              ],
+              "message": "wings has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                14
+              ],
+              "message": "feet has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                17
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "snout",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented snout; found 0."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "feet (minimum)",
+              "message": "feet (minimum) are named separately but occupy coincident positions."
+            }
+          ],
+          "solid_parts": 16,
+          "scene_span": 0.2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No collision-free placement for legs fits a close parent anchor. Simplify this attachment.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-07",
+      "group": "dragon",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                1
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "wings",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented wings; found 1."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "horns",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented horns; found 1."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs",
+              "expected": 4,
+              "found": 1,
+              "message": "Expected 4 separately represented legs; found 1."
+            }
+          ],
+          "solid_parts": 17,
+          "scene_span": 1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for wings to body fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-08",
+      "group": "lamp",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": true,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "base has an endpoint that this primitive ignores."
+            }
+          ],
+          "solid_parts": 3,
+          "scene_span": 0.30000000000000004,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for shade to base fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-09",
+      "group": "chair",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "chair has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                2
+              ],
+              "message": "seat has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                3
+              ],
+              "message": "back has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                4
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                14
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                15
+              ],
+              "message": "head has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs",
+              "expected": 4,
+              "found": 1,
+              "message": "Expected 4 separately represented legs; found 1."
+            }
+          ],
+          "solid_parts": 7,
+          "scene_span": 1.2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for head to seat fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-10",
+      "group": "watering-can",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                1
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "top has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                6
+              ],
+              "message": "top has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                7
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                8
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                9
+              ],
+              "message": "top has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                10
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                11
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                12
+              ],
+              "message": "top has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                13
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                14
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                15
+              ],
+              "message": "top has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                16
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                17
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            }
+          ],
+          "solid_parts": 18,
+          "scene_span": 1.1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No collision-free placement for spout fits a close parent anchor. Simplify this attachment.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-11",
+      "group": "umbrella",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                1
+              ],
+              "message": "stem has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "canopy",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented canopy; found 0."
+            }
+          ],
+          "solid_parts": 3,
+          "scene_span": 1.5,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for handle to stem fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-12",
+      "group": "pineapple",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                1
+              ],
+              "message": "leaves has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "crown has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "head has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "legs has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                6
+              ],
+              "message": "feet has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                7
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                8
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                9
+              ],
+              "message": "horn has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                10
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                11
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                12
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                13
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                14
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                15
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                16
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                17
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "leaves (minimum)",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented leaves (minimum); found 0."
+            }
+          ],
+          "solid_parts": 15,
+          "scene_span": 1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for horn to head fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    }
+  ]
+}

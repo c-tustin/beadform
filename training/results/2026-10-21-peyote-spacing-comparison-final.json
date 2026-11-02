@@ -1,0 +1,3624 @@
+{
+  "note": "Paired nominal geometry and project-migration audit. Not a physical build or independent generalization benchmark.",
+  "sourceSha256": {
+    "training/fixtures/peyote-before-spacing.js": "6ad3be7612d4fe4eb12f1e6afc67e05d26b6d3c7635391bae4e412479fefcbd9",
+    "peyote-ball.js": "86f8bcac7bee2ca9b59ba31dcd025f971a39b7ebc0df279ce2ee0f8d777748c3",
+    "parts-engine.js": "b8dda7ab040b20b66ab18cc2d034357e198f4f12c63ccf8b5c4732ac1c46cad9",
+    "parts-project.js": "e274ef362fc39e7ae328135ec64efdec9a2139b1ca67b517fa42f02e9d20f425",
+    "continuous-thread.js": "c7800d20a8967638e30338e862ff2cd5b9272af0f1d0b5116f0b77181a9eedb3",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "construction-graph.js": "d4b97666d3fbeb0e39a7a72379b146bfdf6fd701c84314e4a43d036b974441f9",
+    "craw-block.js": "e0d45a71fbca813973527eb63ce746d6c8f5f2275deead7bd0531d44f22849dd",
+    "thread-finishing.js": "f8ecfba12228971c6864884e67a07c19c3bdba4aba1af0b177eb60191b309ea8",
+    "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/compare_peyote_spacing.cjs": "49ed6f48401715d28608b2100c63a8f962e7279aefd876909e63c0274a40ba0e"
+  },
+  "summary": {
+    "cases": 128,
+    "compiled": 128,
+    "identicalPartInventory": 128,
+    "priorProjectMigrationValid": 128,
+    "unchangedRoutesResume": 24,
+    "before": {
+      "flags": 371,
+      "crossPart": 50,
+      "connections": 40889,
+      "threadSections": 139
+    },
+    "after": {
+      "flags": 47,
+      "crossPart": 47,
+      "connections": 40844,
+      "threadSections": 139
+    }
+  },
+  "profiles": [
+    {
+      "profile": "ball",
+      "big": false,
+      "economy": false,
+      "beads": 40,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999971
+    },
+    {
+      "profile": "ball",
+      "big": false,
+      "economy": true,
+      "beads": 40,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.05177062851238001
+    },
+    {
+      "profile": "ball",
+      "big": true,
+      "economy": false,
+      "beads": 70,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.32233290250335433
+    },
+    {
+      "profile": "ball",
+      "big": true,
+      "economy": true,
+      "beads": 70,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999982
+    },
+    {
+      "profile": "body",
+      "big": false,
+      "economy": false,
+      "beads": 100,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.053931709606360734
+    },
+    {
+      "profile": "body",
+      "big": false,
+      "economy": true,
+      "beads": 100,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.061090748409933116
+    },
+    {
+      "profile": "body",
+      "big": true,
+      "economy": false,
+      "beads": 100,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.053931709606360734
+    },
+    {
+      "profile": "body",
+      "big": true,
+      "economy": true,
+      "beads": 100,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.061090748409933116
+    },
+    {
+      "profile": "dome",
+      "big": false,
+      "economy": false,
+      "beads": 25,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999971
+    },
+    {
+      "profile": "dome",
+      "big": false,
+      "economy": true,
+      "beads": 10,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999971
+    },
+    {
+      "profile": "dome",
+      "big": true,
+      "economy": false,
+      "beads": 55,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.05343904381328757
+    },
+    {
+      "profile": "dome",
+      "big": true,
+      "economy": true,
+      "beads": 10,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999971
+    },
+    {
+      "profile": "pear",
+      "big": false,
+      "economy": false,
+      "beads": 40,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999971
+    },
+    {
+      "profile": "pear",
+      "big": false,
+      "economy": true,
+      "beads": 20,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999993
+    },
+    {
+      "profile": "pear",
+      "big": true,
+      "economy": false,
+      "beads": 40,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999971
+    },
+    {
+      "profile": "pear",
+      "big": true,
+      "economy": true,
+      "beads": 20,
+      "identicalScheduleAndSequence": true,
+      "minimumNominalCenterPlaneClearanceMm": 0.04999999999999993
+    }
+  ],
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 116,
+        "connections": 277,
+        "nominalFlags": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 116,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 134,
+        "connections": 341,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 134,
+        "connections": 341,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 196,
+        "connections": 482,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 196,
+        "connections": 482,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 82,
+        "connections": 223,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 82,
+        "connections": 223,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 139,
+        "connections": 339,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 139,
+        "connections": 339,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 126,
+        "connections": 341,
+        "nominalFlags": 9,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 126,
+        "connections": 334,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 109,
+        "connections": 282,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 109,
+        "connections": 283,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 65,
+        "connections": 142,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 65,
+        "connections": 142,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 117,
+        "connections": 331,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 117,
+        "connections": 331,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 42,
+        "connections": 128,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 42,
+        "connections": 128,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 138,
+        "connections": 360,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 138,
+        "connections": 360,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 84,
+        "connections": 231,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 84,
+        "connections": 229,
+        "nominalFlags": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 66,
+        "connections": 164,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 66,
+        "connections": 164,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 72,
+        "connections": 191,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 72,
+        "connections": 191,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 52,
+        "connections": 121,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 52,
+        "connections": 121,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 27,
+        "connections": 68,
+        "nominalFlags": 7,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 27,
+        "connections": 68,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 101,
+        "connections": 355,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 101,
+        "connections": 355,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 57,
+        "connections": 146,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 57,
+        "connections": 146,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 125,
+        "connections": 349,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 125,
+        "connections": 349,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 129,
+        "connections": 335,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 129,
+        "connections": 335,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 119,
+        "connections": 314,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 119,
+        "connections": 312,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 124,
+        "connections": 301,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 124,
+        "connections": 301,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 173,
+        "connections": 430,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 173,
+        "connections": 431,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 127,
+        "connections": 323,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 127,
+        "connections": 323,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 167,
+        "connections": 464,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 167,
+        "connections": 465,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 52,
+        "connections": 120,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 52,
+        "connections": 120,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 45,
+        "connections": 121,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 45,
+        "connections": 121,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 108,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 108,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 66,
+        "connections": 165,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 66,
+        "connections": 165,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 90,
+        "connections": 265,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 90,
+        "connections": 265,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 76,
+        "connections": 204,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 76,
+        "connections": 204,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 66,
+        "connections": 220,
+        "nominalFlags": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 66,
+        "connections": 220,
+        "nominalFlags": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 116,
+        "connections": 277,
+        "nominalFlags": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 116,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 134,
+        "connections": 345,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 134,
+        "connections": 345,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 196,
+        "connections": 485,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 196,
+        "connections": 485,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 82,
+        "connections": 211,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 82,
+        "connections": 211,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 139,
+        "connections": 343,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 139,
+        "connections": 343,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 126,
+        "connections": 342,
+        "nominalFlags": 11,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 126,
+        "connections": 342,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 109,
+        "connections": 285,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 109,
+        "connections": 286,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 65,
+        "connections": 142,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 65,
+        "connections": 142,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 117,
+        "connections": 331,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 117,
+        "connections": 331,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 42,
+        "connections": 128,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 42,
+        "connections": 128,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 138,
+        "connections": 359,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 138,
+        "connections": 360,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 84,
+        "connections": 236,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 84,
+        "connections": 236,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 66,
+        "connections": 166,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 66,
+        "connections": 166,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 72,
+        "connections": 191,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 72,
+        "connections": 191,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 52,
+        "connections": 123,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 52,
+        "connections": 122,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 27,
+        "connections": 68,
+        "nominalFlags": 7,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 27,
+        "connections": 68,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 101,
+        "connections": 357,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 101,
+        "connections": 357,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 57,
+        "connections": 147,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 57,
+        "connections": 147,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 125,
+        "connections": 341,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 125,
+        "connections": 341,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 129,
+        "connections": 320,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 129,
+        "connections": 321,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 119,
+        "connections": 311,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 119,
+        "connections": 307,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 124,
+        "connections": 301,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 124,
+        "connections": 301,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 173,
+        "connections": 420,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 173,
+        "connections": 419,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 127,
+        "connections": 318,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 127,
+        "connections": 318,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 167,
+        "connections": 463,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 167,
+        "connections": 463,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 52,
+        "connections": 122,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 52,
+        "connections": 122,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 45,
+        "connections": 121,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 45,
+        "connections": 121,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 108,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 108,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 66,
+        "connections": 169,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 66,
+        "connections": 169,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 90,
+        "connections": 267,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 90,
+        "connections": 267,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 76,
+        "connections": 208,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 76,
+        "connections": 208,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 66,
+        "connections": 223,
+        "nominalFlags": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 66,
+        "connections": 223,
+        "nominalFlags": 4,
+        "crossPart": 4,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 116,
+        "connections": 277,
+        "nominalFlags": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 116,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 188,
+        "connections": 493,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 188,
+        "connections": 493,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 250,
+        "connections": 633,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 250,
+        "connections": 633,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 114,
+        "connections": 291,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 114,
+        "connections": 285,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 169,
+        "connections": 418,
+        "nominalFlags": 15,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 169,
+        "connections": 418,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 146,
+        "connections": 389,
+        "nominalFlags": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 146,
+        "connections": 382,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 158,
+        "connections": 418,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 158,
+        "connections": 419,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 95,
+        "connections": 200,
+        "nominalFlags": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 95,
+        "connections": 199,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 182,
+        "connections": 578,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 182,
+        "connections": 578,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 84,
+        "connections": 301,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 84,
+        "connections": 301,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 198,
+        "connections": 503,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 198,
+        "connections": 504,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 114,
+        "connections": 293,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 114,
+        "connections": 293,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 96,
+        "connections": 222,
+        "nominalFlags": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 96,
+        "connections": 222,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 102,
+        "connections": 263,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 102,
+        "connections": 261,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 82,
+        "connections": 188,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 82,
+        "connections": 185,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 47,
+        "connections": 108,
+        "nominalFlags": 19,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 47,
+        "connections": 110,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 193,
+        "connections": 737,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 193,
+        "connections": 737,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 67,
+        "connections": 174,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 67,
+        "connections": 174,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 196,
+        "connections": 649,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 196,
+        "connections": 649,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 159,
+        "connections": 404,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 159,
+        "connections": 404,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 149,
+        "connections": 394,
+        "nominalFlags": 13,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 149,
+        "connections": 391,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 154,
+        "connections": 373,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 154,
+        "connections": 373,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 199,
+        "connections": 525,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 199,
+        "connections": 519,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 157,
+        "connections": 388,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 157,
+        "connections": 388,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 197,
+        "connections": 529,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 197,
+        "connections": 533,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 82,
+        "connections": 183,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 82,
+        "connections": 183,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 55,
+        "connections": 148,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 55,
+        "connections": 148,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 148,
+        "connections": 376,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 148,
+        "connections": 376,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 126,
+        "connections": 294,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 126,
+        "connections": 293,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 165,
+        "connections": 543,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 165,
+        "connections": 543,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 101,
+        "connections": 260,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 101,
+        "connections": 260,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 7,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 144,
+        "connections": 515,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 144,
+        "connections": 515,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 8,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 116,
+        "connections": 277,
+        "nominalFlags": 12,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 116,
+        "connections": 279,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 188,
+        "connections": 492,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 188,
+        "connections": 492,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 250,
+        "connections": 640,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 250,
+        "connections": 639,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 114,
+        "connections": 291,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 114,
+        "connections": 285,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 169,
+        "connections": 418,
+        "nominalFlags": 31,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 169,
+        "connections": 409,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 146,
+        "connections": 389,
+        "nominalFlags": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 146,
+        "connections": 382,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 158,
+        "connections": 421,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 158,
+        "connections": 422,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 95,
+        "connections": 200,
+        "nominalFlags": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 95,
+        "connections": 199,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 182,
+        "connections": 573,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 182,
+        "connections": 573,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 84,
+        "connections": 295,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 84,
+        "connections": 295,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 198,
+        "connections": 502,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 198,
+        "connections": 503,
+        "nominalFlags": 1,
+        "crossPart": 1,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 114,
+        "connections": 295,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 114,
+        "connections": 295,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 96,
+        "connections": 223,
+        "nominalFlags": 23,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 96,
+        "connections": 232,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 102,
+        "connections": 263,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 102,
+        "connections": 261,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 82,
+        "connections": 188,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 82,
+        "connections": 186,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 47,
+        "connections": 108,
+        "nominalFlags": 19,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 47,
+        "connections": 110,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 193,
+        "connections": 739,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 193,
+        "connections": 739,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 67,
+        "connections": 174,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 67,
+        "connections": 174,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 196,
+        "connections": 637,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 196,
+        "connections": 637,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 159,
+        "connections": 388,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 159,
+        "connections": 388,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 149,
+        "connections": 390,
+        "nominalFlags": 29,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 149,
+        "connections": 384,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 154,
+        "connections": 373,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 154,
+        "connections": 373,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 199,
+        "connections": 496,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 3,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 199,
+        "connections": 496,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 3,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 157,
+        "connections": 383,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 157,
+        "connections": 383,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 197,
+        "connections": 533,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 197,
+        "connections": 533,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 82,
+        "connections": 186,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 82,
+        "connections": 186,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 55,
+        "connections": 148,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 55,
+        "connections": 148,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 5,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 148,
+        "connections": 377,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 148,
+        "connections": 378,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 126,
+        "connections": 289,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 126,
+        "connections": 288,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 2,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 165,
+        "connections": 541,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 165,
+        "connections": 541,
+        "nominalFlags": 0,
+        "crossPart": 0,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": false,
+      "before": {
+        "beads": 101,
+        "connections": 263,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 101,
+        "connections": 263,
+        "nominalFlags": 2,
+        "crossPart": 2,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalPartInventory": true,
+      "priorProjectMigrationValid": true,
+      "priorRouteStillMatches": true,
+      "before": {
+        "beads": 144,
+        "connections": 519,
+        "nominalFlags": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      },
+      "after": {
+        "beads": 144,
+        "connections": 519,
+        "nominalFlags": 3,
+        "crossPart": 3,
+        "threadSections": 1,
+        "maxPasses": 6,
+        "detectedCrossPartOverlaps": 0
+      }
+    }
+  ]
+}

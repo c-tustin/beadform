@@ -1,0 +1,123 @@
+{
+  "note": "Six actual scene decisions plus deliberately altered selector inputs. The altered inputs are not claimed valid physical plans or training targets.",
+  "sourceSha256": {
+    "parts-engine.js": "36d930f3613e83dfd0ccc37011b782fd40f4548c0add471d860911c4285d72a5",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "construction-graph.js": "094f1d95af7fbf631caef34557f97acd04a454634a4c23f7d63070fa75c1e9b1",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_joint_selection.cjs": "c56f8b515fde940d6d5cac3a7d04578ba805e9ef8c413f57a5adbcf49b8811f3"
+  },
+  "cases": [
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "line": 0.25,
+      "selectedWeight": 0,
+      "reasons": [
+        "widest joint increased",
+        "no net joint improvement"
+      ],
+      "workingLengths": 1
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "line": 0.25,
+      "selectedWeight": 0,
+      "reasons": [
+        "requested arm height worsened"
+      ],
+      "workingLengths": 1
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "line": 0.25,
+      "selectedWeight": 0,
+      "reasons": [
+        "no net joint improvement"
+      ],
+      "workingLengths": 1
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "line": 0.2,
+      "selectedWeight": 0,
+      "reasons": [
+        "widest joint increased"
+      ],
+      "workingLengths": 1
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "line": 0.25,
+      "selectedWeight": 250,
+      "reasons": [],
+      "workingLengths": 2
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "line": 0.25,
+      "selectedWeight": 250,
+      "reasons": [],
+      "workingLengths": 1
+    }
+  ],
+  "controls": [
+    {
+      "kind": "geometry",
+      "rejected": true,
+      "reasons": [
+        "geometry or colored inventory changed",
+        "no net joint improvement"
+      ]
+    },
+    {
+      "kind": "fewer-loops",
+      "rejected": true,
+      "reasons": [
+        "fewer attachment loops",
+        "no net joint improvement"
+      ]
+    },
+    {
+      "kind": "finishing-coverage",
+      "rejected": true,
+      "reasons": [
+        "finishing coverage or passage budget worsened",
+        "no net joint improvement"
+      ]
+    },
+    {
+      "kind": "pass-budget",
+      "rejected": true,
+      "reasons": [
+        "finishing coverage or passage budget worsened",
+        "no net joint improvement"
+      ]
+    },
+    {
+      "kind": "assembly-flags",
+      "rejected": true,
+      "reasons": [
+        "more nominal approach flags",
+        "no net joint improvement"
+      ]
+    },
+    {
+      "kind": "finishing-flags",
+      "rejected": true,
+      "reasons": [
+        "more nominal approach flags",
+        "no net joint improvement"
+      ]
+    }
+  ],
+  "accessPrioritized": true,
+  "physicalSamples": 0
+}

@@ -1,0 +1,44 @@
+{
+  "note": "Focused controls using three actual obstructed candidates from the preceding published finisher. Not physical validation.",
+  "sourceSha256": {
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "training/fixtures/finishing-before-access.js": "f8ecfba12228971c6864884e67a07c19c3bdba4aba1af0b177eb60191b309ea8",
+    "continuous-thread.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "parts-engine.js": "b8dda7ab040b20b66ab18cc2d034357e198f4f12c63ccf8b5c4732ac1c46cad9",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_finishing_access_controls.cjs": "de362dcbbbdf5883cf9f955107056baad78413cac535668084244ff521eae042"
+  },
+  "cases": [
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "priorConflicts": 1,
+      "blockedRouteRejected": true,
+      "forgedClaimRejected": true,
+      "revisedConflicts": 0,
+      "allEndsHaveCandidate": true
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "priorConflicts": 1,
+      "blockedRouteRejected": true,
+      "forgedClaimRejected": true,
+      "revisedConflicts": 0,
+      "allEndsHaveCandidate": true
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "priorConflicts": 1,
+      "blockedRouteRejected": true,
+      "forgedClaimRejected": true,
+      "revisedConflicts": 0,
+      "allEndsHaveCandidate": true
+    }
+  ]
+}

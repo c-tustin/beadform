@@ -1,0 +1,27 @@
+{
+  "title": "One CRAW cube practice draft",
+  "notes": "Twelve shared-edge beads; physical sample not yet tested.",
+  "parts": [
+    {
+      "name": "practice CRAW cube",
+      "type": "box",
+      "center": [
+        0,
+        0,
+        0
+      ],
+      "size": [
+        1,
+        1,
+        1
+      ],
+      "color": "#7caa80",
+      "end": [
+        0,
+        0,
+        0
+      ],
+      "role": "solid"
+    }
+  ]
+}

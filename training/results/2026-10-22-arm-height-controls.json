@@ -1,0 +1,79 @@
+{
+  "note": "Reject altered arm-region claims and anchors, verify translated reference geometry, and load actual prior version-5 projects. No real browser import or physical construction is verified.",
+  "sourceSha256": {
+    "parts-engine.js": "3f4c3ed743e4489fff5ea96bcd4e9730e48b0674df21cbe5c64288d88dd0998c",
+    "construction-graph.js": "094f1d95af7fbf631caef34557f97acd04a454634a4c23f7d63070fa75c1e9b1",
+    "parts-project.js": "e274ef362fc39e7ae328135ec64efdec9a2139b1ca67b517fa42f02e9d20f425",
+    "continuous-thread.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "training/fixtures/parts-before-arm-height.js": "b8dda7ab040b20b66ab18cc2d034357e198f4f12c63ccf8b5c4732ac1c46cad9",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_arm_height_controls.cjs": "1896f350cc058e698dfc6cd015f11473cefc1021a576c678c06dbbe1df0f7103"
+  },
+  "controls": [
+    {
+      "kind": "missing-region",
+      "rejected": true,
+      "errors": [
+        "invalid arm attachment region"
+      ]
+    },
+    {
+      "kind": "nonfinite-height",
+      "rejected": true,
+      "errors": [
+        "invalid arm attachment region"
+      ]
+    },
+    {
+      "kind": "altered-target",
+      "rejected": true,
+      "errors": [
+        "invalid arm attachment region",
+        "arm anchor is outside its requested height band"
+      ]
+    },
+    {
+      "kind": "low-anchor",
+      "rejected": true,
+      "errors": [
+        "anatomically invalid anchor",
+        "arm anchor is outside its requested height band",
+        "unsupported thread span",
+        "missing joint reinforcement"
+      ]
+    }
+  ],
+  "translationRemainsValid": true,
+  "migrations": [
+    {
+      "group": "frog",
+      "routeChanged": true,
+      "resumes": false,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "cactus",
+      "routeChanged": true,
+      "resumes": false,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "octopus",
+      "routeChanged": false,
+      "resumes": true,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "robot",
+      "routeChanged": true,
+      "resumes": false,
+      "priorProgressPreserved": true
+    },
+    {
+      "group": "bear",
+      "routeChanged": false,
+      "resumes": true,
+      "priorProgressPreserved": true
+    }
+  ]
+}

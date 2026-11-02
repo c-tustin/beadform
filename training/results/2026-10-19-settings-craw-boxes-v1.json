@@ -1,0 +1,1280 @@
+{
+  "note": "Digital settings sweep; clearance and draft weave-in routes do not establish physical buildability.",
+  "dataSha256": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+  "sourceSha256": {
+    "parts-engine.js": "89de8bc918ccf9dc81ed7e2e973da9dbbf1588177eefa4484e0cd7fa0eabe7cc",
+    "continuous-thread.js": "df704f2bf0abd008a1081f1aa2c25eb77e912c2b8d82dc13bc8cb386c7aa57ab",
+    "thread-finishing.js": "f8ecfba12228971c6864884e67a07c19c3bdba4aba1af0b177eb60191b309ea8",
+    "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba"
+  },
+  "results": [
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "compilerValid": 29,
+        "clearanceValid": 29,
+        "allEndsHaveCandidate": 29,
+        "physicallyTested": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "compilerValid": true,
+          "beads": 116,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "compilerValid": true,
+          "beads": 134,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "compilerValid": true,
+          "beads": 196,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "compilerValid": true,
+          "beads": 82,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "compilerValid": true,
+          "beads": 139,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "compilerValid": true,
+          "beads": 126,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "compilerValid": true,
+          "beads": 109,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "compilerValid": true,
+          "beads": 65,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "compilerValid": true,
+          "beads": 117,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "compilerValid": true,
+          "beads": 138,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "compilerValid": true,
+          "beads": 84,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "compilerValid": true,
+          "beads": 66,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "compilerValid": true,
+          "beads": 72,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "compilerValid": true,
+          "beads": 52,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "compilerValid": true,
+          "beads": 27,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "compilerValid": true,
+          "beads": 136,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "compilerValid": true,
+          "beads": 129,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "compilerValid": true,
+          "beads": 119,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "compilerValid": true,
+          "beads": 124,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "compilerValid": true,
+          "beads": 173,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "compilerValid": true,
+          "beads": 127,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "compilerValid": true,
+          "beads": 167,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "compilerValid": true,
+          "beads": 52,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "compilerValid": true,
+          "beads": 45,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "compilerValid": true,
+          "beads": 108,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "compilerValid": true,
+          "beads": 66,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "compilerValid": true,
+          "beads": 90,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "compilerValid": true,
+          "beads": 76,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "compilerValid": true,
+          "beads": 66,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 3,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "compilerValid": 29,
+        "clearanceValid": 29,
+        "allEndsHaveCandidate": 29,
+        "physicallyTested": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "compilerValid": true,
+          "beads": 116,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "compilerValid": true,
+          "beads": 134,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "compilerValid": true,
+          "beads": 196,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "compilerValid": true,
+          "beads": 82,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "compilerValid": true,
+          "beads": 139,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "compilerValid": true,
+          "beads": 126,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "compilerValid": true,
+          "beads": 109,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "compilerValid": true,
+          "beads": 65,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "compilerValid": true,
+          "beads": 117,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "compilerValid": true,
+          "beads": 138,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "compilerValid": true,
+          "beads": 84,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "compilerValid": true,
+          "beads": 66,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "compilerValid": true,
+          "beads": 72,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "compilerValid": true,
+          "beads": 52,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "compilerValid": true,
+          "beads": 27,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "compilerValid": true,
+          "beads": 136,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "compilerValid": true,
+          "beads": 129,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 4,
+          "totalEndpoints": 4,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "compilerValid": true,
+          "beads": 119,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 4,
+          "totalEndpoints": 4,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "compilerValid": true,
+          "beads": 124,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "compilerValid": true,
+          "beads": 173,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 4,
+          "totalEndpoints": 4,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "compilerValid": true,
+          "beads": 127,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "compilerValid": true,
+          "beads": 167,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "compilerValid": true,
+          "beads": 52,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "compilerValid": true,
+          "beads": 45,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "compilerValid": true,
+          "beads": 108,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "compilerValid": true,
+          "beads": 66,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "compilerValid": true,
+          "beads": 90,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "compilerValid": true,
+          "beads": 76,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "compilerValid": true,
+          "beads": 66,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.2
+      },
+      "summary": {
+        "examples": 32,
+        "compilerValid": 26,
+        "clearanceValid": 26,
+        "allEndsHaveCandidate": 26,
+        "physicallyTested": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "compilerValid": true,
+          "beads": 116,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "compilerValid": true,
+          "beads": 188,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "compilerValid": true,
+          "beads": 250,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "compilerValid": true,
+          "beads": 114,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "compilerValid": true,
+          "beads": 169,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "compilerValid": true,
+          "beads": 146,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "compilerValid": true,
+          "beads": 158,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "compilerValid": true,
+          "beads": 95,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "compilerValid": true,
+          "beads": 182,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "compilerValid": true,
+          "beads": 198,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "compilerValid": true,
+          "beads": 114,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "compilerValid": true,
+          "beads": 96,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "compilerValid": true,
+          "beads": 102,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "compilerValid": true,
+          "beads": 82,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "compilerValid": true,
+          "beads": 47,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "compilerValid": false,
+          "error": "No close attachment for small red sail to brown mast fits the available hole space. Choose the smaller parts setting or simplify this joint. The planner will not span the gap with loose thread."
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "compilerValid": true,
+          "beads": 159,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "compilerValid": true,
+          "beads": 149,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "compilerValid": true,
+          "beads": 154,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "compilerValid": true,
+          "beads": 199,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "compilerValid": true,
+          "beads": 157,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "compilerValid": true,
+          "beads": 197,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "compilerValid": true,
+          "beads": 82,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "compilerValid": true,
+          "beads": 55,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "compilerValid": true,
+          "beads": 148,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "compilerValid": true,
+          "beads": 126,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "compilerValid": true,
+          "beads": 101,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        }
+      ]
+    },
+    {
+      "settings": {
+        "detail": 4,
+        "threadDiameter": 0.25
+      },
+      "summary": {
+        "examples": 32,
+        "compilerValid": 26,
+        "clearanceValid": 26,
+        "allEndsHaveCandidate": 26,
+        "physicallyTested": 0
+      },
+      "cases": [
+        {
+          "id": "frog-original-01",
+          "group": "frog",
+          "compilerValid": true,
+          "beads": 116,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bunny-original-01",
+          "group": "bunny",
+          "compilerValid": true,
+          "beads": 188,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bear-original-01",
+          "group": "bear",
+          "compilerValid": true,
+          "beads": 250,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "butterfly-original-01",
+          "group": "butterfly",
+          "compilerValid": true,
+          "beads": 114,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "turtle-original-01",
+          "group": "turtle",
+          "compilerValid": true,
+          "beads": 169,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 4,
+          "totalEndpoints": 4,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bird-original-01",
+          "group": "bird",
+          "compilerValid": true,
+          "beads": 146,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "flower-synthetic-01",
+          "group": "flower",
+          "compilerValid": true,
+          "beads": 158,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "mushroom-synthetic-01",
+          "group": "mushroom",
+          "compilerValid": true,
+          "beads": 95,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "cactus-synthetic-01",
+          "group": "cactus",
+          "compilerValid": true,
+          "beads": 182,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "house-synthetic-01",
+          "group": "house",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "rocket-synthetic-01",
+          "group": "rocket",
+          "compilerValid": true,
+          "beads": 198,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "whale-synthetic-01",
+          "group": "whale",
+          "compilerValid": true,
+          "beads": 114,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "snail-synthetic-01",
+          "group": "snail",
+          "compilerValid": true,
+          "beads": 96,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "penguin-synthetic-01",
+          "group": "penguin",
+          "compilerValid": true,
+          "beads": 102,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "octopus-synthetic-01",
+          "group": "octopus",
+          "compilerValid": true,
+          "beads": 82,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "pear-synthetic-01",
+          "group": "pear",
+          "compilerValid": true,
+          "beads": 47,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "robot-synthetic-01",
+          "group": "robot",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "sailboat-synthetic-01",
+          "group": "sailboat",
+          "compilerValid": false,
+          "error": "No close attachment for small red sail to brown mast fits the available hole space. Try 0.20 mm line, the smaller parts setting, or a simpler joint. The planner will not span the gap with loose thread."
+        },
+        {
+          "id": "train-synthetic-01",
+          "group": "train",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "cloud-synthetic-01",
+          "group": "cloud",
+          "compilerValid": true,
+          "beads": 159,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 4,
+          "totalEndpoints": 4,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ladybug-original-01",
+          "group": "ladybug",
+          "compilerValid": true,
+          "beads": 149,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "bee-original-01",
+          "group": "bee",
+          "compilerValid": true,
+          "beads": 154,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "fox-original-01",
+          "group": "fox",
+          "compilerValid": true,
+          "beads": 199,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 6,
+          "totalEndpoints": 6,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "elephant-original-01",
+          "group": "elephant",
+          "compilerValid": true,
+          "beads": 157,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "giraffe-original-01",
+          "group": "giraffe",
+          "compilerValid": true,
+          "beads": 197,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "strawberry-original-01",
+          "group": "strawberry",
+          "compilerValid": true,
+          "beads": 82,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "donut-original-01",
+          "group": "donut",
+          "compilerValid": true,
+          "beads": 55,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "ice-cream-original-01",
+          "group": "ice-cream",
+          "compilerValid": true,
+          "beads": 148,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "teapot-original-01",
+          "group": "teapot",
+          "compilerValid": true,
+          "beads": 126,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "guitar-original-01",
+          "group": "guitar",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        },
+        {
+          "id": "spaceship-original-01",
+          "group": "spaceship",
+          "compilerValid": true,
+          "beads": 101,
+          "overlapPairs": 0,
+          "finishingCandidateEndpoints": 2,
+          "totalEndpoints": 2,
+          "finishingInventoryValid": true
+        },
+        {
+          "id": "castle-original-01",
+          "group": "castle",
+          "compilerValid": false,
+          "error": "A loop cannot fit within the hole-space planning limit. Try a smaller ball or 0.20 mm line."
+        }
+      ]
+    }
+  ]
+}

@@ -1,0 +1,1120 @@
+{
+  "summary": {
+    "examples": 12,
+    "original_scene_checks_pass": 0,
+    "original_compiler_pass": 11,
+    "original_cross_component_clearance_pass": 11,
+    "eye_spacing_proposals": 1,
+    "physically_tested": 0,
+    "note": "Feature checks are explicit lower-bound requirements; clearance uses conservative nominal spherical envelopes. Neither establishes recognizable or physically buildable patterns."
+  },
+  "results": [
+    {
+      "id": "schema-fresh-01",
+      "group": "dog",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "left ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                6
+              ],
+              "message": "right ear has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "ears",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented ears; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs",
+              "expected": 4,
+              "found": 1,
+              "message": "Expected 4 separately represented legs; found 1."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "tail",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented tail; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "eyes",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented eyes; found 1."
+            }
+          ],
+          "solid_parts": 3,
+          "scene_span": 2.4,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 114,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.18663085787876899,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.8545340105679022,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0036",
+              "b": "B0041",
+              "center_span_mm": 2.2000000000000006
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0027",
+              "b": "B0045",
+              "center_span_mm": 2.8545340105679022
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0018",
+              "b": "B0049",
+              "center_span_mm": 2.186630857878769
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-02",
+      "group": "cat",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "face has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "muzzle has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "ears",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented ears; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "eyes",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented eyes; found 1."
+            }
+          ],
+          "solid_parts": 3,
+          "scene_span": 2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 113,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.19999999999999885,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.6498120980531947,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.332047209744525
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.3320472097445255
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0105",
+              "b": "B0111",
+              "center_span_mm": 3.6498120980531947
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-03",
+      "group": "duck",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "bill has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "wings",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented wings; found 1."
+            }
+          ],
+          "solid_parts": 4,
+          "scene_span": 2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 55,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.1999999999999993,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.8608718028631888,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0027",
+              "b": "B0049",
+              "center_span_mm": 2.8608718028631888
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0018",
+              "b": "B0042",
+              "center_span_mm": 2.712221981115658
+            },
+            {
+              "parent": "P2",
+              "child": "P3",
+              "a": "B0043",
+              "b": "B0050",
+              "center_span_mm": 2.1999999999999993
+            },
+            {
+              "parent": "P2",
+              "child": "P4",
+              "a": "B0041",
+              "b": "B0053",
+              "center_span_mm": 2.200000000000001
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-04",
+      "group": "lobster",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "ignored_endpoint",
+              "severity": "warning",
+              "parts": [
+                0
+              ],
+              "message": "body has an endpoint that this primitive ignores."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "claws",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented claws; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs (minimum)",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented legs (minimum); found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "antennae",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented antennae; found 0."
+            }
+          ],
+          "solid_parts": 1,
+          "scene_span": 10,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 45,
+          "thread_sections": 1,
+          "max_passes": 5,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": null,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 0,
+          "joins": [],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-05",
+      "group": "owl",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                1
+              ],
+              "message": "left eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "right eye has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "beak has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "left foot has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                5
+              ],
+              "message": "right foot has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                1,
+                2
+              ],
+              "message": "Left and right eye occupy the same region."
+            },
+            {
+              "code": "coincident_pair",
+              "severity": "error",
+              "parts": [
+                4,
+                5
+              ],
+              "message": "Left and right foot occupy the same region."
+            },
+            {
+              "code": "collapsed_feature_group",
+              "severity": "error",
+              "feature": "eyes",
+              "message": "eyes are named separately but occupy coincident positions."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "wings",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented wings; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "feet",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented feet; found 0."
+            }
+          ],
+          "solid_parts": 1,
+          "scene_span": 2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 40,
+          "thread_sections": 1,
+          "max_passes": 3,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": null,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 0,
+          "joins": [],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": {
+        "scene": {
+          "title": "Small Purple Owl",
+          "notes": "A compact, stylized owl with simplified features: two large eyes, yellow beak, short wings, and two feet. The body is a solid ellipsoid with a painted purple hue. The eyes are painted in a contrasting yellow, and the beak is a single paint-",
+          "parts": [
+            {
+              "name": "body",
+              "type": "ellipsoid",
+              "role": "solid",
+              "center": [
+                0,
+                0,
+                0
+              ],
+              "size": [
+                1,
+                1,
+                0.8
+              ],
+              "end": [
+                0,
+                0,
+                0
+              ],
+              "color": "#A0B0C0"
+            },
+            {
+              "name": "left eye",
+              "type": "ellipsoid",
+              "role": "paint",
+              "center": [
+                -0.35,
+                0,
+                0.7493997598078078
+              ],
+              "size": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "end": [
+                -0.35,
+                0,
+                0.7493997598078078
+              ],
+              "color": "#FFFF00"
+            },
+            {
+              "name": "right eye",
+              "type": "ellipsoid",
+              "role": "paint",
+              "center": [
+                0.35,
+                0,
+                0.7493997598078078
+              ],
+              "size": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "end": [
+                0.35,
+                0,
+                0.7493997598078078
+              ],
+              "color": "#FFFF00"
+            },
+            {
+              "name": "beak",
+              "type": "capsule",
+              "role": "paint",
+              "center": [
+                0,
+                0,
+                0.5
+              ],
+              "size": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "end": [
+                0,
+                0,
+                0.5
+              ],
+              "color": "#FFD700"
+            },
+            {
+              "name": "left foot",
+              "type": "capsule",
+              "role": "cut",
+              "center": [
+                0,
+                0,
+                0.5
+              ],
+              "size": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "end": [
+                0,
+                0,
+                0.5
+              ],
+              "color": "#FFFFFF"
+            },
+            {
+              "name": "right foot",
+              "type": "capsule",
+              "role": "cut",
+              "center": [
+                0,
+                0,
+                0.5
+              ],
+              "size": [
+                0.1,
+                0.1,
+                0.1
+              ],
+              "end": [
+                0,
+                0,
+                0.5
+              ],
+              "color": "#FFFFFF"
+            }
+          ]
+        },
+        "changes": [
+          {
+            "part": "left eye",
+            "before": [
+              0,
+              0,
+              0.5
+            ],
+            "after": [
+              -0.35,
+              0,
+              0.7493997598078078
+            ],
+            "reason": "Separate coincident painted eyes on the host ellipsoid surface."
+          },
+          {
+            "part": "right eye",
+            "before": [
+              0,
+              0,
+              0.5
+            ],
+            "after": [
+              0.35,
+              0,
+              0.7493997598078078
+            ],
+            "reason": "Separate coincident painted eyes on the host ellipsoid surface."
+          }
+        ],
+        "requiresReview": true,
+        "physicallyTested": false,
+        "quality": {
+          "scene": {
+            "numeric_valid": true,
+            "passes": false,
+            "issues": [
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  3
+                ],
+                "message": "beak has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  4
+                ],
+                "message": "left foot has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "collapsed_capsule",
+                "severity": "error",
+                "parts": [
+                  5
+                ],
+                "message": "right foot has no meaningful capsule length; its pose is not represented."
+              },
+              {
+                "code": "coincident_pair",
+                "severity": "error",
+                "parts": [
+                  4,
+                  5
+                ],
+                "message": "Left and right foot occupy the same region."
+              },
+              {
+                "code": "missing_feature",
+                "severity": "error",
+                "feature": "wings",
+                "expected": 2,
+                "found": 0,
+                "message": "Expected 2 separately represented wings; found 0."
+              },
+              {
+                "code": "missing_feature",
+                "severity": "error",
+                "feature": "feet",
+                "expected": 2,
+                "found": 0,
+                "message": "Expected 2 separately represented feet; found 0."
+              }
+            ],
+            "solid_parts": 1,
+            "scene_span": 2,
+            "physicalSampleRequired": true
+          },
+          "graph": {
+            "compiler_valid": true,
+            "beads": 40,
+            "thread_sections": 1,
+            "max_passes": 3,
+            "pass_limit": 6,
+            "cross_component_overlap_pairs": 0,
+            "min_cross_component_clearance_mm": null,
+            "overlap_examples": [],
+            "max_join_center_span_mm": 0,
+            "joins": [],
+            "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+            "physicalSampleRequired": true
+          }
+        }
+      }
+    },
+    {
+      "id": "schema-fresh-06",
+      "group": "hedgehog",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "eyes has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                4
+              ],
+              "message": "feet has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "snout",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented snout; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "feet (minimum)",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented feet (minimum); found 0."
+            }
+          ],
+          "solid_parts": 2,
+          "scene_span": 3,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 110,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.33204720974452595,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.332047209744526,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.332047209744526
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0004",
+              "b": "B0045",
+              "center_span_mm": 2.332047209744526
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-07",
+      "group": "dragon",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "wings has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                3
+              ],
+              "message": "tail has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "wings",
+              "expected": 2,
+              "found": 1,
+              "message": "Expected 2 separately represented wings; found 1."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "horns",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented horns; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs",
+              "expected": 4,
+              "found": 0,
+              "message": "Expected 4 separately represented legs; found 0."
+            }
+          ],
+          "solid_parts": 4,
+          "scene_span": 1.6,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "No close attachment for wings to body fits the available hole space. Try 0.20 mm line or simplify this joint; the planner will not span the gap with loose thread.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-08",
+      "group": "lamp",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "shade has no meaningful capsule length; its pose is not represented."
+            }
+          ],
+          "solid_parts": 3,
+          "scene_span": 1.6,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 53,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.20000000000000018,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.454541146560803,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0005",
+              "b": "B0010",
+              "center_span_mm": 2.454541146560803
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0006",
+              "b": "B0050",
+              "center_span_mm": 2.2
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-09",
+      "group": "chair",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "seat",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented seat; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "back",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented back; found 0."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "legs",
+              "expected": 4,
+              "found": 0,
+              "message": "Expected 4 separately represented legs; found 0."
+            }
+          ],
+          "solid_parts": 1,
+          "scene_span": 1,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 40,
+          "thread_sections": 1,
+          "max_passes": 3,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": null,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 0,
+          "joins": [],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-10",
+      "group": "watering-can",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "spout has no meaningful capsule length; its pose is not represented."
+            },
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "spout",
+              "expected": 1,
+              "found": 0,
+              "message": "Expected 1 separately represented spout; found 0."
+            }
+          ],
+          "solid_parts": 2,
+          "scene_span": 2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 43,
+          "thread_sections": 1,
+          "max_passes": 5,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.20000000000000018,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 2.659240559222002,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0003",
+              "b": "B0041",
+              "center_span_mm": 2.659240559222002
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-11",
+      "group": "umbrella",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "collapsed_capsule",
+              "severity": "error",
+              "parts": [
+                2
+              ],
+              "message": "handle has no meaningful capsule length; its pose is not represented."
+            }
+          ],
+          "solid_parts": 3,
+          "scene_span": 10,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 88,
+          "thread_sections": 1,
+          "max_passes": 6,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": 0.15071873423467874,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 3.0070749907509793,
+          "joins": [
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0021",
+              "b": "B0046",
+              "center_span_mm": 2.6796555863391496
+            },
+            {
+              "parent": "P1",
+              "child": "P2",
+              "a": "B0019",
+              "b": "B0047",
+              "center_span_mm": 2.294844191184814
+            },
+            {
+              "parent": "P1",
+              "child": "P3",
+              "a": "B0039",
+              "b": "B0086",
+              "center_span_mm": 3.0070749907509793
+            }
+          ],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-12",
+      "group": "pineapple",
+      "original": {
+        "scene": {
+          "numeric_valid": true,
+          "passes": false,
+          "issues": [
+            {
+              "code": "missing_feature",
+              "severity": "error",
+              "feature": "leaves (minimum)",
+              "expected": 2,
+              "found": 0,
+              "message": "Expected 2 separately represented leaves (minimum); found 0."
+            }
+          ],
+          "solid_parts": 1,
+          "scene_span": 2,
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": true,
+          "beads": 40,
+          "thread_sections": 1,
+          "max_passes": 3,
+          "pass_limit": 6,
+          "cross_component_overlap_pairs": 0,
+          "min_cross_component_clearance_mm": null,
+          "overlap_examples": [],
+          "max_join_center_span_mm": 0,
+          "joins": [],
+          "clearance_model": "Conservative spherical envelopes from nominal bead diameters; not a tension, hole-axis or physical-build simulation.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    }
+  ]
+}

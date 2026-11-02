@@ -1,0 +1,77 @@
+{
+  "format": "beadform-project",
+  "version": 5,
+  "dimension": "volume",
+  "construction": "parts",
+  "title": "One CRAW cube practice draft",
+  "settings": {
+    "shape": "custom",
+    "design": {
+      "title": "One CRAW cube practice draft",
+      "notes": "Twelve shared-edge beads; physical sample not yet tested.",
+      "parts": [
+        {
+          "name": "practice CRAW cube",
+          "type": "box",
+          "center": [
+            0,
+            0,
+            0
+          ],
+          "size": [
+            1,
+            1,
+            1
+          ],
+          "color": "#7caa80",
+          "end": [
+            0,
+            0,
+            0
+          ],
+          "role": "solid"
+        }
+      ]
+    },
+    "detail": 3,
+    "threadDiameter": 0.25,
+    "depth": 100,
+    "beadSize": 2,
+    "routeVersion": 2,
+    "orderVersion": 2,
+    "colorSource": "design",
+    "projection": "front",
+    "maxColors": 6,
+    "keepEyes": true
+  },
+  "palette": [
+    "#7caa80"
+  ],
+  "colors": [
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0,
+    0
+  ],
+  "sourceData": "",
+  "sourceName": "original code-generated CRAW cube sample",
+  "finishedBuild": null,
+  "partsGuide": {
+    "version": 12,
+    "routeKey": "[12,[[\"B0001\",[0,-1.449569,-1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0002\",[1.449569,0,-1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0003\",[0,1.449569,-1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0004\",[-1.449569,0,-1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0005\",[0,-1.449569,1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0006\",[1.449569,0,1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0007\",[0,1.449569,1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0008\",[-1.449569,0,1.449569],\"11/0 round seed bead\",\"#7caa80\"],[\"B0009\",[1.449569,-1.449569,0],\"11/0 round seed bead\",\"#7caa80\"],[\"B0010\",[-1.449569,-1.449569,0],\"11/0 round seed bead\",\"#7caa80\"],[\"B0011\",[1.449569,1.449569,0],\"11/0 round seed bead\",\"#7caa80\"],[\"B0012\",[-1.449569,1.449569,0],\"11/0 round seed bead\",\"#7caa80\"]],[[[\"B0001\",\"pick\",\"P1:0\",\"P1:1\",\"weave\",1],[\"B0002\",\"pick\",\"P1:1\",\"P1:2\",\"weave\",1],[\"B0003\",\"pick\",\"P1:2\",\"P1:3\",\"weave\",1],[\"B0004\",\"pick\",\"P1:3\",\"P1:0\",\"weave\",1],[\"B0001\",\"pass\",\"P1:0\",\"P1:1\",\"weave\",1],[\"B0002\",\"pass\",\"P1:1\",\"P1:2\",\"weave\",1],[\"B0011\",\"pick\",\"P1:2\",\"P1:6\",\"weave\",1],[\"B0006\",\"pick\",\"P1:6\",\"P1:5\",\"weave\",1],[\"B0009\",\"pick\",\"P1:5\",\"P1:1\",\"weave\",1],[\"B0002\",\"pass\",\"P1:1\",\"P1:2\",\"weave\",1],[\"B0011\",\"pass\",\"P1:2\",\"P1:6\",\"weave\",1],[\"B0007\",\"pick\",\"P1:6\",\"P1:7\",\"weave\",1],[\"B0012\",\"pick\",\"P1:7\",\"P1:3\",\"weave\",1],[\"B0003\",\"pass\",\"P1:3\",\"P1:2\",\"weave\",1],[\"B0011\",\"pass\",\"P1:2\",\"P1:6\",\"weave\",1],[\"B0006\",\"pass\",\"P1:6\",\"P1:5\",\"weave\",1],[\"B0005\",\"pick\",\"P1:5\",\"P1:4\",\"weave\",1],[\"B0008\",\"pick\",\"P1:4\",\"P1:7\",\"weave\",1],[\"B0007\",\"pass\",\"P1:7\",\"P1:6\",\"weave\",1],[\"B0006\",\"pass\",\"P1:6\",\"P1:5\",\"weave\",1],[\"B0009\",\"pass\",\"P1:5\",\"P1:1\",\"weave\",1],[\"B0001\",\"pass\",\"P1:1\",\"P1:0\",\"weave\",1],[\"B0010\",\"pick\",\"P1:0\",\"P1:4\",\"weave\",1],[\"B0005\",\"pass\",\"P1:4\",\"P1:5\",\"weave\",1],[\"B0009\",\"pass\",\"P1:5\",\"P1:1\",\"weave\",1],[\"B0001\",\"pass\",\"P1:1\",\"P1:0\",\"position\",1],[\"B0004\",\"pass\",\"P1:0\",\"P1:3\",\"weave\",1],[\"B0012\",\"pass\",\"P1:3\",\"P1:7\",\"weave\",1],[\"B0008\",\"pass\",\"P1:7\",\"P1:4\",\"weave\",1],[\"B0010\",\"pass\",\"P1:4\",\"P1:0\",\"weave\",1],[\"B0004\",\"pass\",\"P1:0\",\"P1:3\",\"weave\",1]]]]",
+    "stage": 0,
+    "reveal": null
+  },
+  "creation": {
+    "prompt": "One CRAW cube physical-sampling draft",
+    "inputMode": "text"
+  }
+}

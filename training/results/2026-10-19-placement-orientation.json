@@ -1,0 +1,295 @@
+{
+  "examples": 32,
+  "max_strand_rotation_degrees": 29.302030342081217,
+  "cap_degrees": 30,
+  "parts_engine_sha256": "b79b2e51d5ba586cb903ead18f0d5696eda3c5f942f1612e08ebcfcbb28eb8d5",
+  "input_sha256": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+  "angles": [
+    {
+      "group": "frog",
+      "part": "left back leg",
+      "degrees": 29.302030342081203
+    },
+    {
+      "group": "frog",
+      "part": "left front arm",
+      "degrees": 12.724500366783339
+    },
+    {
+      "group": "frog",
+      "part": "right back leg",
+      "degrees": 29.302030342081217
+    },
+    {
+      "group": "frog",
+      "part": "right front arm",
+      "degrees": 12.724500366783339
+    },
+    {
+      "group": "bunny",
+      "part": "left foot",
+      "degrees": 8.537736462515939e-7
+    },
+    {
+      "group": "bunny",
+      "part": "right foot",
+      "degrees": 8.537736462515939e-7
+    },
+    {
+      "group": "bear",
+      "part": "left foot",
+      "degrees": 8.537736462515939e-7
+    },
+    {
+      "group": "bear",
+      "part": "right foot",
+      "degrees": 8.537736462515939e-7
+    },
+    {
+      "group": "butterfly",
+      "part": "antenna -1",
+      "degrees": 19.026732385322415
+    },
+    {
+      "group": "butterfly",
+      "part": "antenna 1",
+      "degrees": 0
+    },
+    {
+      "group": "flower",
+      "part": "green stem",
+      "degrees": 23.346297467689155
+    },
+    {
+      "group": "cactus",
+      "part": "right arm",
+      "degrees": 24.622803702340864
+    },
+    {
+      "group": "cactus",
+      "part": "right arm tip",
+      "degrees": 15.200610747614842
+    },
+    {
+      "group": "cactus",
+      "part": "left arm",
+      "degrees": 28.107583178083807
+    },
+    {
+      "group": "cactus",
+      "part": "left arm tip",
+      "degrees": 6.6016842199222525
+    },
+    {
+      "group": "whale",
+      "part": "tail stem",
+      "degrees": 8.487655029226875
+    },
+    {
+      "group": "whale",
+      "part": "water spout",
+      "degrees": 0
+    },
+    {
+      "group": "snail",
+      "part": "left eyestalk",
+      "degrees": 23.569751696018496
+    },
+    {
+      "group": "snail",
+      "part": "right eyestalk",
+      "degrees": 17.01040362282496
+    },
+    {
+      "group": "penguin",
+      "part": "left orange foot",
+      "degrees": 21.96127117197507
+    },
+    {
+      "group": "penguin",
+      "part": "right orange foot",
+      "degrees": 21.961271171975085
+    },
+    {
+      "group": "octopus",
+      "part": "short arm 2",
+      "degrees": 0.0000012074182697257333
+    },
+    {
+      "group": "octopus",
+      "part": "short arm 1",
+      "degrees": 0
+    },
+    {
+      "group": "octopus",
+      "part": "short arm 3",
+      "degrees": 0
+    },
+    {
+      "group": "octopus",
+      "part": "short arm 4",
+      "degrees": 0.0000012074182697257333
+    },
+    {
+      "group": "pear",
+      "part": "short brown stem",
+      "degrees": 18.029516983020287
+    },
+    {
+      "group": "robot",
+      "part": "left leg",
+      "degrees": 0.0000012074182697257333
+    },
+    {
+      "group": "robot",
+      "part": "right leg",
+      "degrees": 0.0000012074182697257333
+    },
+    {
+      "group": "robot",
+      "part": "left arm",
+      "degrees": 1.928741530279979
+    },
+    {
+      "group": "robot",
+      "part": "right arm",
+      "degrees": 1.928741530279979
+    },
+    {
+      "group": "train",
+      "part": "short chimney",
+      "degrees": 10.454315612743757
+    },
+    {
+      "group": "cloud",
+      "part": "middle blue raindrop",
+      "degrees": 0
+    },
+    {
+      "group": "cloud",
+      "part": "left blue raindrop",
+      "degrees": 0
+    },
+    {
+      "group": "cloud",
+      "part": "right blue raindrop",
+      "degrees": 0
+    },
+    {
+      "group": "ladybug",
+      "part": "left antenna",
+      "degrees": 0.0000012074182697257333
+    },
+    {
+      "group": "ladybug",
+      "part": "right antenna",
+      "degrees": 0.0000012074182697257333
+    },
+    {
+      "group": "ladybug",
+      "part": "left walking limb 2",
+      "degrees": 0
+    },
+    {
+      "group": "ladybug",
+      "part": "right walking limb 2",
+      "degrees": 0
+    },
+    {
+      "group": "ladybug",
+      "part": "left walking limb 3",
+      "degrees": 17.18416426501334
+    },
+    {
+      "group": "ladybug",
+      "part": "right walking limb 3",
+      "degrees": 0
+    },
+    {
+      "group": "ladybug",
+      "part": "left walking limb 1",
+      "degrees": 0
+    },
+    {
+      "group": "ladybug",
+      "part": "right walking limb 1",
+      "degrees": 0
+    },
+    {
+      "group": "bee",
+      "part": "left antenna",
+      "degrees": 0
+    },
+    {
+      "group": "bee",
+      "part": "right antenna",
+      "degrees": 0
+    },
+    {
+      "group": "fox",
+      "part": "curled orange tail",
+      "degrees": 18.9258765037484
+    },
+    {
+      "group": "elephant",
+      "part": "curved trunk",
+      "degrees": 12.15056385850475
+    },
+    {
+      "group": "elephant",
+      "part": "left white tusk",
+      "degrees": 8.537736462515939e-7
+    },
+    {
+      "group": "elephant",
+      "part": "right white tusk",
+      "degrees": 8.537736462515939e-7
+    },
+    {
+      "group": "giraffe",
+      "part": "left walking limb",
+      "degrees": 19.290046219188728
+    },
+    {
+      "group": "giraffe",
+      "part": "right walking limb",
+      "degrees": 19.290046219188728
+    },
+    {
+      "group": "strawberry",
+      "part": "short green stem",
+      "degrees": 0
+    },
+    {
+      "group": "ice-cream",
+      "part": "cherry stem",
+      "degrees": 6.523187541094982
+    },
+    {
+      "group": "teapot",
+      "part": "round handle",
+      "degrees": 12.191782049477217
+    },
+    {
+      "group": "teapot",
+      "part": "curved spout",
+      "degrees": 0
+    },
+    {
+      "group": "spaceship",
+      "part": "yellow engine flame",
+      "degrees": 0
+    },
+    {
+      "group": "castle",
+      "part": "left red flag",
+      "degrees": 0
+    },
+    {
+      "group": "castle",
+      "part": "right red flag",
+      "degrees": 0
+    }
+  ],
+  "physical_sample_required": true
+}

@@ -1,0 +1,58 @@
+{
+  "note": "Deliberately altered computed frog models and synthetic boundary controls, not natural generated failures or physical samples. Cached graph claims are not trusted. Within-part geometry is outside this guard.",
+  "sourceSha256": {
+    "bead-geometry.js": "6e49d690c54ba776f305316a957b332482b85f68cf18b5d710c7fb0117486862",
+    "parts-engine.js": "b5b6016454a8e33e054933ce7f47f337eb06793f55ade3dfe0e1b4caeafcdbf0",
+    "construction-graph.js": "439a6d2225afb98ba324e800c7348ea0caeace1396c530ed0c6e46df225c9d5b",
+    "training/fixtures/parts-before-clearance-check.js": "36d930f3613e83dfd0ccc37011b782fd40f4548c0add471d860911c4285d72a5",
+    "training/fixtures/construction-before-clearance-check.js": "094f1d95af7fbf631caef34557f97acd04a454634a4c23f7d63070fa75c1e9b1",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/audit_clearance_controls.cjs": "ab33ccd156a9797be5a6e847fa1d81d40565fdb0bd39c39f179d24ddf4c755ad"
+  },
+  "controls": [
+    {
+      "kind": "overlapped-eye",
+      "priorPartsAccepted": true,
+      "priorGraphAccepted": true,
+      "currentPartsRejected": true,
+      "currentGraphRejected": true,
+      "cachedClearanceClaimIgnored": true,
+      "nominalOverlapPairs": 5,
+      "invalidBeads": []
+    },
+    {
+      "kind": "nonfinite-position",
+      "priorPartsAccepted": true,
+      "priorGraphAccepted": true,
+      "currentPartsRejected": true,
+      "currentGraphRejected": true,
+      "cachedClearanceClaimIgnored": true,
+      "nominalOverlapPairs": 0,
+      "invalidBeads": [
+        "B0101"
+      ]
+    },
+    {
+      "kind": "invalid-diameter",
+      "priorPartsAccepted": true,
+      "priorGraphAccepted": true,
+      "currentPartsRejected": true,
+      "currentGraphRejected": true,
+      "cachedClearanceClaimIgnored": true,
+      "nominalOverlapPairs": 0,
+      "invalidBeads": [
+        "B0101"
+      ]
+    }
+  ],
+  "boundary": {
+    "atToleranceAccepted": true,
+    "withinAccepted": true,
+    "beyondRejected": true,
+    "numericalEpsilonMm": 1e-8
+  },
+  "exampleLimitPreservesAllCounts": true,
+  "samePartPairsExcluded": true,
+  "freshExportIgnoresStaleValidation": true,
+  "physicalSamples": 0
+}

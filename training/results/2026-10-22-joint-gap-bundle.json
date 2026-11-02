@@ -1,0 +1,228 @@
+{
+  "note": "Source inclusion and script syntax only. This does not cover all browser interactions or physical construction.",
+  "modules": [
+    {
+      "label": "STYLE",
+      "path": "style.css",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "VOLUME_STYLE",
+      "path": "volume-style.css",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "ENGINE",
+      "path": "engine.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "APP",
+      "path": "app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "SHAPE_ENGINE",
+      "path": "shape-engine.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "VOLUME_ENGINE",
+      "path": "volume-engine.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "THREAD_DIAGRAM",
+      "path": "thread-diagram.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "STAGE_GUIDE",
+      "path": "stage-guide.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PEYOTE_BALL",
+      "path": "peyote-ball.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "CRAW_BLOCK",
+      "path": "craw-block.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PARTS_LIBRARY",
+      "path": "parts-library.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "CONSTRUCTION_GRAPH",
+      "path": "construction-graph.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PARTS_ENGINE",
+      "path": "parts-engine.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "BEAD_GEOMETRY",
+      "path": "bead-geometry.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "CONTINUOUS_THREAD",
+      "path": "continuous-thread.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "THREAD_FINISHING",
+      "path": "thread-finishing.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "FINISHING_GUIDE",
+      "path": "finishing-guide.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PARTS_LAYOUT",
+      "path": "parts-layout.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PARTS_APP",
+      "path": "parts-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PARTS_PROJECT",
+      "path": "parts-project.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "VOLUME_APP",
+      "path": "volume-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "CREATOR_APP",
+      "path": "creator-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "CONNECTION_APP",
+      "path": "connection-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "JOURNEY_APP",
+      "path": "journey-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "FINISHED_APP",
+      "path": "finished-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PLAYFUL_APP",
+      "path": "playful-app.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "FLOAT_PHYSICS",
+      "path": "float-physics.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "SHAPE_REFERENCE",
+      "path": "shape-reference.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "MAKER_TOOLS",
+      "path": "maker-tools.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    },
+    {
+      "label": "PATTERN_SOURCES",
+      "path": "pattern-sources.js",
+      "sourceIncluded": true,
+      "placeholderRemoved": true
+    }
+  ],
+  "scriptsParsed": 24,
+  "sourceSha256": {
+    "build.py": "89e6bf722ecca987ddc1d9650c8dc94ec5e3d7e1d020f457863eb2b348fb0441",
+    "shell.html": "d575cf04dd244c618c287572762f3baed1c2ad340d70baebd9f5bf9de563b99c",
+    "beadform.html": "599a1b385499e7a4ce202a8eae8756727cf9182072c62b19bda2b63e161fbdb1",
+    "style.css": "1bd0475b02d6b3e07a77799c1deefeb0e0203e45e8bf5cd2a325aca5631fd253",
+    "volume-style.css": "3498effac8377f793f57e59de652405234997e36d4e61ac56bed049d398c5712",
+    "engine.js": "f98f1903bd5ca4b43ff3f556c49e7cbae9d927bda2c9d6a8e588b59617fb7ad4",
+    "app.js": "e77e2a14597e62cc8b8e7b54676525ecd4b0595f81601093e8dc2ffbde7a6e06",
+    "shape-engine.js": "3eb3240c5f796496e75098e6d18c17f30e373d8c16cf1a050748c9d666d587be",
+    "volume-engine.js": "d746682d33e3d71aa158935425d5be12ec963c68e335b328f8fb50fc8f1e13c1",
+    "thread-diagram.js": "6c401221e4e19dd7ffbbbaac99f3d41d5dc553008ee1f421bf7ff3f1172b3f4c",
+    "stage-guide.js": "3053da8684fbf2a1cf02fa7192f66b13da3669bd7ec9aba3a0dbaab498710f03",
+    "peyote-ball.js": "86f8bcac7bee2ca9b59ba31dcd025f971a39b7ebc0df279ce2ee0f8d777748c3",
+    "craw-block.js": "e0d45a71fbca813973527eb63ce746d6c8f5f2275deead7bd0531d44f22849dd",
+    "parts-library.js": "306ea184df3801b2f763b6d1aeb74611d6e7c9f72f24000a24b640e83525457c",
+    "construction-graph.js": "094f1d95af7fbf631caef34557f97acd04a454634a4c23f7d63070fa75c1e9b1",
+    "parts-engine.js": "36d930f3613e83dfd0ccc37011b782fd40f4548c0add471d860911c4285d72a5",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "continuous-thread.js": "274b9207f102b6a8747cb2d60fd4085951ef870d78dfa92980f599f65016b8bc",
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "finishing-guide.js": "94dee4eecc745f3cc1cb05d5541c56e8d16a1421e467cb6166a975db03d4eeb7",
+    "parts-layout.js": "605e583251145b2381401d30095124f7c757f6d4880499b0d596df480db89f0b",
+    "parts-app.js": "c8d444484edb3ae44454ee646faaef1ac5a8a368739d1774534b6689dd0b5aaa",
+    "parts-project.js": "e274ef362fc39e7ae328135ec64efdec9a2139b1ca67b517fa42f02e9d20f425",
+    "volume-app.js": "acb9c8fa02d4bbb4e36f70b3bda84054d02cdcf98f3992b28a8f718d57c8d1b5",
+    "creator-app.js": "483ee3f040ff6684bdfaa102141be7554b4936aa4915b6a83b6950b1d88b9b62",
+    "connection-app.js": "91d415e828c633fb67354c8a697e29f06e649badc3d77299443e7ff9bcdc8c4e",
+    "journey-app.js": "4269edb6cc28ad8ff0a37d52c1cc897f279d9e9c163720ac78084cc083a914af",
+    "finished-app.js": "ab9f36d28418a471d9f5266263067ea9be8efef033e34075c311eb6aa344546e",
+    "playful-app.js": "435ae32806570e5af72ae21a8c1488a4712be2a070dae2d9d89c4921b4e0b04d",
+    "float-physics.js": "6a4435ee39cf2b88cd5a46b8f7a664d0e75cf161fc667d45824613936006b7ea",
+    "shape-reference.js": "07ced7bfbbe402854f9a6feb0c758dd652328635e204178c2fd5766e3002870c",
+    "maker-tools.js": "ecc98c6d13ed4c051e88421a437963f10b97bfde065ad0ef9d0326f39639f623",
+    "pattern-sources.js": "0d85ad2491fd1544568648e7bb98cc7b5fae82f863c2acc2203e06c6ae118af5",
+    "assets/frog.webp": "1e739ae350899b12a0e53b93070139fa194042ff8258933c82a727ee572d1a28",
+    "assets/caterpillar.webp": "57babfb016a77730184efafaa2c1427c458cc1c006af798dd6926d75f3e4e86c",
+    "assets/blue-lizard.webp": "311777bd344cdafd7172bf51241a77d99a55e82c157a3a1fd6a0a30b751da8f6",
+    "assets/jellyfish.webp": "0d897b78d853bcc56126a7294a28b524bffbc83dbbc0aca71155029f6f80f44b",
+    "assets/starfish.webp": "4a333969757a2b0576a04511bcfe5e189049998912b96eaf796c7eff9a624d60",
+    "assets/crocodile.webp": "7e8e7a81a2648a93115f6911a9d9d808d7866df3a38541da8da7dc2139b531d1",
+    "training/audit_browser_bundle.cjs": "0c5f54fb2a97944d114d0a0c2e2e336166f8908d862e3d0a94ea804bb6ec52d3"
+  }
+}

@@ -1,0 +1,301 @@
+{
+  "summary": {
+    "examples": 12,
+    "original_scene_checks_pass": 0,
+    "original_compiler_pass": 0,
+    "original_cross_component_clearance_pass": 0,
+    "eye_spacing_proposals": 0,
+    "physically_tested": 0,
+    "note": "Feature checks are explicit lower-bound requirements; clearance uses conservative nominal spherical envelopes. Neither establishes recognizable or physically buildable patterns."
+  },
+  "results": [
+    {
+      "id": "schema-fresh-01",
+      "group": "dog",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-02",
+      "group": "cat",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-03",
+      "group": "duck",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-04",
+      "group": "lobster",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-05",
+      "group": "owl",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-06",
+      "group": "hedgehog",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-07",
+      "group": "dragon",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-08",
+      "group": "lamp",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-09",
+      "group": "chair",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-10",
+      "group": "watering-can",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-11",
+      "group": "umbrella",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    },
+    {
+      "id": "schema-fresh-12",
+      "group": "pineapple",
+      "original": {
+        "scene": {
+          "numeric_valid": false,
+          "passes": false,
+          "issues": [
+            {
+              "code": "invalid_scene",
+              "severity": "error",
+              "message": "Invalid shape part."
+            }
+          ],
+          "physicalSampleRequired": true
+        },
+        "graph": {
+          "compiler_valid": false,
+          "error": "Invalid shape part.",
+          "physicalSampleRequired": true
+        }
+      },
+      "proposal": null
+    }
+  ]
+}

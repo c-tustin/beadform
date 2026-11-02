@@ -1,0 +1,33 @@
+{
+  "date": "2026-10-19",
+  "goalStatus": "active",
+  "libraryScenes": 32,
+  "settingsConfigurations": 128,
+  "compiled": 128,
+  "clearancePasses": 128,
+  "charts": 2856,
+  "crowdedGlyphPairs": 0,
+  "projectRoundTrips": 128,
+  "offlineApiFixtures": 128,
+  "liveModelCallsForApiAudit": 0,
+  "crawDimensionCases": 216,
+  "crawEntryOrders": 1728,
+  "physicallyVerifiedBuilds": 0,
+  "completeKnottedFinishesVerified": 0,
+  "adapterDeployed": false,
+  "modelGeometryPilotUsablePatterns": 0,
+  "semanticProbeCorrect": 11,
+  "semanticProbeCases": 15,
+  "semanticUnknownControlsRejected": 0,
+  "remaining": [
+    "Physical sampling of finishes, joints, hole fit and tension",
+    "Stronger visual fidelity and proportions",
+    "Reliable learned decisions and unsupported-request rejection"
+  ],
+  "reports": {
+    "2026-10-19-patterns-frozen-final.json": "092a9021b461ec6f8a8136f05e0063256ac4d033183545c40ea97f54cf26d24e",
+    "2026-10-19-projects-frozen-final.json": "85f21661f4e264f4c535b42d78eb1cf5e56073aa296a7892cf63af91030b83ca",
+    "2026-10-19-api-frozen-final.json": "3ba48a988658d509d3bb63caa905dcd853db033ebb9ca92ecb567dfb83bc13a5",
+    "2026-10-19-craw-frozen-final.json": "b1f99a94a898fd23b017e24032115363bc9341b75c93503e3a68cef110ca38d9"
+  }
+}

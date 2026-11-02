@@ -1,0 +1,30 @@
+{
+  "input_sha256": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+  "parts_engine_sha256": "a11ffa152b250f5f8738bcd4a99a9b19f3f1a3ddb7836dce8c83d817422e7bce",
+  "quality_checks_sha256": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba",
+  "train_rows": 27,
+  "eval_rows": 3,
+  "heldout_families": [
+    "frog",
+    "mushroom",
+    "cloud"
+  ],
+  "excluded": [
+    {
+      "id": "cactus-synthetic-01",
+      "group": "cactus",
+      "reason": "Scene, compiler or conservative clearance check failed.",
+      "issues": [],
+      "overlap_pairs": 22
+    },
+    {
+      "id": "sailboat-synthetic-01",
+      "group": "sailboat",
+      "reason": "Scene, compiler or conservative clearance check failed.",
+      "issues": [],
+      "overlap_pairs": 2
+    }
+  ],
+  "physically_tested": false,
+  "note": "Quality-filtered subset of existing approved synthetic scenes. Compiler and conservative nominal-clearance checks do not establish physical buildability or feature fidelity. Previously inspected held-out families are development evaluation, not a new generalization benchmark."
+}

@@ -1,0 +1,156 @@
+{
+  "version": "2026-11-01.1",
+  "purpose": "Authored decision guidance for choosing candidate stitches per design part, not executable stitch instructions or physical validation.",
+  "reviewed": "2026-11-01",
+  "decisionOrder": [
+    "Consider each part separately: flat panel, curved surface, tube, thick volume, narrow strip or open mesh.",
+    "Consider outline changes, bead orientation, desired flexibility, support and attachment access; shape alone does not determine the best stitch.",
+    "Compare at least two plausible techniques when there is a real alternative. A hybrid may use different stitches for different parts.",
+    "Check the compiler support below. A suitable technique is not necessarily implemented. Never relabel an existing route as another stitch.",
+    "Explain the chosen technique and the main compromise in scene notes. If an explicitly requested stitch is unavailable, say so and identify the actual draft technique.",
+    "Keep counts, geometry, thread paths, increases, decreases and joints algorithmic. A physical sample is still required."
+  ],
+  "stitches": [
+    {
+      "id": "peyote",
+      "label": "Peyote",
+      "candidatesFor": "Dense staggered surfaces; flat fabric, tubes and shaped rounded surfaces using the appropriate variant.",
+      "tradeoff": "Choose flat, tubular or circular construction explicitly. Curvature requires a defined shaping schedule; round does not automatically mean peyote.",
+      "compilerSupport": "Rounded hollow parts use the existing shaped peyote generator. Arbitrary flat peyote sheets and general tubular charts are not selectable generators yet.",
+      "sources": [
+        "peyote-flat",
+        "peyote-tubular"
+      ]
+    },
+    {
+      "id": "brick",
+      "label": "Brick stitch",
+      "candidatesFor": "Flat silhouettes with stepped or changing outlines, such as a petal, wing or small shaped panel.",
+      "tradeoff": "Attachment uses thread bridges. Circular and tubular variants also exist; brick is not restricted to flat designs.",
+      "compilerSupport": "Advisory only: no brick thread-bridge route generator. Current flat details use angle-weave panels; disclose that approximation rather than calling it brick.",
+      "sources": [
+        "brick-ladder",
+        "brick-tubular"
+      ]
+    },
+    {
+      "id": "raw",
+      "label": "Right-angle weave (RAW)",
+      "candidatesFor": "Flexible connected bead-loop surfaces and open lattice-like panels.",
+      "tradeoff": "Compare flexibility and gaps with a denser surface. RAW and cubic RAW are different constructions; rectangular appearance alone does not make a route RAW.",
+      "compilerSupport": "Existing angle-weave panels use connected loops. The tube generator uses four-bead walls and five-bead ends; do not describe it as tubular peyote or uniformly four-bead RAW.",
+      "sources": [
+        "raw"
+      ]
+    },
+    {
+      "id": "craw",
+      "label": "Cubic right-angle weave (CRAW)",
+      "candidatesFor": "Chunky block-like volumes, frames and structural regions built from shared-edge cubes.",
+      "tradeoff": "Cube geometry does not guarantee rigidity: tension and support still matter. Avoid choosing a thick lattice for a thin smooth surface.",
+      "compilerSupport": "Available for non-flat box parts in parts mode, and the cubic lattice mode. Exact shared-edge counts and build order come from code.",
+      "sources": [
+        "craw"
+      ]
+    },
+    {
+      "id": "ladder",
+      "label": "Ladder stitch",
+      "candidatesFor": "Short bead strips and foundations for brick or other stitches.",
+      "tradeoff": "Treat it as a foundation or narrow construction when appropriate, not a general replacement for shaped surfaces.",
+      "compilerSupport": "Advisory only: no ladder generator. Existing flexible return strands are not ladder stitch.",
+      "sources": [
+        "brick-ladder"
+      ]
+    },
+    {
+      "id": "herringbone",
+      "label": "Herringbone",
+      "candidatesFor": "Consider flat fabric or tubular ropes when paired angled beads and the desired drape suit the design.",
+      "tradeoff": "Choose the flat or tubular variant and verify the tension and joining method for it.",
+      "compilerSupport": "Advisory only: no herringbone route generator.",
+      "sources": [
+        "herringbone",
+        "herringbone-tubular"
+      ]
+    },
+    {
+      "id": "netting",
+      "label": "Netting",
+      "candidatesFor": "Open mesh, lightweight coverings and wraps where visible gaps are intentional.",
+      "tradeoff": "A mesh needs support and fit checks; it is not a closed dense shell.",
+      "compilerSupport": "Advisory only: no netting route generator.",
+      "sources": [
+        "netting"
+      ]
+    },
+    {
+      "id": "square",
+      "label": "Square stitch",
+      "candidatesFor": "Consider flat charted designs when an aligned bead grid is important.",
+      "tradeoff": "Compare bead orientation and thread passes with staggered peyote or brick layouts.",
+      "compilerSupport": "Advisory only: no square-stitch route generator.",
+      "sources": [
+        "square"
+      ]
+    }
+  ],
+  "sources": [
+    {
+      "id": "peyote-flat",
+      "title": "The Beadworkers Guild: Peyote stitch",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Peyote-stitch-basic-instructions-1.pdf"
+    },
+    {
+      "id": "peyote-tubular",
+      "title": "The Beadworkers Guild: Tubular peyote",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Peyote_tubular-1.pdf"
+    },
+    {
+      "id": "brick-ladder",
+      "title": "The Beadworkers Guild: Brick and ladder",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Brick-ladder-stitch-1.pdf"
+    },
+    {
+      "id": "raw",
+      "title": "The Beadworkers Guild: Single-needle RAW",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/RAW_single_needle-1.pdf"
+    },
+    {
+      "id": "craw",
+      "title": "The Beadworkers Guild: Cubic RAW",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Cubic-Right-Angle-Weave-CRAW-1.pdf"
+    },
+    {
+      "id": "brick-tubular",
+      "title": "Fire Mountain Gems: Tubular brick stitch",
+      "url": "https://www.firemountaingems.com/learn/categories/essential-resources/how-tos/J414-project-tutorial.html"
+    },
+    {
+      "id": "stitch-index",
+      "title": "The Beadworkers Guild: Basic stitch instructions",
+      "url": "https://beadworkersguild.com/basic-stitch-instructions/"
+    },
+    {
+      "id": "herringbone",
+      "title": "The Beadworkers Guild: Herringbone weave",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Herringbone_Weave-1.pdf"
+    },
+    {
+      "id": "herringbone-tubular",
+      "title": "The Beadworkers Guild: Tubular herringbone",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Herringbone-weave-tubular-1.pdf"
+    },
+    {
+      "id": "netting",
+      "title": "The Beadworkers Guild: Circular netting",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Circular_Netting-1.pdf"
+    },
+    {
+      "id": "square",
+      "title": "The Beadworkers Guild: Square stitch",
+      "url": "https://beadworkersguild.com/wp-content/uploads/2021/04/Square_stitch-1.pdf"
+    }
+  ],
+  "sourceUse": "Links are reading references. The decision rules are authored summaries and engineering heuristics, not copied tutorials, charts, project patterns, or a scraped training corpus. Recommendations do not certify physical success."
+}

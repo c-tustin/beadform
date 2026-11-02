@@ -1,0 +1,47 @@
+{
+  "date": "2026-10-21",
+  "paired": {
+    "cases": 128,
+    "compiled": 128,
+    "identicalPartInventory": 128,
+    "priorProjectMigrationValid": 128,
+    "unchangedRoutesResume": 24,
+    "before": {
+      "flags": 371,
+      "crossPart": 50,
+      "connections": 40889,
+      "threadSections": 139
+    },
+    "after": {
+      "flags": 47,
+      "crossPart": 47,
+      "connections": 40844,
+      "threadSections": 139
+    }
+  },
+  "profileVariants": 16,
+  "allProfileSchedulesPreserved": true,
+  "minimumNominalClearanceMm": 0.04999999999999971,
+  "charts": 2861,
+  "settingsCompilePasses": 128,
+  "crossPartClearancePasses": 128,
+  "projectRoundTrips": 128,
+  "offlineApiFixtures": 128,
+  "allThreadEndsHaveCandidates": 128,
+  "physicalBuildsVerified": 0,
+  "completeFinishesVerified": 0,
+  "browserOldProjectImportConfirmed": false,
+  "reportsSha256": {
+    "2026-10-21-peyote-spacing-comparison-final.json": "dbbba370cff5413d3989de41a9b9a7224ab47a7779c7e3bd023d93377b8ad7e3",
+    "2026-10-21-patterns-peyote-final.json": "77ec689722694a5b20d7dc7db2557d5819e80a9624a94ae5ebf5f3155a3fc2f6",
+    "2026-10-21-projects-peyote-final.json": "58dc8c37795a550297afe497206a35c3bdbe53e8118aa6548405068c441be2e1",
+    "2026-10-21-api-peyote-final.json": "f7270b5041e1dd4a825ccbd77cf1636b95bb3950f225fc33d448b7b206ae348d",
+    "2026-10-21-thread-access-peyote-final.json": "132c03bea71d2f7c2c3c3ba42389468ff5362c9688f31eb48c20ea698675aa5a"
+  },
+  "remaining": [
+    "47 nominal between-part path flags",
+    "Physical validation of shaping, joints, hole fit, needle access, tension and secure finishes",
+    "Browser confirmation of old-project import",
+    "Visual fidelity and reliable learned decisions"
+  ]
+}

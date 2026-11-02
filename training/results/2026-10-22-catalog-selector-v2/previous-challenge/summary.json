@@ -1,0 +1,36 @@
+{
+  "examples": 80,
+  "correct": 77,
+  "strict_valid": 80,
+  "supported": {
+    "cases": 64,
+    "correct": 64
+  },
+  "rejection": {
+    "cases": 16,
+    "correct": 13
+  },
+  "by_category": {
+    "ambiguous": {
+      "cases": 4,
+      "correct": 4
+    },
+    "composition": {
+      "cases": 4,
+      "correct": 2
+    },
+    "fish": {
+      "cases": 4,
+      "correct": 4
+    },
+    "supported": {
+      "cases": 64,
+      "correct": 64
+    },
+    "unsupported": {
+      "cases": 4,
+      "correct": 3
+    }
+  },
+  "note": "Authored synthetic semantic development experiment. Not geometry generation or physical validation."
+}

@@ -1,0 +1,6248 @@
+{
+  "note": "Paired synthetic-scene audit. Nominal finishing access is checked against all completed beads. Three distinct beads is a heuristic; actual needle access, knots, tension and holding strength remain unverified.",
+  "sourceSha256": {
+    "thread-finishing.js": "5b8f02f348a5a81d02d00dabb6d6090d11d193875aaeac7a9c74cfd6b2e42e8e",
+    "training/fixtures/finishing-before-access.js": "f8ecfba12228971c6864884e67a07c19c3bdba4aba1af0b177eb60191b309ea8",
+    "parts-engine.js": "b8dda7ab040b20b66ab18cc2d034357e198f4f12c63ccf8b5c4732ac1c46cad9",
+    "continuous-thread.js": "f2c6fc9374723883b5febffa1a42c3917c1e36270edd2b997f374813fdcd9833",
+    "bead-geometry.js": "9ac59a630ba957d1fdd236f8b977810c0ef3674b5fb2d6c487dfd30f78e2cbb3",
+    "peyote-ball.js": "86f8bcac7bee2ca9b59ba31dcd025f971a39b7ebc0df279ce2ee0f8d777748c3",
+    "construction-graph.js": "d4b97666d3fbeb0e39a7a72379b146bfdf6fd701c84314e4a43d036b974441f9",
+    "pattern-quality.js": "969b7d56b33b4d57fcd3294db9bf6576bcfa6147d9b41763dac1b2ea745795ba",
+    "training/approved-expanded.jsonl": "05455d93fde86d8a8f54e087c084e32511a2fca30a34fc5e0968f928d8e400d9",
+    "training/compare_finishing_access.cjs": "1d831b949b41a355f40e52946e9d1c48c31c466d1626215a65d73d5225b6c6dd"
+  },
+  "summary": {
+    "cases": 128,
+    "compiled": 128,
+    "identicalInventoryAndPositions": 128,
+    "identicalStitchSchedules": 128,
+    "before": {
+      "assemblyConflicts": 0,
+      "finishingConflicts": 3,
+      "finishingConnections": 819,
+      "threadSections": 140,
+      "candidateEndpoints": 280,
+      "totalEndpoints": 280,
+      "allEndsHaveCandidate": 128,
+      "clearCases": 128,
+      "withinCombinedPassLimit": 128
+    },
+    "after": {
+      "assemblyConflicts": 0,
+      "finishingConflicts": 0,
+      "finishingConnections": 818,
+      "threadSections": 140,
+      "candidateEndpoints": 280,
+      "totalEndpoints": 280,
+      "allEndsHaveCandidate": 128,
+      "clearCases": 128,
+      "withinCombinedPassLimit": 128
+    },
+    "completeFinishes": 0,
+    "physicallyTested": 0
+  },
+  "cases": [
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 134,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 134,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 196,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 196,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 139,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 139,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 126,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 126,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 109,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 109,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 65,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 65,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 117,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 117,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 42,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 42,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 138,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 138,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 72,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 72,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 27,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 27,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 101,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 101,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 57,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 57,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 125,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 125,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 129,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 129,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 119,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 119,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 124,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 124,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 173,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 173,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 127,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 127,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 167,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 167,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 45,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 45,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 108,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 108,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 90,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 90,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 76,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 76,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 134,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 134,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 196,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 196,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 139,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 139,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 126,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 126,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 109,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 109,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 65,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 65,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 117,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 1,
+        "finishingConnections": 9,
+        "examples": [
+          {
+            "endpoint": "length-2-working",
+            "from": "B0113",
+            "exit": "P6:1",
+            "to": "B0042",
+            "entrance": "P2:13",
+            "blockingBeads": [
+              "B0112"
+            ]
+          }
+        ],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 117,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 10,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "house",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 42,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 42,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 138,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 138,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 72,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 72,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 27,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 27,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 101,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 11,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 101,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 11,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 57,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 57,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "train",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 125,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 125,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 129,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 129,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 119,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 119,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 124,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 124,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 173,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 11,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 173,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 11,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 127,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 127,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 167,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 167,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 52,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 45,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 45,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 108,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 108,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 90,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 90,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 76,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 76,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 3,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 66,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 188,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 188,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 250,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 250,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 169,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 169,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 146,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 146,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 158,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 158,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 95,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 95,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 182,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 182,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 198,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 198,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 96,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 96,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 102,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 102,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 47,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 47,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 193,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 193,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 67,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 1,
+        "finishingConnections": 6,
+        "examples": [
+          {
+            "endpoint": "length-1-tail",
+            "from": "B0001",
+            "exit": "P1:0",
+            "to": "B0004",
+            "entrance": "P1:0",
+            "blockingBeads": [
+              "B0058"
+            ]
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 67,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 196,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 196,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 159,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 159,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 149,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 149,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 154,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 154,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 199,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 199,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 157,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 157,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 197,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 197,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 55,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 55,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 148,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 148,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 7,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 126,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 126,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 165,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 165,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 101,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 101,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.2,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 144,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 144,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 8,
+        "passLimit": 8,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "frog",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 116,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bunny",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 188,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 188,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 250,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 250,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "butterfly",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "turtle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 169,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 169,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "bird",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 146,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 146,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "flower",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 158,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 158,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "mushroom",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 95,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 95,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cactus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 182,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 182,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "house",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 84,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "rocket",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 198,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 198,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "whale",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 114,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "snail",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 96,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 96,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "penguin",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 102,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 102,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "octopus",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "pear",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 47,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 47,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "robot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 193,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 193,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "sailboat",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 67,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 1,
+        "finishingConnections": 6,
+        "examples": [
+          {
+            "endpoint": "length-1-tail",
+            "from": "B0001",
+            "exit": "P1:0",
+            "to": "B0004",
+            "entrance": "P1:0",
+            "blockingBeads": [
+              "B0058"
+            ]
+          }
+        ],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 67,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "train",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 196,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 196,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "cloud",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 159,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 11,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 159,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 11,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ladybug",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 149,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 9,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": {
+          "kind": "bounded starting-tail passage reservation",
+          "attempts": [
+            {
+              "reserveBeads": [
+                "B0041"
+              ],
+              "candidateEndpoints": 4,
+              "totalEndpoints": 4
+            }
+          ],
+          "completeFinish": false
+        }
+      },
+      "after": {
+        "beads": 149,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 9,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": {
+          "kind": "bounded starting-tail passage reservation",
+          "attempts": [
+            {
+              "reserveBeads": [
+                "B0041"
+              ],
+              "candidateEndpoints": 4,
+              "totalEndpoints": 4
+            }
+          ],
+          "completeFinish": false
+        }
+      }
+    },
+    {
+      "group": "bee",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 154,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 154,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "fox",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 199,
+        "threadSections": 3,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 18,
+        "examples": [],
+        "candidateEndpoints": 6,
+        "totalEndpoints": 6,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 199,
+        "threadSections": 3,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 18,
+        "examples": [],
+        "candidateEndpoints": 6,
+        "totalEndpoints": 6,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "elephant",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 157,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 157,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "giraffe",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 197,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 197,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 5,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "strawberry",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 82,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "donut",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 55,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 55,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 5,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "ice-cream",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 148,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 148,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "teapot",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 126,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 126,
+        "threadSections": 2,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 12,
+        "examples": [],
+        "candidateEndpoints": 4,
+        "totalEndpoints": 4,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "guitar",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 165,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 165,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "spaceship",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 101,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 101,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    },
+    {
+      "group": "castle",
+      "detail": 4,
+      "threadDiameter": 0.25,
+      "compiled": true,
+      "identicalInventoryAndPositions": true,
+      "identicalStitchSchedules": true,
+      "before": {
+        "beads": 144,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      },
+      "after": {
+        "beads": 144,
+        "threadSections": 1,
+        "assemblyConflicts": 0,
+        "finishingConflicts": 0,
+        "finishingConnections": 6,
+        "examples": [],
+        "candidateEndpoints": 2,
+        "totalEndpoints": 2,
+        "unresolved": [],
+        "proposedMaxPasses": 6,
+        "passLimit": 6,
+        "overlaps": 0,
+        "checks": {
+          "valid": true,
+          "errors": [],
+          "physicalSampleRequired": true
+        },
+        "repair": null
+      }
+    }
+  ]
+}
