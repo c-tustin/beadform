@@ -18,6 +18,16 @@ echo '{"stitch":"brick","shape":"triangle","width":6,"rows":4}' | node stitch-pr
 
 Add `--svg` to produce a bead-placement chart. The SVG is not a complete thread diagram; the JSON steps supply the construction order. Brick rectangles/narrowing triangles and single ladder strips are new experimental generators. Flat peyote, RAW and square use the existing flat engine. The model never invents bead IDs or counts.
 
+## Use the trained weights after completion
+
+In the same free Colab GPU runtime, generate a fresh recipe and compile its bead chart, exact operations and assembly ledger:
+
+```sh
+python training/generate_stitch_pattern.py --adapter /content/drive/MyDrive/Beadform-free-qwen/runs/stitch-program-v1/adapter --prompt "A triangular flat wing worked through thread bridges, six foundation beads and four rows total" --output /content/drive/MyDrive/Beadform-free-qwen/generated/brick-wing-01
+```
+
+Choose a new output folder each time. Unsupported or missing specifications return a clarification result, not a substitute design. Generated requests remain in your output folder and are not automatically published or added to training. This script requires the completed new adapter; earlier catalog adapters have a different task.
+
 ## Meaning of the five-pass preference
 
 For new 3D parts projects, 11/0 round seed beads and 0.20 mm thread are now the default. The planner tries a five-pass search budget first, including available proposed finishing routes. It can fall back to the earlier eight-pass engineering budget if necessary; every bead above five is reported as a review exception in the interface, text/print notes and construction export. This is a soft preference, not a certified hole capacity. A different needle, bead finish, knot or extra reinforcement can require more space. Existing saved projects retain their recorded thread size, and changed routes reset guide progress through the existing route-key mechanism.
