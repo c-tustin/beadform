@@ -248,7 +248,7 @@ dialog{border:1px solid var(--studio-line);border-radius:24px;box-shadow:0 25px 
     <section class="panel"><details><summary>Size & supplies</summary>
       <label id="pSizeField" class="field v-field">Project size<select id="pBallSize"><option value="3" selected>Everyday · fewer beads</option><option value="4">Expanded · more detail where available</option></select></label><label id="vDetailField" class="field v-field">Pattern detail<select id="vDetail"><option value="2">Small · fewer beads</option><option value="3" selected>Standard · more shape</option><option value="4">Detailed · more beads</option></select></label>
       <label class="field v-field">Body depth<select id="vDepth"><option value="75">Slim</option><option value="100" selected>Regular</option><option value="125">Plump</option></select></label>
-      <div class="v-materials"><b>size 11 seed beads · 11/0</b><span>Round / rocaille · approx. 2 × 1.3 mm</span><input id="vBeadSize" type="hidden" value="2"><label class="field">Fishing-line diameter<select id="vThread"><option value="0.2">0.20 mm</option><option value="0.25" selected>0.25 mm</option></select></label><small>Dimensions vary by brand and finish. Check a small sample with your actual beads and line.</small></div>
+      <div class="v-materials"><b>size 11 seed beads · 11/0</b><span>Round / rocaille · approx. 2 × 1.3 mm</span><input id="vBeadSize" type="hidden" value="2"><label class="field">Fishing-line diameter<select id="vThread"><option value="0.2" selected>0.20 mm</option><option value="0.25">0.25 mm</option></select></label><small>Dimensions vary by brand and finish. Check a small sample with your actual beads and line.</small></div>
       <details class="v-examples" id="vLegacyColor"><summary>color mapping</summary><label class="field v-field">Colors from<select id="vColorSource"><option value="design">The generated project</option><option value="template">The example palette</option><option value="image">Project the reference colors</option></select></label><label class="range-label" for="vMaxColors">Maximum colors <output id="vMaxColorsValue">6</output></label><input id="vMaxColors" type="range" min="2" max="10" value="6"><div id="vImageOptions" hidden><label class="field">Image placement<select id="vProjection"><option value="front">Front image + solid back</option><option value="both">Mirror on front and back</option></select></label><label class="check-label v-field"><input type="checkbox" id="vKeepEyes" checked> Keep landmark beads readable</label></div></details>
     </details></section>
     <section class="v-stitch-note"><span class="eyebrow">THE TECHNIQUE</span><h3>cubic right-angle weave</h3><p>Four-bead rings form cubes. Neighboring cubes share a face. Each physical bead has one ID, even when several rings use it.</p><button id="vTechniqueBtn" class="text-button">how it comes together ↗</button></section>
@@ -1199,9 +1199,11 @@ function attachmentRegion(g,child){
  return {...r,targetHeightMm:low+(high-low)*r.sourceFraction,toleranceMm:Math.max(r.minimumToleranceMm,(high-low)*r.toleranceFraction)};
 }
 function orient(p,axis){const y=unit(axis),x=unit(cross(y,Math.abs(y[2])<.9?[0,0,1]:[1,0,0])),z=cross(x,y);return add(add(mul(x,p[0]),mul(y,p[1])),mul(z,p[2]));}
-function buildSeparate(design,{detail=3,threadDiameter=.25}={}){
+function buildSeparate(design,{detail=3,threadDiameter=.2,passBudget}={}){
+ const hardBudget=threadDiameter===.2?8:6;
+ if(passBudget!==undefined&&(!Number.isInteger(passBudget)||passBudget<3||passBudget>hardBudget))throw Error("Invalid internal passage budget.");
  const economy=detail<4,scene=amigurumiScene(design),solids=scene.parts.filter(p=>p.role==='solid');if(!solids.length)throw Error('This design needs a solid body.');if(solids.length>18)throw Error('Simplify this subject to at most 18 main parts for the parts guide.');
- const g={structure:'modules',settings:{threadDiameter},nodes:[],byId:new Map(),faces:[],steps:[],stages:[],components:[],joins:[],palette:[],colors:[],passLimit:threadDiameter===.2?8:6,counts:new Map(),notes:[]};
+ const g={structure:'modules',settings:{threadDiameter},nodes:[],byId:new Map(),faces:[],steps:[],stages:[],components:[],joins:[],palette:[],colors:[],passLimit:passBudget??hardBudget,counts:new Map(),notes:[]};
  const bases=solids.filter(p=>p.type!=='capsule'),foundation=bases.filter(p=>/\b(body|torso|base|hull|wall|shell)\b/i.test(p.name)),base=(foundation.length?foundation:bases).sort((a,b)=>Math.max(...b.size)-Math.max(...a.size))[0]||solids[0],scale=(/head.*body/i.test(base.name)?ball(true,'body'):ball(!economy)).radius/Math.max(...base.size),remaining=solids.slice();let section=0;
  function colorIndex(h){let i=g.palette.indexOf(h);if(i<0){i=g.palette.length;g.palette.push(h);}return i;}
  while(remaining.length){let source;if(!g.components.length)source=base;else source=remaining.slice().sort((a,b)=>Number(/\b(neck|mast)\b/i.test(b.name))-Number(/\b(neck|mast)\b/i.test(a.name))||(a.type==='capsule')-(b.type==='capsule')||Math.min(...g.components.map(c=>len(sub(a.center,c.source.center))))-Math.min(...g.components.map(c=>len(sub(b.center,c.source.center)))))[0];remaining.splice(remaining.indexOf(source),1);
@@ -1322,17 +1324,39 @@ function compareJointPlans(baseline,candidate){
  return {preferCandidate:reasons.length===0,reasons,workingLengthPenaltyMm2,baselineScore,candidateScore,baseline:a,candidate:b};
 }
 function build(design,options={}){
- if(options.continuous===false)return buildCandidate(design,options,0);
- const attempts=[];let baseline,candidate;
- for(const weight of [0,250])try{const model=buildCandidate(design,options,weight);if(weight===0)baseline=model;else candidate=model;attempts.push({weight,compiled:true});}catch(error){attempts.push({weight,compiled:false,error:error.message});}
- if(!baseline&&!candidate)throw Error(attempts[0].error);
- let selected=baseline||candidate,comparison=null;
- if(baseline&&candidate){comparison=compareJointPlans(baseline,candidate);if(comparison.preferCandidate)selected=candidate;}
- const selection={kind:'two deterministic joint-distance candidates',selectedWeight:selected===candidate?250:0,attempts,comparison,physicalSampleRequired:true};
- selected.jointSelection=selection;if(selected.constructionGraph)selected.constructionGraph.jointSelection=selection;return selected;
+ options={...options,threadDiameter:options.threadDiameter??.2};
+ if(![.2,.25].includes(options.threadDiameter))throw Error('Choose 0.20 or 0.25 mm thread.');
+ const preferred=options.threadDiameter===.2?5:null,hard=options.threadDiameter===.2?8:6,attempts=[];
+ let selected=null,selectedScore=null;
+ for(const budget of preferred?[preferred,hard]:[hard]){
+  let baseline,candidate;
+  for(const weight of options.continuous===false?[0]:[0,250])try{
+   const model=buildCandidate(design,{...options,passBudget:budget},weight);
+   if(weight===0)baseline=model;else candidate=model;
+   attempts.push({budget,weight,compiled:true});
+  }catch(error){attempts.push({budget,weight,compiled:false,error:error.message});}
+  if(!baseline&&!candidate)continue;
+  let choice=baseline||candidate,comparison=null;
+  if(baseline&&candidate){comparison=compareJointPlans(baseline,candidate);if(comparison.preferCandidate)choice=candidate;}
+  const incomplete=choice.finishing&&choice.finishing.candidateEndpoints<choice.finishing.totalEndpoints;
+  const score=[choice.finishing?choice.finishing.totalEndpoints-choice.finishing.candidateEndpoints:0,choice.threadAccess?.nominalStraightPathConflicts||0,choice.finishing?.nominalAccess?.nominalStraightPathConflicts||0,budget];
+  if(!selectedScore||score.some((n,i)=>n<selectedScore[i]&&score.slice(0,i).every((v,j)=>v===selectedScore[j]))){selected=choice;selectedScore=score;}
+  choice.jointSelection={kind:'joint-distance candidates within passage preference',selectedWeight:choice===candidate?250:0,comparison,physicalSampleRequired:true};
+  // Do not trade resolved finishes/nominal access for a low count.
+  if(!incomplete&&!(choice.threadAccess?.nominalStraightPathConflicts)&&!(choice.finishing?.nominalAccess?.nominalStraightPathConflicts))break;
+ }
+ if(!selected)throw Error(attempts[0]?.error||'No construction candidate.');
+ const totals=new Map(selected.counts);
+ for(const end of selected.finishing?.endpoints||[])for(const op of end.moves||[])if(op.id!==null)totals.set(op.id,(totals.get(op.id)||0)+1);
+ const exceptions=preferred?selected.nodes.filter(n=>(totals.get(n.id)||0)>preferred).map(n=>({id:n.id,part:n.component,passes:totals.get(n.id)})):[];
+ selected.passagePreference={preferredMax:preferred,hardSearchBudget:hard,selectedSearchBudget:selected.passLimit,finishingIncluded:!!selected.finishing,unresolvedFinishingEnds:selected.finishing?selected.finishing.totalEndpoints-selected.finishing.candidateEndpoints:null,includes:'initial pickup, weaving, positioning, reinforcement and proposed finishing passes',maximumPlanned:Math.max(0,...totals.values()),exceptions,attempts,physicalSampleRequired:true};
+ if(preferred)selected.notes.push(exceptions.length?`Passage preference exceeded: ${exceptions.length} beads exceed five planned passes with 0.20 mm thread. Review these beads before making: ${exceptions.map(n=>n.id+' ('+n.passes+')').join(', ')}. Counts include proposed finishing; knots and actual hole fit remain unverified.`:'The plan stays within the preferred five passes per bead with 0.20 mm thread, including proposed finishing. Knots and actual hole fit remain unverified.');
+ if(selected.constructionGraph){selected.constructionGraph.passagePreference=selected.passagePreference;selected.constructionGraph.jointSelection=selected.jointSelection;}
+ return selected;
 }
 root.BeadParts={build,example,ball,tube,strand,panel,amigurumiScene,attachmentRegion,jointPlanMetrics,compareJointPlans,validate};if(typeof module!=='undefined')module.exports=root.BeadParts;
 })(typeof window!=='undefined'?window:globalThis);
+
 </script>
 <script>(function(root){
 'use strict';
@@ -1697,7 +1721,7 @@ root.BeadPartsProject={build,open,routeKey,guideVersion};if(typeof module!=='und
  'use strict';
  const V=window.BeadVolume,G=window.BeadStages,E=window.BeadEngine,B=window.Beadform,$=id=>document.getElementById(id),U=B.ui;
  const {esc,modal,toast,loadImage}=U,fmt=n=>new Intl.NumberFormat('en-US').format(n);
- const state={construction:'parts',settings:{shape:'frog',detail:3,depth:100,beadSize:2,colorSource:'template',maxColors:6,projection:'front',keepEyes:true,routeVersion:2,orderVersion:2,threadDiameter:.25},reveal:Infinity,stage:0,stageReveal:Infinity,focusStage:false,lastError:'',model:null,palette:[],colors:[],source:null,sourceData:'',sourceName:'',sourceCustom:false,title:'garden frog',view:'thread',yaw:-28,pitch:18,zoom:100,showIds:false,inside:false,builtOnly:false,step:0,layer:0,tool:'rotate',activeColor:0,selected:null,edits:false,undo:[]};
+ const state={construction:'parts',settings:{shape:'frog',detail:3,depth:100,beadSize:2,colorSource:'template',maxColors:6,projection:'front',keepEyes:true,routeVersion:2,orderVersion:2,threadDiameter:.2},reveal:Infinity,stage:0,stageReveal:Infinity,focusStage:false,lastError:'',model:null,palette:[],colors:[],source:null,sourceData:'',sourceName:'',sourceCustom:false,title:'garden frog',view:'thread',yaw:-28,pitch:18,zoom:100,showIds:false,inside:false,builtOnly:false,step:0,layer:0,tool:'rotate',activeColor:0,selected:null,edits:false,undo:[]};
  let mode='volume',drag=null,frame=null,pngBusy=false,sourceVersion=0;
  const shapeIcons={frog:'M9 10a4 4 0 1 1 7-2h8a4 4 0 1 1 7 2c4 2 6 6 6 11 0 9-7 13-17 13S3 30 3 21c0-5 2-9 6-11Zm4-6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z',fish:'M8 20C11 5 28 4 37 20c-9 16-26 15-29 0L1 9v22l7-11Zm20-5a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z',bunny:'M10 17C0-4 18-5 18 14h4C22-5 40-4 30 17c8 8 4 22-10 22S2 25 10 17Zm4 8a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm12 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z',bear:'M8 13C-4 8 5-5 14 5a21 21 0 0 1 12 0c9-10 18 3 6 8 10 17-1 25-12 25S-2 30 8 13Zm5 6a2 2 0 1 0 0 4 2 2 0 0 0 0-4Zm14 0a2 2 0 1 0 0 4 2 2 0 0 0 0-4Z',heart:'M20 36 4 21C-8 8 9-3 20 9 31-3 48 8 36 21Z',ball:'M20 1a19 19 0 1 0 0 38 19 19 0 0 0 0-38Zm0 5a14 14 0 0 1 13 8C19 10 8 19 6 24a14 14 0 0 1 14-18Z'};
  const shapeIcon=s=>`<svg viewBox="0 0 40 40" aria-hidden="true"><path d="${shapeIcons[s]}" fill-rule="evenodd"/></svg>`;
@@ -1890,7 +1914,7 @@ root.BeadPartsProject={build,open,routeKey,guideVersion};if(typeof module!=='und
    const timeout=setTimeout(()=>controller.abort(),310000);
    try{
      let imageData=null;if(withImage){const im=state.source,cv=document.createElement('canvas'),scale=Math.min(1,768/Math.max(im.naturalWidth,im.naturalHeight));cv.width=Math.max(1,Math.round(im.naturalWidth*scale));cv.height=Math.max(1,Math.round(im.naturalHeight*scale));cv.getContext('2d').drawImage(im,0,0,cv.width,cv.height);imageData=cv.toDataURL('image/png');}
-     const response=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,imageData,construction:'parts',buildReferences:window.BeadFinished?.references(prompt)||[],detail:state.settings.detail,depth:state.settings.depth,threadDiameter:state.settings.threadDiameter||.25}),signal:controller.signal});const body=await response.json();if(!response.ok)throw Error(body.error||'The generation service could not complete this project.');if(token!==revision)return;
+     const response=await fetch('/api/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({prompt,imageData,construction:'parts',buildReferences:window.BeadFinished?.references(prompt)||[],detail:state.settings.detail,depth:state.settings.depth,threadDiameter:state.settings.threadDiameter||.2}),signal:controller.signal});const body=await response.json();if(!response.ok)throw Error(body.error||'The generation service could not complete this project.');if(token!==revision)return;
      const design=S.scene(body.scene);window.BeadParts.build(design,state.settings);if(state.model!==originModel)throw Error('The project changed while generating. Your current project has been kept; please generate again.');
      T.confirmEdits(()=>{try{applyDesign(design,design.title,withImage?'Interpreted your image':'Created from your description');if(design.notes)status($('vGenerationStatus').textContent+' '+design.notes);}catch(e){status(e.message,true);}});
    }catch(e){if(token===revision)status(e.name==='AbortError'?'Generation timed out. Your existing project is unchanged; try again with a simpler description.':e.message,true);}finally{clearTimeout(timeout);if(token===revision){request=null;busy(false);}}
@@ -2061,7 +2085,7 @@ function inlineReveal(i,n){const st=g.stages[i],count=Math.max(0,Math.min(st.ope
 function drawPreview(){if(!g)return;const canvas=$('pCanvas');canvas.classList.toggle('is-model',view==='model');canvas.innerHTML=view==='plan'?mapSVG():view==='thread'?threadSVG():modelSVG({highlight:$('pBuilt').checked,built:$('pBuilt').checked});$('pZoomLabel').textContent=Math.round(zoom*100)+'%';}
 function render(){if(!g)return;window.BeadJourney?.scheduleSave();s.partsStage=Math.max(0,Math.min(g.stages.length-1,s.partsStage));const st=current(),shown=Math.min(st.operations.length,s.partsReveal),newBeads=st.operations.slice(0,shown).filter(o=>o.kind==='pick').length;
  fullPattern();$('pStatus').textContent=`${g.nodes.length} beads · ${g.components.length} parts${g.nodes.length>200?' · above the 150–200 bead target':''}`;
- $('pThreadPlan').innerHTML=`<b>${g.threadSections===1?'One working line':g.threadSections+' working lengths'}</b> · ${g.threadLengths.reduce((n,x)=>n+x.estimatedMeters,0).toFixed(1)} m estimated<details><summary>Thread details</summary>Return through body beads between limbs. Required thread changes are marked in each step.<br>${g.threadLengths.map(x=>`Length ${x.number}: ${x.estimatedMeters.toFixed(1)} m`).join(' · ')}. Includes 30% routing allowance and 40 cm of tails per length. Candidate finishing routes below use these tails; knots may need more line.</details>`+accessHTML()+finishingHTML();
+ $('pThreadPlan').innerHTML=`<b>${g.threadSections===1?'One working line':g.threadSections+' working lengths'}</b> · ${g.threadLengths.reduce((n,x)=>n+x.estimatedMeters,0).toFixed(1)} m estimated<details><summary>Thread details</summary>Return through body beads between limbs. Required thread changes are marked in each step.<br>${g.threadLengths.map(x=>`Length ${x.number}: ${x.estimatedMeters.toFixed(1)} m`).join(' · ')}. Includes 30% routing allowance and 40 cm of tails per length. Candidate finishing routes below use these tails; knots may need more line.</details>`+(g.passagePreference?.preferredMax?`<p><b>Preferred maximum: 5 passes per bead</b> · ${g.passagePreference.maximumPlanned} busiest planned (including available finishing candidates). ${g.passagePreference.exceptions.length?`${g.passagePreference.exceptions.length} beads exceed the preference; review the construction export and sample before making.`:"No planned bead exceeds five."} Knots, missing finishes and actual hole fit remain unverified.</p>`:"")+accessHTML()+finishingHTML();
  $('pStageList').innerHTML=g.stages.map((st,i)=>`<button data-pstage="${i}" class="${i===s.partsStage?'active':''}">${st.kind==='join'?'↳':st.component} · ${esc(st.label)}<small>${st.kind==='join'?st.pairs.length+' attachment loops':st.ids.length+' beads · '+st.kind}</small></button>`).join('');document.querySelectorAll('[data-pstage]').forEach(b=>b.onclick=()=>select(+b.dataset.pstage));
  drawPreview();for(const [id,v]of [['pPlanView','plan'],['pModelView','model'],['pThreadView','thread']]){$(id).classList.toggle('active',view===v);$(id).setAttribute('aria-pressed',view===v);}
  const counts=g.palette.map(()=>0);g.colors.forEach(c=>counts[c]++);$('pInventory').innerHTML=`<span><b>${g.nodes.length}</b> physical beads</span>${g.materials.map(m=>`<span>${m.count} × ${esc(m.name)}</span>`).join('')}`+counts.map((n,i)=>`<span><i class="mini-bead" style="background:${g.palette[i]}"></i>${'color '+(i+1)} · ${n}</span>`).join('');

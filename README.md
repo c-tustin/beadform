@@ -47,6 +47,10 @@ This needs Node.js and a local Ollama model. The built-in examples are the easie
 
 ## Free model training
 
+A new [stitch-selection and pattern-recipe pilot](training/stitch-program-v1/README.md) trains a separate Qwen adapter for flat peyote, brick, ladder, RAW and square drafts. It compiles recipes into counted routes; it is not yet a deployed or physically validated model.
+
+New 11/0 parts projects default to **0.20 mm thread** and prefer **at most five passes per bead**, counting available finishing candidates. Exceptions above five are shown for review.
+
 We are training Qwen to choose from the supported drafts and reject unsupported requests.
 
 - The expanded run used **320 synthetic training requests**, **48 development requests**, and a separate **80-request synthetic set**.

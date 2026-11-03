@@ -30,7 +30,7 @@ function validateRequest(body){
   const buildReferences=body.buildReferences===undefined?[]:body.buildReferences;
   if(!Array.isArray(buildReferences)||buildReferences.length>2)throw Error('Use at most two approved build references.');
   const references=buildReferences.map(b=>{if(!b||b.consented!==true||typeof b.imageData!=='string'||b.imageData.length>450000||!/^data:image\/jpeg;base64,[A-Za-z0-9+/]+={0,2}$/.test(b.imageData)||typeof b.notes!=='string'||b.notes.length>1000||typeof b.title!=='string'||b.title.length>70||!['worked','adjusted'].includes(b.outcome))throw Error('Invalid or unapproved build reference.');const design=b.design?Shape.scene(b.design):null;return {title:b.title,notes:b.notes,outcome:b.outcome,imageData:b.imageData,design};});
-  const detail=[2,3,4].includes(body.detail)?body.detail:3,depth=[75,100,125].includes(body.depth)?body.depth:100,threadDiameter=body.threadDiameter===.2?.2:.25;
+  const detail=[2,3,4].includes(body.detail)?body.detail:3,depth=[75,100,125].includes(body.depth)?body.depth:100,threadDiameter=body.threadDiameter===.25?.25:.2;
   return {prompt,imageData,buildReferences:references,detail,depth,threadDiameter,construction:body.construction==='parts'?'parts':'lattice'};
 }
 export async function generateScene(input,{apiKey=process.env.OPENAI_API_KEY,provider=process.env.BEADFORM_PROVIDER||'openai',model=provider==='ollama'?localModel():process.env.OPENAI_MODEL||'gpt-4.1',fetchImpl=fetch,signal}={}){

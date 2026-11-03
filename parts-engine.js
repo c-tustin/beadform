@@ -51,9 +51,11 @@ function attachmentRegion(g,child){
  return {...r,targetHeightMm:low+(high-low)*r.sourceFraction,toleranceMm:Math.max(r.minimumToleranceMm,(high-low)*r.toleranceFraction)};
 }
 function orient(p,axis){const y=unit(axis),x=unit(cross(y,Math.abs(y[2])<.9?[0,0,1]:[1,0,0])),z=cross(x,y);return add(add(mul(x,p[0]),mul(y,p[1])),mul(z,p[2]));}
-function buildSeparate(design,{detail=3,threadDiameter=.25}={}){
+function buildSeparate(design,{detail=3,threadDiameter=.2,passBudget}={}){
+ const hardBudget=threadDiameter===.2?8:6;
+ if(passBudget!==undefined&&(!Number.isInteger(passBudget)||passBudget<3||passBudget>hardBudget))throw Error("Invalid internal passage budget.");
  const economy=detail<4,scene=amigurumiScene(design),solids=scene.parts.filter(p=>p.role==='solid');if(!solids.length)throw Error('This design needs a solid body.');if(solids.length>18)throw Error('Simplify this subject to at most 18 main parts for the parts guide.');
- const g={structure:'modules',settings:{threadDiameter},nodes:[],byId:new Map(),faces:[],steps:[],stages:[],components:[],joins:[],palette:[],colors:[],passLimit:threadDiameter===.2?8:6,counts:new Map(),notes:[]};
+ const g={structure:'modules',settings:{threadDiameter},nodes:[],byId:new Map(),faces:[],steps:[],stages:[],components:[],joins:[],palette:[],colors:[],passLimit:passBudget??hardBudget,counts:new Map(),notes:[]};
  const bases=solids.filter(p=>p.type!=='capsule'),foundation=bases.filter(p=>/\b(body|torso|base|hull|wall|shell)\b/i.test(p.name)),base=(foundation.length?foundation:bases).sort((a,b)=>Math.max(...b.size)-Math.max(...a.size))[0]||solids[0],scale=(/head.*body/i.test(base.name)?ball(true,'body'):ball(!economy)).radius/Math.max(...base.size),remaining=solids.slice();let section=0;
  function colorIndex(h){let i=g.palette.indexOf(h);if(i<0){i=g.palette.length;g.palette.push(h);}return i;}
  while(remaining.length){let source;if(!g.components.length)source=base;else source=remaining.slice().sort((a,b)=>Number(/\b(neck|mast)\b/i.test(b.name))-Number(/\b(neck|mast)\b/i.test(a.name))||(a.type==='capsule')-(b.type==='capsule')||Math.min(...g.components.map(c=>len(sub(a.center,c.source.center))))-Math.min(...g.components.map(c=>len(sub(b.center,c.source.center)))))[0];remaining.splice(remaining.indexOf(source),1);
@@ -174,14 +176,36 @@ function compareJointPlans(baseline,candidate){
  return {preferCandidate:reasons.length===0,reasons,workingLengthPenaltyMm2,baselineScore,candidateScore,baseline:a,candidate:b};
 }
 function build(design,options={}){
- if(options.continuous===false)return buildCandidate(design,options,0);
- const attempts=[];let baseline,candidate;
- for(const weight of [0,250])try{const model=buildCandidate(design,options,weight);if(weight===0)baseline=model;else candidate=model;attempts.push({weight,compiled:true});}catch(error){attempts.push({weight,compiled:false,error:error.message});}
- if(!baseline&&!candidate)throw Error(attempts[0].error);
- let selected=baseline||candidate,comparison=null;
- if(baseline&&candidate){comparison=compareJointPlans(baseline,candidate);if(comparison.preferCandidate)selected=candidate;}
- const selection={kind:'two deterministic joint-distance candidates',selectedWeight:selected===candidate?250:0,attempts,comparison,physicalSampleRequired:true};
- selected.jointSelection=selection;if(selected.constructionGraph)selected.constructionGraph.jointSelection=selection;return selected;
+ options={...options,threadDiameter:options.threadDiameter??.2};
+ if(![.2,.25].includes(options.threadDiameter))throw Error('Choose 0.20 or 0.25 mm thread.');
+ const preferred=options.threadDiameter===.2?5:null,hard=options.threadDiameter===.2?8:6,attempts=[];
+ let selected=null,selectedScore=null;
+ for(const budget of preferred?[preferred,hard]:[hard]){
+  let baseline,candidate;
+  for(const weight of options.continuous===false?[0]:[0,250])try{
+   const model=buildCandidate(design,{...options,passBudget:budget},weight);
+   if(weight===0)baseline=model;else candidate=model;
+   attempts.push({budget,weight,compiled:true});
+  }catch(error){attempts.push({budget,weight,compiled:false,error:error.message});}
+  if(!baseline&&!candidate)continue;
+  let choice=baseline||candidate,comparison=null;
+  if(baseline&&candidate){comparison=compareJointPlans(baseline,candidate);if(comparison.preferCandidate)choice=candidate;}
+  const incomplete=choice.finishing&&choice.finishing.candidateEndpoints<choice.finishing.totalEndpoints;
+  const score=[choice.finishing?choice.finishing.totalEndpoints-choice.finishing.candidateEndpoints:0,choice.threadAccess?.nominalStraightPathConflicts||0,choice.finishing?.nominalAccess?.nominalStraightPathConflicts||0,budget];
+  if(!selectedScore||score.some((n,i)=>n<selectedScore[i]&&score.slice(0,i).every((v,j)=>v===selectedScore[j]))){selected=choice;selectedScore=score;}
+  choice.jointSelection={kind:'joint-distance candidates within passage preference',selectedWeight:choice===candidate?250:0,comparison,physicalSampleRequired:true};
+  // Do not trade resolved finishes/nominal access for a low count.
+  if(!incomplete&&!(choice.threadAccess?.nominalStraightPathConflicts)&&!(choice.finishing?.nominalAccess?.nominalStraightPathConflicts))break;
+ }
+ if(!selected)throw Error(attempts[0]?.error||'No construction candidate.');
+ const totals=new Map(selected.counts);
+ for(const end of selected.finishing?.endpoints||[])for(const op of end.moves||[])if(op.id!==null)totals.set(op.id,(totals.get(op.id)||0)+1);
+ const exceptions=preferred?selected.nodes.filter(n=>(totals.get(n.id)||0)>preferred).map(n=>({id:n.id,part:n.component,passes:totals.get(n.id)})):[];
+ selected.passagePreference={preferredMax:preferred,hardSearchBudget:hard,selectedSearchBudget:selected.passLimit,finishingIncluded:!!selected.finishing,unresolvedFinishingEnds:selected.finishing?selected.finishing.totalEndpoints-selected.finishing.candidateEndpoints:null,includes:'initial pickup, weaving, positioning, reinforcement and proposed finishing passes',maximumPlanned:Math.max(0,...totals.values()),exceptions,attempts,physicalSampleRequired:true};
+ if(preferred)selected.notes.push(exceptions.length?`Passage preference exceeded: ${exceptions.length} beads exceed five planned passes with 0.20 mm thread. Review these beads before making: ${exceptions.map(n=>n.id+' ('+n.passes+')').join(', ')}. Counts include proposed finishing; knots and actual hole fit remain unverified.`:'The plan stays within the preferred five passes per bead with 0.20 mm thread, including proposed finishing. Knots and actual hole fit remain unverified.');
+ if(selected.constructionGraph){selected.constructionGraph.passagePreference=selected.passagePreference;selected.constructionGraph.jointSelection=selected.jointSelection;}
+ return selected;
 }
 root.BeadParts={build,example,ball,tube,strand,panel,amigurumiScene,attachmentRegion,jointPlanMetrics,compareJointPlans,validate};if(typeof module!=='undefined')module.exports=root.BeadParts;
 })(typeof window!=='undefined'?window:globalThis);
+

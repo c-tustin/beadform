@@ -1,0 +1,12 @@
+{
+  "created": "2026-11-03",
+  "splits": {
+    "train": 175,
+    "dev": 22,
+    "challenge": 31
+  },
+  "compilerSha256": "d94a5fb6454ee702569dab56d7c72c734c49cf7057fb63ceff0cd8a26846d158",
+  "engineSha256": "f98f1903bd5ca4b43ff3f556c49e7cbae9d927bda2c9d6a8e588b59617fb7ad4",
+  "scope": "Single flat draft swatches in five stitches, not complete 3D designs. All assembly routes compiled and counted before training. No finishes or physical success labels.",
+  "promotion": false
+}

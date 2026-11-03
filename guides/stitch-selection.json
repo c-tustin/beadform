@@ -1,5 +1,5 @@
 {
-  "version": "2026-11-01.1",
+  "version": "2026-11-03.1",
   "purpose": "Authored decision guidance for choosing candidate stitches per design part, not executable stitch instructions or physical validation.",
   "reviewed": "2026-11-01",
   "decisionOrder": [
@@ -8,7 +8,8 @@
     "Compare at least two plausible techniques when there is a real alternative. A hybrid may use different stitches for different parts.",
     "Check the compiler support below. A suitable technique is not necessarily implemented. Never relabel an existing route as another stitch.",
     "Explain the chosen technique and the main compromise in scene notes. If an explicitly requested stitch is unavailable, say so and identify the actual draft technique.",
-    "Keep counts, geometry, thread paths, increases, decreases and joints algorithmic. A physical sample is still required."
+    "Keep counts, geometry, thread paths, increases, decreases and joints algorithmic. A physical sample is still required.",
+    "For new 11/0 round-seed-bead drafts use 0.20 mm thread and prefer no more than five needle/thread passages per bead, including initial pickup and available proposed finishing. More than five is a visible review exception, not an automatic claim of failure or certified hole fit."
   ],
   "stitches": [
     {
@@ -27,7 +28,7 @@
       "label": "Brick stitch",
       "candidatesFor": "Flat silhouettes with stepped or changing outlines, such as a petal, wing or small shaped panel.",
       "tradeoff": "Attachment uses thread bridges. Circular and tubular variants also exist; brick is not restricted to flat designs.",
-      "compilerSupport": "Advisory only: no brick thread-bridge route generator. Current flat details use angle-weave panels; disclose that approximation rather than calling it brick.",
+      "compilerSupport": "Main 3D compiler: advisory only; flat details still use angle-weave panels. A separate experimental flat-recipe compiler supports brick rectangles and narrowing triangles with explicit thread-bridge operations, not arbitrary 3D brick construction.",
       "sources": [
         "brick-ladder",
         "brick-tubular"
@@ -58,7 +59,7 @@
       "label": "Ladder stitch",
       "candidatesFor": "Short bead strips and foundations for brick or other stitches.",
       "tradeoff": "Treat it as a foundation or narrow construction when appropriate, not a general replacement for shaped surfaces.",
-      "compilerSupport": "Advisory only: no ladder generator. Existing flexible return strands are not ladder stitch.",
+      "compilerSupport": "Main 3D compiler: advisory only; return strands are not ladder. A separate experimental flat-recipe compiler supports one ladder foundation strip.",
       "sources": [
         "brick-ladder"
       ]
