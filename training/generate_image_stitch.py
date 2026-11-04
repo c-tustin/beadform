@@ -22,14 +22,16 @@ def main():
         image.info.clear()
     import torch
     from transformers import AutoProcessor,Qwen3VLForConditionalGeneration,BitsAndBytesConfig
-    from peft import PeftModel
+    from peft import PeftModel,prepare_model_for_kbit_training
     from lmformatenforcer import JsonSchemaParser
     from lmformatenforcer.integrations.transformers import build_transformers_prefix_allowed_tokens_fn
     if not torch.cuda.is_available():raise RuntimeError('Use an eligible free Colab GPU; no automatic paid resources.')
     dtype=torch.bfloat16 if torch.cuda.is_bf16_supported() else torch.float16
     processor=AutoProcessor.from_pretrained(MODEL,revision=REVISION)
     model=Qwen3VLForConditionalGeneration.from_pretrained(MODEL,revision=REVISION,device_map={'':0},torch_dtype=dtype,quantization_config=BitsAndBytesConfig(load_in_4bit=True,bnb_4bit_quant_type='nf4',bnb_4bit_use_double_quant=True,bnb_4bit_compute_dtype=dtype))
-    model=PeftModel.from_pretrained(model,adapter);model.eval()
+    # Match the non-quantized parameter preparation used during the recorded evaluation.
+    model=prepare_model_for_kbit_training(model,use_gradient_checkpointing=False)
+    model=PeftModel.from_pretrained(model,adapter);model.eval();model.config.use_cache=True
     messages=[{'role':'system','content':[{'type':'text','text':SYSTEM}]},{'role':'user','content':[{'type':'image','image':image},{'type':'text','text':args.prompt}]}]
     inputs=processor.apply_chat_template(messages,tokenize=True,return_dict=True,return_tensors='pt',add_generation_prompt=True);inputs.pop('token_type_ids',None)
     if inputs['input_ids'].shape[1]>2048:raise ValueError('Input is too long; no truncation.')

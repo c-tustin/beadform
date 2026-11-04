@@ -43,7 +43,12 @@ def show_image(_):
         except Exception as error:print(str(error))
 
 def remove_image(_):
-    image_upload.value={} if isinstance(image_upload.value,dict) else ()
+    global image_upload
+    previous=image_upload
+    image_upload=widgets.FileUpload(accept='.png,.jpg,.jpeg,.webp',multiple=False,description='Upload image')
+    image_upload.observe(show_image,names='value')
+    upload_controls.children=(image_upload,clear_image)
+    previous.close();image_preview.clear_output()
 image_upload.observe(show_image,names='value')
 clear_image.on_click(remove_image)
 
@@ -89,5 +94,6 @@ def make_pattern(_):
 
 generate_button.on_click(make_pattern)
 display(HTML('<h3>Try Beadform — text or image + text</h3><p>Upload an optional reference, describe one small flat swatch, and specify bead dimensions (2–12 beads/units, up to 12 rows). Click Generate pattern.</p><p>Images are processed on this Colab GPU. A resized reference is saved with the result in your Drive. Nothing is published or added to training. Image-conditioned pattern generation is not ready: a live triangle check was recognized by vision but declined by the recipe adapter. The current training scores cover text only. This pilot does not reproduce arbitrary silhouettes, colors or whole 3D objects.</p>'))
-display(prompt_box,widgets.HBox([image_upload,clear_image]),image_preview,generate_button,result_box)
+upload_controls=widgets.HBox([image_upload,clear_image])
+display(prompt_box,upload_controls,image_preview,generate_button,result_box)
 print('Ready. Upload a reference or use text, then click Generate pattern.')

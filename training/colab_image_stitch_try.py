@@ -18,11 +18,14 @@ if not (adapter_path/'adapter_model.safetensors').is_file():
 prompt_box=widgets.Textarea(value='Choose a suitable supported stitch for this flat reference. Target width 8, total rows 5.',description='Design:',layout=widgets.Layout(width='95%',height='90px'))
 image_upload=widgets.FileUpload(accept='.png,.jpg,.jpeg,.webp',multiple=False,description='Upload image')
 clear_image=widgets.Button(description='Clear image')
+sample_button=widgets.Button(description='Use sample triangle')
+sample_data=None
 image_preview=widgets.Output()
 generate_button=widgets.Button(description='Generate pattern',button_style='primary')
 result_box=widgets.Output()
 
 def image_bytes():
+    if sample_data is not None:return sample_data
     value=image_upload.value
     if not value:return None
     item=next(iter(value.values())) if isinstance(value,dict) else value[0]
@@ -38,7 +41,9 @@ def decode_image(data):
         image.thumbnail((896,896))
         return image
 
-def show_image(_):
+def show_image(change):
+    global sample_data
+    if change is not None:sample_data=None
     with image_preview:
         image_preview.clear_output()
         try:
@@ -49,9 +54,27 @@ def show_image(_):
         except Exception as error:print(str(error))
 
 def remove_image(_):
-    image_upload.value={} if isinstance(image_upload.value,dict) else ()
+    global image_upload,sample_data
+    previous=image_upload;sample_data=None
+    image_upload=widgets.FileUpload(accept='.png,.jpg,.jpeg,.webp',multiple=False,description='Upload image')
+    image_upload.observe(show_image,names='value')
+    upload_controls.children=(image_upload,clear_image)
+    previous.close()
+    image_preview.clear_output()
+
+def choose_sample(_):
+    global sample_data
+    from PIL import ImageDraw
+    remove_image(None)
+    image=Image.new('RGB',(224,224),'white')
+    ImageDraw.Draw(image).polygon([(28,192),(112,32),(196,192)],fill='green')
+    buffer=io.BytesIO();image.save(buffer,format='PNG');sample_data=buffer.getvalue()
+    prompt_box.value='Make the pictured flat shape with six foundation beads and four rows total. Select a suitable supported stitch.'
+    show_image(None)
+    with image_preview:print('Using an authored triangle sample; uploading your own image replaces it. This is the known regression case, not an unseen benchmark.')
 image_upload.observe(show_image,names='value')
 clear_image.on_click(remove_image)
+sample_button.on_click(choose_sample)
 
 def make_pattern(_):
     generate_button.disabled=True
@@ -70,7 +93,14 @@ def make_pattern(_):
                     image_path=Path(temp)/'reference.png';image.save(image_path)
                     command.extend(['--image',str(image_path)])
                 completed=subprocess.run(command,cwd=trial_repo,capture_output=True,text=True)
-                if completed.returncode:raise RuntimeError(completed.stderr[-2500:] or completed.stdout[-2500:])
+                if completed.returncode:
+                    detail=completed.stderr.lower()
+                    if 'out of memory' in detail:message='The free GPU ran out of memory. Stop other GPU tasks, reconnect and try again.'
+                    elif 'cuda' in detail and 'unavailable' in detail:message='Reconnect a free GPU runtime, then try again.'
+                    elif 'filenotfounderror' in detail:message='The saved adapter or a required file is missing. Check the connected Drive account.'
+                    else:message='The model could not produce a valid supported draft. Check the dimensions (including even peyote width and triangle row limits), or try a clearer flat reference.'
+                    print('No draft saved. '+message)
+                    return
             plan=json.loads((output_path/'pattern.json').read_text())
             print('Selected recipe:',plan.get('recipe'))
             if plan.get('needsClarification'):
@@ -99,5 +129,6 @@ display(HTML('<h3>Try the new image-trained Beadform adapter</h3><p>Upload a ref
 print('Synthetic development exact recipes:',comparison['before']['dev']['exact_recipes'],'before ->',comparison['after']['dev']['exact_recipes'],'after, out of',comparison['after']['dev']['examples'])
 print('Synthetic challenge exact recipes:',comparison['before']['challenge']['exact_recipes'],'before ->',comparison['after']['challenge']['exact_recipes'],'after, out of',comparison['after']['challenge']['examples'])
 print('Audited adapter SHA256:',audit['adapter_sha256'])
-display(prompt_box,widgets.HBox([image_upload,clear_image]),image_preview,generate_button,result_box)
+upload_controls=widgets.HBox([image_upload,clear_image])
+display(prompt_box,upload_controls,sample_button,image_preview,generate_button,result_box)
 print('Ready. Upload a reference, enter dimensions and click Generate pattern.')
