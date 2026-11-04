@@ -47,7 +47,7 @@ This needs Node.js and a local Ollama model. The built-in examples are the easie
 
 ## Free model training
 
-The new [image-trained flat-stitch experiment](training/results/image-stitch-v1/README.md) is complete: held-out synthetic image recipes improved from **12/40 to 26/40**, but unsupported-input rejection got worse. It remains experimental and is separate from the app's default model. [Try it in free Colab](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_image_stitch.ipynb), including a built-in triangle reference.
+The new [image-trained flat-stitch experiment](training/results/image-stitch-v1/README.md) is complete: held-out synthetic image recipes improved from **12/40 to 26/40**, but unsupported-input rejection got worse. It remains experimental and is separate from the app's default model. [Try it in free Colab](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_image_stitch_try.ipynb), including a built-in triangle reference. This two-cell notebook never retrains the model.
 
 A new [stitch-selection and pattern-recipe pilot](training/stitch-program-v1/README.md) trains a separate Qwen adapter for flat peyote, brick, ladder, RAW and square drafts. It compiles recipes into counted routes; it is not yet a deployed or physically validated model.
 

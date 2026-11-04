@@ -65,7 +65,7 @@ The complete [comparison](comparison.json), [metadata](metadata.json), [training
 
 ## Try the new image adapter
 
-[Open the free image notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_image_stitch.ipynb), use the same Drive account, and run its setup and final interface cell. An existing completed comparison is preserved; the training cell does not retrain a completed run.
+[Open the inference-only image notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_image_stitch_try.ipynb), use the same Drive account, and run its two cells. It never invokes a trainer or changes weights. Colab disconnected after the successful run; reconnecting to try the saved model does not require retraining. The separate training notebook preserves an existing completed comparison.
 
 Click **Use sample triangle**, then **Generate pattern**, or upload a small flat reference and give explicit bead dimensions. The old text adapter remains available in the earlier interface. The app's default model has not changed.
 
