@@ -20,3 +20,9 @@ The new LoRA continues the previous language-attention adapter using actual imag
 **Results are pending until `comparison.json` exists.** Neither valid JSON, a lower training loss nor a five-pass assembly ledger proves image accuracy or physical beadability. Inspect failure cases, then try real references separately. The old text model remains available.
 
 [Open the free Colab training notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_image_stitch.ipynb).
+
+## Try the evaluated adapter
+
+After this run's `comparison.json` exists, use `training/generate_image_stitch.py` with `--adapter /content/drive/MyDrive/Beadform-free-qwen/runs/image-stitch-v1/adapter`, `--image /content/reference.png`, `--prompt "Choose a suitable stitch for this flat reference. Target width 8, total rows 5."`, and a fresh `--output` folder in your Drive. This uses the trained image adapter directly with the same image/text system as evaluation, rather than the earlier vision-description handoff. It refuses the old adapter and refuses an evaluation that has not finished. It does not automatically replace the app model.
+
+Source image uploads remain private to the Colab run and your chosen output folder. A normalized reference, exact model recipe, compiler draft, chart and provenance are saved. No upload is published or added to training automatically. A resized image and generated draft are not physical-success evidence.
