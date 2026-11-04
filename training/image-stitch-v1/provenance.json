@@ -1,0 +1,22 @@
+{
+  "version": 1,
+  "source": "original deterministic synthetic drawings and authored rules; no downloaded photos",
+  "pixel_hash": "SHA256 of decoded RGB bytes; Pillow version pinned",
+  "split_design": "Recipe groups, image seeds and image hashes isolated; train colored/outlined charts, dev sketch style, challenge alternate background/rotation. Some abstract drawing structures recur; this is not real-photo generalization.",
+  "counts": {
+    "train": 228,
+    "dev": 28,
+    "challenge": 40
+  },
+  "physical_success_labels": 0,
+  "user_reviewed_labels": 0,
+  "training_images": 140,
+  "supported_flat_families": [
+    "peyote",
+    "brick",
+    "ladder",
+    "raw",
+    "square"
+  ],
+  "no_whole_3d_subjects": true
+}
