@@ -51,7 +51,9 @@ def main():
         image_evidence['pipeline']='frozen-base-vision-then-text-stitch-adapter'
     user_text=args.prompt
     if visual is not None:
-        user_text+='\nReference image visual reading (uncertain model observation): '+json.dumps(visual)
+        outlines={'triangle':'A flat changing triangular outline','rectangle':'A flat rectangular outline','strip':'A narrow flat foundation strip','unknown':'An unsupported or ambiguous outline'}
+        structures={'solid':'solid fabric','open-grid':'an open grid of connected units','aligned-grid':'an aligned bead grid','unknown':'unspecified structure'}
+        user_text=outlines[visual['outline']]+' with '+structures[visual['structure']]+'. User specifications: '+args.prompt
     system=SYSTEM
     if visual is not None:
         system+=' Use the reference visual reading only as an uncertain shape/structure observation. Dimensions must come from the user text, never image scale. If the observed outline is unknown or conflicts with the requested shape, return unknown. This image workflow is experimental and requires user review.'
