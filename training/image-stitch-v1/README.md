@@ -30,3 +30,7 @@ Source image uploads remain private to the Colab run and your chosen output fold
 ## Audit saved evaluation
 
 After completion, `python training/audit_image_stitch_results.py --run /content/drive/MyDrive/Beadform-free-qwen/runs/image-stitch-v1` checks frozen source/data hashes, every saved input and raw prediction, all summaries and comparison bindings, two completed epochs, changed adapter weights, and actual compilation of every distinct predicted recipe. It writes `audit.json` only if these checks pass. The report also counts unique positive targets so repeated image styles are not mistaken for independent pattern specifications. This verifies the experiment's records, not real-world beadability.
+
+## Image-upload interface after evaluation
+
+The notebook's final cell audits every saved prediction, pins the result-tool revision, and opens `colab_image_stitch_try.py`. The interface requires completed evaluation and an audit matching the actual new adapter hash. It displays measured synthetic before/after scores, accepts an image plus explicit bead dimensions, and uses the new image adapter directly. The original adapter and earlier interface remain available. This is an experimental Colab interface, not an automatic app deployment.
