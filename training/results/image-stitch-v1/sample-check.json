@@ -1,0 +1,18 @@
+{
+  "status": "verified",
+  "reference": "Authored known-regression triangle; not an unseen benchmark. Selected using the real Use sample triangle button, then Generate pattern.",
+  "recipe": {
+    "stitch": "brick",
+    "shape": "triangle",
+    "width": 6,
+    "rows": 4
+  },
+  "beads": 18,
+  "maximum_assembly_passes": 3,
+  "clear_reference_control_verified": true,
+  "missing_reference_guard_verified": true,
+  "native_file_picker_automation_verified": false,
+  "finishing_planned": false,
+  "physical_validated": false,
+  "adapter_sha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1"
+}

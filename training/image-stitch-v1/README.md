@@ -17,7 +17,7 @@ The five supported families remain flat peyote, brick, ladder, RAW and square st
 
 The new LoRA continues the previous language-attention adapter using actual image tokens plus text, assistant-only loss, two fixed epochs, seed 43 and a 5e-5 learning rate. The vision tower remains frozen. Model, parent-weight, source, data and environment hashes are recorded. Checkpoints permit an identical run to resume; completed runs are protected. Challenge scores do not choose epochs or promote deployment.
 
-**Results are pending until `comparison.json` exists.** Neither valid JSON, a lower training loss nor a five-pass assembly ledger proves image accuracy or physical beadability. Inspect failure cases, then try real references separately. The old text model remains available.
+**Completed:** development images improved from 15/28 to 24/28 exact recipes; held-out synthetic images improved from 12/40 to 26/40. Unsupported-input rejection worsened from 9/10 to 6/10, and text retention stayed 21/22. [Full audited results and failures](../results/image-stitch-v1/README.md). The old adapter is preserved and this experiment is not the app default. Neither valid JSON, a lower training loss nor a five-pass assembly ledger proves image accuracy or physical beadability. Inspect failure cases, then try real references separately. The old text model remains available.
 
 [Open the free Colab training notebook](https://colab.research.google.com/github/c-tustin/beadform/blob/main/training/colab_image_stitch.ipynb).
 
@@ -34,3 +34,5 @@ After completion, `python training/audit_image_stitch_results.py --run /content/
 ## Image-upload interface after evaluation
 
 The notebook's final cell audits every saved prediction, pins the result-tool revision, and opens `colab_image_stitch_try.py`. The interface requires completed evaluation and an audit matching the actual new adapter hash. It displays measured synthetic before/after scores, accepts an image plus explicit bead dimensions, and uses the new image adapter directly. The original adapter and earlier interface remain available. This is an experimental Colab interface, not an automatic app deployment.
+
+The compatible interface includes **Use sample triangle** and a reset that supports Colab ipywidgets 7 as well as 8. The sample generated a verified 18-bead brick draft with at most three assembly passages; it is a known regression, not new held-out evidence. Manual uploads remain supported by the standard upload component; automated native file-picker interaction was not verified.

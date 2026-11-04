@@ -1,0 +1,15 @@
+{
+  "prompt": "Make the pictured flat shape with six foundation beads and four rows total. Select a suitable supported stitch.",
+  "raw": "{\"stitch\": \"brick\", \"shape\": \"triangle\", \"width\": 6, \"rows\": 4}",
+  "task": "image-stitch-v1",
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "adapter_sha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+  "source_image_sha256": "7ffc92dbd7c0560065be160bb8df58ccef1fdb8f6aa942ca2ec36935b2ce81e0",
+  "image_pixel_sha256": "57a86326e406902b4608fe954a094f26c6d61f6e80aa138d9302cccf9007e94b",
+  "image_preprocessing": "EXIF orientation, RGB, preserve aspect ratio and pad to 224 square",
+  "evaluation_scope": "synthetic flat references only",
+  "physicalSampleRequired": true,
+  "finishingPlanned": false,
+  "deployed": false
+}

@@ -1,0 +1,11 @@
+{
+  "parent_unchanged": true,
+  "new_matches_audit": true,
+  "parent_sha256": "7c63aeaf0d9560d04cb040dcb875a33211be5e6b893c59b2567545e9c307fdb8",
+  "adapter_sha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+  "changed_tensors": 112,
+  "tensor_count": 112,
+  "changed_elements": 3211260,
+  "total_elements": 3211264,
+  "maximum_absolute_change": 0.001265640021301806
+}

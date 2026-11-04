@@ -1,0 +1,26 @@
+{
+  "task": "image-stitch-v1",
+  "model": "Qwen/Qwen3-VL-2B-Instruct",
+  "revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "parent_adapter_sha256": "7c63aeaf0d9560d04cb040dcb875a33211be5e6b893c59b2567545e9c307fdb8",
+  "parent_config_sha256": "81b86c5ca99336b97e764eb2fc028978417c4889047808255461d06ffea9130f",
+  "epochs": 2,
+  "seed": 43,
+  "train_rows": 228,
+  "dev_images": 28,
+  "challenge_images": 40,
+  "text_retention_eval": 22,
+  "sources": {
+    "training/image_stitch_data.py": "04eed18a82aa9a972a4eb6fc000b109e5086807c6062e410c3e57067f17462ea",
+    "training/train_image_stitch.py": "60b8ddc00e8ff199c67498e84c319561cd3ee6bc9b473b2bb879259ef3ade050",
+    "training/image-stitch-v1/examples.jsonl": "8cfa5e4fdb80374b325d79a339e071262670897073e18c9b4d48e3ebb774e344",
+    "training/image-stitch-v1/provenance.json": "f4dff9d38c5584288c0fbc746565b5cb4714c8a77b0911532f8ab08c1ef22422",
+    "training/stitch_data.py": "71bdea67d6b903383dbf646841458880b932cefa54af87d3af3051ef8dcbf445",
+    "training/stitch-program-v1/examples.jsonl": "3b469ab5834bbe88b81e3cb081d4f2b5829361e5307af92eef86b9d3f410f246",
+    "training/requirements-catalog-v2.txt": "c77f6c5c1bb2b4027eae6dc1ed0a94f0b48cfcc194f44aaa16c7ab5eb1dbf23c",
+    "stitch-programs.mjs": "d94a5fb6454ee702569dab56d7c72c734c49cf7057fb63ceff0cd8a26846d158",
+    "engine.js": "f98f1903bd5ca4b43ff3f556c49e7cbae9d927bda2c9d6a8e588b59617fb7ad4"
+  },
+  "system_sha256": "ce3fa0bec833e6e482992db979620b92bb2d3dc2b72646c42a02a29858be5741",
+  "note": "Synthetic flat image references, not real-photo or physical-beadability validation. No automatic deployment."
+}

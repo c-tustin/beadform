@@ -1,0 +1,81 @@
+{
+  "status": "verified",
+  "audit_script_sha256": "9d06da5cac922850075d1cc79f26512ae8c89b030aaa169dc5e542fd69ae90e7",
+  "prediction_count": 218,
+  "source_and_data_match": true,
+  "all_predictions_recompiled": true,
+  "two_epochs_complete": true,
+  "adapter_sha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+  "parent_adapter_sha256": "7c63aeaf0d9560d04cb040dcb875a33211be5e6b893c59b2567545e9c307fdb8",
+  "adapter_differs_from_parent": true,
+  "sets": {
+    "frozen-base-dev": {
+      "predictions": 28,
+      "exact_recipes": 16,
+      "unique_positive_targets": 5,
+      "predictions_sha256": "f688768bacdb0f1bc62600a66bcb44cd2a2b987b4190ff37bd5f77948600cbbc"
+    },
+    "before-dev": {
+      "predictions": 28,
+      "exact_recipes": 15,
+      "unique_positive_targets": 5,
+      "predictions_sha256": "c36f173d5446d6d87c7e1097c01f3b563d02a2091c8dd01a7a842ef5f02189bf"
+    },
+    "before-challenge": {
+      "predictions": 40,
+      "exact_recipes": 12,
+      "unique_positive_targets": 9,
+      "predictions_sha256": "2b52b4576f1599e5d0d49c35dfa90c9eb19e384d734edfb03a05e0786a7e7479"
+    },
+    "before-text": {
+      "predictions": 22,
+      "exact_recipes": 21,
+      "unique_positive_targets": 9,
+      "predictions_sha256": "f906b039b727bb8f05195cb0e72ed9a763fba0087ff090c6e2a49c35df5bb928"
+    },
+    "before-regression": {
+      "predictions": 1,
+      "exact_recipes": 0,
+      "unique_positive_targets": 1,
+      "predictions_sha256": "d69e74ebb80e5df462c6415dff969f9c3c4a1b13f3c0e92c587606174253b62c"
+    },
+    "after-dev": {
+      "predictions": 28,
+      "exact_recipes": 24,
+      "unique_positive_targets": 5,
+      "predictions_sha256": "ffd3176b712efd5118c51da35d554c26baacdf6e5c6703efedc25a38ce57a024"
+    },
+    "after-challenge": {
+      "predictions": 40,
+      "exact_recipes": 26,
+      "unique_positive_targets": 9,
+      "predictions_sha256": "f30686497fff3cc1e0c953f10e94b3580ce52efbc16d0d434135fb7ee537f465"
+    },
+    "after-text": {
+      "predictions": 22,
+      "exact_recipes": 21,
+      "unique_positive_targets": 9,
+      "predictions_sha256": "f906b039b727bb8f05195cb0e72ed9a763fba0087ff090c6e2a49c35df5bb928"
+    },
+    "after-regression": {
+      "predictions": 1,
+      "exact_recipes": 1,
+      "unique_positive_targets": 1,
+      "predictions_sha256": "f2448953324022d87a35f85f291d0edb2b2c52beb51c5813a15e26281b4025d9"
+    },
+    "after-image-swaps": {
+      "predictions": 4,
+      "exact_recipes": 1,
+      "unique_positive_targets": 4,
+      "predictions_sha256": "de8bf90fa1d64ae6fe295ff689f6020df5b28889b85330fb17eae07c333dc850"
+    },
+    "after-blank-ablation": {
+      "predictions": 4,
+      "exact_recipes": 0,
+      "unique_positive_targets": 4,
+      "predictions_sha256": "a6c9bcb4bcb537ca3acf59201ae13310e44f6aa50c7097943576661ff9a96d4a"
+    }
+  },
+  "physical_validated": false,
+  "note": "Synthetic flat references only. Known regression was previously debugged; blank ablation is a diagnostic. No automatic deployment."
+}

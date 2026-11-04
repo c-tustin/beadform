@@ -1,0 +1,371 @@
+{
+  "frozen_base_dev": {
+    "examples": 28,
+    "exact_recipes": 16,
+    "stitch_correct": 16,
+    "strict_valid": 28,
+    "compiled_patterns": 26,
+    "assembly_at_most_five": 26,
+    "unsupported_correct": 0,
+    "unsupported_cases": 8,
+    "by_stitch": {
+      "brick": {
+        "cases": 4,
+        "exact": 4
+      },
+      "ladder": {
+        "cases": 4,
+        "exact": 4
+      },
+      "peyote": {
+        "cases": 4,
+        "exact": 0
+      },
+      "raw": {
+        "cases": 4,
+        "exact": 4
+      },
+      "square": {
+        "cases": 4,
+        "exact": 4
+      },
+      "unknown": {
+        "cases": 8,
+        "exact": 0
+      }
+    },
+    "physical_validated": false,
+    "finishing_planned": false
+  },
+  "before": {
+    "dev": {
+      "examples": 28,
+      "exact_recipes": 15,
+      "stitch_correct": 15,
+      "strict_valid": 28,
+      "compiled_patterns": 11,
+      "assembly_at_most_five": 11,
+      "unsupported_correct": 7,
+      "unsupported_cases": 8,
+      "by_stitch": {
+        "brick": {
+          "cases": 4,
+          "exact": 0
+        },
+        "ladder": {
+          "cases": 4,
+          "exact": 0
+        },
+        "peyote": {
+          "cases": 4,
+          "exact": 0
+        },
+        "raw": {
+          "cases": 4,
+          "exact": 4
+        },
+        "square": {
+          "cases": 4,
+          "exact": 4
+        },
+        "unknown": {
+          "cases": 8,
+          "exact": 7
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "challenge": {
+      "examples": 40,
+      "exact_recipes": 12,
+      "stitch_correct": 12,
+      "strict_valid": 40,
+      "compiled_patterns": 5,
+      "assembly_at_most_five": 5,
+      "unsupported_correct": 9,
+      "unsupported_cases": 10,
+      "by_stitch": {
+        "brick": {
+          "cases": 6,
+          "exact": 0
+        },
+        "ladder": {
+          "cases": 6,
+          "exact": 0
+        },
+        "peyote": {
+          "cases": 6,
+          "exact": 0
+        },
+        "raw": {
+          "cases": 6,
+          "exact": 0
+        },
+        "square": {
+          "cases": 6,
+          "exact": 3
+        },
+        "unknown": {
+          "cases": 10,
+          "exact": 9
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "text": {
+      "examples": 22,
+      "exact_recipes": 21,
+      "stitch_correct": 21,
+      "strict_valid": 22,
+      "compiled_patterns": 18,
+      "assembly_at_most_five": 18,
+      "unsupported_correct": 3,
+      "unsupported_cases": 4,
+      "by_stitch": {
+        "brick": {
+          "cases": 4,
+          "exact": 4
+        },
+        "ladder": {
+          "cases": 2,
+          "exact": 2
+        },
+        "peyote": {
+          "cases": 4,
+          "exact": 4
+        },
+        "raw": {
+          "cases": 4,
+          "exact": 4
+        },
+        "square": {
+          "cases": 4,
+          "exact": 4
+        },
+        "unknown": {
+          "cases": 4,
+          "exact": 3
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "known_regression": {
+      "examples": 1,
+      "exact_recipes": 0,
+      "stitch_correct": 0,
+      "strict_valid": 1,
+      "compiled_patterns": 0,
+      "assembly_at_most_five": 0,
+      "unsupported_correct": 0,
+      "unsupported_cases": 0,
+      "by_stitch": {
+        "brick": {
+          "cases": 1,
+          "exact": 0
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    }
+  },
+  "after": {
+    "dev": {
+      "examples": 28,
+      "exact_recipes": 24,
+      "stitch_correct": 24,
+      "strict_valid": 28,
+      "compiled_patterns": 21,
+      "assembly_at_most_five": 21,
+      "unsupported_correct": 5,
+      "unsupported_cases": 8,
+      "by_stitch": {
+        "brick": {
+          "cases": 4,
+          "exact": 3
+        },
+        "ladder": {
+          "cases": 4,
+          "exact": 4
+        },
+        "peyote": {
+          "cases": 4,
+          "exact": 4
+        },
+        "raw": {
+          "cases": 4,
+          "exact": 4
+        },
+        "square": {
+          "cases": 4,
+          "exact": 4
+        },
+        "unknown": {
+          "cases": 8,
+          "exact": 5
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "challenge": {
+      "examples": 40,
+      "exact_recipes": 26,
+      "stitch_correct": 26,
+      "strict_valid": 40,
+      "compiled_patterns": 22,
+      "assembly_at_most_five": 22,
+      "unsupported_correct": 6,
+      "unsupported_cases": 10,
+      "by_stitch": {
+        "brick": {
+          "cases": 6,
+          "exact": 3
+        },
+        "ladder": {
+          "cases": 6,
+          "exact": 6
+        },
+        "peyote": {
+          "cases": 6,
+          "exact": 2
+        },
+        "raw": {
+          "cases": 6,
+          "exact": 6
+        },
+        "square": {
+          "cases": 6,
+          "exact": 3
+        },
+        "unknown": {
+          "cases": 10,
+          "exact": 6
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "text": {
+      "examples": 22,
+      "exact_recipes": 21,
+      "stitch_correct": 21,
+      "strict_valid": 22,
+      "compiled_patterns": 18,
+      "assembly_at_most_five": 18,
+      "unsupported_correct": 3,
+      "unsupported_cases": 4,
+      "by_stitch": {
+        "brick": {
+          "cases": 4,
+          "exact": 4
+        },
+        "ladder": {
+          "cases": 2,
+          "exact": 2
+        },
+        "peyote": {
+          "cases": 4,
+          "exact": 4
+        },
+        "raw": {
+          "cases": 4,
+          "exact": 4
+        },
+        "square": {
+          "cases": 4,
+          "exact": 4
+        },
+        "unknown": {
+          "cases": 4,
+          "exact": 3
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "known_regression": {
+      "examples": 1,
+      "exact_recipes": 1,
+      "stitch_correct": 1,
+      "strict_valid": 1,
+      "compiled_patterns": 1,
+      "assembly_at_most_five": 1,
+      "unsupported_correct": 0,
+      "unsupported_cases": 0,
+      "by_stitch": {
+        "brick": {
+          "cases": 1,
+          "exact": 1
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "image_swaps": {
+      "examples": 4,
+      "exact_recipes": 1,
+      "stitch_correct": 1,
+      "strict_valid": 4,
+      "compiled_patterns": 1,
+      "assembly_at_most_five": 1,
+      "unsupported_correct": 0,
+      "unsupported_cases": 0,
+      "by_stitch": {
+        "brick": {
+          "cases": 1,
+          "exact": 0
+        },
+        "peyote": {
+          "cases": 1,
+          "exact": 0
+        },
+        "raw": {
+          "cases": 1,
+          "exact": 1
+        },
+        "square": {
+          "cases": 1,
+          "exact": 0
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    },
+    "blank_image_original_targets": {
+      "examples": 4,
+      "exact_recipes": 0,
+      "stitch_correct": 0,
+      "strict_valid": 4,
+      "compiled_patterns": 0,
+      "assembly_at_most_five": 0,
+      "unsupported_correct": 0,
+      "unsupported_cases": 0,
+      "by_stitch": {
+        "brick": {
+          "cases": 1,
+          "exact": 0
+        },
+        "peyote": {
+          "cases": 1,
+          "exact": 0
+        },
+        "raw": {
+          "cases": 1,
+          "exact": 0
+        },
+        "square": {
+          "cases": 1,
+          "exact": 0
+        }
+      },
+      "physical_validated": false,
+      "finishing_planned": false
+    }
+  },
+  "deployed": false,
+  "note": "Synthetic flat image references, not real-photo or physical-beadability validation. No automatic deployment.",
+  "ablation_note": "Blank-image accuracy is against original image labels only as a reliance diagnostic, not a valid blank-image pattern target."
+}
