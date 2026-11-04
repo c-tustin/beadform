@@ -28,6 +28,18 @@ python training/generate_stitch_pattern.py --adapter /content/drive/MyDrive/Bead
 
 Choose a new output folder each time. Unsupported or missing specifications return a clarification result, not a substitute design. Generated requests remain in your output folder and are not automatically published or added to training. This script requires the completed new adapter; earlier catalog adapters have a different task.
 
+## Try an image reference
+
+The try-it interface now accepts an optional PNG, JPEG or WebP (up to 10 MB and 20 megapixels) plus your text dimensions. Qwen receives the image directly through its vision processor; code still computes the resulting flat chart and passage ledger. Use a clear image of one small flat shape. The pilot does not trace arbitrary silhouettes, reproduce image colors, or generate whole 3D objects.
+
+For the CLI, add `--image /content/reference.png` to the inference command above. Bead dimensions must still be in the text; image scale is never a reliable bead measurement. Unsupported inputs should request clarification; review every result because this behavior has not been evaluated on images.
+
+**Experimental:** the saved adapter was trained and evaluated on text only, with zero image training examples. Its text scores do not measure image accuracy. No weights were changed for this upload feature. The vision pathway comes from the frozen Qwen3-VL base. Image-conditioned examples and a separate held-out image evaluation are needed before claiming reliable image pattern generation.
+
+Uploaded images are processed on the connected free Colab GPU, resized to at most 896 pixels per side, and stripped of EXIF metadata in the saved `reference.png`. This reference and generation metadata stay with the output in your Drive; neither uploads nor generated results are automatically published to GitHub or used as training labels. For CLI inputs, the original file is not modified.
+
+The interactive UI is in `training/colab_stitch_try.py`. After GPU, Drive and dependency setup, run it with `%run /content/beadform-stitch-try/training/colab_stitch_try.py`. See the inference-only notebook `training/colab_stitch_try.ipynb` for setup; it never reruns training. Source reference: [official Qwen3-VL image-input documentation](https://huggingface.co/docs/transformers/model_doc/qwen3_vl).
+
 ## Meaning of the five-pass preference
 
 For new 3D parts projects, 11/0 round seed beads and 0.20 mm thread are now the default. The planner tries a five-pass search budget first, including available proposed finishing routes. It can fall back to the earlier eight-pass engineering budget if necessary; every bead above five is reported as a review exception in the interface, text/print notes and construction export. This is a soft preference, not a certified hole capacity. A different needle, bead finish, knot or extra reinforcement can require more space. Existing saved projects retain their recorded thread size, and changed routes reset guide progress through the existing route-key mechanism.
