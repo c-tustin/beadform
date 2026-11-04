@@ -1,5 +1,6 @@
 {
   "version": 1,
+  "pillow_version": "11.3.0",
   "source": "original deterministic synthetic drawings and authored rules; no downloaded photos",
   "pixel_hash": "SHA256 of decoded RGB bytes; Pillow version pinned",
   "split_design": "Recipe groups, image seeds and image hashes isolated; train colored/outlined charts, dev sketch style, challenge alternate background/rotation. Some abstract drawing structures recur; this is not real-photo generalization.",

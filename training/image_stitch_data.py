@@ -1,7 +1,7 @@
 """Authored synthetic image-to-recipe curriculum; no physical-success labels."""
 import hashlib,json,random,io
 from pathlib import Path
-from PIL import Image,ImageDraw
+from PIL import Image,ImageDraw,__version__ as PILLOW_VERSION
 from stitch_data import MODEL,REVISION,SCHEMA,strict_recipe,SYSTEM as TEXT_SYSTEM
 HERE=Path(__file__).resolve().parent
 DATA=HERE/'image-stitch-v1'
@@ -10,6 +10,7 @@ UNKNOWN={'stitch':'unknown','shape':'unknown','width':0,'rows':0}
 
 def render(spec):
     """No text, stitch names, dimension labels or target JSON are painted into images."""
+    if PILLOW_VERSION!='11.3.0':raise RuntimeError('Render with pinned Pillow 11.3.0; do not regenerate frozen hashes under a different version.')
     rng=random.Random(spec['seed']);style=spec['style'];kind=spec['kind']
     bg=[(251,249,242),(236,242,248),(255,255,255),(240,232,220)][style]
     # Palette depends on seed only, never target stitch or split.
@@ -117,7 +118,7 @@ if __name__=='__main__':
         plan=json.loads(result.stdout)
         if plan.get('needsClarification') or plan['passagePreference']['exceptions']:raise ValueError('Invalid or over-five target.')
     (DATA/'examples.jsonl').write_text(''.join(json.dumps(r)+'\n' for r in rows))
-    provenance={'version':1,'source':'original deterministic synthetic drawings and authored rules; no downloaded photos','pixel_hash':'SHA256 of decoded RGB bytes; Pillow version pinned','split_design':'Recipe groups, image seeds and image hashes isolated; train colored/outlined charts, dev sketch style, challenge alternate background/rotation. Some abstract drawing structures recur; this is not real-photo generalization.','counts':{s:sum(r['split']==s for r in rows) for s in ['train','dev','challenge']},'physical_success_labels':0,'user_reviewed_labels':0,'training_images':sum(r['split']=='train' and bool(r.get('image')) for r in rows),'supported_flat_families':['peyote','brick','ladder','raw','square'],'no_whole_3d_subjects':True}
+    provenance={'version':1,'pillow_version':PILLOW_VERSION,'source':'original deterministic synthetic drawings and authored rules; no downloaded photos','pixel_hash':'SHA256 of decoded RGB bytes; Pillow version pinned','split_design':'Recipe groups, image seeds and image hashes isolated; train colored/outlined charts, dev sketch style, challenge alternate background/rotation. Some abstract drawing structures recur; this is not real-photo generalization.','counts':{s:sum(r['split']==s for r in rows) for s in ['train','dev','challenge']},'physical_success_labels':0,'user_reviewed_labels':0,'training_images':sum(r['split']=='train' and bool(r.get('image')) for r in rows),'supported_flat_families':['peyote','brick','ladder','raw','square'],'no_whole_3d_subjects':True}
     (DATA/'provenance.json').write_text(json.dumps(provenance,indent=2)+'\n')
     # A contact sheet makes reference-label mistakes reviewable.
     sheet=Image.new('RGB',(224*5,258*3),'white');draw=ImageDraw.Draw(sheet)
