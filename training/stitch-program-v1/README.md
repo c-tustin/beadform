@@ -30,7 +30,7 @@ Choose a new output folder each time. Unsupported or missing specifications retu
 
 ## Try an image reference
 
-The try-it interface now accepts an optional PNG, JPEG or WebP (up to 10 MB and 20 megapixels) plus your text dimensions. Qwen receives the image directly through its vision processor; code still computes the resulting flat chart and passage ledger. Use a clear image of one small flat shape. The pilot does not trace arbitrary silhouettes, reproduce image colors, or generate whole 3D objects.
+The try-it interface now accepts an optional PNG, JPEG or WebP (up to 10 MB and 20 megapixels) plus your text dimensions. The frozen Qwen base reads the outline and structure through its vision processor, then the text-trained stitch adapter receives that uncertain visual description plus your dimensions. Code still computes the resulting flat chart and passage ledger. Use a clear image of one small flat shape. The pilot does not trace arbitrary silhouettes, reproduce image colors, or generate whole 3D objects.
 
 For the CLI, add `--image /content/reference.png` to the inference command above. Bead dimensions must still be in the text; image scale is never a reliable bead measurement. Unsupported inputs should request clarification; review every result because this behavior has not been evaluated on images.
 
