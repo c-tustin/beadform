@@ -9,6 +9,7 @@
  function settings(s){
    if(!s||(!shapes[s.shape]&&s.shape!=='custom')||![2,3,4].includes(s.detail)||![75,100,125].includes(s.depth)||!Number.isFinite(s.beadSize)||s.beadSize<1||s.beadSize>6)throw Error('Unsupported 3D shape settings.');
    const out={shape:s.shape,detail:s.detail,depth:s.depth,beadSize:s.beadSize,routeVersion:s.routeVersion===2?2:1,orderVersion:s.orderVersion===2?2:1,threadDiameter:s.threadDiameter===.2?.2:.25};
+   if(s.preferredMaxPasses===5)out.preferredMaxPasses=5;
    if(s.shape==='custom'){if(!S)throw Error('The shape engine is missing.');out.design=s.design?.kind==='image'?S.validateImage(s.design):S.scene(s.design);}
    return out;
  }
@@ -115,7 +116,7 @@
  }
  function construction2(g){
    const used=new Set(),stitched=new Set(),adj=new Map(),usage=new Map(),remaining=new Map(),out=[];
-   const limit=g.settings.threadDiameter===.2?8:6;let cursor=null,section=0;
+   const limit=g.settings.preferredMaxPasses||(g.settings.threadDiameter===.2?8:6);let cursor=null,section=0;
    for(const f of g.faces)for(const id of f.ids)remaining.set(id,(remaining.get(id)||0)+1);
    function register(id){used.add(id);const n=g.byId.get(id);for(let j=0;j<2;j++){if(!adj.has(n.ends[j]))adj.set(n.ends[j],[]);adj.get(n.ends[j]).push({id,to:n.ends[1-j]});}}
    function move(id){const n=g.byId.get(id);if(!n.ends.includes(cursor))throw Error('The thread route is disconnected.');cursor=n.ends[0]===cursor?n.ends[1]:n.ends[0];usage.set(id,(usage.get(id)||0)+1);}
@@ -181,7 +182,7 @@
    if(added.size!==g.nodes.length)errors.push('The guide does not construct every bead.');if(stitched.size!==g.faces.length)errors.push('The guide leaves an incomplete ring.');
    const cells=new Set();for(const c of g.cubes){if(cells.size&&!dirs.some(d=>cells.has(k([c.x+d[0],c.y+d[1],c.z+d[2]]))))errors.push('A cube has no joining face.');cells.add(k([c.x,c.y,c.z]));}
    const maxPasses=Math.max(0,...usage.values()),longRoutes=g.steps.filter(s=>s.travel.length>16).length;
-   const limit=g.settings.threadDiameter===.2?8:6;
+   const limit=g.settings.preferredMaxPasses||(g.settings.threadDiameter===.2?8:6);
    if(g.settings.routeVersion===2&&maxPasses>limit)errors.push('A bead exceeds the planned fishing-line passage budget.');
    return {valid:errors.length===0,errors:[...new Set(errors)],beads:added.size,closedRings:stitched.size,maxPasses,longRoutes,passLimit:limit,threadSections:Math.max(1,g.steps.filter(s=>s.threadStart).length),usage};
  }

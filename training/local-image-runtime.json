@@ -1,0 +1,28 @@
+{
+  "task": "image-stitch-v1",
+  "status": "local-image-generation-verified",
+  "converted_adapter_sha256": "a5a1f5977028b3f4ec4c87912fbbe2000a27f3904128c01e4f7f4554bd54ee55",
+  "adapter_source_sha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+  "training_base": "Qwen/Qwen3-VL-2B-Instruct",
+  "training_base_revision": "89644892e4d85e24eaac8bacfd4f463576704203",
+  "gguf_repository": "Qwen/Qwen3-VL-2B-Instruct-GGUF",
+  "gguf_revision": "52d6c8ffea26cc873ac5ad116f8631268d7eb503",
+  "files": {
+    "Qwen3VL-2B-Instruct-Q8_0.gguf": "1e8db19207c8ce0733ddd78c2eff8a9e22c27c82f4443df94c25792ed8fe04f2",
+    "mmproj-Qwen3VL-2B-Instruct-F16.gguf": "c3d5afbef5287953acd57b4043d2269456e5761a4eaccb3b71b062996970aea5"
+  },
+  "llama_cpp_commit": "6f1e6543704bc5b080c7a98e7b6f707b31f6ed51",
+  "llama_cpp_build": 12119,
+  "archive_sha256": "79cdaf30cfd10d6ebbb39f65ae95d542bf526730292698056f39443d9d3f7f29",
+  "local_model_evaluation_complete": false,
+  "local_smoke_test": {
+    "date": "2026-11-06",
+    "image_input_verified": true,
+    "workbench_text_generation_verified": true,
+    "expected_recipe": {"stitch":"brick","shape":"triangle","width":6,"rows":4},
+    "beads": 18,
+    "maximum_assembly_passes": 3,
+    "scope": "One synthetic image and a text prompt; not a general accuracy evaluation."
+  },
+  "physical_beadability_verified": false
+}

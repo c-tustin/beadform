@@ -1,0 +1,53 @@
+{
+  "date": "2026-11-06",
+  "scope": "Digital smoke tests only. No physical build or general model accuracy evaluation.",
+  "catalog": {
+    "starters": 32,
+    "fishExcluded": true,
+    "routeChecks": "Unique edge beads, pickup order, endpoint continuity, face-connected cubes, independently recomputed assembly counts <= 5."
+  },
+  "regression": {
+    "volumeEngineConfigurations": 54
+  },
+  "liveTests": {
+    "trainedFlatAdapter": {
+      "stitch": "brick",
+      "shape": "triangle",
+      "width": 6,
+      "rows": 4,
+      "beads": 18,
+      "maxAssemblyPasses": 3
+    },
+    "baseQwenText3d": {
+      "title": "Sitting Cat",
+      "source": {
+        "kind": "local-qwen-base",
+        "adapterApplied": false
+      },
+      "beads": 399,
+      "cubes": 78,
+      "steps": 307,
+      "maxAssemblyPasses": 5,
+      "valid": true
+    },
+    "baseQwenImage3d": {
+      "title": "3D Rabbit Sculpture",
+      "source": {
+        "kind": "local-qwen-base",
+        "adapterApplied": false
+      },
+      "beads": 367,
+      "cubes": 74,
+      "steps": 286,
+      "maxAssemblyPasses": 5,
+      "valid": true
+    }
+  },
+  "observedLimitations": [
+    "Using the flat-trained adapter for 3D produced collapsed geometry; the compiler now rejects that condition.",
+    "3D requests explicitly disable that adapter and use base Qwen. No new 3D training was performed.",
+    "The image proposal copied several proportions from the prompt example and omitted painted eyes; likeness and details require user review.",
+    "Assembly passage counts exclude unplanned starts, finishing and extra reinforcement."
+  ],
+  "physicalBeadabilityVerified": false
+}
