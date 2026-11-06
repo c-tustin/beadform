@@ -1,0 +1,107 @@
+{
+  "date": "2026-11-06",
+  "scope": "Local digital smoke tests. Not a physical build or broad model accuracy benchmark.",
+  "codeSha256": {
+    "local-trained-selector.mjs": "fda150bcd59118b7a6b2206eef042c7a58b6221541f34d0888e8ff6246c1943c",
+    "local-pattern-pipeline.mjs": "dc7de19f5bec0d2feaa515b394cbd92819a3d6e07ab966095329eeb8a334c301",
+    "pattern-checker.mjs": "795aeb397c3d310edab1fdcd25bbfd3521680871c1023c3afddc63d4445a059a",
+    "check-trained-pipeline.mjs": "51a7823ffd4e5d68a2cc7a4daeb01181c992dc0bd732e12c2bf0a7b585e01cc2"
+  },
+  "liveCases": [
+    {
+      "name": "image-brick",
+      "selectedStitch": "brick",
+      "scope": "trained-flat",
+      "adapterApplied": true,
+      "adapterSha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+      "status": "passed-digital",
+      "beads": 18,
+      "maxAssemblyPasses": 3,
+      "hasPattern": true
+    },
+    {
+      "name": "craw-starter",
+      "selectedStitch": "craw",
+      "scope": "experimental-3d",
+      "adapterApplied": true,
+      "adapterSha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+      "status": "needs-review",
+      "beads": 169,
+      "maxAssemblyPasses": 5,
+      "hasPattern": true
+    },
+    {
+      "name": "new-3d-craw",
+      "selectedStitch": "craw",
+      "scope": "experimental-3d",
+      "adapterApplied": true,
+      "adapterSha256": "4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1",
+      "status": "needs-review",
+      "beads": 1944,
+      "maxAssemblyPasses": 5,
+      "hasPattern": true
+    },
+    {
+      "name": "unsupported-peyote-sphere-ui",
+      "selectedStitch": "peyote",
+      "scope": "experimental-3d",
+      "adapterApplied": true,
+      "status": "failed",
+      "hasPattern": false,
+      "blockedCodes": [
+        "unsupported_3d_stitch",
+        "missing_pattern"
+      ]
+    },
+    {
+      "name": "design-description-only-ui",
+      "description": "Dense flat staggered fabric, width 8, rows 6; no stitch name supplied.",
+      "selectedStitch": "peyote",
+      "scope": "trained-flat",
+      "adapterApplied": true,
+      "status": "passed-digital",
+      "hasPattern": true,
+      "beads": 24,
+      "maxAssemblyPasses": 2
+    }
+  ],
+  "flatTextCases": [
+    {
+      "requested": "brick",
+      "selected": "brick",
+      "checker": "passed-digital"
+    },
+    {
+      "requested": "peyote",
+      "selected": "peyote",
+      "checker": "passed-digital"
+    },
+    {
+      "requested": "raw",
+      "selected": "raw",
+      "checker": "passed-digital"
+    },
+    {
+      "requested": "square",
+      "selected": "square",
+      "checker": "passed-digital"
+    },
+    {
+      "requested": "ladder",
+      "selected": "ladder",
+      "checker": "passed-digital"
+    }
+  ],
+  "regressionChecks": {
+    "catalogRoutes": 32,
+    "existingVolumeConfigurations": 54,
+    "corruptedInventoryRouteBridgeLedgerAndGeometryRejected": true,
+    "unsupportedSelectionNeverCallsBaseGeometry": true,
+    "overFivePassesIsSoftReview": true
+  },
+  "observedFailures": [
+    "A 3D starter initially selected CRAW with an unknown shape label and was blocked. The 3D mode label is now supplied by the selection contract, while stitch choice remains a model decision.",
+    "The adapter was trained only on flat stitch samples. 3D stitch recommendations are experimental and always require review."
+  ],
+  "physicalBeadabilityVerified": false
+}

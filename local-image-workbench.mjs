@@ -4,7 +4,8 @@ import {resolve} from 'node:path';
 import {fileURLToPath} from 'node:url';
 import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
-import {catalog,fromCatalog,volumeSvg} from './local-3d-planner.mjs';
+import {catalog} from './local-3d-planner.mjs';
+import {checkPattern} from './pattern-checker.mjs';
 const run=promisify(execFile),root=fileURLToPath(new URL('.',import.meta.url));
 const origin='http://127.0.0.1:8198',latest=resolve(root,'.local-qwen/outputs/workbench-latest.json');
 const staticFiles=new Map([
@@ -20,7 +21,11 @@ createServer(async(req,res)=>{
  if(req.method==='GET'){
   const file=staticFiles.get(req.url);if(file){res.writeHead(200,{'Content-Type':file[1],'Cache-Control':'no-store'});return res.end(readFileSync(resolve(root,file[0])));}
   if(req.url==='/catalog')return json(200,catalog);
-  if(req.url==='/latest')return json(200,existsSync(latest)?JSON.parse(readFileSync(latest)):null);
+  if(req.url==='/latest'){
+   const saved=existsSync(latest)?JSON.parse(readFileSync(latest)):null;
+   if(saved?.pattern){const report=checkPattern(saved.pattern,{selection:saved.selection||saved.pattern.stitchSelection});if(!report.passed)return json(200,{pattern:null,svg:null,selection:saved.selection||null,checker:report,prompt:saved.prompt});saved.checker=report;saved.pattern.checker=report;}
+   return json(200,saved);
+  }
  }
  if(req.method!=='POST'||req.url!=='/generate')return json(404,{error:'Not found.'});
  if(req.headers.origin!==origin)return json(403,{error:'Use the local Beadform page.'});
@@ -33,22 +38,20 @@ createServer(async(req,res)=>{
   if(typeof data.prompt!=='string'||!data.prompt.trim()||data.prompt.length>4000)throw Error('Enter a description of 1–4000 characters.');
   if(data.mode!==undefined&&!['flat','volume'].includes(data.mode))throw Error('Choose a flat or 3D pattern.');
   const out=resolve(root,'.local-qwen/outputs',Date.now().toString());mkdirSync(out,{recursive:true});
-  let pattern,svg;
-  if(data.mode==='volume'&&data.template){
-   if(data.image)throw Error('Choose “New design with local Qwen” to use an image. Starters use their saved geometry.');
-   pattern=fromCatalog(data.template);svg=volumeSvg(pattern);
-   writeFileSync(resolve(out,'pattern.json'),JSON.stringify(pattern));writeFileSync(resolve(out,'bead-chart.svg'),svg);
-  }else{
-   const dimensions=data.mode==='flat'?`\nDimensions: starter width ${data.width}; rows ${data.rows}.`:'';
-   if(data.mode==='flat'&&(!Number.isInteger(data.width)||!Number.isInteger(data.rows)||data.width<2||data.width>12||data.rows<1||data.rows>12))throw Error('Use width 2–12 and rows 1–12.');
-   const args=[resolve(root,'local-image-qwen.mjs'),'--prompt',data.prompt+dimensions,'--out',out];
-   if(data.mode==='volume')args.push('--scene');
-   if(data.image){const m=/^data:image\/(png|jpeg|webp);base64,([A-Za-z0-9+/=]+)$/.exec(data.image);if(!m)throw Error('Use a PNG, JPEG or WebP image.');const path=resolve(out,'reference.'+m[1]);writeFileSync(path,Buffer.from(m[2],'base64'));args.push('--image',path);}
-   await run(process.execPath,args,{cwd:root,timeout:600000,maxBuffer:1024*1024});
-   pattern=JSON.parse(readFileSync(resolve(out,'pattern.json')));
-   svg=pattern.needsClarification?null:readFileSync(resolve(out,'bead-chart.svg'),'utf8');
-  }
-  const result={pattern,svg,prompt:data.prompt};if(!pattern.needsClarification)writeFileSync(latest,JSON.stringify(result));
+  const mode=data.mode||'flat';
+  const dimensions=mode==='flat'?`\nDimensions: starter width ${data.width}; rows ${data.rows}.`:'';
+  if(mode==='flat'&&(!Number.isInteger(data.width)||!Number.isInteger(data.rows)||data.width<2||data.width>12||data.rows<1||data.rows>12))throw Error('Use width 2–12 and rows 1–12.');
+  if(data.template&&data.image)throw Error('Choose “New design with local Qwen” to use an image. Starters use saved geometry.');
+  const args=[resolve(root,'local-image-qwen.mjs'),'--prompt',data.prompt+dimensions,'--out',out];
+  if(mode==='volume')args.push('--scene');
+  else args.push('--width',String(data.width),'--rows',String(data.rows));
+  if(data.template)args.push('--template',data.template);
+  if(data.image){const m=/^data:image\/(png|jpeg|webp);base64,([A-Za-z0-9+/=]+)$/.exec(data.image);if(!m)throw Error('Use a PNG, JPEG or WebP image.');const path=resolve(out,'reference.'+m[1]);writeFileSync(path,Buffer.from(m[2],'base64'));args.push('--image',path);}
+  await run(process.execPath,args,{cwd:root,timeout:600000,maxBuffer:1024*1024});
+  const generated=JSON.parse(readFileSync(resolve(out,'result.json')));
+  // The serving boundary reruns the independent checker rather than trusting CLI flags.
+  if(generated.pattern){generated.checker=checkPattern(generated.pattern,{selection:generated.selection});if(!generated.checker.passed){generated.pattern=null;generated.svg=null;}}
+  const result={...generated,prompt:data.prompt};writeFileSync(latest,JSON.stringify(result));
   json(200,result);
  }catch(e){
   const message=String(e.stderr||e.message),reason=message.match(/Error: ([^\n]+)/)?.[1]||e.message;

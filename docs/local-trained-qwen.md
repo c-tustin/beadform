@@ -4,7 +4,11 @@ The local studio uses Qwen3-VL-2B-Instruct and the **image-stitch-v1 adapter fro
 
 Choose **3D animal or object** for a rotatable CRAW sculpture, or **Flat stitch sample** for brick, peyote, ladder, RAW or square stitch. Beadform computes the physical bead inventory and assembly route.
 
-The 32 saved 3D starters work without model generation. **New design with local Qwen** accepts text and optional images, proposes overlapping geometric parts, then validates and voxelizes them. The flat-trained adapter is disabled for that individual geometry request; it remains active for flat stitch requests. This does not retrain the adapter for 3D. New-shape accuracy is experimental, thin details may disappear, and a single image does not reconstruct unseen anatomy. Collapsed or disconnected proposals are rejected. Mixed-stitch 3D planning is not implemented in this local studio; 3D output uses CRAW.
+Every generation now starts with the **trained adapter choosing the stitch**, including requests for saved 3D starters. A capability check must accept that choice before compilation. A separate checker then walks the generated bead/thread pattern independently. The page shows the selected stitch, checks and warnings before showing the thread guide.
+
+For flat swatches this uses the original training prompt and schema. For 3D, the same adapter makes an experimental stitch recommendation using the stitch guide and an expanded selection contract. It was **not trained or broadly evaluated on 3D selection**. The current 3D compiler implements CRAW: if the model chooses peyote or another unimplemented 3D technique, the checker blocks the pattern instead of silently replacing that stitch with CRAW.
+
+The 32 saved starters supply existing CRAW geometry. **New design with local Qwen** accepts text and optional images; after stitch selection passes, base Qwen proposes geometry separately and the compiler computes the pattern. Only that geometry request disables the flat adapter. The model does not invent bead counts or thread operations. New-shape accuracy is experimental, thin details may disappear, and a single image does not reconstruct unseen anatomy. Collapsed, disconnected or invalid proposals are rejected. Mixed-stitch 3D planning is not implemented in this local studio.
 
 ## Start
 
@@ -13,6 +17,7 @@ On this Mac, double-click **Start Local Beadform.command** to start the model an
 - Drag the 3D view to rotate it, or use the arrow keys. Scroll to zoom.
 - Use the step and movement sliders, **Play thread**, or the arrow buttons to follow the route.
 - Click a bead to find its pickup step and assembly passage count.
+- Read the model's selected stitch and the checker findings. Failed patterns have no usable thread chart or instructions; 3D recommendations are marked for review.
 - Read instructions on the page, save a chart or text guide, or print the guide. Raw JSON is kept out of the interface.
 
 Or start both from Terminal:
@@ -37,7 +42,7 @@ Leave that running. In another Terminal:
 node local-image-qwen.mjs --image reference.png --prompt "Make a flat triangle, foundation 6 beads, 4 rows."
 ```
 
-Omit `--image` for text only. Add `--scene` for a new 3D geometry proposal using the base model. The output folder contains `pattern.json` and, for a supported recipe, `bead-chart.svg`. An `unknown` flat result means the model needs a supported design or clearer dimensions. Flat inference verifies that the trained adapter is active; 3D requests explicitly use the base model without that adapter.
+Omit `--image` for text only. Add `--scene` for the 3D pipeline. Stitch selection explicitly enables the audited adapter for every request. Only geometry generation uses base Qwen without it. Internal output includes `selection.json`, `checker.json` and `result.json`; a usable `pattern.json` and `bead-chart.svg` exist only when the checker accepts the result. An unresolved or unsupported stitch is blocked. Raw JSON remains internal to the command-line artifacts.
 
 On an Intel Mac, inference uses the CPU and may take several minutes. Keep the server bound to its default `127.0.0.1`; the local API has no account login.
 
@@ -58,3 +63,5 @@ Patterns use 11/0 round seed beads and 0.20 mm thread, preferring at most five a
 The 3D planner starts another working thread section if needed to avoid extra travel through a bead. Those starts and finishes still require a tested physical method. Digital route checks do not establish hole capacity, tension, needle access, strength or a stable finished sculpture.
 
 Developer check: `node check-local-studio.mjs` walks every starter's route independently to check pickup order, hole-to-hole continuity, exact bead inventory, face attachments and recomputed assembly passage counts.
+
+Run `node check-trained-pipeline.mjs` for selector/compiler agreement, bead-count formulas, parity and dimensions, corrupt pickup/bridge/route/ledger rejection, exact 3D edge inventories, no base-model substitution for unsupported choices, and a continuous route above five passages that is correctly flagged as a soft review rather than certified or rejected automatically. The checker also runs the existing scene-quality inspection. Physical sample requirements remain separate from passing digital checks.
