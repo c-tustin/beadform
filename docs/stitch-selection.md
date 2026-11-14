@@ -30,3 +30,7 @@ The JSON scene format and computed bead counts/routes stay unchanged. The genera
 - [Generation server](../server.mjs): includes the guide in every provider request.
 
 The guide is advisory; a model can still make a poor choice. Physical sampling remains necessary, especially for shaped surfaces, joins and finishes. Digital checks and a model's explanation do not prove beadability.
+
+## Experimental stitch recipe training (November 3, 2026)
+
+A separate [Qwen recipe pilot](../training/stitch-program-v1/README.md) now has draft flat brick and ladder generators alongside the existing flat peyote, RAW and square engine. This does not make those stitches selectable in the 3D scene compiler. The pilot changes a new adapter’s weights to select a technique and specify bounded recipe parameters, then code computes the pattern. New 3D parts plans separately prefer five passages for 11/0 beads and 0.20 mm thread, with visible exceptions. See the pilot guide for the different assembly-only versus proposed-finishing ledgers.
