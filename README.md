@@ -4,6 +4,16 @@ Turn an idea into a draft 3D beadwork pattern, with a preview, bead list and ste
 
 **Still in development:** patterns need hands-on testing. The preview and digital checks do not prove that a piece will hold its shape or that its joints and finishes will be secure.
 
+## Local Qwen app draft
+
+Double-click **Start Local Beadform.command** (with the local model assets installed), or run `node start-local-beadform.mjs`. Open **http://127.0.0.1:8198** for the local studio: model status, prompt and image input, pattern previews, thread guides and downloads. **Open sample pattern** works without the model.
+
+[App draft and scope](docs/local-app-draft.md)
+
+## iPhone app draft
+
+The [native iPhone draft](mobile/README.md) includes a local pattern library, model-file setup and sample thread guide. On-device Qwen inference still needs native integration and physical-device validation. Open `mobile/ios/Beadform.xcodeproj` in Xcode. Preview the design with `node mobile-preview.mjs` at **http://127.0.0.1:8199**.
+
 ## Try it for free
 
 1. [Download Beadform](https://github.com/c-tustin/beadform/archive/refs/heads/main.zip) and unzip it.

@@ -6,6 +6,8 @@ import {execFile} from 'node:child_process';
 import {promisify} from 'node:util';
 import {catalog} from './local-3d-planner.mjs';
 import {checkPattern} from './pattern-checker.mjs';
+import {compileRecipe,patternSvg} from './stitch-programs.mjs';
+import {activeTrainedAdapter} from './local-trained-selector.mjs';
 const run=promisify(execFile),root=fileURLToPath(new URL('.',import.meta.url));
 const origin='http://127.0.0.1:8198',latest=resolve(root,'.local-qwen/outputs/workbench-latest.json');
 const staticFiles=new Map([
@@ -20,10 +22,24 @@ createServer(async(req,res)=>{
  if(req.headers.host!=='127.0.0.1:8198')return json(403,{error:'Use the localhost URL.'});
  if(req.method==='GET'){
   const file=staticFiles.get(req.url);if(file){res.writeHead(200,{'Content-Type':file[1],'Cache-Control':'no-store'});return res.end(readFileSync(resolve(root,file[0])));}
+  if(req.url==='/status'){
+   try{
+    await activeTrainedAdapter({fetchImpl:(url,options={})=>fetch(url,{...options,signal:AbortSignal.timeout(2500)})});
+    return json(200,{ready:true,busy,model:'Qwen3-VL · 2B',adapter:'Beadform image-stitch-v1',message:'Local model and trained adapter are ready.'});
+   }catch{
+    return json(200,{ready:false,busy,model:'Qwen3-VL · 2B',message:'Model unavailable. Start the local model, then check again.',command:'node start-local-beadform.mjs'});
+   }
+  }
+  if(req.url==='/example'){
+   const pattern=compileRecipe({stitch:'brick',shape:'triangle',width:6,rows:4});
+   pattern.title='Little brick-stitch triangle';pattern.source={kind:'example'};
+   const checker=checkPattern(pattern,{requireSelection:false});pattern.checker=checker;
+   return json(200,{pattern,svg:patternSvg(pattern),checker,example:true});
+  }
   if(req.url==='/catalog')return json(200,catalog);
   if(req.url==='/latest'){
    const saved=existsSync(latest)?JSON.parse(readFileSync(latest)):null;
-   if(saved?.pattern){const report=checkPattern(saved.pattern,{selection:saved.selection||saved.pattern.stitchSelection});if(!report.passed)return json(200,{pattern:null,svg:null,selection:saved.selection||null,checker:report,prompt:saved.prompt});saved.checker=report;saved.pattern.checker=report;}
+   if(saved?.pattern){const report=checkPattern(saved.pattern,{selection:saved.selection||saved.pattern.stitchSelection});report.advisoryOnly=true;if(!report.passed||saved.pattern.approximation)report.status='needs-review';saved.checker=report;saved.pattern.checker=report;}
    return json(200,saved);
   }
  }
@@ -49,8 +65,8 @@ createServer(async(req,res)=>{
   if(data.image){const m=/^data:image\/(png|jpeg|webp);base64,([A-Za-z0-9+/=]+)$/.exec(data.image);if(!m)throw Error('Use a PNG, JPEG or WebP image.');const path=resolve(out,'reference.'+m[1]);writeFileSync(path,Buffer.from(m[2],'base64'));args.push('--image',path);}
   await run(process.execPath,args,{cwd:root,timeout:600000,maxBuffer:1024*1024});
   const generated=JSON.parse(readFileSync(resolve(out,'result.json')));
-  // The serving boundary reruns the independent checker rather than trusting CLI flags.
-  if(generated.pattern){generated.checker=checkPattern(generated.pattern,{selection:generated.selection});if(!generated.checker.passed){generated.pattern=null;generated.svg=null;}}
+  // Refresh advisory findings without withholding the generated draft.
+  if(generated.pattern){generated.checker=checkPattern(generated.pattern,{selection:generated.selection});generated.checker.advisoryOnly=true;if(!generated.checker.passed||generated.pattern.approximation)generated.checker.status='needs-review';generated.pattern.checker=generated.checker;}
   const result={...generated,prompt:data.prompt};writeFileSync(latest,JSON.stringify(result));
   json(200,result);
  }catch(e){

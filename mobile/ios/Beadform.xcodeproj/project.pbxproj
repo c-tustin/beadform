@@ -1,0 +1,26 @@
+// !$*UTF8*$!
+{archiveVersion = 1; classes = {}; objectVersion = 56; objects = {
+B3E81CE05D3C3119F35296D3 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = BeadformApp.swift; sourceTree = "<group>";};
+9B58F059D54CA3440EA1CDA3 = {isa = PBXBuildFile; fileRef = B3E81CE05D3C3119F35296D3;};
+49EE7D5733FABDADD30E450A = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Pattern.swift; sourceTree = "<group>";};
+4322D253946C59740944231B = {isa = PBXBuildFile; fileRef = 49EE7D5733FABDADD30E450A;};
+5231716AA82C92F72A3274B0 = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LocalModel.swift; sourceTree = "<group>";};
+738688A8D34CD95C84AA43A2 = {isa = PBXBuildFile; fileRef = 5231716AA82C92F72A3274B0;};
+2BFA6C0171BB45596CE69AEB = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StudioView.swift; sourceTree = "<group>";};
+F9A35F96A342F3DFC87D7888 = {isa = PBXBuildFile; fileRef = 2BFA6C0171BB45596CE69AEB;};
+38A007151ABE87CC01A5B6E9 = {isa = PBXFileReference; explicitFileType = wrapper.application; path = Beadform.app; sourceTree = BUILT_PRODUCTS_DIR;};
+B28B7AF69320201D1CF206EB = {isa = PBXGroup; children = (4D820FADAFBC7A1FCACC4F07,FBDC4F23F93125BBEEAE800C,); sourceTree = "<group>";};
+4D820FADAFBC7A1FCACC4F07 = {isa = PBXGroup; children = (B3E81CE05D3C3119F35296D3,49EE7D5733FABDADD30E450A,5231716AA82C92F72A3274B0,2BFA6C0171BB45596CE69AEB,); path = Beadform; sourceTree = "<group>";};
+FBDC4F23F93125BBEEAE800C = {isa = PBXGroup; children = (38A007151ABE87CC01A5B6E9,); name = Products; sourceTree = "<group>";};
+BCE16DD0260827ECF338C787 = {isa = PBXSourcesBuildPhase; buildActionMask = 2147483647; files = (9B58F059D54CA3440EA1CDA3,4322D253946C59740944231B,738688A8D34CD95C84AA43A2,F9A35F96A342F3DFC87D7888,); runOnlyForDeploymentPostprocessing = 0;};
+AF39DD055C3EF8226FBE929D = {isa = PBXFrameworksBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+87DF60DE337FB58864343E39 = {isa = PBXResourcesBuildPhase; buildActionMask = 2147483647; files = (); runOnlyForDeploymentPostprocessing = 0;};
+89E1FD6268CC0F221A2BE178 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug;};
+E6DE6C99132752C914FEF632 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0;}; name = Release;};
+862894B703A6DEDF96A9DD6C = {isa = XCConfigurationList; buildConfigurations = (89E1FD6268CC0F221A2BE178,E6DE6C99132752C914FEF632,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+7082CC0B6FC1282FCEABD07A = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; PRODUCT_BUNDLE_IDENTIFIER = com.beadform.mobile.draft; PRODUCT_NAME = "$(TARGET_NAME)"; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; TARGETED_DEVICE_FAMILY = 1; CODE_SIGN_STYLE = Automatic; SWIFT_OPTIMIZATION_LEVEL = "-Onone";}; name = Debug;};
+639A7CA24D39909E713B47F7 = {isa = XCBuildConfiguration; buildSettings = {CLANG_ENABLE_MODULES = YES; SDKROOT = iphoneos; IPHONEOS_DEPLOYMENT_TARGET = 17.0; SWIFT_VERSION = 5.0; PRODUCT_BUNDLE_IDENTIFIER = com.beadform.mobile.draft; PRODUCT_NAME = "$(TARGET_NAME)"; GENERATE_INFOPLIST_FILE = YES; INFOPLIST_KEY_UILaunchScreen_Generation = YES; INFOPLIST_KEY_UIApplicationSceneManifest_Generation = YES; TARGETED_DEVICE_FAMILY = 1; CODE_SIGN_STYLE = Automatic;}; name = Release;};
+C57128001CE614BF8549D6BB = {isa = XCConfigurationList; buildConfigurations = (7082CC0B6FC1282FCEABD07A,639A7CA24D39909E713B47F7,); defaultConfigurationIsVisible = 0; defaultConfigurationName = Release;};
+0E8A3AD980EC179856012B7E = {isa = PBXNativeTarget; buildConfigurationList = C57128001CE614BF8549D6BB; buildPhases = (BCE16DD0260827ECF338C787,AF39DD055C3EF8226FBE929D,87DF60DE337FB58864343E39,); buildRules = (); dependencies = (); name = Beadform; productName = Beadform; productReference = 38A007151ABE87CC01A5B6E9; productType = "com.apple.product-type.application";};
+98F54143AB4E86B28C3AFEE0 = {isa = PBXProject; attributes = {LastUpgradeCheck = 1600;}; buildConfigurationList = 862894B703A6DEDF96A9DD6C; compatibilityVersion = "Xcode 14.0"; developmentRegion = en; hasScannedForEncodings = 0; knownRegions = (en,Base,); mainGroup = B28B7AF69320201D1CF206EB; productRefGroup = FBDC4F23F93125BBEEAE800C; projectDirPath = ""; projectRoot = ""; targets = (0E8A3AD980EC179856012B7E,);};
+}; rootObject = 98F54143AB4E86B28C3AFEE0; }

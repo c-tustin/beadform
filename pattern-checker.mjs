@@ -6,10 +6,10 @@ export function checkStitchSelection(selection,{mode='flat',actualStitch,actualR
  const issues=[],r=selection?.recipe,add=(code,message)=>issues.push({code,severity:'error',message});
  if(selection?.adapterApplied!==true||selection.adapterSha256!=='4037c83f7e07b9bf6c11361b433eaef416c344d1dbe8c9f6c671760a3adc00f1'||selection.convertedAdapterSha256!=='a5a1f5977028b3f4ec4c87912fbbe2000a27f3904128c01e4f7f4554bd54ee55')add('missing_trained_selection','Regenerate with the audited trained stitch selector.');
  if(!r){if(selection)add('invalid_selection','The stitch selector did not return a recipe.');}
- else if(r.stitch==='unknown')add('stitch_unresolved','The trained model could not select a stitch for this design. Clarify the design or choose a simpler supported draft.');
+ else if(r.stitch==='unknown')add('stitch_unresolved','The trained model could not select a stitch for this design. A best-effort supported approximation may be used; review the actual draft.');
  else if(mode==='volume'){
   if(r.width!==0||r.rows!==0||!['volume','sphere','tube'].includes(r.shape))add('invalid_volume_selection','The 3D stitch decision has incompatible dimensions or shape.');
-  if(r.stitch!=='craw')add('unsupported_3d_stitch',`The model selected ${r.stitch}. This local 3D generator currently implements CRAW only; it cannot produce a ${r.stitch} thread pattern. No stitch has been substituted.`);
+  if(r.stitch!=='craw')add('unsupported_3d_stitch',`The model selected ${r.stitch}. This local 3D generator currently implements CRAW only; it cannot produce a ${r.stitch} thread pattern. The draft uses a CRAW approximation; review this difference.`);
  }else{
   if(!['brick','peyote','raw','square','ladder'].includes(r.stitch))add('unsupported_flat_stitch','This stitch is not implemented by the flat generator.');
   if(r.width<2||r.width>12||r.rows<1||r.rows>12)add('invalid_dimensions','Use width 2–12 and rows 1–12.');
@@ -82,6 +82,7 @@ export function checkPattern(pattern,{selection,requireSelection=true}={}){
   checks.push({name:'Independent bead inventory, pickup order and thread-route checks',passed:!issues.some(i=>i.severity==='error'&&!['missing_trained_selection','stitch_unresolved','stitch_mismatch','unsupported_3d_stitch'].includes(i.code))});
   checks.push({name:'Recounted passages with a soft five-pass preference',passed:!issues.some(i=>['pass_ledger_mismatch','max_pass_mismatch','pass_exception_mismatch','five_pass_review'].includes(i.code)),maximumAssemblyPasses:max,overFive:over});
  }catch(e){add('malformed_pattern','The checker could not read this pattern: '+e.message);}
+ if(pattern?.approximation)add('best_effort_approximation',pattern.approximation.message,'warning',{reviewRequired:true});
  if(selection?.scope==='experimental-3d')add('experimental_3d_selection','The adapter was trained on flat stitches. Its 3D stitch recommendation is experimental.', 'warning',{reviewRequired:true});
  add('physical_sample_required','Finishing, needle access, tension and strength still need a physical sample.','notice');
  const passed=!issues.some(i=>i.severity==='error');

@@ -4,11 +4,11 @@ The local studio uses Qwen3-VL-2B-Instruct and the **image-stitch-v1 adapter fro
 
 Choose **3D animal or object** for a rotatable CRAW sculpture, or **Flat stitch sample** for brick, peyote, ladder, RAW or square stitch. Beadform computes the physical bead inventory and assembly route.
 
-Every generation now starts with the **trained adapter choosing the stitch**, including requests for saved 3D starters. A capability check must accept that choice before compilation. A separate checker then walks the generated bead/thread pattern independently. The page shows the selected stitch, checks and warnings before showing the thread guide.
+Every generation now starts with the **trained adapter choosing the stitch**, including requests for saved 3D starters. The compiler attempts a supported approximation even when that choice is unsupported or unresolved. A separate checker then walks the generated bead/thread pattern independently. The page shows the selected stitch, actual compiled technique, checks and warnings alongside the thread guide. Checker findings never withhold a compiled draft.
 
-For flat swatches this uses the original training prompt and schema. For 3D, the same adapter makes an experimental stitch recommendation using the stitch guide and an expanded selection contract. It was **not trained or broadly evaluated on 3D selection**. The current 3D compiler implements CRAW: if the model chooses peyote or another unimplemented 3D technique, the checker blocks the pattern instead of silently replacing that stitch with CRAW.
+For flat swatches this uses the original training prompt and schema. For 3D, the same adapter makes an experimental stitch recommendation using the stitch guide and an expanded selection contract. It was **not trained or broadly evaluated on 3D selection**. The current 3D compiler implements CRAW: if the model chooses peyote or another unimplemented 3D technique, the compiler still attempts a CRAW approximation and the checker discloses the stitch mismatch.
 
-The 32 saved starters supply existing CRAW geometry. **New design with local Qwen** accepts text and optional images; after stitch selection passes, base Qwen proposes geometry separately and the compiler computes the pattern. Only that geometry request disables the flat adapter. The model does not invent bead counts or thread operations. New-shape accuracy is experimental, thin details may disappear, and a single image does not reconstruct unseen anatomy. Collapsed, disconnected or invalid proposals are rejected. Mixed-stitch 3D planning is not implemented in this local studio.
+The 32 saved starters supply existing CRAW geometry. **New design with local Qwen** accepts text and optional images; after stitch selection, base Qwen proposes geometry separately and the compiler computes the pattern. Only that geometry request disables the flat adapter. The model does not invent bead counts or thread operations. New-shape accuracy is experimental, thin details may disappear, and a single image does not reconstruct unseen anatomy. If geometry cannot compile, Qwen receives the failure message and gets one more attempt with simpler connected parts. If both attempts fail, no draft can be returned. Mixed-stitch 3D planning is not implemented in this local studio.
 
 ## Start
 
@@ -17,7 +17,7 @@ On this Mac, double-click **Start Local Beadform.command** to start the model an
 - Drag the 3D view to rotate it, or use the arrow keys. Scroll to zoom.
 - Use the step and movement sliders, **Play thread**, or the arrow buttons to follow the route.
 - Click a bead to find its pickup step and assembly passage count.
-- Read the model's selected stitch and the checker findings. Failed patterns have no usable thread chart or instructions; 3D recommendations are marked for review.
+- Read the model's selected stitch and the checker findings. Compiled patterns keep their thread chart and instructions even when checks fail; findings and 3D recommendations are marked for review.
 - Read instructions on the page, save a chart or text guide, or print the guide. Raw JSON is kept out of the interface.
 
 Or start both from Terminal:
@@ -42,7 +42,7 @@ Leave that running. In another Terminal:
 node local-image-qwen.mjs --image reference.png --prompt "Make a flat triangle, foundation 6 beads, 4 rows."
 ```
 
-Omit `--image` for text only. Add `--scene` for the 3D pipeline. Stitch selection explicitly enables the audited adapter for every request. Only geometry generation uses base Qwen without it. Internal output includes `selection.json`, `checker.json` and `result.json`; a usable `pattern.json` and `bead-chart.svg` exist only when the checker accepts the result. An unresolved or unsupported stitch is blocked. Raw JSON remains internal to the command-line artifacts.
+Omit `--image` for text only. Add `--scene` for the 3D pipeline. Stitch selection explicitly enables the audited adapter for every request. Only geometry generation uses base Qwen without it. Internal output includes `selection.json`, `checker.json` and `result.json`; `pattern.json` and `bead-chart.svg` are kept whenever compilation succeeds, regardless of checker findings. Unresolved flat recipes use a disclosed supported approximation; 3D uses a disclosed CRAW approximation. Raw JSON remains internal to the command-line artifacts.
 
 On an Intel Mac, inference uses the CPU and may take several minutes. Keep the server bound to its default `127.0.0.1`; the local API has no account login.
 
@@ -64,4 +64,6 @@ The 3D planner starts another working thread section if needed to avoid extra tr
 
 Developer check: `node check-local-studio.mjs` walks every starter's route independently to check pickup order, hole-to-hole continuity, exact bead inventory, face attachments and recomputed assembly passage counts.
 
-Run `node check-trained-pipeline.mjs` for selector/compiler agreement, bead-count formulas, parity and dimensions, corrupt pickup/bridge/route/ledger rejection, exact 3D edge inventories, no base-model substitution for unsupported choices, and a continuous route above five passages that is correctly flagged as a soft review rather than certified or rejected automatically. The checker also runs the existing scene-quality inspection. Physical sample requirements remain separate from passing digital checks.
+Run `node check-trained-pipeline.mjs` for selector/compiler agreement, bead-count formulas, parity and dimensions, corrupt pickup/bridge/route/ledger rejection, exact 3D edge inventories, advisory unsupported-stitch findings, disclosed best-effort recipe adaptation, geometry retry, and a continuous route above five passages that is correctly flagged as a soft review rather than certified or rejected automatically. The checker also runs the existing scene-quality inspection. Physical sample requirements remain separate from passing digital checks.
+
+The runtime selection prompts now request a best-effort supported draft rather than rejection. The original flat training prompt and audited adapter weights are unchanged. `checker.passed` remains a diagnostic result, not permission to view, export or reopen a pattern.

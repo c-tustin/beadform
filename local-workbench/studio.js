@@ -1,24 +1,24 @@
 const $=id=>document.getElementById(id),esc=s=>String(s).replace(/[&<>"']/g,c=>({'&':'&amp;','<':'&lt;','>':'&gt;','"':'&quot;',"'":'&#39;'}[c]));
-let pattern=null,stepIndex=0,moveIndex=0,timer=null,graph=null,chartBlob=null,instructionsBlob=null,yaw=-.5,pitch=.28,zoom=1,hitBeads=[];
+let pattern=null,stepIndex=0,moveIndex=0,timer=null,graph=null,chartBlob=null,instructionsBlob=null,projectBlob=null,yaw=-.5,pitch=.28,zoom=1,hitBeads=[];
 const operations=step=>pattern.dimension==='volume'?[...(step.travel||[]).map(id=>({kind:'pass',id,phase:'position'})),...step.ops]:step.operations;
 const words=op=>op.kind==='thread-bridge'?`Go under the existing thread bridge between ${op.between.join(' and ')}.`:op.kind==='pick'?`Pick up new bead ${op.id}.`:`Pass through existing bead ${op.id}${op.phase==='position'?' to move into position':''}.`;
 function stop(){clearInterval(timer);timer=null;$('play').textContent='Play thread';}
 function instructions(p){
- const lines=[p.title||`${p.recipe.stitch} ${p.recipe.shape}`,'BEADFORM · DRAFT BEADING GUIDE',`Model selected: ${p.stitchSelection?.recipe?.stitch||'not recorded'}; checker: ${p.checker?.status||'not checked'}.`,...(p.checker?.issues||[]).map(i=>i.message),`${p.beadCount} physical beads · 11/0 round seed beads · 0.20 mm thread`,`${p.technique||p.recipe.stitch} · preferred maximum 5 assembly passages; actual maximum ${p.passagePreference.maximumAssemblyPasses}.`,'Finishing, tails and reinforcement are not included. Test with your actual materials.','',p.note||'',''];
+ const lines=[p.title||`${p.recipe.stitch} ${p.recipe.shape}`,'BEADFORM · DRAFT BEADING GUIDE',`Stitch source: ${p.source?.kind==='example'?'built-in example (no model)':p.stitchSelection?.recipe?.stitch||'not recorded'}; checker: ${p.checker?.status||'not checked'}.`,...(p.checker?.issues||[]).map(i=>i.message),`${p.beadCount} physical beads · 11/0 round seed beads · 0.20 mm thread`,`${p.technique||p.recipe.stitch} · preferred maximum 5 assembly passages; actual maximum ${p.passagePreference.maximumAssemblyPasses}.`,'Finishing, tails and reinforcement are not included. Test with your actual materials.','',p.note||'',''];
  for(const [i,s] of p.steps.entries()){lines.push(`${i+1}. ${s.label}`);if(s.threadStart)lines.push(`Start working thread section ${s.threadSection} at junction ${s.entryCorner}; ${i?'anchor beside existing bead '+s.anchor:'leave a tail and secure a tested start'}. Starting/finishing method needs a physical sample.`);for(const [j,op] of operations(s).entries())lines.push(`   ${j+1}. ${words(op)}`);if(s.note)lines.push(s.note);if(s.endThread)lines.push('Finish this working thread section using a separately tested method.');lines.push('');}
  return lines.join('\n');
 }
 function showDecision(result){
  const selection=result.selection||result.pattern?.stitchSelection,report=result.checker||result.pattern?.checker;
  $('empty').hidden=true;$('result').hidden=false;$('decisionPanel').hidden=false;
- $('modelChoice').textContent=selection?'Model selected: '+selection.recipe.stitch:'Trained stitch selection required';
- $('selectionInfo').textContent=selection?.scope==='experimental-3d'?'Your trained adapter made this stitch recommendation. Its training covered flat swatches, so this 3D use is experimental.':selection?'This stitch was selected with the trained Beadform adapter, then sent to the independent checker.':'This saved pattern predates the trained-selector checker. Generate it again to check it.';
- $('checkerStatus').textContent=report?.status==='passed-digital'?'Digital checks passed':report?.status==='needs-review'?'Digital checks passed · review required':'Checker blocked this pattern';
+ $('modelChoice').textContent=result.example?'Example · brick-stitch triangle':selection?'Model selected: '+selection.recipe.stitch:'Trained stitch selection required';
+ $('selectionInfo').textContent=result.example?'This saved example was computed by Beadform without running Qwen. The checker reviewed its bead inventory and thread plan.':selection?.scope==='experimental-3d'?'Your trained adapter made this stitch recommendation. Its training covered flat swatches, so this 3D use is experimental.':selection?'This stitch was selected with the trained Beadform adapter, then sent to the independent checker.':'This saved pattern predates the trained-selector checker. Generate it again to check it.';
+ $('checkerStatus').textContent=report?.status==='passed-digital'?'Digital checks passed':report?.status==='needs-review'?'Draft available · review findings':'Review checker findings';
  $('checkerStatus').dataset.status=report?.status||'failed';
  $('checkerChecks').innerHTML=(report?.checks||[]).map(c=>'<li>'+ (c.passed?'✓ ':'✕ ')+esc(c.name)+'</li>').join('');
  const issues=(report?.issues||[]).filter(i=>i.code!=='missing_pattern'||report.issues.filter(x=>x.severity==='error').length===1);
  $('checkerIssues').innerHTML=issues.map(i=>'<li class="'+esc(i.severity)+'">'+esc(i.message)+'</li>').join('');
- $('patternContent').hidden=!(result.pattern&&report?.passed);
+ $('patternContent').hidden=!result.pattern;
  if($('patternContent').hidden){stop();pattern=null;graph=null;$('result').scrollIntoView({behavior:'smooth',block:'start'});}
 }
 function setPattern(p,svg){
@@ -26,7 +26,7 @@ function setPattern(p,svg){
  graph=p.dimension==='volume'?{nodes:p.beads,byId:new Map(p.beads.map(b=>[b.id,b])),faces:p.faces}:null;
  $('empty').hidden=true;$('result').hidden=false;$('title').textContent=p.title||`${p.recipe.stitch} ${p.recipe.shape}`;
  $('technique').textContent=p.dimension==='volume'?'3D · CRAW':`${p.recipe.stitch} · flat`;
- $('source').textContent=p.dimension==='volume'?(p.source.kind==='catalog'?'Saved starter geometry · computed 3D bead and thread plan.':'Base Qwen proposed the geometry separately. Your trained adapter selected the stitch; the independent checker verified the computed route. Shape accuracy still needs your review.'):'Your image-trained Qwen adapter selected this recipe. Beadform computed the pattern.';
+ $('source').textContent=p.source?.kind==='example'?'Built-in example · computed brick-stitch swatch. No AI model was used.':p.dimension==='volume'?(p.source.kind==='catalog'?'Saved starter geometry · computed 3D bead and thread plan.':'Base Qwen proposed the geometry separately. Your trained adapter selected the stitch; the independent checker reviewed the computed route. Shape accuracy still needs your review.'):'Your image-trained Qwen adapter selected this recipe. Beadform computed the pattern.';
  const count=p.dimension==='volume'?p.cubes.length:p.steps.length,kind=p.dimension==='volume'?'shared-face cubes':'construction steps';
  $('stats').innerHTML=`<div><strong>${p.beadCount}</strong><small>physical beads</small></div><div><strong>${count}</strong><small>${kind}</small></div><div><strong>${p.passagePreference.maximumAssemblyPasses} / 5</strong><small>max assembly passes / preferred</small></div>`;
  $('volumePreview').hidden=p.dimension!=='volume';$('notes').textContent=p.note;
@@ -35,6 +35,8 @@ function setPattern(p,svg){
  chartBlob=URL.createObjectURL(new Blob([svg],{type:'image/svg+xml'}));$('saveChart').href=chartBlob;
  instructionsBlob=URL.createObjectURL(new Blob([instructions(p)],{type:'text/plain'}));$('saveInstructions').href=instructionsBlob;
  $('printSteps').innerHTML='<h3>Complete construction guide</h3><ol>'+p.steps.map(s=>'<li><b>'+esc(s.label)+'</b>'+((s.threadStart)?'<p>Start thread section '+s.threadSection+' at '+esc(s.entryCorner)+'. Finish separately; finishing passes excluded.</p>':'')+'<p>'+operations(s).map(words).map(esc).join(' → ')+'</p></li>').join('')+'</ol>';
+ if(projectBlob)URL.revokeObjectURL(projectBlob);
+ projectBlob=URL.createObjectURL(new Blob([JSON.stringify({format:'beadform-local-draft',version:1,pattern:p},null,2)],{type:'application/json'}));$('saveProject').href=projectBlob;
  renderStep();$('result').scrollIntoView({behavior:'smooth',block:'start'});
 }
 function flatSvg(){
@@ -108,21 +110,38 @@ $('moves').onclick=e=>{const b=e.target.closest('[data-move]');if(b){stop();move
  $('chart').onclick=e=>{const b=e.target.closest('[data-bead],[data-diagram-bead]');if(b)inspectBead(b.dataset.bead||b.dataset.diagramBead);};
 $('chart').onkeydown=e=>{if(e.key==='Enter'||e.key===' '){const b=e.target.closest('[data-bead],[data-diagram-bead]');if(b){e.preventDefault();inspectBead(b.dataset.bead||b.dataset.diagramBead);}}};
 $('print').onclick=()=>window.print();
+async function checkModel(){
+ $('checkModel').disabled=true;
+ try{
+  const response=await fetch('/status');if(!response.ok)throw Error('Cannot reach the local studio.');const d=await response.json();
+  $('modelState').textContent=d.ready?d.model+' · ready':d.model+' · offline';
+  $('modelDot').classList.toggle('ready',d.ready);$('modelDetail').textContent=d.message;$('modelSetup').hidden=d.ready;
+ }catch(e){$('modelState').textContent='Studio unavailable';$('modelDetail').textContent=e.message;$('modelSetup').hidden=false;}
+ finally{$('checkModel').disabled=false;}
+}
+$('checkModel').onclick=checkModel;
+$('tryExample').onclick=async()=>{
+ $('tryExample').disabled=true;
+ try{const response=await fetch('/example');if(!response.ok)throw Error('Could not load the example.');const d=await response.json();showDecision(d);if(!d.pattern)throw Error('No example draft was generated.');setPattern(d.pattern,d.svg);$('status').textContent='Example open. Explore the thread chart, or describe your own design and generate with Qwen.';}
+ catch(e){$('status').textContent=e.message;}finally{$('tryExample').disabled=false;}
+};
+$('exampleAgain').onclick=()=>$('tryExample').click();
+checkModel();
 $('mode').onchange=()=>{$('starters').hidden=$('mode').value==='flat';$('flatSettings').hidden=$('mode').value!=='flat';if($('mode').value==='flat')$('prompt').value='A brick stitch triangle.';};
 $('template').onchange=()=>{if($('template').value){$('prompt').value='Make a '+$('template').selectedOptions[0].textContent+'.';$('image').value='';$('referencePreview').hidden=true;}};
 $('image').onchange=()=>{const f=$('image').files[0];$('referencePreview').hidden=!f;if(f)$('referencePreview').src=URL.createObjectURL(f);};
 $('form').onsubmit=async e=>{
- e.preventDefault();stop();$('generate').disabled=true;$('patternContent').hidden=true;$('result').hidden=true;$('empty').hidden=false;$('status').textContent='Your trained model will choose a stitch. Beadform will compile the supported pattern and check its thread route. 3D geometry can take a few minutes.';
+ e.preventDefault();stop();$('tryExample').disabled=true;$('generate').disabled=true;$('patternContent').hidden=true;$('result').hidden=true;$('empty').hidden=false;$('status').textContent='Your trained model will choose a stitch. Beadform will attempt a supported approximation and show advisory findings. 3D geometry can take a few minutes.';
  try{const f=$('image').files[0];if(f&&f.size>10*1024*1024)throw Error('Use an image smaller than 10 MB.');const image=f?await new Promise((ok,fail)=>{const r=new FileReader();r.onload=()=>ok(r.result);r.onerror=fail;r.readAsDataURL(f);}):null;
  const response=await fetch('/generate',{method:'POST',headers:{'Content-Type':'application/json'},body:JSON.stringify({mode:$('mode').value,template:$('mode').value==='volume'?$('template').value:null,prompt:$('prompt').value,image,width:Number($('width').value),rows:Number($('rows').value)})});const d=await response.json();if(!response.ok)throw Error(d.error);
- showDecision(d);if(!d.pattern||!d.checker?.passed){$('status').textContent='The checker stopped this pattern. Read its findings and adjust the request.';return;}
- setPattern(d.pattern,d.svg);$('status').textContent=d.checker.status==='needs-review'?'The checked draft needs review. Read the findings before using its thread guide.':'Your trained-model draft passed the digital checker. Follow the thread arrows one movement at a time.';
- }catch(e){$('status').textContent=e.message;}finally{$('generate').disabled=false;}
+ showDecision(d);if(!d.pattern){$('status').textContent='Qwen could not compile a draft. Read the findings and try again.';return;}
+ setPattern(d.pattern,d.svg);$('status').textContent=d.checker.status==='needs-review'?'Your best-effort draft is ready. Review the findings alongside its thread guide.':'Your trained-model draft passed the digital checker. Follow the thread arrows one movement at a time.';
+ }catch(e){$('status').textContent=e.message;}finally{$('generate').disabled=false;$('tryExample').disabled=false;checkModel();}
 };
 const catalog=await (await fetch('/catalog')).json();for(const e of catalog){const o=document.createElement('option');o.value=e.id;o.textContent=e.title;$('template').append(o);}
 const saved=await (await fetch('/latest')).json();
 if(saved){showDecision(saved);}
-if(saved?.pattern&&saved.checker?.passed&&!saved.pattern.needsClarification){
+if(saved?.pattern&&!saved.pattern.needsClarification){
  const p=saved.pattern,volume=p.dimension==='volume';$('mode').value=volume?'volume':'flat';$('starters').hidden=!volume;$('flatSettings').hidden=volume;
  $('template').value=volume&&p.source.kind==='catalog'?p.source.id:'';
  $('prompt').value=saved.prompt||(volume?'Make a '+p.title+'.':`A ${p.recipe.stitch} ${p.recipe.shape}.`);
