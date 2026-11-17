@@ -1,0 +1,4 @@
+ios/Frameworks/
+ios/DerivedData/
+**/xcuserdata/
+*.gguf

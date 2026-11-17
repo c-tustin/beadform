@@ -1,12 +1,21 @@
 import Foundation
 import Combine
 
+struct BeadPosition: Codable, Identifiable {
+    let id: String
+    let x: Double
+    let y: Double
+}
+
 struct BeadPattern: Codable, Identifiable {
     var id = UUID()
     var title: String
     var rows: [[String]]
     var steps: [String]
     var created = Date()
+    var technique: String?
+    var source: String?
+    var beadPositions: [BeadPosition]?
     var beadCount: Int { rows.reduce(0) { $0 + $1.count } }
 
     // Original bounded brick triangle. No model output or inferred physical success.

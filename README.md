@@ -12,7 +12,7 @@ Double-click **Start Local Beadform.command** (with the local model assets insta
 
 ## iPhone app draft
 
-The [native iPhone draft](mobile/README.md) includes a local pattern library, model-file setup and sample thread guide. On-device Qwen inference still needs native integration and physical-device validation. Open `mobile/ios/Beadform.xcodeproj` in Xcode. Preview the design with `node mobile-preview.mjs` at **http://127.0.0.1:8199**.
+The [native iPhone app](app/README.md) now connects Qwen and the trained adapter through llama.cpp to the local pattern compiler. It targets iPhone 14 Pro and newer on iOS 17+. The native bridge passes a real-model Mac test; building and testing the iPhone app still requires full Xcode and a physical device. Follow the mobile setup guide before opening `app/ios/Beadform.xcodeproj`. The browser design preview (`node mobile-preview.mjs`, port 8199) does not run Qwen.
 
 ## Try it for free
 
